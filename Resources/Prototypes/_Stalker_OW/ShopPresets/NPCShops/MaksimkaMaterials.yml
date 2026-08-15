@@ -1,0 +1,84 @@
+﻿- type: shopPreset
+  id: STOWMaksimkaMaterialsPreset
+  minSellPrice: 5
+  itemsForSale:
+    # Tier 1
+    STCraftSheetCopperT1: 120
+    STCraftPlasticFittingT1: 120
+    STCraftPinePlankT1: 120
+    STCraftGlassT1: 120
+    STCraftCottonFabricT1: 120
+    STCraftBasicThreadKitT1: 120
+    STCraftBasicPCBT1: 120
+
+    # Tier 2
+    STCraftSheetIronT2: 160
+    STCraftPlasticFittingT2: 160
+    STCraftBirchPlankT2: 160
+    STCraftGlassT2: 160
+    STCraftHideT2: 160
+    STCraftTapeKitT2: 160
+    STCraftStandardPCBT2: 160
+
+    # Tier 3
+    STCraftSheetBrassT3: 220
+    STCraftPlasticFittingT3: 220
+    STCraftOakPlankT3: 220
+    STCraftQuartzCrystalT3: 220
+    TCraftSturdyHideT3: 220
+    STCraftGlueKitT3: 220
+    STCraftMultilayerPCBT3: 220
+
+    # Tier 4
+    STCraftSheetAluminumT4: 300
+    STCraftPlasticFittingT4: 300
+    STCraftYewPlankT4: 300
+    STCraftSapphireCrystalT4: 300
+    TCraftPolymerFabricT4: 300
+    STCraftIndustrialThreadStaplesKitT4: 300
+    STCraftHighPerformanceChipT4: 300
+
+    # Tier 5
+    STCraftSheetSteelT5: 420
+    STCraftPlasticFittingT5: 420
+    STCraftRedWoodPlankT5: 420
+    STCraftAluminumOxideT5: 420
+    TCraftCompositeMaterialT5: 420
+    STCraftHighStrengthKitT5: 420
+    STCraftNanoChipT5: 420
+
+    # Electronic components
+    STCraftBattery: 180
+    STCraftCoil: 180
+    STCraftCapacitor: 180
+    STCraftTransformer: 260
+
+  categories:
+    - name: shop-category-tools
+      priority: 1
+      items:
+        ToolkitTearOne: 2000
+        ToolkitTearTwo: 7000
+        ToolkitTearThree: 12000
+        CraftLeatherbox: 5000
+        CraftGunpowderBank: 250
+        CraftMaterialGunpowder: 50
+
+    - name: shop-category-utilities
+      priority: 2
+      items:
+        TrashDetectorTier1: 200
+        TrashDetectorTier2: 600
+        TrashDetectorTier3: 1800
+        longrangemetaldetector: 3000
+        STCombatKnife: 50
+
+    - name: shop-category-blueprints
+      priority: 3
+      items:
+        TrashDetectorTier4Blueprint: 25000
+        
+    - name: shop-category-storage-and-containers
+      priority: 4
+      items:
+        ClothingBeltCrafterStalker: 3000

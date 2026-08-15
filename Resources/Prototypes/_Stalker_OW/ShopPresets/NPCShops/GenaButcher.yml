@@ -1,0 +1,220 @@
+﻿- type: shopPreset
+  id: STOWGenaButcherPreset
+  minSellPrice: 5
+  itemsForSale:
+    # Mutant parts
+    
+    # Boars
+    MutantPartBoarHoof: 100
+    MutantPartSeasonedBoarHoof: 225
+    MutantPartOldBoarHoof: 355
+
+    # Bears
+    MutantPartBearClaw: 215
+    MutantPartBearPaw: 360
+    MutantPartBearEye: 560
+    ClothingHeadBear: 670
+
+    # T1
+    MutantPartBlindDogTail: 60
+    MutantPartFleshEye: 160
+    FoodMeatSpiderLeg: 30
+    MutantPartCatGland: 230
+
+    # T2
+    MutantPartLeshiyRoot: 485
+    MutantPartPseudodogTail: 255
+    MutantPartSnorkFoot: 445
+    MutantPartPsiDogTail: 370
+    MutantPartFrogLeg: 170
+
+    # T3
+    MutantPartBloodsuckerTentacles: 962
+    MutantPartOraculeEye: 735
+    MutantPartZombieHand: 399
+    MutantPartPseudogiantHeart: 4760
+    ClothingMaskChimera: 52500
+    MutantPartChimeraTooth: 26250
+    MutantPartIzlomArm: 571
+    MutantPartBurerBrain: 1050
+    MutantPartControllerBrain: 2337
+    MutantPartRustEgg: 35000
+
+    # Foods
+    STFoodMeatSalo: 80
+    STFoodMeatSpiderCooked: 65
+    FoodMeatBoar: 72
+    FoodMeatDog: 33
+    FoodMeatSTBear: 85
+    FoodMeatBoarCooked: 195
+    FoodMeatDogCooked: 130
+    FoodMeatSTBearCooked: 390
+    FoodMeatSTFishFilletRaw: 65
+    FoodMeatSTFishSteakRaw: 130
+    FoodMeatSTEelRaw: 130
+    FoodMeatSTFishFilletCooked: 130
+    FoodMeatSTFishSteakCooked: 195
+    FoodMeatSTEelCooked: 325
+    STFoodMeatCvarci: 52
+    FoodMeatSTRatCooked: 13
+    FoodMeatSTRatJerked: 26
+    FoodMeatSTDogJerkedSingle: 130
+    FoodMeatSTBoarJerkedSingle: 250
+    FoodMeatSTBearJerkedSingle: 300
+    FoodMeatSTSuckerJerkedSingle: 900
+
+    # Cooking
+    FoodSTFreshCheese: 130
+    FoodSTRiceCooked: 403
+    FoodSTPancakes: 325
+    FoodSTOnionRings: 195
+    FoodSTFriedEggs: 390
+    FoodSTBorscht: 845
+    FoodSTCabbageSoup: 780
+    FoodSTMeatStew: 1235
+    FoodSTFriedFish: 585
+    FoodSTCakePlain: 618
+    FoodSTHrechanyky: 683
+    FoodSTSyrnyky: 1170
+    FoodSTDeruny: 748
+    FoodSTKebabMeat: 585
+    FoodSTKebabVeggie: 358
+    FoodSTCakeBerry: 1170
+    FoodSTSnorkSoup: 650
+    FoodSTIceCream: 390
+    FoodSTBraid: 650
+    FoodSTAmbrosia: 7150
+    FoodSTFrogLegs: 1040
+    FoodSTOracleGumbo: 1950
+    STFoodJarCherriesPickled: 2600
+    STFoodJarJamBerry: 2600
+    STFoodJarKvass: 4550
+    STFoodJarSalo: 650
+    STFoodJarEggs: 715
+    STFoodJarMeatSausage: 1008
+    STFoodJarMeatFishFillet: 455
+    STFoodJarMeatFishSteak: 1300
+    STFoodJarMeatEel: 1885
+    STFoodJarWholeEelFermented: 4030
+
+  categories:
+    - name: shop-category-ammunition
+      priority: 1
+      items:
+        # 20 gauge
+        62mmBuckshotBox: 30 # T0
+        75mmBuckshotBox: 150 # T1
+
+        # 7mm
+        7mmBuckshotBox: 50 # T0
+        6mmBuckshotBox: 200 # T1
+        8mmBuckshotBox: 450 # T2
+
+        # .45
+        45ACPRIPBox: 550 # Mutant
+
+        # 7.25
+        725LRNPCBox: 500 # Mutant
+
+        # 9.19
+        919RIPBox: 500 # Mutant
+
+        # 9.18
+        918SP7Box: 500 # Mutant
+
+        # 5.45
+        545HPBox: 425 # Mutant
+
+        # 5.56
+        556WarmagBox: 425 # Mutant
+
+        # 7.62
+        739HPBox: 500 # Mutant
+        751UNBox: 500 # Mutant
+        754HPBox: 650 # Mutant
+
+        # .357
+        MagazineBox357MagnumHP: 1500 # Mutant
+      
+    - name: shop-category-blueprints
+      priority: 2
+      items:
+        # Easy
+        STCookingFreshCheese: 500
+        STCookingRice: 500
+        STCookingPancakes: 500
+        STCookingOnionRings: 500
+        STCookingFriedEggs: 500
+        STCookingFrogLegs: 1000
+
+        # Normal
+        STCookingBorscht: 1000
+        STCookingCabbageSoup: 1000
+        STCookingMeatStew: 1500
+        STCookingDeruny: 1000
+        STCookingHrechanyky: 1000
+        STCookingSyrnyky: 1500
+        STCookingFriedFish: 750
+        STCookingCakePlain: 750
+        STCookingKebabMeat: 750
+        STCookingKebabVeggie: 500
+
+        # Hard
+        STCookingCakeBerry: 1500
+
+        # Strange
+        STCookingSnorkSoup: 750
+        STCookingIceCream: 500
+        STCookingBraid: 750
+        STCookingAmbrosia: 3000
+        STCookingOracleGumbo: 2500
+
+        # Jarred
+        STCookingPickledCherries: 3000
+        STCookingFermentedEel: 3000
+        STCookingPreservedEel: 2500
+        STCookingPickledEggs: 1000
+        STCookingPreservedFishSteak: 1750
+        STCookingBerryJam: 3000
+        STCookingKvass: 3000
+        STCookingRenderedSalo: 750
+        STCookingPickledSausage: 1500
+        STCookingPreservedFishFillets: 750
+      
+    - name: shop-category-utilities
+      priority: 3
+      items:
+        BookCookingStalkerHomemade: 20
+        HuntingKnife: 700
+        STCombatKnife: 50
+
+    - name: shop-category-provisions
+      priority: 4
+      items:
+        STFoodBreadPlain: 20
+        DrinkWaterBottleFull: 45
+        STFoodMeatSalami: 125
+        FoodTinMRE: 100
+        STEnergyDrink: 100
+        STEnergyDrinkMonster: 200
+        STEnergyDrinkRevo: 150
+        DrinkFlaskOld: 30
+        DrinkLemonadehBottleFull: 50
+        FoodSTTomato: 70
+        FoodSTCarrot: 55
+        FoodSTCabbage: 55
+        FoodSTOnion: 55
+        FoodSTCorn: 65
+        FoodSTMilkCarton: 75
+        FoodSTFreshCheese: 300
+        FoodSTSpice: 50
+        FoodSTYeast: 50
+        FoodSTFlour: 150
+        FoodSTSugar: 150
+        FoodSTEgg: 100
+        FoodSTOil: 100
+        FoodBowlBig: 200
+        Spoon: 75
+        HerculesBottleFull: 200
+        DrinkGlass: 100
+        DrinkShotGlass: 100

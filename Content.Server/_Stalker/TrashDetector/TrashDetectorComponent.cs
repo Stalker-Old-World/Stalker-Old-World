@@ -11,5 +11,14 @@ namespace Content.Server.TrashDetector.Components
 
         [DataField]
         public string Loot = "RandomTrashDetectorSpawner";
+        
+        [DataField]
+        public int RollsMin = 1;
+
+        [DataField]
+        public int RollsMax = 1;
+
+        [DataField]
+        public int RollsHardCap = 6;
     }
 }

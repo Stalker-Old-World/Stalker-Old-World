@@ -1,0 +1,83 @@
+﻿- type: entity
+  parent: NPCDoll
+  id: NPCGena
+  name: Gena [→   ←]
+  suffix: ST:OW, Trader, Butcher
+  description: She is a skilled butcher who came to the zone for its mutant wildlife.
+  components:
+    - type: Sprite
+      sprite: _Stalker/NPC/PovarGena.rsi
+      state: gena
+    - type: Physics
+      bodyType: Static
+    - type: Vocalizer
+    - type: DatasetVocalizer
+      dataset: NPCGenaButcherAds
+    - type: ActivatableUI
+      key: enum.ShopUiKey.Key
+      singleUser: true
+    - type: UserInterface
+      interfaces:
+        enum.ShopUiKey.Key:
+          type: ShopBoundUserInterface
+    - type: Shop
+      moneyId: Roubles
+      shopPresetId: STOWGenaButcherPreset
+      buybackMaxItems: 0
+    - type: TypingIndicator
+      proto: robot
+    - type: TTS # Corvax-TTS
+      voice: TrainingRobot
+    - type: Speech
+      speechVerb: Robotic
+      speechSounds: Alto
+    - type: IntrinsicRadioReceiver
+    - type: IntrinsicRadioTransmitter
+      channels:
+        - Binary
+    - type: ActiveRadio
+      channels:
+        - Binary
+        - Common
+
+- type: entity
+  parent: NPCDoll
+  id: NPCMaksimkaOW
+  name: Maksimka "Magpie" [→   ←]
+  suffix: ST:OW, Trader, Materials
+  description: A material specialist who buys excess crafting components from stalkers for unknown purposes.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/NPCs/maksimka.rsi
+      state: base
+    - type: Physics
+      bodyType: Static
+    - type: Vocalizer
+    - type: DatasetVocalizer
+      dataset: NPCMaksimkaMaterialsAds
+    - type: ActivatableUI
+      key: enum.ShopUiKey.Key
+      singleUser: true
+    - type: UserInterface
+      interfaces:
+        enum.ShopUiKey.Key:
+          type: ShopBoundUserInterface
+    - type: Shop
+      moneyId: Roubles
+      shopPresetId: STOWMaksimkaMaterialsPreset
+      buybackMaxItems: 0
+    - type: TypingIndicator
+      proto: robot
+    - type: TTS # Corvax-TTS
+      voice: TrainingRobot
+    - type: Speech
+      speechVerb: Robotic
+      speechSounds: Alto
+    - type: IntrinsicRadioReceiver
+    - type: IntrinsicRadioTransmitter
+      channels:
+        - Binary
+    - type: ActiveRadio
+      channels:
+        - Binary
+        - Common

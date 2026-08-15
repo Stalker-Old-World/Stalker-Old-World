@@ -1,0 +1,13 @@
+﻿# Stalker: OW NPCs
+
+- type: localizedDataset
+  id: NPCGenaButcherAds
+  values:
+    prefix: advertisement-gena-butcher-
+    count: 12
+
+- type: localizedDataset
+  id: NPCMaksimkaMaterialsAds
+  values:
+    prefix: advertisement-maksimka-materials-
+    count: 12

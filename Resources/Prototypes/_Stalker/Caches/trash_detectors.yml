@@ -1,6 +1,7 @@
 - type: entity
   id: RandomTrashDetectorSpawner
-  name: спавнер случайного мусора (металлоискатель)
+  #name: спавнер случайного мусора (металлоискатель) # ST:OW
+  name: random garbage spawner (metal detector) # ST:OW
   suffix: Stalker
   parent: FlexibleMarker
   components:
@@ -9,56 +10,100 @@
       state: icon
     - type: RandomSpawner
       prototypes:
-        # Tier 2 Crafting Materials
-        - STCraftStandardPCBT2
-        - STCraftTapeKitT2
-        - STCraftHideT2
-        - STCraftGlassT2
-        - STCraftBirchPlankT2
-        - STCraftPlasticFittingT2
-        - STCraftSheetIronT2
-        # values
-        - STJewelryGold
-        - STJewelrySilver
-        - STWristwatchGold
+      # ST:OW begin
+      # Tier 1
+      - STCraftSheetCopperT1
+      - STCraftPlasticFittingT1
+      - STCraftPinePlankT1
+      - STCraftGlassT1
+      - STCraftCottonFabricT1
+      - STCraftBasicThreadKitT1
+      - STCraftBasicPCBT1
+    
+      # Tier 2
+      - STCraftSheetIronT2
+      - STCraftPlasticFittingT2
+      - STCraftBirchPlankT2
+      - STCraftGlassT2
+      - STCraftHideT2
+      - STCraftTapeKitT2
+      - STCraftStandardPCBT2
+    
+      # Electronics
+      - STCraftBattery
+      - STCraftCoil
+      - STCraftCapacitor
+      - STCraftTransformer
+      
+      # Currency 
+      - Roubles500
+      - Roubles1000
+      - Roubles2000
 
+      # Rare (T3 items)
       rarePrototypes:
-        # Tier 3 Crafting Materials (перенесены в редкие)
-        - STCraftMultilayerPCBT3
-        - STCraftGlueKitT3
-        - STCraftSturdyHideT3
-        - STCraftQuartzCrystalT3
-        - STCraftOakPlankT3
-        - STCraftPlasticFittingT3
-        - STCraftSheetBrassT3
+      - STCraftSheetBrassT3
+      - STCraftPlasticFittingT3
+      - STCraftOakPlankT3
+      - STCraftQuartzCrystalT3
+      - TCraftSturdyHideT3
+      - STCraftGlueKitT3
+      - STCraftMultilayerPCBT3
+    
+      # Weapons
+      - STWeaponShotgunMP153
+      - STWeaponShotgunMossbergM88
+      - WeaponPistolStalkerAPS
+      - KhattabkaGrenade
+      - STWeaponRifleAKS74U
+      - STWeaponRifleSaiga545
+      - STWeaponSniperMosin
+      - STWeaponSniperSKS
+    
+      # Utility Items
+      - DoubleEmergencyOxygenTankStalkerFilled
+      - ExtendedEmergencyOxygenTankFilledStalker
+      - Binocularus1
+  
+      # Jewelry
+      - STGoldRingBigDiamond
+      
+      # Currency
+      - Roubles5000
+      rareChance: 0.15 # 15%
 
-        #  Weapons
-        - STWeaponShotgunMP153
-        - STWeaponShotgunMossbergM88
-        - WeaponPistolStalkerAPS
-        - KhattabkaGrenade
-        - STWeaponRifleAKS74U
-        - STWeaponRifleSaiga545
-        - STWeaponSniperMosin
-        - STWeaponSniperSKS
+      epicPrototypes:
+      - STCraftSheetAluminumT4
+      - STCraftPlasticFittingT4
+      - STCraftYewPlankT4
+      - STCraftSapphireCrystalT4
+      - TCraftPolymerFabricT4
+      - STCraftIndustrialThreadStaplesKitT4
+      - STCraftHighPerformanceChipT4
+      epicChance: 0.006 # 0.6%
 
-        # Utility Items
-        - DoubleEmergencyOxygenTankStalkerFilled
-        - ExtendedEmergencyOxygenTankFilledStalker
-        - Binocularus1
-
-        #Jewelery
-        - STGoldRingBigDiamond
-      rareChance: 0.05   # 5% шанс спавна редкого предмета
-      chance: 1
-      offset: 0.5
+      legendaryPrototypes:
+      - STCraftSheetSteelT5
+      - STCraftPlasticFittingT5
+      - STCraftRedWoodPlankT5
+      - STCraftAluminumOxideT5
+      - TCraftCompositeMaterialT5
+      - STCraftHighStrengthKitT5
+      - STCraftNanoChipT5
+      legendaryChance: 0.0015 # 0.15% (about 1 in 667 successful spawns)
+      # ST:OW end
 
 - type: entity
   parent: BaseItem
   id: TrashDetectorTier1
-  name: металлоискатель "Простофиля"
-  description: Сделан из говна и палок, но если порыться им в больших кучах мусора, то возможно вы что-то найдете.
-  suffix: Stalker, металлоискатель
+  # ST:OW begin
+  #name: металлоискатель "Простофиля"
+  #description: Сделан из говна и палок, но если порыться им в больших кучах мусора, то возможно вы что-то найдете.
+  #suffix: Stalker, металлоискатель
+  name: metal detector "Prostofil"
+  description: Made of junk and sticks, but if you rummage through large piles of garbage, you might find something.
+  suffix: Stalker, metal detector
+  # ST:OW end
   components:
     - type: STWeight
       self: 6
@@ -70,15 +115,20 @@
       sprite: _Stalker/Objects/Tools/Trash_detectors/T1_trash_detector.rsi
       state: icon
     - type: TrashDetector
-      searchTime: 40
-      probability: 0.1
+      searchTime: 25
+      probability: 0.50
 
 - type: entity
   parent: BaseItem
   id: TrashDetectorTier2
-  name: металлоискатель "Копатель"
-  description: Хороший металлоискатель, качественно сделанный. Если порыться им в больших кучах мусора, то возможно вы что-то найдете.
-  suffix: Stalker, металлоискатель
+  # ST:OW begin
+  #name: металлоискатель "Копатель"
+  #description: Хороший металлоискатель, качественно сделанный. Если порыться им в больших кучах мусора, то возможно вы что-то найдете.
+  #suffix: Stalker, металлоискатель
+  name: metal detector "Digger"
+  description: A good, well-made metal detector. If you rummage through large piles of garbage, you might find something.
+  suffix: Stalker, metal detector
+  # ST:OW end
   components:
     - type: STWeight
       self: 4.5
@@ -90,15 +140,20 @@
       sprite: _Stalker/Objects/Tools/Trash_detectors/T2_trash_detector.rsi
       state: icon
     - type: TrashDetector
-      searchTime: 20
-      probability: 0.3
+      searchTime: 15
+      probability: 0.75
 
 - type: entity
   parent: BaseItem
   id: TrashDetectorTier3
-  name: металлоискатель "Шахтёр"
-  description: Дорогой, импортный металлоискатель. Прямо из Германии. Если порыться им в больших кучах мусора, то возможно вы что-то найдете.
-  suffix: Stalker, металлоискатель
+  # ST:OW begin
+  #name: металлоискатель "Шахтёр"
+  #description: Дорогой, импортный металлоискатель. Прямо из Германии. Если порыться им в больших кучах мусора, то возможно вы что-то найдете.
+  #suffix: Stalker, металлоискатель
+  name: metal detector "Shakhter"
+  description: An expensive imported metal detector, straight from Germany. If you rummage through large piles of garbage, you will most likely find something.
+  suffix: Stalker, metal detector
+  # ST:OW end
   components:
     - type: STWeight
       self: 3.5
@@ -110,15 +165,20 @@
       sprite: _Stalker/Objects/Tools/Trash_detectors/T3_trash_detector.rsi
       state: icon
     - type: TrashDetector
-      searchTime: 20
-      probability: 0.5
+      searchTime: 10
+      probability: 0.85
 
 - type: entity
   parent: BaseItem
   id: TrashDetectorTier4
-  name: металлоискатель "Находка"
-  description: Очень Дорогой, металлоискатель модиффицированный с помощью частей гравитационных артефактов. Если порыться им в больших кучах мусора, то с большой вероятностью вы что-то найдете.
-  suffix: Stalker, металлоискатель
+  # ST:OW begin
+  #name: металлоискатель "Находка"
+  #description: Очень Дорогой, металлоискатель модиффицированный с помощью частей гравитационных артефактов. Если порыться им в больших кучах мусора, то с большой вероятностью вы что-то найдете.
+  #suffix: Stalker, металлоискатель
+  name: metal detector "Nakhodka"
+  description: A very expensive metal detector modified with gravity artifact parts. If you rummage through large piles of garbage, you have a very high chance to find something.
+  suffix: Stalker, metal detector
+  # ST:OW end
   components:
     - type: STWeight
       self: 0.5
@@ -131,14 +191,22 @@
       state: icon
     - type: TrashDetector
       searchTime: 5
-      probability: 0.80
+      probability: 1
+      rollsMin: 1
+      rollsMax: 3
+      rollsHardCap: 3
 
 - type: entity
   parent: BaseItem
   id: TrashDetectorTier5
-  name: металлоискатель "Аномалист"
-  description: Крайне Дорогой, металлоискатель, является улучшенной версией металлоискателя "Находка". Обладает исключительными свойствами по поиску сборочных компонентов. Если порыться им в больших кучах мусора, то вы обязательно что-то найдете.
-  suffix: Stalker, металлоискатель
+  # ST:OW begin
+  #name: металлоискатель "Аномалист"
+  #description: Крайне Дорогой, металлоискатель, является улучшенной версией металлоискателя "Находка". Обладает исключительными свойствами по поиску сборочных компонентов. Если порыться им в больших кучах мусора, то вы обязательно что-то найдете.
+  #suffix: Stalker, металлоискатель
+  name: metal detector "Anomalist"
+  description: An extremely expensive metal detector and an improved version of "Nakhodka". It has exceptional properties for finding crafting components. If you rummage through large piles of garbage, you will definitely find something.
+  suffix: Stalker, metal detector
+  # ST:OW end
   components:
     - type: STWeight
       self: -2
@@ -152,3 +220,6 @@
     - type: TrashDetector
       searchTime: 2
       probability: 1
+      rollsMin: 1
+      rollsMax: 6
+      rollsHardCap: 6
