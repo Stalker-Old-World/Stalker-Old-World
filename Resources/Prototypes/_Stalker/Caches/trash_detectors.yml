@@ -77,7 +77,7 @@
       - STCraftPlasticFittingT4
       - STCraftYewPlankT4
       - STCraftSapphireCrystalT4
-      - TCraftPolymerFabricT4
+      - STCraftPolymerFabricT4
       - STCraftIndustrialThreadStaplesKitT4
       - STCraftHighPerformanceChipT4
       epicChance: 0.006 # 0.6%
@@ -87,7 +87,7 @@
       - STCraftPlasticFittingT5
       - STCraftRedWoodPlankT5
       - STCraftAluminumOxideT5
-      - TCraftCompositeMaterialT5
+      - STCraftCompositeMaterialT5
       - STCraftHighStrengthKitT5
       - STCraftNanoChipT5
       legendaryChance: 0.0015 # 0.15% (about 1 in 667 successful spawns)
