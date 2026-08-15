@@ -12,40 +12,40 @@
     STCraftBasicPCBT1: 120
 
     # Tier 2
-    STCraftSheetIronT2: 160
-    STCraftPlasticFittingT2: 160
-    STCraftBirchPlankT2: 160
-    STCraftGlassT2: 160
-    STCraftHideT2: 160
-    STCraftTapeKitT2: 160
-    STCraftStandardPCBT2: 160
+    STCraftSheetIronT2: 240
+    STCraftPlasticFittingT2: 240
+    STCraftBirchPlankT2: 240
+    STCraftGlassT2: 240
+    STCraftHideT2: 240
+    STCraftTapeKitT2: 240
+    STCraftStandardPCBT2: 240
 
     # Tier 3
-    STCraftSheetBrassT3: 220
-    STCraftPlasticFittingT3: 220
-    STCraftOakPlankT3: 220
-    STCraftQuartzCrystalT3: 220
-    TCraftSturdyHideT3: 220
-    STCraftGlueKitT3: 220
-    STCraftMultilayerPCBT3: 220
+    STCraftSheetBrassT3: 480
+    STCraftPlasticFittingT3: 480
+    STCraftOakPlankT3: 480
+    STCraftQuartzCrystalT3: 480
+    STCraftSturdyHideT3: 480
+    STCraftGlueKitT3: 480
+    STCraftMultilayerPCBT3: 480
 
     # Tier 4
-    STCraftSheetAluminumT4: 300
-    STCraftPlasticFittingT4: 300
-    STCraftYewPlankT4: 300
-    STCraftSapphireCrystalT4: 300
-    TCraftPolymerFabricT4: 300
-    STCraftIndustrialThreadStaplesKitT4: 300
-    STCraftHighPerformanceChipT4: 300
+    STCraftSheetAluminumT4: 960
+    STCraftPlasticFittingT4: 960
+    STCraftYewPlankT4: 960
+    STCraftSapphireCrystalT4: 960
+    STCraftPolymerFabricT4: 960
+    STCraftIndustrialThreadStaplesKitT4: 960
+    STCraftHighPerformanceChipT4: 960
 
     # Tier 5
-    STCraftSheetSteelT5: 420
-    STCraftPlasticFittingT5: 420
-    STCraftRedWoodPlankT5: 420
-    STCraftAluminumOxideT5: 420
-    TCraftCompositeMaterialT5: 420
-    STCraftHighStrengthKitT5: 420
-    STCraftNanoChipT5: 420
+    STCraftSheetSteelT5: 1920
+    STCraftPlasticFittingT5: 1920
+    STCraftRedWoodPlankT5: 1920
+    STCraftAluminumOxideT5: 1920
+    STCraftCompositeMaterialT5: 1920
+    STCraftHighStrengthKitT5: 1920
+    STCraftNanoChipT5: 1920
 
     # Electronic components
     STCraftBattery: 180

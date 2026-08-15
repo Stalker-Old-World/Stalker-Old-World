@@ -35,6 +35,14 @@
       - STCraftCapacitor
       - STCraftTransformer
       
+      # Utility
+      - MedkitAI2
+      
+      # Jewelery
+      - STJewelryGold
+      - STJewelrySilver
+      - STWristwatchGold
+      
       # Currency 
       - Roubles500
       - Roubles1000
@@ -54,6 +62,7 @@
       - STWeaponShotgunMP153
       - STWeaponShotgunMossbergM88
       - WeaponPistolStalkerAPS
+      - RGD5Grenade
       - KhattabkaGrenade
       - STWeaponRifleAKS74U
       - STWeaponRifleSaiga545
@@ -61,16 +70,15 @@
       - STWeaponSniperSKS
     
       # Utility Items
-      - DoubleEmergencyOxygenTankStalkerFilled
-      - ExtendedEmergencyOxygenTankFilledStalker
-      - Binocularus1
+      - MedkitMilitary
+      - MedkitScience
   
       # Jewelry
       - STGoldRingBigDiamond
       
       # Currency
       - Roubles5000
-      rareChance: 0.15 # 15%
+      rareChance: 0.10 # 10%
 
       epicPrototypes:
       - STCraftSheetAluminumT4
