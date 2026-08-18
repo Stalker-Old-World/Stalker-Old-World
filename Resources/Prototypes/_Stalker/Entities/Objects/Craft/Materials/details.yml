@@ -1,0 +1,87 @@
+
+- type: entity
+  parent: STBaseIngridient
+  id: STCraftBattery
+  name: аккумулятор
+  description: Аккумулятор.
+  suffix: Stalker, крафт
+  components:
+    - type: Sprite
+      state: battery
+      sprite: _Stalker/Objects/Craft/Materials/details.rsi
+    - type: Stack
+      stackType: STCraftBattery
+      count: 1
+    - type: Craftable
+    - type: RepositoryItem
+      categoryName: repository-materials-category
+
+- type: entity
+  parent: STBaseIngridient
+  id: STCraftCoil
+  name: катушка
+  description: Катушка.
+  suffix: Stalker, крафт
+  components:
+    - type: Sprite
+      state: coil
+      sprite: _Stalker/Objects/Craft/Materials/details.rsi
+    - type: Stack
+      stackType: STCraftCoil
+      count: 1
+    - type: Craftable
+    - type: RepositoryItem
+      categoryName: repository-materials-category
+
+- type: entity
+  parent: STBaseIngridient
+  id: STCraftCapacitor
+  name: конденсатор
+  description: Конденсатор.
+  suffix: Stalker, крафт
+  components:
+    - type: Sprite
+      state: capacitor
+      sprite: _Stalker/Objects/Craft/Materials/details.rsi
+    - type: Stack
+      stackType: STCraftCapacitor
+      count: 1
+    - type: Craftable
+    - type: RepositoryItem
+      categoryName: repository-materials-category
+
+- type: entity
+  parent: STBaseIngridient
+  id: STCraftTransformer
+  name: трансформатор
+  description: Трансформатор.
+  suffix: Stalker, крафт
+  components:
+    - type: Sprite
+      state: transformer
+      sprite: _Stalker/Objects/Craft/Materials/details.rsi
+    - type: Stack
+      stackType: STCraftTransformer
+      count: 1
+    - type: Craftable
+    - type: RepositoryItem
+      categoryName: repository-materials-category
+
+- type: entity
+  parent: STBaseIngridient
+  id: STCraftAnomalyDust
+  name: anomaly essence
+  description: Unstable anomalous substance. Used in disassembly and crafting.
+  suffix: Stalker, craft, anomaly essence
+  components:
+    - type: Sprite
+      state: core
+      sprite: Structures/Specific/Anomalies/Cores/gravity_core.rsi
+    - type: Item
+      sprite: Structures/Specific/Anomalies/Cores/gravity_core.rsi
+    - type: Stack
+      stackType: STAnomalyDust
+      count: 1
+    - type: Craftable
+    - type: RepositoryItem
+      categoryName: repository-materials-category

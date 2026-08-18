@@ -1,0 +1,10 @@
+- type: entity
+  parent: STClothingHeadHelmetCombatT2Base
+  id: ClothingHeadHelmetInfantryMilitary
+  name: military helmet «East»
+  description: «East» brand helmet with II level protection, manufacturer is unknown. Now in army colours.
+  components:
+    - type: Sprite
+      sprite: _Stalker_EN/Objects/Clothing/Head/military_Easthelmet.rsi
+    - type: Clothing
+      sprite: _Stalker_EN/Objects/Clothing/Head/military_Easthelmet.rsi

@@ -1,0 +1,9 @@
+ent-STClothingOuterArmorVeryHeavy = KSN-13 Behemoth
+    .desc = Behemoth Special Purpose Suit, used by state operatives in the Chernobyl Exclusion Zone.
+    .suffix = ST, T4, PvE
+ent-STClothingOuterArmorVeryHeavySci = КSN-13-М
+    .desc = The “Behemoth” Special Purpose Suit is used by government operatives in the Zone.
+    .suffix = ST, T4, PvE
+ent-STClothingOuterArmorGonchiy = KSN-X 'Hound'
+    .desc = A suit with camouflage elements, designed for fast and comfortable movement around the Zone.
+    .suffix = ST, T4

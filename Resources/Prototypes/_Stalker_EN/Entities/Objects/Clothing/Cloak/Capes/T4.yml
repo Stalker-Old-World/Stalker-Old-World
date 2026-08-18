@@ -1,0 +1,11 @@
+- type: entity
+  parent: STClothingCapeArmorChainmailSeva
+  id: ClothingCapeArmorChainmailSevaNeutral
+  name: Neutral chainmail cloak
+  suffix: ST, T4
+  description: "A thick chain cloak, adorned with the Neutrals' signature colour"
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/neutral_chaincloak.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/neutral_chaincloak.rsi

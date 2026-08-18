@@ -1,0 +1,44 @@
+- type: entity
+  id: Base545MagRPK
+  name: магазин РПК
+  description: Магазин 5.45х39 для РПК.
+  parent: BaseItem
+  suffix: Stalker
+  components:
+  - type: STBulkBuyable # stalker-14-en
+    maxQuantity: 10
+  - type: STWeight
+    self: 0.5
+  - type: Tag
+    tags:
+      - MagazineRPK
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - STCartridge545
+    capacity: 60
+  - type: Item
+    size: Small
+    shape:
+      - 0,0,0,2
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+      storagebase: !type:Container
+        ents: [ ]
+      item_slot: !type:ContainerSlot { }
+  - type: RepositoryItem
+    categoryName: Магазины
+  - type: Sprite
+    sprite: _Stalker/Objects/Weapons/Guns/Ammunition/Magazines/rpk.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance

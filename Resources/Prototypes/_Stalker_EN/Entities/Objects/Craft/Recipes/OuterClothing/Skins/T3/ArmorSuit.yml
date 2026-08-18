@@ -1,0 +1,9 @@
+- type: lightCraftingRecipe
+  id: STCraftSkinClothingOuterArmorNeutralBadger
+  results:
+    - ClothingOuterArmorNeutralBadger
+  steps:
+    firstIngredient: STSkinsKitNeutral
+    secondIngredient: ClothingOuterArmorStalker
+    keepFirst: true
+    time: 5

@@ -1,0 +1,72 @@
+#-----------------------Dolla-----------------------
+- type: shopPreset
+  id: EcologistDollarFaction
+  itemsForSale:
+    ZoneArtifactFireball: 0
+
+
+  categories:
+#  - name: shop-category-weapons
+#    priority: 1
+#    items:
+      #Special
+#  - name: shop-category-magazines
+#    priority: 2
+#    items:
+      #Special
+  - name: shop-category-ammunition
+    priority: 3
+    items:
+      KhattabkaGrenade: 2
+      DG05SmokeGrenade: 3
+      TearGasGrenadeStalker: 3
+#      SingularityGrenade: 25 Could be cool to have a mulcher grenade, need to find a treat for eco dollar
+  - name: shop-category-armor
+    priority: 4
+    items:
+      STClothingOuterArmorVeryHeavySci: 450
+  - name: shop-category-storage-and-containers
+    priority: 5
+    items:
+      ClothingBackpackDuffelBlackTacticStalker: 90
+      ClothingBackpackDuffelOliveTacticStalker: 90
+  - name: shop-category-research-equipment
+    priority: 7
+    items:
+      ZoneAnomalyDetectorAD3: 30
+  - name: shop-category-medicine
+    priority: 10
+    items:
+      BoxMRE: 5
+      MedkitMilitary: 3
+      MedkitScience: 5
+      MedkitElite: 15
+      MedkitLAR: 20
+      ThermoOintment: 5
+      STOintmentGood: 5
+      STTourniquet: 3
+      DefibrillatorCompact: 75
+#  - name: shop-category-modules
+#    priority: 11
+#    items:
+      #Special
+
+
+# Machine
+- type: entity
+  parent: StalkerShop
+  id: DollarShopEcologist
+  name: Ecologist Dollar Shop
+  description: Premium gear sold for USD.
+  suffix: ST, EN, Mapping, Dollar, Shop
+  components:
+    - type: Sprite
+      drawdepth: Objects
+      sprite: _Stalker/Structures/Machines/VendingMachines/torgomat_black.rsi
+      layers:
+        - state: torgomat_black
+          map: [ "enum.ConstructionVisuals.Layer" ]
+        - state: normal-unshaded
+    - type: Shop
+      moneyId: Dollar
+      shopPresetId: EcologistDollarFaction

@@ -1,0 +1,61 @@
+- type: entity
+  parent: STClothingOuterArmorSevaBase
+  id: ClothingOuterArmorSevaSciMauve
+  name: Mauve Seva
+  description: "A specialized SEVA in a striking shade of purple purpose built for psionic shielding. The delicate construction is easily damaged and requires regular calibrating."
+  components:
+    - type: Sprite
+      sprite: _Stalker_EN/Objects/Clothing/outerClothing/seva_sci_mauve.rsi
+    - type: Clothing
+      sprite: _Stalker_EN/Objects/Clothing/outerClothing/seva_sci_mauve.rsi
+    - type: ToggleableClothing
+      clothingPrototype: ClothingHeadHardsuitSevaHelmSciMauve
+      slot: head
+    - type: Armor
+      armorClass: 1
+      modifiers:
+        flatReductions:
+          Blunt: 2
+          Slash: 2
+          Piercing: 1
+          Heat: 3
+          Radiation: 3
+          Caustic: 2
+          Psy: 2
+        coefficients:
+          Blunt: 0.8
+          Slash: 0.9
+          Piercing: 0.85
+          Heat: 0.50
+          Radiation: 0.7
+          Caustic: 0.7
+          Shock: 0.9
+          Compression: 0.7
+    - type: GrantsArtifactSlots
+      slots: 4 # EN
+
+- type: entity
+  parent: STClothingHeadHardsuitSevaHelmBase
+  id: ClothingHeadHardsuitSevaHelmSciMauve
+  name: Mauve Seva Helmet
+  description: "A specialized SEVA in a striking shade of purple purpose built for psionic shielding"
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/hats/seva_sci_helm_mauve.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/hats/seva_sci_helm_mauve.rsi
+  - type: Armor
+    armorClass: 1
+    modifiers:
+      flatReductions:
+        Radiation: 4
+        Caustic: 1
+        Psy: 3
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Compression: 0.95
+        Psy: 0.4
+  - type: PsyHelmet

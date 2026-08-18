@@ -1,0 +1,109 @@
+#Silent Hill Mannequin made by Nahuel
+- type: entity
+  parent: BaseMobMutant
+  id: STMobMutantMannequin
+  name: Mannequin
+  suffix: ST, T3, SH
+  description: A creature composed of two lower halves of what looks like mannequins connected by the waist. It has bandages wrapped around some parts.
+  components:
+  - type: Sprite
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base", "movement" ]
+        sprite: /Textures/_Stalker_EN/Mobs/Mutants/mannequin.rsi
+        state: alive-1
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: alive-3
+    noMovementLayers:
+      movement:
+        state: alive-1
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive-1
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      500: Dead
+  - type: Damageable
+    damageModifierSet: STMutantT3DamageModifierSet
+  - type: Bloodstream
+    bloodReagents:
+      reagents:
+      - ReagentId: MuteToxin
+        Quantity: 1
+    bloodMaxVolume: 100
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      400: 1.2
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_Stalker_EN/Mutants/mannequin_death.ogg
+  - type: Butcherable
+    spawned:
+    - id: STCraftPlasticFittingT2 # I'd like to make an actual part in the future
+      amount: 1
+  - type: STWeight
+    self: 65
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2.5
+    baseSprintSpeed: 3.6
+  - type: MeleeWeapon
+    attackRate: 0.7
+    angle: 30
+    range: 1.5
+    soundHit:
+          path: /Audio/_Stalker_EN/Mutants/mannequin_hit.ogg
+          params:
+           variation: 0.125
+    soundSwing:
+      path: /Audio/_Stalker_EN/Mutants/mannequin_miss.ogg
+      params:
+        variation: 0.125
+    animation: WeaponArcSmash
+    wideAnimation: WeaponArcSmash
+    damage:
+      types:
+        Blunt: 45
+  - type: BonusMeleeDamage
+    heavyDamageMultiplier: 1.5
+  - type: StaminaDamageOnHit
+    damage: 40
+  - type: Puller
+    needsHands: false
+  - type: HTN
+    rootTask:
+      task: STAmbushHostileCompound # stand still until a player comes within VisionRadius (or it's damaged), then hunt like a normal mutant
+    blackboard:
+      VisionRadius: !type:Single
+        2 # proximity trigger: won't notice players past 3 tiles
+      AggroVisionRadius: !type:Single
+        20 # once provoked, keeps hunting out to 20 tiles before re-freezing
+  #- type: MeleeThrowOnHit
+  #  speed: 3
+  #  distance: 0.5
+  - type: NPCRetaliation
+    attackMemoryLength: 20 # 20 what?
+  - type: NpcFactionMember
+    factions:
+    - Mutated
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damage:
+      types:
+        Burn: -100
+        Toxin: -100
+        Airloss: -100
+        Psy: -100
+        Radiation: -100

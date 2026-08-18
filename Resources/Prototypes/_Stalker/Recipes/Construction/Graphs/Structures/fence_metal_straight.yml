@@ -1,0 +1,19 @@
+- type: constructionGraph
+  id: FenceMetalStraight
+  start: full
+  graph:
+    - node: full
+      entity: Barricade
+      edges:
+        - to: full
+          completed:
+            - !type:SpawnPrototype
+              prototype: PartRodMetalStalker
+              amount: 2
+            - !type:DeleteEntity {}
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tool: Biting
+              doAfter: 60

@@ -1,0 +1,66 @@
+﻿- type: entity
+  id: MoonshineStillActive
+  parent: MoonshineStill
+  name: moonshine still
+  suffix: ST, Mapping, Active
+  description: The lid is closed tight. It needs some time to work.
+  components:
+  - type: AmbientSound
+    enabled: true
+    volume: -5
+    range: 8
+    sound:
+      path: /Audio/_Stalker_EN/Effects/bubbling.ogg
+  - type: TimedDespawn
+    lifetime: 300 # 5 min
+  - type: SpawnOnDespawn
+    prototype: MoonshineStillFull
+
+- type: entity
+  id: MoonshineStillFull
+  parent: MoonshineStill
+  name: moonshine still
+  suffix: ST, Mapping, Full
+  description: It's stopped bubbling, hopefully it's safe to open. Jar that moonshine!
+  components:
+  - type: Craftable
+
+- type: lightCraftingRecipe
+  id: STJarMoonshineCraft
+  results:
+  - MoonshineStill
+  - STDrinkJarMoonshine
+  steps:
+    firstIngredient: MoonshineStillFull
+    secondIngredient: STDrinkJar
+    time: 3
+
+# im zen actually. i dont even care. look at how much i dont care.
+- type: constructionGraph
+  id: MoonshineStillActive
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: STStill
+      steps:
+      - tag: STSugar
+        name: construction-insert-info-examine-name-sugar
+        icon:
+          sprite: Objects/Consumable/Food/ingredients.rsi
+          state: sugar-big
+        doAfter: 1
+      - tag: STCorn
+        name: construction-insert-info-examine-name-corn
+        icon:
+          sprite: Objects/Specific/Hydroponics/corn.rsi
+          state: produce
+        doAfter: 1
+      - tag: STYeast
+        name: construction-insert-info-examine-name-yeast
+        icon:
+          sprite: _Stalker_EN/Objects/Consumable/Food/ingredients.rsi
+          state: yeast
+        doAfter: 1
+  - node: STStill
+    entity: MoonshineStillActive

@@ -1,0 +1,47 @@
+- type: entity
+  parent: BaseArrow
+  id: STArrowboltbroadhead
+  name: Broadhead Bolt
+  description: An arrow most fit for hunting, Still usable against weaker armor
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/arrows.rsi
+    layers:
+    - state: tail
+      color: white
+    - state: rod
+      color: red
+    - state: tip
+      color: darkgray
+    - state: solution1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Projectile
+    projectileClass: 2
+    damage:
+      types:
+        Slash: 35
+        Mutant: 120
+
+- type: entity
+  parent: BaseArrow
+  id: STArrowboltbodkin
+  name: Bodkin point Arrow
+  description: A much thinner arrow, designed around piercing heavy armor
+  components:
+  - type: Sprite
+    layers:
+    - state: tail
+      color: red
+    - state: rod
+      color: brown
+    - state: tip
+      color: darkgray
+    - state: solution1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Projectile
+    projectileClass: 3
+    damage:
+      types:
+        Piercing: 50

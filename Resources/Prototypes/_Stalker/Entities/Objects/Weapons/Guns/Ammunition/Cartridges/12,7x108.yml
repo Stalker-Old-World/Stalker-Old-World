@@ -1,0 +1,46 @@
+- type: entity
+  id: BaseSTCartridge50bmg
+  name: cartridge (12,7x108 rifle)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - STCartridge50bmg
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+    state: "base"
+  - type: STWeight
+    self: 0.02
+
+- type: entity
+  id: STCartridge50bmgFMJ
+  name: 50 BMG FMJ
+  parent: BaseSTCartridge50bmg
+  components:
+    - type: CartridgeAmmo
+      proto: Bullet50bmgFMJ
+
+- type: entity
+  id: STCartridge50bmgPC
+  name: Патрон (12,7x108)ПС
+  parent: BaseSTCartridge50bmg
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet50bmgPC
+
+- type: entity
+  id: STCartridge50bmgHPBT
+  name: 50 BMG HP BT
+  parent: BaseSTCartridge50bmg
+  components:
+  - type: CartridgeAmmo
+    proto: Bullet50bmgHPBT

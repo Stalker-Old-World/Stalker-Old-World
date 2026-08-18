@@ -1,0 +1,10 @@
+<PanelContainer
+    xmlns="https://spacestation14.io"
+    xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+    HorizontalExpand="True">
+
+        <PanelContainer.PanelOverride>
+            <graphics:StyleBoxFlat BackgroundColor="#000000FF" BorderColor="#4A4A4A" BorderThickness="2"/>
+        </PanelContainer.PanelOverride>
+        <RichTextLabel Name="CategoryLabel" Margin="5 10" HorizontalExpand="True"/>
+</PanelContainer>

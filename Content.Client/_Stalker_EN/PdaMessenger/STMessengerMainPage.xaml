@@ -1,0 +1,64 @@
+<BoxContainer xmlns="https://spacestation14.io"
+              xmlns:msg="clr-namespace:Content.Client._Stalker_EN.PdaMessenger"
+              xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+              xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
+              Orientation="Vertical"
+              HorizontalExpand="True"
+              VerticalExpand="True"
+              Margin="4">
+
+    <!-- Header -->
+    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="0 0 0 4" MinSize="0 28">
+        <AnimatedTextureRect Name="HeaderIcon" Access="Public" SetSize="20 20" VerticalAlignment="Center" Margin="0 0 16 0"/>
+        <Label Name="HeaderLabel" StyleClasses="LabelHeading" Text="{Loc 'st-messenger-header-title'}" HorizontalExpand="True" VerticalAlignment="Center"/>
+        <Label Name="MessengerIdLabel" StyleClasses="LabelSubText" VerticalAlignment="Center"/>
+    </BoxContainer>
+
+    <!-- Emission Warning -->
+    <Label Name="EmissionWarningLabel" Text="{Loc 'st-messenger-emission-warning'}" StyleClasses="LabelKeyText" HorizontalAlignment="Center" Margin="0 4 0 4" Visible="False"/>
+
+    <customControls:HSeparator Margin="0 2 0 2"/>
+
+    <BoxContainer Orientation="Horizontal" VerticalExpand="True">
+        <!-- Channels Section -->
+        <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" SizeFlagsStretchRatio="2" Margin="8 0 0 0">
+            <Label Text="{Loc 'st-messenger-channels-header'}" StyleClasses="LabelKeyText" Margin="0 4 0 2"/>
+            <ScrollContainer VerticalExpand="True" HScrollEnabled="False" MinSize="0 75" SizeFlagsStretchRatio="1">
+                <BoxContainer Name="ChannelList" Orientation="Vertical" HorizontalExpand="True"/>
+            </ScrollContainer>
+        </BoxContainer>
+
+        <customControls:VSeparator Margin="0 4 0 4"/>
+
+        <!-- Contacts Section -->
+        <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" SizeFlagsStretchRatio="3" Margin="8 0 0 0">
+            <Label Text="{Loc 'st-messenger-contacts-header'}" StyleClasses="LabelKeyText" Margin="0 4 0 2"/>
+            <ScrollContainer VerticalExpand="True" HScrollEnabled="False" SizeFlagsStretchRatio="1">
+                <BoxContainer Name="ContactList" Orientation="Vertical" HorizontalExpand="True"/>
+            </ScrollContainer>
+        </BoxContainer>
+    </BoxContainer>
+
+    <customControls:HSeparator Margin="0 4 0 4"/>
+
+    <BoxContainer Orientation="Horizontal" VerticalExpand="False">
+    <!-- Add Contact Section -->
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="False" Margin="8 0 0 0">
+            <Label Text="{Loc 'st-messenger-add-contact-header'}" StyleClasses="LabelKeyText" Margin="0 2 0 2"/>
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                <LineEdit Name="AddContactInput" PlaceHolder="{Loc 'st-messenger-add-contact-placeholder'}" HorizontalExpand="True" Margin="0 0 4 0"/>
+                <Button Name="AddContactButton" Text="{Loc 'st-messenger-add-contact-button'}" MinWidth="60"/>
+            </BoxContainer>
+        </BoxContainer>
+
+        <customControls:VSeparator Margin="0 4 0 4"/>
+        <!-- Settings Section -->
+        <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="False" Margin="8 0 0 0">
+            <Label Text="{Loc 'st-messenger-settings-header'}" StyleClasses="LabelKeyText" Margin="0 2 0 2"/>
+            <BoxContainer Name="SettingsContainer" Orientation="Horizontal" HorizontalExpand="True" Visible="False">
+                <CheckBox Name="RandomNameCheckbox" Text="{Loc 'st-messenger-random-name-when-not-disguised'}" Margin="0 2 0 2"/>
+            </BoxContainer>
+        </BoxContainer>
+    </BoxContainer>
+
+</BoxContainer>

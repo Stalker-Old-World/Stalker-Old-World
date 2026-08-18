@@ -1,0 +1,13 @@
+﻿<pda:PdaProgramItem Margin="2 0"
+                    xmlns:pda="clr-namespace:Content.Client.PDA"
+                    xmlns="https://spacestation14.io">
+    <PanelContainer Name="Panel"/>
+    <!-- stalker-en-changes: notification dot -->
+    <PanelContainer Name="NotificationDot" Access="Public" SetSize="8 8" Visible="False"
+                    HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 2 2 0"/>
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True">
+        <AnimatedTextureRect HorizontalAlignment="Center" VerticalAlignment="Center" Name="Icon" Access="Public" SetSize="28 28"/>
+        <Label Name="ProgramName" Access="Public" HorizontalAlignment="Center" StyleClasses="LabelSmall" Visible="True"/>
+        <Button Name="InstallButton" Access="Public" Visible="False" SetHeight="16" HorizontalAlignment="Center"/>
+    </BoxContainer>
+</pda:PdaProgramItem>

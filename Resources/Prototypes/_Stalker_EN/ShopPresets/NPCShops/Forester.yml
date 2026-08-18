@@ -1,0 +1,650 @@
+# CORDON
+- type: shopPreset
+  id: NpcForesterCordonEN
+  minSellPrice: 5
+  itemsForSale:
+    # Thermal group - 1
+    ZoneArtifactFireball: 500
+    ZoneArtifactEye: 610
+    ZoneArtifactFlame: 1215
+    ZoneArtifactBunch: 1420
+    ZoneArtifactRock: 1215
+    ZoneArtifactSun: 2210
+    ZoneArtifactRoot: 2430
+    ZoneArtifactConflagration: 610
+    # Thermal group - 2
+    ZoneArtifactCristall: 2430
+    ZoneArtifactLithosphere: 4860
+    # Electrical group - 1
+    ZoneArtifactSparkler: 500
+    ZoneArtifactBattery: 475
+    ZoneArtifactFlash: 1215
+    ZoneArtifactAccumulator: 1215
+    ZoneArtifactDiamond: 2210
+    ZoneArtifactCharger: 475
+    ArtMoon: 2430
+    ZoneArtifactTesla: 3645
+    ZoneArtifactIce: 4860
+    # Gravity group - 1
+    ArtMedusa: 500
+    ZoneArtifactFlower: 610
+    ZoneArtifactNightStar: 2430
+    ZoneArtifactWhirlwind: 550
+    ZoneArtifactPebble: 405
+    ZoneArtifactRosin: 610
+    ZoneArtifactStoneCube: 850
+    ZoneArtifactDarkCube: 3645
+    # Gravity group - 2
+    ZoneArtifactVyvert: 500
+    ZoneArtifactAmoeba: 610
+    ZoneArtifactFloodlight: 610
+    ZoneArtifactGravi: 1215
+    ZoneArtifactGoldfish: 4860
+    ZoneArtifactSpring: 2700
+    ZoneArtifactFocus: 3645
+    ZoneArtifactStuntman: 4860
+    ZoneArtifactDistorter: 4860
+    ZoneArtifactSoul: 3645
+    ZoneArtifactCompass: 2700
+    ZoneArtifactCrucifix: 3190
+    ZoneArtifactThorn: 1910
+    ZoneArtifactArf: 1910
+    # Acidic group - 1
+    ZoneArtifactToxic: 490
+    ZoneArtifactCytoplasm: 1215
+    ZoneArtifactBlood: 1215
+    ZoneArtifactMeat: 2430
+    ZoneArtifactKolobok: 3645
+    ZoneArtifactBeer: 600
+    # Acidic group - 2
+    ZoneArtifactPellicle: 500
+    ZoneArtifactBaloon: 3645
+
+    # Mutant parts
+
+    #Boars -------- Health * T * 0.45
+    MutantPartBoarHoof: 155 # T1
+    MutantPartSeasonedBoarHoof: 255 # T2
+    MutantPartOldBoarHoof: 385 # T3
+    #Bears ---------
+    MutantPartBearClaw: 325
+    MutantPartBearPaw: 390
+    MutantPartBearEye: 590
+    ClothingHeadBear: 700
+    #T1 -------- Health * 1
+    MutantPartBlindDogTail: 105
+    MutantPartFleshEye: 190
+    FoodMeatSpiderLeg: 30
+    MutantPartCatGland: 290
+    #T2 -------- Health * 1.8
+    MutantPartLeshiyRoot: 515
+    MutantPartPseudodogTail: 285
+    MutantPartSnorkFoot: 475
+    MutantPartPsiDogTail: 400
+    MutantPartFrogLeg: 300
+    #T3 -------- Health * 3 Modified by Oracle
+    MutantPartBloodsuckerTentacles: 1375
+    MutantPartOraculeEye: 1050
+    MutantPartZombieHand: 570
+    MutantPartPseudogiantHeart: 6800
+    ClothingMaskChimera: 1
+    MutantPartChimeraTooth: 1
+    MutantPartIzlomArm: 815
+    MutantPartBurerBrain: 1500
+    MutantPartControllerBrain: 2625
+    # Meat
+    FoodMeatDogCooked: 75
+    STFoodMeatSpiderCooked: 40
+    FoodMeatBoarCooked: 115
+    FoodMeatSTBearCooked: 225
+    FoodMeatSTFishFilletCooked: 75
+    FoodMeatSTFishSteakCooked: 115
+    FoodMeatSTEelCooked: 190
+    STFoodMeatCvarci: 30
+    FoodMeatSTRatCooked: 5 # whatever
+    FoodMeatSTRatJerked: 10
+    FoodMeatSTDogJerkedSingle: 115
+    FoodMeatSTBoarJerkedSingle: 150
+    FoodMeatSTBearJerkedSingle: 265
+    FoodMeatSTSuckerJerkedSingle: 675
+    STFoodMeatSalo: 30
+
+  categories:
+    - name: shop-category-weapons
+      priority: 1
+      items:
+        # Melee
+        STThrowingknifeBlue: 250
+        # Shotguns
+        STWeaponShotgunMossbergM88: 600
+        STWeaponShotgunMP153: 1700 # T2
+        # Pistols
+        STWeaponRevolverSWModel325: 500
+        WeaponPistolStalkerAPS: 800 #T2
+        STWeaponRevolverSWPC325TR: 900
+        # SMGs
+        STWeaponSMGMP40: 1000
+        STWeaponSMGPPSh41: 2500
+        STWeaponSMGPP91: 3000
+        # Rifles
+        STWeaponRifleSaiga545: 1350 # T3
+        STWeaponRifleAKS74: 3900
+        # Snipers
+        STWeaponSniperMosin: 1100
+        STWeaponSniperSKS: 1550
+    - name: shop-category-magazines
+      priority: 2
+      items:
+        # 7,62x39
+        Base739Mag10: 300 #T1
+        # 5,45x39
+        545Mag20: 250
+        545Mag30: 500
+        # Other
+        BasePPSHMag: 300
+        BaseAPSMag: 200
+        MP40Mag: 150
+        STSpeedLoader45ACPEmpty: 100
+        PP91Mag: 200
+    - name: shop-category-ammunition
+      priority: 3
+      items:
+        #7mm
+        7mmBuckshotBox: 45 # T0
+        6mmBuckshotBox: 150 # T1
+        # 5.45
+        545FMJBox: 425 # T2
+        545HPBox: 400 # Mutant
+        # 7.39
+        739HPBox: 450 # Mutant
+        # 7.54
+        754HPBox: 600 # Mutant
+        # 9.18
+        918PGJBox: 80 # T1
+        918PSTBox: 150 # T2
+        918SP7Box: 425 # Mutant
+        # 9.19
+        919PSOGJBox: 80 # T1
+        919PSTBox: 150 # T2
+        919RIPBox: 425 # Mutant
+        # 7.25
+        725PBox: 75 # T1
+        725LRNPCBox: 450 # Mutant
+        725PTBox: 150 # T2
+        # .45
+        45ACPLFMJBox: 75 # T1
+        45ACPRIPBox: 500 # Mutant
+        45ACPMFMJBox: 225 # T2
+    - name: shop-category-medicine
+      priority: 4
+      items:
+        STPillboxAntirad: 350
+        STGauze: 35
+        STOintment: 45
+        STBrutepack: 35
+        MedkitAI2: 135
+        AntiRadMedipen: 300
+        STPillboxProbud: 500
+        WakeUpMedipen: 400
+        MedkitMilitary: 380
+        MedkitScience: 435
+    - name: shop-category-provisions
+      priority: 5
+      items:
+        DrinkCossackVodkaBottleFull: 55
+        STFoodBreadPlain: 30
+        DrinkMREFlask: 200
+        DrinkWaterBottleFull: 45
+        FoodTinMRE: 120
+    - name: shop-category-storage-and-containers
+      priority: 6
+      items:
+        # BackPacks
+        ClothingBackpackTacticOliveStalker: 450 # T2
+        ClothingBackpackTacticBeigeStalker: 450 # T2
+        ClothingBackpackMercStalker: 850 # T3 |pve backpack
+        ClothingBackpackStalkerZaryaGreen: 1200 #T3 |pvp backpack
+        ClothingBeltPocketPouch: 500
+        ClothingBeltHerbalistPouch: 500
+    - name: shop-category-research-equipment
+      priority: 7
+      items:
+        STBoltBagFilled: 50
+        BoxArtcont: 400 # T1
+        BoxArtcontBlack: 400
+        BoxArtcontBlue: 400
+        BoxArtcontYellow: 400
+        BoxArtcontOrange: 400
+        ZoneAnomalyDetectorAD1: 50 # T1
+        # Detectors
+        ZoneArtifactDetectorPulse: 100 # T1
+        ZoneArtifactDetectorHunter: 500 # T2
+        ZoneArtifactDetectorResponse: 1250 # T2
+        ZoneArtifactDetectorSpruce: 6350 #T3
+    - name: shop-category-utilities
+      priority: 10
+      items:
+        STCombatKnife: 25
+        CheapLighter: 5
+        GeigerCounter: 50
+        BaseRadio: 50
+        STFlashlightSeclite: 50
+        PowerCellHyper: 50
+        HandheldGPSBasic: 50
+        FishingRod: 500
+        Binocularus1: 800
+        BoxFlare: 45
+        Matchbox: 10
+        HatchetStalker: 150
+        BookOldJournal: 100
+
+# RED FOREST
+- type: shopPreset
+  id: NpcForesterRedForestEN
+  minSellPrice: 1
+  itemsForSale: # ~2/3 lim price
+    # ---GRAVITY---
+    #Т2
+    ZoneArtifactFireball: 0
+    ZoneArtifactBattery: 1
+    ZoneArtifactAmoeba: 2
+    ZoneArtifactBlood: 3
+    ZoneArtifactEye: 1
+    #T3
+    ArtMedusa: 0
+    ZoneArtifactVyvert: 0
+    ZoneArtifactFlower: 7
+    #T4
+    ZoneArtifactGravi: 20
+    ZoneArtifactNightStar: 20
+    #T5
+    ZoneArtifactDistorter: 65
+    ZoneArtifactFocus: 65
+    ZoneArtifactGoldfish: 125
+    ZoneArtifactSpring: 65
+    ZoneArtifactStuntman: 65
+    ZoneArtifactDarkCube: 0
+    # ---THERMAL---
+    #T3
+    ZoneArtifactFlame: 10
+    ZoneArtifactRock: 10
+    ZoneArtifactBunch: 5
+    #T4
+    ZoneArtifactCristall: 20
+    ZoneArtifactRoot: 20
+    ZoneArtifactSun: 20
+    #T5
+    ZoneArtifactLithosphere: 60
+    # ---ELECTRICAL---
+    #T3
+    ArtMoon: 20
+    ZoneArtifactFlash: 15
+    ZoneArtifactAccumulator: 10
+    #T4
+    ZoneArtifactDiamond: 20
+    #T5
+    ZoneArtifactIce: 60
+    ZoneArtifactTesla: 60
+    # ---SPATIAL---
+    #T1
+    ZoneArtifactFloodlight: 1
+    #T3
+    ZoneArtifactArf: 10
+    ZoneArtifactThorn: 15
+    #T4
+    ZoneArtifactAtom: 20
+    ZoneArtifactCompass: 30
+    #T5
+    ZoneArtifactSoul: 60
+    ZoneArtifactCrucifix: 60
+    # ---ACIDIC---
+    #T3
+    ZoneArtifactMeat: 10
+    #T4
+    ZoneArtifactBaloon: 20
+    ZoneArtifactKolobok: 20
+    # Mutant parts
+ 
+    
+    #T1 -------- Health * 1
+    MutantPartBoarHoof: 0
+    MutantPartBlindDogTail: 0
+    MutantPartFleshEye: 0
+    FoodMeatSpiderLeg: 0
+    MutantPartCatGland: 0
+    #T2 -------- Health * 1.8
+    MutantPartSeasonedBoarHoof: 0
+    MutantPartBearClaw: 0
+    MutantPartBearPaw: 0
+    MutantPartBearEye: 5
+    ClothingHeadBear: 30
+    MutantPartLeshiyRoot: 5
+    MutantPartPseudodogTail: 0
+    MutantPartSnorkFoot: 0
+    MutantPartPsiDogTail: 7
+    MutantPartFrogLeg: 0
+    #T3+ -------- Health * 3
+    MutantPartOldBoarHoof: 0
+    MutantPartBloodsuckerTentacles: 18
+    MutantPartOraculeEye: 20
+    MutantPartPseudogiantHeart: 255
+    MutantPartZombieHand: 0
+    MutantPartBloodsuckerHead: 70
+    ClothingMaskChimera: 35
+    MutantPartChimeraTooth: 60
+    MutantPartIzlomArm: 18
+    MutantPartBurerBrain: 5
+    MutantPartControllerBrain: 5
+
+  categories:
+  - name: shop-category-weapons
+    priority: 1
+    items:
+      # Melee
+      # Shotguns
+      STWeaponShotgunProtecta: 45
+      # Pistols
+      # SMGs
+      # Rifles
+      STWeaponRifleM14: 150
+      # Snipers
+      STWeaponSniperVepr: 225
+      STWeaponSniperVSS: 525
+  - name: shop-category-magazines
+    priority: 2
+    items:
+      # 7.62x54
+      Base754Mag5: 2
+      754Mag10: 15
+      # 9x39
+      Base939Mag10: 10
+      939Mag20: 25
+  - name: shop-category-ammunition
+    priority: 3
+    items:
+      # buckshot
+      6mmBuckshotBoxCink: 40 # Express
+      8mmBuckshotBoxCink: 50 # Magnum
+      # 7.62x54
+      754HPBox: 4 # mutant
+      754FMJBox: 10 # T3
+      # 9x39
+      STBox9x39SP5: 20 # T2
+      STBox9x39PAB9: 30 # T3
+  - name: shop-category-medicine
+    priority: 4
+    items:
+      MedkitMilitary: 2
+      MedkitScience: 4
+      MedkitElite: 10
+      MedkitLAR: 18
+      ThermoOintment: 3
+      STOintmentGood: 3
+      STTourniquet: 2
+  - name: shop-category-provisions
+    priority: 5
+    items:
+      BoxMRE: 5
+      DrinkWhiskeyBottleFull: 2
+      DrinkCossackVodkaBottleFull: 1
+  - name: shop-category-armor
+    priority: 6
+    items:
+      # Helmets
+      # OuterClothing
+      STClothingOuterArmorIOTVBlack: 165
+      STClothingOuterIOTVGEN4: 240
+      ClothingOuterArmorHazmatRf: 225
+  - name: shop-category-storage-and-containers
+    priority: 7
+    items:
+      # BackPacks
+      ClothingBackpackDuffelMilitaryOlive: 70
+      ClothingBackpackDuffelSuperStalker: 100
+      ClothingBackpackDuffelSuperStalkerGray: 100
+  - name: shop-category-raincoats-and-gasmasks
+    priority: 8
+    items:
+      # Gas masks
+      ClothingMaskGP21: 55 # T4
+      ClothingMaskM51: 55 # T4
+      ClothingMaskRCBZ2: 80 # T5
+      ClothingMaskunix5000: 80 # T5
+  - name: shop-category-research-equipment
+    priority: 9
+    items:
+      BoxArtcont: 5
+      STBoltBagOliveGrayFilledGolden: 300
+      TrashDetectorTier4: 100
+      ZoneAnomalyDetectorAD3: 20
+      ZoneArtifactDetectorSpruce: 25
+      ZoneArtifactDetectorBear: 350
+      STRuggedPdaEN: 300
+
+# LIMANSK
+- type: shopPreset
+  id: NpcForesterLimanskEN
+  minSellPrice: 1
+  itemsForSale:
+    # StalkerOW - Begin
+    # Changed most of the prices for artifacts so they as least matched the prices for mutant parts by ease of acquisition.
+    # ---GRAVITY---
+    #Т2
+    ZoneArtifactFireball: 0
+    ZoneArtifactBattery: 5
+    ZoneArtifactAmoeba: 4
+    ZoneArtifactBlood: 10
+    ZoneArtifactEye: 8
+    #T3
+    ArtMedusa: 0
+    ZoneArtifactVyvert: 0
+    ZoneArtifactFlower: 10
+    #T4
+    ZoneArtifactGravi: 90
+    ZoneArtifactNightStar: 90
+    #T5
+    ZoneArtifactDistorter: 200
+    ZoneArtifactFocus: 200
+    ZoneArtifactGoldfish: 250
+    ZoneArtifactSpring: 200
+    ZoneArtifactStuntman: 200
+    ZoneArtifactDarkCube: 0 # its too scary
+    # ---THERMAL---
+    #T3
+    ZoneArtifactFlame: 50
+    ZoneArtifactRock: 65
+    ZoneArtifactBunch: 40
+    #T4
+    ZoneArtifactCristall: 90
+    ZoneArtifactRoot: 90
+    ZoneArtifactSun: 90
+    #T5
+    ZoneArtifactLithosphere: 220
+    # ---ELECTRICAL---
+    #T3
+    ArtMoon: 65
+    ZoneArtifactFlash: 50
+    ZoneArtifactAccumulator: 40
+    #T4
+    ZoneArtifactDiamond: 90
+    #T5
+    ZoneArtifactIce: 200
+    ZoneArtifactTesla: 200
+    # ---SPATIAL---
+    #T1
+    ZoneArtifactFloodlight: 1
+    #T3
+    ZoneArtifactArf: 40
+    ZoneArtifactThorn: 60
+    #T4
+    ZoneArtifactAtom: 90
+    ZoneArtifactCompass: 100 # more valueable to forester specifically
+    #T5
+    ZoneArtifactSoul: 200
+    ZoneArtifactCrucifix: 200
+    # ---ACIDIC---
+    #T3
+    ZoneArtifactMeat: 40
+    #T4
+    ZoneArtifactBaloon: 70
+    ZoneArtifactKolobok: 70
+    # Mutant parts
+    # Nerfed Bloodsucker prices and buffed most other parts by tier to diversify what's worth selling to Forester.
+    # Boar
+    MutantPartBoarHoof: 2 # T1
+    MutantPartSeasonedBoarHoof: 5 # T2
+    MutantPartOldBoarHoof: 7 # T3
+    # Bear
+    MutantPartBearClaw: 5
+    MutantPartBearPaw: 9
+    MutantPartBearEye: 32
+    ClothingHeadBear: 60
+    #T1 -------- Health * 1
+    MutantPartBlindDogTail: 4
+    MutantPartFleshEye: 7
+    MutantPartCatGland: 7
+    #T2 -------- Health * 1.8
+    MutantPartLeshiyRoot: 15
+    MutantPartPseudodogTail: 10
+    MutantPartSnorkFoot: 15
+    MutantPartPsiDogTail: 20
+    MutantPartFrogLeg: 15
+    #T3+ -------- Health * 3
+    MutantPartBloodsuckerTentacles: 40
+    MutantPartOraculeEye: 60
+    MutantPartPseudogiantHeart: 700
+    MutantPartZombieHand: 5
+    MutantPartBloodsuckerHead: 160
+    ClothingMaskChimera: 100
+    MutantPartChimeraTooth: 200
+    MutantPartIzlomArm: 70
+    MutantPartBurerBrain: 30
+    MutantPartControllerBrain: 80
+
+  categories:
+  - name: shop-category-weapons
+    priority: 2
+    items:
+      # Melee
+      # Shotguns
+      STWeaponShotgunProtecta: 200
+      STWeaponShotgunSaiga12: 350
+      # Pistols
+      WeaponPistolStalkerLP08: 90
+      STWeaponRevolverRH12: 600
+      # SMGs
+      # Rifles
+      STWeaponRifleM14: 250
+      STWeaponRifleStalkerAek971: 450
+      # Snipers
+      STWeaponSniperVepr: 300
+      STWeaponSniperSVDS: 600
+      STWeaponSniperVSS: 700
+      STWeaponSniperOSV96: 800
+  - name: shop-category-magazines
+    priority: 2
+    items:
+      # saiga-12
+      Saiga1270Mag10: 10
+      Saiga1270Drum: 40
+      # 5.45x39
+      545Mag20: 2
+      545Mag30: 5
+      545Mag45: 10
+      # 7.62x54
+      Base754Mag5: 15
+      754Mag10: 35
+      # 9x19
+      LP08Drum: 20
+      # 50 bmg
+      50bmgMag10: 20
+      # 9x39
+      Base939Mag10: 10
+      939Mag20: 25
+      #1255
+      AS12Mag: 25
+  - name: shop-category-ammunition
+    priority: 3
+    items:
+      # buckshot
+      6mmBuckshotBoxCink: 25 # Express
+      8mmBuckshotBoxCink: 60 # Magnum
+      # 5.45x39
+      545HPBoxCink: 35 # mutant
+      545PCBoxCink: 45 # T3
+      # 7.62x54
+      754HPBox: 20 # mutant
+      754FMJBox: 50 # T3
+      # 9x19
+      919PBMBoxCink: 45 # T3
+      # 9x39
+      STBox9x39SP5: 15 # T2
+      STBox9x39PAB9: 25 # T3
+      #1255
+      Ammobox1255BP: 60
+      # 50 bmg
+      50bmgFMJBox: 100
+      50bmgHPBox: 60
+  - name: shop-category-medicine
+    priority: 4
+    items:
+      MedkitMilitary: 5
+      MedkitElite: 25
+      MedkitLAR: 30
+      ThermoOintment: 9
+      STOintmentGood: 9
+      STTourniquet: 5
+  - name: shop-category-provisions
+    priority: 5
+    items:
+      BoxMRE: 5
+      DrinkWhiskeyBottleFull: 2
+      DrinkCossackVodkaBottleFull: 1
+  - name: shop-category-armor
+    priority: 6
+    items:
+      # Helmets
+      ClothingHeadHelmetBerill5MMilitary: 50
+      ClothingHeadHelmetUlach: 170
+      # OuterClothing
+      STClothingOuterArmorIOTVBlack: 300
+      STClothingOuterIOTVGEN4: 300
+      ClothingOuterArmorHazmatRf: 400
+      ClothingOuterArmorStalkerCombat: 450
+      STClothingOuterArmorVeryHeavy: 600
+  - name: shop-category-storage-and-containers
+    priority: 7
+    items:
+      # BackPacks
+      ClothingBackpackDuffelMilitaryOlive: 90
+      ClothingBackpackDuffelSuperStalker: 120
+      ClothingBackpackDuffelSuperStalkerGray: 120
+      ClothingBeltWebbingDoubleStalkerZaryaSmall: 20
+  - name: shop-category-raincoats-and-gasmasks
+    priority: 8
+    items:
+      # Gas masks
+      ClothingMaskGP21: 60 # T4
+      ClothingMaskM51: 60 # T4
+      ClothingMaskRCBZ2: 100 # T5
+      ClothingMaskunix5000: 100 # T5
+  - name: shop-category-research-equipment
+    priority: 9
+    items:
+      BoxArtcont1: 40
+      BoxArtcont: 5
+      STBoltBagOliveGrayFilledGolden: 300
+      TrashDetectorTier4: 80
+      ZoneAnomalyDetectorAD3: 20
+      ZoneArtifactDetectorSpruce: 20
+      ZoneArtifactDetectorBear: 500
+      ZoneArtifactDetectorWolfhound: 1250
+      STRuggedPdaEN: 250
+  - name: shop-category-modules
+    priority: 10
+    items:
+      STModuleAutoSear: 30
+      STModuleSMGGripT2: 60
+      STModuleSniperSightT2: 30
+      STModuleScopeRiflesT2Nato: 50
+      STModuleScopeRiflesT2Ru: 50

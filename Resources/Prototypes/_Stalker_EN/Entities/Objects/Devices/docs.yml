@@ -1,0 +1,30 @@
+- type: entity
+  name: Field Scientist ID
+  id: fieldScientistPermit
+  parent: BookBase
+  suffix: Stalker, Document, Scientists
+  description: Identification papers for field scientists contracted by Ecology.
+  components:
+    - type: STWeight
+      self: 0.2
+    - type: Clickable
+    - type: InteractionOutline 
+    - type: Pullable
+    - type: Sprite
+      sprite: _Stalker_EN/Objects/Misc/field_scientist_id.rsi
+      scale: 0.8, 0.8
+      layers:
+      - state: FieldScientistPermit
+    - type: Item
+      size: Small
+    - type: Paper
+    - type: ActivatableUI
+      key: enum.PaperUiKey.Key
+      requiresComplex: false
+    - type: Tag
+      tags:
+      - Document
+      - Paper
+      - License
+    - type: Appearance
+    - type: PaperVisuals

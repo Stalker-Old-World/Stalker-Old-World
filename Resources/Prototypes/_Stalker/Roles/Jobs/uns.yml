@@ -1,0 +1,59 @@
+
+- type: job
+  id: StalkerUN
+  name: job-un
+  icon: un
+  description: job-un-desc
+  playTimeTracker: JobUN
+  whitelisted: true
+  requirements:
+    # - !type:RoleTimeRequirement
+    #   role: JobUN
+    #   time: 1
+    - !type:SpeciesRequirement
+      species:
+      - Human
+      - Dwarf
+  startingGear: UNGear
+  supervisors: job-un-supervisor
+  canBeAntag: false
+  special:
+    - !type:AddComponentSpecial
+      components:
+        #- type: PersistentCraftAccess
+        - type: Access
+          tags:
+            - Journalist
+            - MilitaryHead
+            - MilitaryBarraks
+            - Military
+            - UN
+        - type: Bands
+          band: Stalker
+          bandIcon: un
+          bandProto: STUNBand
+          bandRankId: 1
+        - type: BlockTackingHolyItems
+        - type: TeethPull
+          teethProto: ToothStalker
+          pullingItemTag: PliersStalker
+          teethCount: 3
+          initialTeeth: 3
+
+- type: startingGear
+  id: UNGear
+  equipment:
+    id: MilitaryPDA
+    dogtag: ClothingNeckDogtagUN # EN
+    legs: ClothingLegsJeansGreenCargo
+    shoes: STClothingShoesBootsCombatFilled
+    torso: ClothingTorsoTurtlenecksUN
+
+- type: stBand
+  id: STUNBand
+  name: UN
+  factionId: Military
+  maxMembers: 30
+  managingRankId: 2
+  hierarchy:
+    1: StalkerUN

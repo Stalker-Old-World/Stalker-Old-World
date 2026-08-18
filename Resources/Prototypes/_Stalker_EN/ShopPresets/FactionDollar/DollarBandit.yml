@@ -1,0 +1,72 @@
+#-----------------------Dolla-----------------------
+- type: shopPreset
+  id: BanditDollarFaction
+  itemsForSale:
+    ZoneArtifactFireball: 0
+
+
+  categories:
+  - name: shop-category-weapons
+    priority: 1
+    items:
+      STWeaponSMGThompson: 200
+  - name: shop-category-magazines
+    priority: 2
+    items:
+      BaseTommyGunMag: 40
+      TommyGunDrum: 60
+      TommyGunBigDrum: 100
+  - name: shop-category-ammunition
+    priority: 3
+    items:
+      KhattabkaGrenade: 2
+      IpritGrenadeStalker: 3
+      StielhandgranateM24: 3
+      StielhandgranateM24Bundle: 5
+  - name: shop-category-armor
+    priority: 4
+    items:
+      ClothingHeadHelmet1SHBandit: 185
+      STClothingOuterArmorLightPlateVestBaseHeavyBandit: 425
+  - name: shop-category-storage-and-containers
+    priority: 5
+    items:
+      ClothingBackpackDuffelBlackTacticStalker: 90
+      ClothingBackpackDuffelOliveTacticStalker: 90
+  - name: shop-category-research-equipment
+    priority: 7
+    items:
+      ZoneAnomalyDetectorAD3: 30
+      TrashDetectorTier4: 100
+  - name: shop-category-medicine
+    priority: 10
+    items:
+      BoxMRE: 5
+      MedkitMilitary: 3
+      MedkitScience: 5
+      MedkitElite: 15
+      MedkitLAR: 20
+      ThermoOintment: 5
+      STOintmentGood: 5
+      STTourniquet: 3
+
+
+
+# Machine
+- type: entity
+  parent: StalkerShop
+  id: DollarShopBandit
+  name: Bandit Dollar Shop
+  description: Premium gear sold for USD.
+  suffix: ST, EN, Mapping, Dollar, Shop
+  components:
+    - type: Sprite
+      drawdepth: Objects
+      sprite: _Stalker/Structures/Machines/VendingMachines/torgomat_black.rsi
+      layers:
+        - state: torgomat_black
+          map: [ "enum.ConstructionVisuals.Layer" ]
+        - state: normal-unshaded
+    - type: Shop
+      moneyId: Dollar
+      shopPresetId: BanditDollarFaction

@@ -1,0 +1,33 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by dreamlyjack for Stalker",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "alive",
+        "delays": [
+            [
+                0.25,
+                0.25,
+                0.25,
+                0.25
+            ]
+          ]
+      },
+      {
+        "name": "dead",
+        "delays": [
+            [
+                0.25,
+                0.25,
+                0.25,
+                0.25
+            ]
+          ]
+      }
+    ]
+  }

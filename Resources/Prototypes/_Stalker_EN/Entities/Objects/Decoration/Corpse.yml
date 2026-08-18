@@ -1,0 +1,10 @@
+﻿- type: entity
+  id: CorpseStalkerFishDrop
+  parent: Corpse1Stalker
+  suffix: ST, Trash
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Decoration/Other/corpse.rsi
+    state: corpse4
+  - type: Trash
+    time: 1200

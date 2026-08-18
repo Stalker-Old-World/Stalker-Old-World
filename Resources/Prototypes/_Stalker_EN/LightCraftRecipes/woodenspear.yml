@@ -1,0 +1,263 @@
+- type: lightCraftingRecipe
+  id: CraftSpearFromSTBaseHeavyKnife
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseHeavyKnife
+    secondIngredient: STLogStalkerT1
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTCombatKnife
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STCombatKnife
+    secondIngredient: STLogStalkerT1
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTBaseFastKnife
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseFastKnife
+    secondIngredient: STLogStalkerT1
+    keepFirst: true
+    exactSecond: false
+    time: 2
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTBaseLongKnife
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseLongKnife
+    secondIngredient: STLogStalkerT1
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTKarambit
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STKarambit
+    secondIngredient: STLogStalkerT1
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTSurvivalKnife
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STSurvivalKnife
+    secondIngredient: STLogStalkerT1
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSpearFromSTBaseHeavyKnife2
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseHeavyKnife
+    secondIngredient: STLogStalkerT2
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTCombatKnife2
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STCombatKnife
+    secondIngredient: STLogStalkerT2
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTBaseFastKnife2
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseFastKnife
+    secondIngredient: STLogStalkerT2
+    keepFirst: true
+    exactSecond: false
+    time: 2
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTBaseLongKnife2
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseLongKnife
+    secondIngredient: STLogStalkerT2
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTKarambit2
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STKarambit
+    secondIngredient: STLogStalkerT2
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTSurvivalKnife2
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STSurvivalKnife
+    secondIngredient: STLogStalkerT2
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSpearFromSTBaseHeavyKnife3
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseHeavyKnife
+    secondIngredient: STLogStalkerT3
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTCombatKnife3
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STCombatKnife
+    secondIngredient: STLogStalkerT3
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTBaseFastKnife3
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseFastKnife
+    secondIngredient: STLogStalkerT3
+    keepFirst: true
+    exactSecond: false
+    time: 2
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTBaseLongKnife3
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseLongKnife
+    secondIngredient: STLogStalkerT3
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTKarambit3
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STKarambit
+    secondIngredient: STLogStalkerT3
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTSurvivalKnife3
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STSurvivalKnife
+    secondIngredient: STLogStalkerT3
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSpearFromSTBaseHeavyKnife4
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseHeavyKnife
+    secondIngredient: STLogStalkerT4
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTCombatKnife4
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STCombatKnife
+    secondIngredient: STLogStalkerT4
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTBaseFastKnife4
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseFastKnife
+    secondIngredient: STLogStalkerT4
+    keepFirst: true
+    exactSecond: false
+    time: 2
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTBaseLongKnife4
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STBaseLongKnife
+    secondIngredient: STLogStalkerT4
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTKarambit4
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STKarambit
+    secondIngredient: STLogStalkerT4
+    keepFirst: true
+    exactSecond: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CraftSTSpearFromSTSurvivalKnife4
+  results:
+  - STSpearWood
+  steps:
+    firstIngredient: STSurvivalKnife
+    secondIngredient: STLogStalkerT4
+    keepFirst: true
+    exactSecond: false
+    time: 3

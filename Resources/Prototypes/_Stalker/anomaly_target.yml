@@ -1,0 +1,7 @@
+- type: entity
+  id: EntityAnomalyTarget
+  abstract: true
+  components:
+    - type: STAnomalyAdditionalGroups
+    # Coming soon...
+    # - type: STAnomalyTipsViewing

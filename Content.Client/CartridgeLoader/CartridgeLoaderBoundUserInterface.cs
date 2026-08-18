@@ -1,0 +1,160 @@
+﻿using Content.Client.UserInterface.Fragments;
+using Content.Shared.CartridgeLoader;
+using Robust.Client.GameObjects;
+using Robust.Client.UserInterface;
+
+namespace Content.Client.CartridgeLoader;
+
+
+public abstract class CartridgeLoaderBoundUserInterface : BoundUserInterface
+{
+    [ViewVariables]
+    private EntityUid? _activeProgram;
+
+    [ViewVariables]
+    private UIFragment? _activeCartridgeUI;
+
+    [ViewVariables]
+    private Control? _activeUiFragment;
+
+    private IEntityManager _entManager;
+
+    protected CartridgeLoaderBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
+    {
+        _entManager = IoCManager.Resolve<IEntityManager>();
+    }
+
+    protected override void UpdateState(BoundUserInterfaceState state)
+    {
+        base.UpdateState(state);
+
+        if (state is not CartridgeLoaderUiState loaderUiState)
+        {
+            _activeCartridgeUI?.UpdateState(state);
+            return;
+        }
+
+        // TODO move this to a component state and ensure the net ids.
+        var programs = GetCartridgeComponents(_entManager.GetEntityList(loaderUiState.Programs));
+        UpdateAvailablePrograms(programs);
+
+        var activeUI = _entManager.GetEntity(loaderUiState.ActiveUI);
+
+        var ui = RetrieveCartridgeUI(activeUI);
+        var comp = RetrieveCartridgeComponent(activeUI);
+        var control = ui?.GetUIFragmentRoot();
+
+        // Skip if the same fragment is already attached, but still update the cartridge UI state
+        if (_activeCartridgeUI == ui && _activeUiFragment is not null && _activeCartridgeUI is not null)
+        {
+            _activeCartridgeUI.UpdateState(state);
+            return;
+        }
+
+        _activeProgram = activeUI;
+
+        if (_activeUiFragment is not null)
+            DetachCartridgeUI(_activeUiFragment);
+
+        if (ui is null)
+        {
+            _activeCartridgeUI = null;
+            _activeUiFragment = null;
+            return;
+        }
+
+        _activeCartridgeUI = ui;
+
+        if (control is not null && _activeProgram.HasValue)
+        {
+            AttachCartridgeUI(control, Loc.GetString(comp?.ProgramName ?? "default-program-name"));
+
+            if (loaderUiState.ActiveProgramState != null)
+                _activeCartridgeUI?.UpdateState(loaderUiState.ActiveProgramState);
+            else
+                SendCartridgeUiReadyEvent(_activeProgram.Value); // fallback
+        }
+
+        _activeUiFragment?.Dispose();
+        _activeUiFragment = control;
+    }
+
+    protected void ActivateCartridge(EntityUid cartridgeUid)
+    {
+        var message = new CartridgeLoaderUiMessage(_entManager.GetNetEntity(cartridgeUid), CartridgeUiMessageAction.Activate);
+        SendPredictedMessage(message);
+    }
+
+    protected void DeactivateActiveCartridge()
+    {
+        if (!_activeProgram.HasValue)
+            return;
+
+        var message = new CartridgeLoaderUiMessage(_entManager.GetNetEntity(_activeProgram.Value), CartridgeUiMessageAction.Deactivate);
+        SendPredictedMessage(message);
+    }
+
+    protected void InstallCartridge(EntityUid cartridgeUid)
+    {
+        var message = new CartridgeLoaderUiMessage(_entManager.GetNetEntity(cartridgeUid), CartridgeUiMessageAction.Install);
+        SendPredictedMessage(message);
+    }
+
+    protected void UninstallCartridge(EntityUid cartridgeUid)
+    {
+        var message = new CartridgeLoaderUiMessage(_entManager.GetNetEntity(cartridgeUid), CartridgeUiMessageAction.Uninstall);
+        SendPredictedMessage(message);
+    }
+
+    private List<(EntityUid, CartridgeComponent)> GetCartridgeComponents(List<EntityUid> programs)
+    {
+        var components = new List<(EntityUid, CartridgeComponent)>();
+
+        foreach (var program in programs)
+        {
+            var component = RetrieveCartridgeComponent(program);
+            if (component is not null)
+                components.Add((program, component));
+        }
+
+        return components;
+    }
+
+    /// <summary>
+    /// The implementing ui needs to add the passed ui fragment as a child to itself
+    /// </summary>
+    protected abstract void AttachCartridgeUI(Control cartridgeUIFragment, string? title);
+
+    /// <summary>
+    /// The implementing ui needs to remove the passed ui from itself
+    /// </summary>
+    protected abstract void DetachCartridgeUI(Control cartridgeUIFragment);
+
+    protected abstract void UpdateAvailablePrograms(List<(EntityUid, CartridgeComponent)> programs);
+
+    protected override void Dispose(bool disposing)
+    {
+        base.Dispose(disposing);
+
+        if (disposing)
+            _activeUiFragment?.Dispose();
+    }
+
+    protected CartridgeComponent? RetrieveCartridgeComponent(EntityUid? cartridgeUid)
+    {
+        return EntMan.GetComponentOrNull<CartridgeComponent>(cartridgeUid);
+    }
+
+    private void SendCartridgeUiReadyEvent(EntityUid cartridgeUid)
+    {
+        var message = new CartridgeLoaderUiMessage(_entManager.GetNetEntity(cartridgeUid), CartridgeUiMessageAction.UIReady);
+        SendMessage(message);
+    }
+
+    private UIFragment? RetrieveCartridgeUI(EntityUid? cartridgeUid)
+    {
+        var component = EntMan.GetComponentOrNull<UIFragmentComponent>(cartridgeUid);
+        component?.Ui?.Setup(this, cartridgeUid);
+        return component?.Ui;
+    }
+}

@@ -1,0 +1,13 @@
+- type: entity
+  id: E-Z-NutrientChemistryBottleStalker
+  name: Nutrients
+  description: A highly nutritious fertilizer developed in the Agroprom Botanical Research institute.
+  parent: BaseChemistryBottleFilled
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: EZNutrient
+          Quantity: 30

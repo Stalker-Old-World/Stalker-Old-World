@@ -1,0 +1,85 @@
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportBasement5
+  suffix: Stalker 5
+  name: Чистилище-Сталкер1
+
+- type: entity
+  parent: LocalTeleportBaseUncollide
+  id: LocalTeleportBasement51
+  suffix: Stalker 5
+  name: Чистилище-Сталкер1 нонколлижн
+
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportBasement52
+  suffix: Stalker 5
+  name: Чистилище-Сталкер2
+
+- type: entity
+  parent: LocalTeleportBaseUncollide
+  id: LocalTeleportBasement512
+  suffix: Stalker 5
+  name: Чистилище-Сталкер2 нонколлижн
+
+#############################Военка
+
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportMilBase1
+  suffix: Stalker 1
+  name: Военная база 1
+
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportMilBase2
+  suffix: Stalker 2
+  name: Военная база 2
+
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportMilBase3
+  suffix: Stalker 3
+  name: Военная база 3
+
+################################Подземка Свалки
+
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportSvUnderground
+  suffix: Stalker 1
+  name: Подземелье Свалки 1
+
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportSvUnderground2
+  suffix: Stalker 2
+  name: Подземелье Свалки 2
+
+################################Этажи для жаб
+
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportJabasFloors
+  suffix: Jaba
+  name: Жабий подвал
+
+################################Вход в базу монолита
+
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportmonolith
+  suffix: monolith
+  name: LocalTeleportmonolith
+  components:
+  - type: AccessReader
+    access: [["Monolith"]]
+
+- type: entity
+  parent: LocalTeleportBaseUncollide
+  id: LocalTeleportmonolithUncollide
+  suffix: monolith
+  name: LocalTeleportmonolithUncollide
+  components:
+  - type: AccessReader
+    access: [["Bandit"]]

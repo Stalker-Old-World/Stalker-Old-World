@@ -1,0 +1,243 @@
+# not actually a torg but whatevr
+- type: vendingMachineInventory
+  id: MonolithInventoryEN
+  startingInventory:
+    SetMonolithBuyableCrateT3Heavy: 10
+    SetMonolithBuyableCrateT3Light: 10  # OW
+    SetMonolithBuyableCrateT2Heavy: 10
+    SetMonolithBuyableCrateT2Light: 10
+    SetMonolithBuyableCrateInfiltrator1: 10
+    SetMonolithBuyableCrateInfiltrator2: 10
+    ClothingNeckScarfWhite: 10
+    MonolithCrateMedkit: 10
+    STThrowingknifeYellow: 100
+    STWeaponRifleAKM: 10
+    STWeaponRifleAKS74WinterMono: 10
+    STWeaponRifleAKS74UWhiteMono: 10
+    STWeaponRifleLR300v1: 10
+    STWeaponRifleOC14WinterMono: 10
+    STWeaponSniperMosin: 10
+    STWeaponSMGStalkerCP2Veresk: 10 # ow chaange
+    DG05SmokeGrenade: 10 # ow change
+    MonolithCrate545Mag30: 10
+    MonolithCrate545PC: 10
+    MonolithCrate556Mag30: 10
+    MonolithCrate556M855: 10
+    MonolithCrate762FMJ: 10
+    MonolithCrate754FMJ: 10
+    MonolithCrate739Mag30: 10
+    MonolithCrate919Mag30: 10
+    MonolithCrate919PBM: 10
+    45ACPAPBox: 10 # ow change
+    TommyGunDrum2: 10 # ow change
+    BaseTommyGunMag: 10 # ow change
+    VityazMag: 10 # ow change
+    ClothingOuterJacketMonolith: 10
+    STClothingNeckFacescarfWhite: 10
+    STClothingNeckFacescarfGrey: 10
+    STClothingNeckFacescarfBlack: 10
+    FoldedFlagMono: 20
+    StalkerMonolithAltarKit: 10
+    BoxZiptie: 10
+    ClothingHeatBagStalker: 10
+    Paper: 10
+    BloodyPaper: 10
+    Pen: 10
+    Candle: 30
+    Matchbox: 5
+    MonolithInventoryRestockEN: 1
+    Screwdriver: 1
+
+- type: entity
+  parent: BaseItem
+  id: MonolithInventoryRestockEN
+  name: пополнительный ящик «Монолита»
+  description: Класть на склад.
+  categories: [ StSkipRestockTest ]
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - MonolithInventoryEN
+  - type: STWeight
+    self: 47.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/Sets/military-box.rsi
+    state: icon
+
+# The premium vender
+- type: shopPreset
+  id: MonolithPremium
+  minSellPrice: 1
+  itemsForSale:
+    # Stalker OW - Start
+    #Zone forbid my heavily staff watched and rp required end game antag faction get to have fun with good gear,
+    # without heavy farming of often meta'd resources, no one is bringing full T3 artifact loadouts to rf and limansk 24/7
+    #  so shop prices shouldn't be balanced around it
+
+    # Thermal group - T1
+    ZoneArtifactFireball: 2
+
+    # Thermal group - T2
+    ZoneArtifactEye: 5
+    ZoneArtifactConflagration: 5
+
+    # Thermal group - T3
+    ZoneArtifactFlame: 10
+    ZoneArtifactBunch: 10
+
+    # Thermal group - T3 North Only
+    ZoneArtifactRock: 15
+
+    # Thermal group - T4
+    ZoneArtifactSun: 45
+    ZoneArtifactRoot: 45
+    ZoneArtifactCristall: 45
+    # Thermal group - T5
+    ZoneArtifactLithosphere: 100
+
+
+    # Electrical group - T1
+    ZoneArtifactSparkler: 2
+
+    # Electrical group - T2
+    ZoneArtifactBattery: 5
+    ZoneArtifactCharger: 5
+
+    # Electrical group - T3
+    ZoneArtifactFlash: 10
+    ZoneArtifactAccumulator: 10
+
+    # Electrical group - T3 North Only
+    ArtMoon: 15
+
+    # Electrical group - T4
+    ZoneArtifactDiamond: 45
+
+    # Electrical group - T5
+    ZoneArtifactTesla: 100
+    ZoneArtifactIce: 100
+
+
+    # Gravity group - T1
+    ArtMedusa: 2
+    ZoneArtifactVyvert: 2
+    ZoneArtifactPebble: 2
+    ZoneArtifactWhirlwind: 2
+    ZoneArtifactBeer: 3
+
+    # Gravity group - T2
+    ZoneArtifactAmoeba: 5
+    ZoneArtifactRosin: 5
+
+    # Gravity group - T3
+    ZoneArtifactFlower: 10
+    ZoneArtifactStoneCube: 10
+
+    # Gravity group - T4
+    ZoneArtifactNightStar: 45
+    ZoneArtifactGravi: 45
+
+    # Gravity group - T5
+    ZoneArtifactDarkCube: 100
+    ZoneArtifactGoldfish: 100
+    ZoneArtifactSpring: 100
+    ZoneArtifactFocus: 100
+    ZoneArtifactStuntman: 100
+    ZoneArtifactDistorter: 100
+
+
+    # Spatial group - T1
+    ZoneArtifactFloodlight: 2
+    ZoneArtifactFloodlightRave: 15
+    # Spatial group - T2
+    ZoneArtifactMagneticFlower: 5
+
+    # Spatial group - T3
+    ZoneArtifactThorn: 15
+    ZoneArtifactArf: 10
+
+    # Spatial group - T4
+    ZoneArtifactCompass: 45
+    ZoneArtifactAtom: 45
+    # Spatial group - T5
+    ZoneArtifactSoul: 100
+    ZoneArtifactCrucifix: 100
+
+
+    # Acidic group - T1
+    ZoneArtifactPellicle: 2
+    ZoneArtifactToxic: 2
+
+    # Acidic group - T2
+    ZoneArtifactBlood: 5
+    ZoneArtifactCytoplasm: 5
+
+    # Acidic group - T3
+    ZoneArtifactMeat: 10
+
+    # Acidic group - T4
+    ZoneArtifactKolobok: 45
+    ZoneArtifactBaloon: 45
+
+    # Acidic group - T5
+
+
+  categories:
+  - name: shop-category-weapons
+    priority: 1
+    items:
+      STWeaponRifleG36Mono: 24 # OW
+      STWeaponRifleStalkerAK12Mono: 12 # OW
+      STWeaponRifleStalkerAbakanWinterMono: 48 # OW
+      STWeaponShotgunProtecta: 10
+      STSharpenedKnife: 1
+      STKnifeShard: 85 # munny sink
+      WeaponPistolGSH18: 1
+      #STWeaponSniperSVDMono: 85 - StalkerOW: Removed until T4 is back.
+      STClothingBeltThrowingKnifes: 5
+      STWeaponSMGThompson: 8 # OW
+      # STWeaponSMGStalkerCP2Veresk: 8 old world change
+  - name: shop-category-magazines
+    priority: 2
+    items:
+      GSH-18Mag18: 1
+      #vityazmag: 1 old world change
+  - name: shop-category-armor
+    priority: 3
+    items:
+      ClothingOuterArmorSevaMonolithPriest: 15
+    # STOWClothingHeadHelmetT3SphereMonolith: 8 - Removed in Favor of the Sphere 12
+      STOWClothingHeadHelmetT3PVPAltMaskMonolith: 8 # OW Changed ID, Lowered price down to Sphere-08 since the stats are the same.
+      ClothingOuterArmorBerill5MMonolith: 50 # OW we added it back 
+
+  - name: shop-category-grenades
+    priority: 4
+    items:
+      RGD5Grenade: 1
+      #DG05SmokeGrenade: 1 # OW change
+      #Grenades shouldn't cost more than one shard, they should be encouraged to be used
+  - name: shop-category-medicine
+    priority: 5
+    items:
+      MedkitElite: 3
+      MedkitLAR: 4
+
+  - name: shop-category-customization
+    priority: 6
+    items:
+      ClothingHeadBeretMonolith: 1
+      #ClothingOuterJacketMonolith: 1
+      ClothingNeckMantleMono: 3
+      #STClothingNeckFacescarfWhite: 1
+      #STClothingNeckFacescarfGrey: 1
+      #STClothingNeckFacescarfBlack: 1
+
+  - name: shop-category-utilities
+    priority: 7
+    items:
+      HandLabeler: 1
+      ClothingBeltPocketPouch: 3
+      STIrradiationkit: 5

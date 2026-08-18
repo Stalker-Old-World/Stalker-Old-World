@@ -1,0 +1,16 @@
+ent-STClothingOuterArmorSSP24Base = SSP-24
+    .suffix = ST, T4, Env
+ent-STClothingHeadHelmetSSP24Base = Green Ecologist's helmet
+    .desc = Protects against anomalies and radiation, but definitely not against bullets.
+ent-ClothingOuterArmorSSP24Ruby = Red SSP-24 "Ruby"
+    .desc = A quality modified SSP-24 set created in the zone with improved protection against Thermal anomalies, both high and low temperature.
+ent-ClothingHeadHelmetSSP24Ruby = SSP-24 "Ruby" Helmet
+    .desc = Protects against anomalies and radiation, but definitely not against bullets and mutants for long.
+ent-ClothingOuterArmorSSP24Topaz = Yellow SSP-24 "Topaz"
+    .desc = A quality modified SSP-24 set created in the zone with improved protection against Gravitational and Spacial anomalies anomalies. There's a note on the inside reading "Not Rift Resistant."
+ent-ClothingHeadHelmetSSP24Topaz = SSP-24 "Topaz" Helmet
+    .desc = Protects against anomalies and radiation, but definitely not against bullets and mutants for long.
+ent-ClothingOuterArmorSSP24Sapfire = Blue SSP-24 "Sapphire"
+    .desc = A quality modified SSP-24 set created in the zone with improved protection against Acidic anomalies. Many have questioned the tinkers why they used blue as the color for this version, the response is always "Why don't you make your own suit then?"
+ent-ClothingHeadHelmetSSP24Sapfire = SSP-24 "Sapphire" Helmet
+    .desc = Protects against anomalies and radiation, but definitely not against bullets and mutants for long.

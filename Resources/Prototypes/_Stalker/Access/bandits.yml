@@ -1,0 +1,7 @@
+- type: accessLevel
+  id: Bandit
+  name: id-card-access-level-bandit
+
+- type: accessLevel
+  id: BanditHead
+  name: id-card-access-level-bandit-head

@@ -1,0 +1,358 @@
+- type: entity
+  parent: [DrinkVisualsOpenable, DrinkBottlePlasticSmallBaseFull]
+  id: HerculesBottleFull
+  name: hercules bottle
+  description: A small bottle containing Hercules drug. The liquid has a distinctive light blue color and slightly bitter taste. Reduces body weight by 20kg while in bloodstream and quenches thirst and hunger.
+  suffix: ST
+  components:
+  - type: Trash
+    time: 300
+  - type: STWeight
+    self: 0.5
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: STHercules
+          Quantity: 30
+  - type: Label
+    currentLabel: reagent-name-hercules
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Consumable/Drinks/hercules.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Consumable/Drinks/hercules.rsi
+  - type: FitsInDispenser
+    solution: drink
+  - type: Tag
+    tags:
+    - DrinkBottle
+  - type: Sealable
+
+- type: entity
+  parent: [DrinkVisualsAllFilled, DrinkBottleGlassBaseFull]
+  id: DrinkCossackVodkaBottleFull
+  name: cossacks vodka bottle
+  description: Vodka popular in the zone, it takes the edge and some of the radiation off.
+  suffix: ST
+  components:
+  - type: Trash
+    time: 300
+  - type: STWeight
+    self: 0.8
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: CossackVodka
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-vodka
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Consumable/Drinks/cossackvodka.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Consumable/Drinks/cossackvodka.rsi
+  - type: Sealable
+
+- type: entity
+  parent: [DrinkBottleGlassBaseFull, DrinkVisualsAllFilled]
+  id: STDrinkYevishWineBottleFull
+  name: Cook's wine
+  description: The label is a bit messy and clearly printed by hand but the wine itself is top notch and clearly crafted by someone dedicated to making something worth drinking.
+  suffix: ST, Food
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Wine
+          Quantity: 90
+  - type: Label
+    currentLabel: reagent-name-wine
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Consumable/Drinks/yevish_wine.rsi
+    layers:
+    - state: icon_empty
+      map: [ "enum.OpenableVisuals.Layer" ]
+    - state: fill-5
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 5
+    inHandsFillBaseName: null
+  - type: FitsInDispenser
+    solution: drink
+  - type: Tag
+    tags:
+    - Wine
+    - DrinkBottle
+
+- type: entity
+  parent: [ DrinkBaseMaterialGlass, DrinkBase, DrinkBaseOpenable, DrinkVisualsOpenable, DrinkVisualsFillOverlay ]
+  id: STDrinkJar
+  name: jar
+  description: An old jar.
+  suffix: ST
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Consumable/Drinks/jar.rsi
+    scale: 0.7,0.7
+    layers:
+    - state: icon
+      map: [ "enum.SolutionContainerLayers.Base" ]
+    - state: fill-1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
+    - state: icon-front
+      map: [ "enum.SolutionContainerLayers.Overlay" ]
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+  - type: SolutionContainerVisuals
+    maxFillLevels: 5
+    fillBaseName: fill-
+    inHandsMaxFillLevels: 3
+    inHandsFillBaseName: -fill-
+  - type: ExaminableSolution
+    examinableWhileClosed: true
+    heldOnly: false
+  - type: Openable
+    sound:
+      collection: bottleOpenSounds
+    closeable: true
+    closeSound:
+      collection: bottleCloseSounds
+  - type: Tag
+    tags:
+    - DrinkBottle
+  - type: Craftable
+
+# various filled jars
+- type: entity
+  parent: STDrinkJar
+  id: STDrinkJarMoonshine
+  name: jar of moonshine
+  suffix: moonshine
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Moonshine
+          Quantity: 50
+
+- type: entity
+  parent: STDrinkJar
+  id: STDrinkJarDirtyWater
+  name: dirty jar
+  suffix: dirty water
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: STToxicWater
+          Quantity: 20
+
+- type: entity
+  parent: STDrinkJar
+  id: STDrinkJarPiss
+  name: dirty jar
+  suffix: piss
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: STPiss
+          Quantity: 20
+
+- type: entity
+  parent: STDrinkJar
+  id: STDrinkJarMold
+  name: dirty jar
+  suffix: mold
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Mold
+          Quantity: 6
+
+- type: entity
+  parent: STDrinkJar
+  id: STDrinkJarBlood
+  name: dirty jar
+  suffix: blood
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Blood
+          Quantity: 50
+
+- type: entity
+  parent: STDrinkJar
+  id: STDrinkJarSap
+  name: dirty jar
+  suffix: sap
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: Sap
+          Quantity: 20
+
+- type: entity
+  parent: STDrinkJar
+  id: STDrinkJarJuicePotato
+  name: dirty jar
+  suffix: potato juice
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: JuicePotato
+          Quantity: 30
+
+- type: entity
+  parent: STDrinkJar
+  id: STDrinkJarMilkSpoiled
+  name: dirty jar
+  suffix: spoiled milk
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 50
+        reagents:
+        - ReagentId: MilkSpoiled
+          Quantity: 25
+
+# and lightcraft recipes to clean them
+- type: lightCraftingRecipe
+  id: CleanJarPiss
+  results:
+  - STDrinkJar
+  steps:
+    firstIngredient: STRag
+    secondIngredient: STDrinkJarPiss
+    keepFirst: true
+    exactFirst: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CleanJarBlood
+  results:
+  - STDrinkJar
+  steps:
+    firstIngredient: STRag
+    secondIngredient: STDrinkJarBlood
+    keepFirst: true
+    exactFirst: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CleanJarMoonshine
+  results:
+  - STDrinkJar
+  steps:
+    firstIngredient: STRag
+    secondIngredient: STDrinkJarMoonshine
+    keepFirst: true
+    exactFirst: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CleanJarMilkSpoiled
+  results:
+  - STDrinkJar
+  steps:
+    firstIngredient: STRag
+    secondIngredient: STDrinkJarMilkSpoiled
+    keepFirst: true
+    exactFirst: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CleanJarJuicePotato
+  results:
+  - STDrinkJar
+  steps:
+    firstIngredient: STRag
+    secondIngredient: STDrinkJarJuicePotato
+    keepFirst: true
+    exactFirst: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CleanJarSap
+  results:
+  - STDrinkJar
+  steps:
+    firstIngredient: STRag
+    secondIngredient: STDrinkJarSap
+    keepFirst: true
+    exactFirst: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CleanJarMold
+  results:
+  - STDrinkJar
+  steps:
+    firstIngredient: STRag
+    secondIngredient: STDrinkJarMold
+    keepFirst: true
+    exactFirst: false
+    time: 3
+
+- type: lightCraftingRecipe
+  id: CleanJarDirtWater
+  results:
+  - STDrinkJar
+  steps:
+    firstIngredient: STRag
+    secondIngredient: STDrinkJarDirtyWater
+    keepFirst: true
+    exactFirst: false
+    time: 3
+
+# OW changes
+
+- type: entity
+  parent: STEnergyDrink
+  id: STEnergyDrinkWhiteMonster
+  name: White Monster
+  description: FOR REAL MEN, CONTAINS 300 MILLIGRAMS OF CAFFINE AND 50 MILLIGRAMS OF PROTIEN.
+  components:
+  - type: Trash
+    time: 300
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Consumable/Drinks/whitemonster.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Consumable/Drinks/whitemonster.rsi
+
+- type: entity
+  parent: STEnergyDrink
+  id: STEnergyDrinkPinkMonster
+  name: Pink Monster
+  description: For the more feminine monster enjoyers.
+  components:
+  - type: Trash
+    time: 300
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Consumable/Drinks/pinkmonster.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Consumable/Drinks/pinkmonster.rsi

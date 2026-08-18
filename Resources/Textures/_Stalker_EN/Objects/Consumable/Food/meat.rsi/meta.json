@@ -1,0 +1,89 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Stalker14 CLA, author: sprites by carousel",
+    "states": [
+        {
+            "name": "eel_cooked"
+        },
+        {
+            "name": "eel_raw"
+        },
+        {
+            "name": "fillet_cooked"
+        },
+        {
+            "name": "fillet_raw"
+        },
+        {
+            "name": "rottenfish"
+        },
+        {
+            "name": "steak_cooked"
+        },
+        {
+            "name": "steak_raw"
+        },
+        {
+            "name": "salo"
+        },
+        {
+            "name": "salochunk"
+        },
+        {
+            "name": "cvarci"
+        },
+        {
+            "name": "ratraw"
+        },
+        {
+            "name": "ratcooked"
+        },
+        {
+            "name": "boarjerked"
+        },
+        {
+            "name": "boarspiced"
+        },
+        {
+            "name": "bearjerked"
+        },
+        {
+            "name": "bearspiced"
+        },
+        {
+            "name": "dogjerked"
+        },
+        {
+            "name": "dogspiced"
+        },
+        {
+            "name": "ratjerked"
+        },
+        {
+            "name": "ratspiced"
+        },
+        {
+            "name": "suckerjerked"
+        },
+        {
+            "name": "suckerspiced"
+        },
+        {
+            "name": "dogjerkedwhole"
+        },
+        {
+            "name": "bearjerkedwhole"
+        },
+        {
+            "name": "boarjerkedwhole"
+        },
+        {
+            "name": "suckerjerkedwhole"
+        }
+    ]
+}

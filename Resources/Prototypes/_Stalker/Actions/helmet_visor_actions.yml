@@ -1,0 +1,11 @@
+- type: entity
+  id: ActionToggleHelmetVisor
+  parent: BaseAction
+  components:
+  - type: Action
+    useDelay: 1.5
+    icon:
+      sprite: _Stalker/Objects/Clothing/hats/Vityaz1C.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:ToggleHelmetVisorEvent

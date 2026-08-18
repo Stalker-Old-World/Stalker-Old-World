@@ -1,0 +1,103 @@
+# Great Swamps
+- type: stAnomalyGenerationOptions
+  id: STGreatSwampsGenerationOptions
+  options:
+    totalCount: 400
+    anomalyEntries:
+    # Electrical
+    - protoId: ZoneAnomalySource
+      weight: 2
+    - protoId: ZoneAnomalyGarland
+      weight: 5
+    # Chemical
+    - protoId: ZoneAnomalySmoke
+      weight: 2
+    - protoId: ZoneAnomalyGazirovka
+      weight: 5
+    - protoId: ZoneAnomalyKissel
+      weight: 3
+    # Gravity
+    - protoId: ZoneAnomalyNoGravity
+      weight: 0.95
+    - protoId: ZoneAnomalyBurden
+      weight: 0.95
+    - protoId: ZoneAnomalyGravi
+      weight: 1.5
+    - protoId: ZoneAnomalySpringboard
+      weight: 1
+    - protoId: ZoneAnomalyPulse
+      weight: 1
+    # Thermal
+    - protoId: ZoneAnomalySteam
+      weight: 2
+    # Psy
+    - protoId: ZoneAnomalyBarabashka
+      weight: 0.5
+    #-PIVO-UPDATE-
+    - protoId: ZoneAnomalyBeer
+      weight: 0.3
+
+# Yantar
+- type: stAnomalyGenerationOptions
+  id: STYantarGenerationOptions
+  options:
+    totalCount: 300
+    anomalyEntries:
+    # Electrical
+    - protoId: ZoneAnomalyGarland
+      weight: 1
+    - protoId: ZoneAnomalyEMP
+      weight: 0.5
+    # Chemical
+    - protoId: ZoneAnomalySmoke
+      weight: 0.5
+    - protoId: ZoneAnomalyGazirovka
+      weight: 2
+    - protoId: ZoneAnomalyKissel
+      weight: 2
+    # Gravity
+    - protoId: ZoneAnomalyGravi
+      weight: 1.25
+    - protoId: ZoneAnomalySpringboard
+      weight: 1
+    - protoId: ZoneAnomalyGrabber
+      weight: 0.5
+    - protoId: ZoneAnomalyGlassShards
+      weight: 3
+    # Thermal
+    - protoId: ZoneAnomalySteam
+      weight: 3
+    - protoId: ZoneAnomalyJarka
+      weight: 3
+    # Psy
+    - protoId: ZoneAnomalyLamp
+      weight: 1
+    - protoId: ZoneAnomalyBarabashka
+      weight: 0.75
+
+# Jupiter Plant - Weak so mutants dont all kill themselves and fighting them flows better
+- type: stAnomalyGenerationOptions
+  id: STJupiterPlantGenerationOptions
+  options:
+    totalCount: 25
+    anomalyEntries:
+    # Electrical
+    - protoId: ZoneAnomalyElectra
+    # Gravity
+    - protoId: ZoneAnomalyGravi
+      weight: 2
+    - protoId: ZoneAnomalySpringboard
+      weight: 5
+    # Thermal
+    - protoId: ZoneAnomalyJarka
+    # Psy
+    - protoId: ZoneAnomalyLamp
+      weight: 0.1
+    #-PIVO-UPDATE-
+    - protoId: ZoneAnomalyBeer
+      weight: 0.6
+    # Gravity
+    - protoId: ZoneAnomalyGlassShards
+      weight: 0.2
+    - protoId: ZoneAnomalyVortex
+      weight: 0.1

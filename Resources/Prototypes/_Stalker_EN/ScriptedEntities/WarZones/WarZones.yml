@@ -1,0 +1,209 @@
+# lowest tier
+# low points, low cooldown
+- type: entity
+  id: WarZoneEntity_CordonPigFarm
+  parent: MarkerBase
+  name: Cordon Pig Farm War Zone
+  description: A physical marker for the Kordon War Zone.
+  suffix: War Zone EN
+  components:
+  - type: WarZone
+    proto: CordonPigFarm
+    portalName: Cordon Pig Farm # im not sure what this comp is for
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      trigger:
+        shape:
+          !type:PhysShapeCircle
+          radius: 6
+        hard: false
+        mask:
+        - MobMask
+        layer:
+        - MidImpassable
+  - type: PointLight
+    enabled: true
+    radius: 7
+    color: Cyan
+    energy: 1
+
+- type: stWarZone
+  id: CordonPigFarm
+  rewardPointsPerPeriod: 1
+  rewardPeriod: 60 # 1 minute
+  captureCooldownHours: 0.5
+  captureTime: 120 # 2 minutes
+  requirements:
+  - !type:ZoneOwnershipRequirenment
+    requiredZones: []
+
+# manual mapping
+# low points
+- type: entity
+  id: WarZoneEntity_LowTier
+  parent: MarkerBase
+  name: War Zone
+  description: A physical marker for the low tier War Zone.
+  suffix: War Zone EN, low points
+  components:
+  - type: WarZone
+    proto: LowTier
+    portalName: War Zone # im not sure what this comp is for
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      trigger:
+        shape:
+          !type:PhysShapeCircle
+          radius: 6
+        hard: false
+        mask:
+        - MobMask
+        layer:
+        - MidImpassable
+  - type: PointLight
+    enabled: true
+    radius: 7
+    color: Cyan
+    energy: 1
+
+- type: stWarZone
+  id: LowTier
+  rewardPointsPerPeriod: 1
+  rewardPeriod: 60 # 1 minute
+  captureCooldownHours: 0.5
+  captureTime: 120 # 2 minutes
+  requirements:
+  - !type:ZoneOwnershipRequirenment
+    requiredZones: []
+
+# medium points
+- type: entity
+  id: WarZoneEntity_MidTier
+  parent: MarkerBase
+  name: War Zone
+  description: A physical marker for the mid tier War Zone.
+  suffix: War Zone EN, medium points
+  components:
+  - type: WarZone
+    proto: MidTier
+    portalName: War Zone # im not sure what this comp is for
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      trigger:
+        shape:
+          !type:PhysShapeCircle
+          radius: 6
+        hard: false
+        mask:
+        - MobMask
+        layer:
+        - MidImpassable
+  - type: PointLight
+    enabled: true
+    radius: 7
+    color: Cyan
+    energy: 1
+
+- type: stWarZone
+  id: MidTier
+  rewardPointsPerPeriod: 2
+  rewardPeriod: 60 # 1 minute
+  captureCooldownHours: 0.5
+  captureTime: 120 # 2 minutes
+  requirements:
+  - !type:ZoneOwnershipRequirenment
+    requiredZones: []
+
+# high points
+# longer cooldown
+- type: entity
+  id: WarZoneEntity_HighTier
+  parent: MarkerBase
+  name: War Zone
+  description: A physical marker for the high tier War Zone.
+  suffix: War Zone EN, high points
+  components:
+  - type: WarZone
+    proto: HighTier
+    portalName: War Zone # im not sure what this comp is for
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      trigger:
+        shape:
+          !type:PhysShapeCircle
+          radius: 6
+        hard: false
+        mask:
+        - MobMask
+        layer:
+        - MidImpassable
+  - type: PointLight
+    enabled: true
+    radius: 7
+    color: Cyan
+    energy: 1
+
+- type: stWarZone
+  id: HighTier
+  rewardPointsPerPeriod: 3
+  rewardPeriod: 60 # 1 minute
+  captureCooldownHours: 1
+  captureTime: 120 # 2 minutes
+  requirements:
+  - !type:ZoneOwnershipRequirenment
+    requiredZones: []
+
+# highest points
+# requires defenders present
+- type: entity
+  id: WarZoneEntity_KotHTier
+  parent: MarkerBase
+  name: War Zone
+  description: A physical marker for the king of the hill War Zone.
+  suffix: War Zone EN, high points, KotH
+  components:
+  - type: WarZone
+    proto: KotHTier
+    portalName: War Zone # im not sure what this comp is for
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      trigger:
+        shape:
+          !type:PhysShapeCircle
+          radius: 6
+        hard: false
+        mask:
+        - MobMask
+        layer:
+        - MidImpassable
+  - type: PointLight
+    enabled: true
+    radius: 7
+    color: Cyan
+    energy: 1
+
+- type: stWarZone
+  id: KotHTier
+  rewardPointsPerPeriod: 6
+  rewardPeriod: 60 # 1 minute
+  shouldAwardWhenDefenderPresent: true
+  captureCooldownHours: 0.1
+  captureTime: 30 # 30 seconds
+  requirements:
+  - !type:ZoneOwnershipRequirenment
+    requiredZones: []

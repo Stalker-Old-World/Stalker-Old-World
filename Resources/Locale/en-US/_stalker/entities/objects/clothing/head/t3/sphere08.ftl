@@ -1,0 +1,10 @@
+ent-STClothingHeadHelmetEnvironmentT3Base = T3 Environment Protection Helmet Base
+    .suffix = ST, T3, Env
+ent-ClothingHeadHelmetBerill5MMilitary = Sphere-08 helmet
+    .desc = Sphere-08 helmet used by the Ukrainian Military. Lighter than other Class 3 helmets, it trades some ballistic protection for limited psi-shielding. Modified with a small headlamp.
+ent-ClothingHeadHelmetBerill5MMonolith = Sphere-08 helmet
+    .desc = Sphere-08 helmet used by Monolith cultists. Lighter than other Class 3 helmets, it trades some ballistic protection for limited psi-shielding, which is unfortunately lost on its fanatical users.
+ent-ClothingHeadHelmetBerill5MDolg = Sphere-08 "Tower" helmet
+    .desc = Sphere-08 helmet used by Duty fighters. Lighter than other Class 3 helmets, it trades some ballistic protection for limited psi-shielding. Modified with a ballistic face mask.
+ent-ClothingHeadHelmetAborigine = Sphere-08 "Turtle" helmet
+    .desc = Sphere-08 helmet used by Freedom fighters. Lighter than other Class 3 helmets, it trades some ballistic protection for limited psi-shielding. Modified with a Flecktarn pattern helmet cover.

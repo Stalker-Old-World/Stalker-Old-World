@@ -1,0 +1,11 @@
+﻿# Neutrals
+
+- type: lightCraftingRecipe
+  id: STCraftSkinClothingOuterArmorAborigineNeutral
+  results:
+    - ClothingOuterArmorAborigineNeutral
+  steps:
+    firstIngredient: STSkinsKitNeutral
+    secondIngredient: ClothingOuterArmorAborigineStalker
+    keepFirst: true
+    time: 5

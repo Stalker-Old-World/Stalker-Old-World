@@ -1,0 +1,104 @@
+<!-- stalker-en-changes: increased height for password button -->
+<pda:PdaWindow  xmlns="https://spacestation14.io"
+                xmlns:pda="clr-namespace:Content.Client.PDA"
+                xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                MinSize="600 450"
+                SetSize="900 600">
+    <!-- This: (Margin="1 1 3 0") is necessary so the navigation bar doesn't sticks into the black content border. -->
+    <BoxContainer Name="NavigationBar" HorizontalExpand="True" MinHeight="32" Margin="1 1 3 0">
+        <pda:PdaNavigationButton Name="HomeButton" SetWidth="32" CurrentTabBorderThickness="0 0 2 0" IsCurrent="True"/>
+        <pda:PdaNavigationButton Name="SettingsButton" MinWidth="100" LabelText="{Loc 'comp-pda-io-settings-button'}"/>
+
+        <pda:PdaNavigationButton HorizontalExpand="True"/>
+        <pda:PdaNavigationButton Name="FlashLightToggleButton" Access="Public" ToggleMode="True" ActiveFgColor="#EAEFBB" SetWidth="32"/>
+        <pda:PdaNavigationButton Name="EjectPenButton" Access="Public" SetWidth="32"/>
+        <pda:PdaNavigationButton Name="EjectIdButton" Access="Public" SetWidth="32"/>
+        <pda:PdaNavigationButton Name="EjectPaiButton" Access="Public" SetWidth="32"/>
+    </BoxContainer>
+    <ScrollContainer Name="ProgramBar" Access="Public" HorizontalExpand="True" SetHeight="80" HScrollEnabled="True" VScrollEnabled="False" Margin="1 0 3 0">
+        <PanelContainer Name="ProgramBarBorder">
+            <BoxContainer Name="ProgramBarContent" Orientation="Horizontal" HorizontalExpand="True" VerticalAlignment="Center" Margin="6 8"/>
+        </PanelContainer>
+    </ScrollContainer>
+    <BoxContainer Name="ViewContainer" HorizontalExpand="True" VerticalExpand="True" Access="Public" Margin="1 0 3 0">
+        <BoxContainer Name="HomeView"
+                      Orientation="Vertical"
+                      VerticalExpand="True"
+                      HorizontalExpand="True"
+                      SizeFlagsStretchRatio="1"
+                      MinSize="50 50"
+                      Margin="8">
+            <ContainerButton Name="PdaOwnerButton">
+                <RichTextLabel Name="PdaOwnerLabel" Access="Public"/>
+            </ContainerButton>
+            <ContainerButton Name="StalkerWeekButton">
+                <RichTextLabel Name="StalkerWeekLabel" Access="Public"/>
+            </ContainerButton>
+            <ContainerButton Name="IdInfoButton" Visible="False"> <!-- stalker-en-changes - PDA homescreen layout -->
+                <RichTextLabel Name="IdInfoLabel" Access="Public"/>
+            </ContainerButton>
+            <ContainerButton Name="StationNameButton" Visible="False"> <!-- stalker-en-changes - PDA homescreen layout -->
+                <RichTextLabel Name="StationNameLabel" Access="Public"/>
+            </ContainerButton>
+            <ContainerButton Name="StationAlertLevelButton" Visible="False"> <!-- stalker-en-changes - PDA homescreen layout -->
+                <RichTextLabel Name="StationAlertLevelLabel" Access="Public"/>
+            </ContainerButton>
+            <ContainerButton Name="StationTimeButton">
+                <RichTextLabel Name="StationTimeLabel" Access="Public"/>
+            </ContainerButton>
+            <ContainerButton Name="StationAlertLevelInstructionsButton" Visible="False"> <!-- stalker-en-changes - PDA homescreen layout -->
+                <RichTextLabel Name="StationAlertLevelInstructions" Access="Public"/>
+            </ContainerButton>
+        </BoxContainer>
+        <ScrollContainer Name="SettingsView" HorizontalExpand="True" VerticalExpand="True" HScrollEnabled="True" SizeFlagsStretchRatio="1">
+            <BoxContainer Orientation="Vertical"
+                          VerticalExpand="True"
+                          HorizontalExpand="True"
+                          MinSize="50 50"
+                          Name="Settings"
+                          Margin="4">
+                <pda:PdaSettingsButton Name="AccessRingtoneButton"
+                                       Access="Public"
+                                       Text="{Loc 'comp-pda-ui-ringtone-button'}"
+                                       Description="{Loc 'comp-pda-ui-ringtone-button-description'}"/>
+                <pda:PdaSettingsButton Name="SilentModeButton"
+                                       Access="Public"
+                                       Text="{Loc 'comp-pda-ui-silent-mode-button-off'}"
+                                       Description="{Loc 'comp-pda-ui-silent-mode-button-description'}"/>
+                <pda:PdaSettingsButton Name="ActivateMusicButton"
+                                       Access="Public"
+                                       Visible="False"
+                                       Text="{Loc 'pda-bound-user-interface-music-button'}"
+                                       Description="{Loc 'pda-bound-user-interface-music-button-description'}"/>
+                <pda:PdaSettingsButton Name="ShowUplinkButton"
+                                       Access="Public"
+                                       Visible="False"
+                                       Text="{Loc 'pda-bound-user-interface-show-uplink-title'}"
+                                       Description="{Loc 'pda-bound-user-interface-show-uplink-description'}"/>
+                <pda:PdaSettingsButton Name="LockUplinkButton"
+                                       Access="Public"
+                                       Visible="False"
+                                       Text="{Loc 'pda-bound-user-interface-lock-uplink-title'}"
+                                       Description="{Loc 'pda-bound-user-interface-lock-uplink-description'}"/>
+                <pda:PdaSettingsButton Name="SetPasswordButton"
+                                       Access="Public"
+                                       Text="{Loc 'st-pda-password-settings-button'}"
+                                       Description="{Loc 'st-pda-password-settings-button-description'}"/>
+            </BoxContainer>
+        </ScrollContainer>
+        <BoxContainer Orientation="Vertical"
+                      VerticalExpand="True"
+                      HorizontalExpand="True"
+                      SizeFlagsStretchRatio="1"
+                      Name="ProgramView"
+                      Access="Public">
+        </BoxContainer>
+    </BoxContainer>
+    <!--stalker-en-change:Delete this "leftover from vanila SS14"-->
+    <!--<BoxContainer Name="ContentFooter" HorizontalExpand="True" SetHeight="28" Margin="1 0 2 1">
+        <controls:StripeBack HasBottomEdge="False" HasMargins="False" HorizontalExpand="True">
+            <Label Text="Robust#OS ™" VerticalAlignment="Center" Margin="6 0" StyleClasses="PdaContentFooterText"/>
+            <Label Name="AddressLabel" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="6 0" StyleClasses="PdaContentFooterText"/>
+        </controls:StripeBack>
+    </BoxContainer>-->
+</pda:PdaWindow>

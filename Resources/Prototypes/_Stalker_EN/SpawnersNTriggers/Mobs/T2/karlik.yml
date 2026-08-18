@@ -1,0 +1,59 @@
+﻿- type: entity
+  name: karlic trigger (1-2) (10%) 30м
+  id: STTriggerKarlik121030
+  parent: STBaseTrigger121030
+  suffix: ST, T2, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMutantKarlik
+    restricted:
+    - STMutantKarlik
+
+- type: entity
+  name: karlik trigger (1-2) (25%) 30м
+  id: STTriggerKarlik122530
+  parent: STBaseTrigger122530
+  suffix: ST, T2, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMutantKarlik
+    restricted:
+    - STMutantKarlik
+
+- type: entity
+  name: karlik trigger (1-2) (50%) 30м
+  id: STTriggerKarlik125030
+  parent: STBaseTrigger125030
+  suffix: ST, T2, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMutantKarlik
+    restricted:
+    - STMutantKarlik
+
+- type: entity
+  name: karlik trigger (1-2) (75%) 30м
+  id: STTriggerSTMutantKarlik127530
+  parent: STBaseTrigger127530
+  suffix: ST, T2, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMutantKarlik
+    restricted:
+    - STMutantKarlik
+
+- type: entity
+  name: karlik trigger (1-2) (100%) 30м
+  id: STTriggerKarlik1210010
+  parent: STBaseTrigger1210010
+  suffix: ST, T2, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMutantKarlik
+    restricted:
+    - STMutantKarlik

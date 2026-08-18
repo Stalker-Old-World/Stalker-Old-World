@@ -1,0 +1,101 @@
+- type: job
+  id: StalkerRene
+  name: job-renegade
+  icon: rene
+  description: job-renegade-desc
+  playTimeTracker: JobRenegat
+  whitelisted: true
+  requirements:
+    # - !type:RoleTimeRequirement
+    #   role: JobRenegat
+    #   time: 1
+    - !type:SpeciesRequirement
+      species:
+      - Human
+      - Dwarf
+  startingGear: ReneGear
+  supervisors: job-renegade-supervisor
+  canBeAntag: false
+  special:
+    - !type:AddComponentSpecial
+      components:
+        #- type: PersistentCraftAccess
+        - type: Access
+          tags:
+            - Renegat
+        - type: Bands
+          band: Stalker
+          bandIcon: rene
+          bandProto: STRenegatsBand
+          bandRankId: 1
+        - type: BlockTackingHolyItems
+        - type: NpcFactionMember
+          factions:
+          - Bandit
+        - type: Vocal # stalker EN change start
+          sounds:
+            Male: MaleHumanBandit
+            Female: FemaleHumanBandit
+            Unsexed: MaleHumanBandit # stalker EN change end
+
+- type: job
+  id: StalkerHeadRene
+  name: job-head-renegade
+  icon: rene
+  description: job-head-renegade-desc
+  playTimeTracker: JobHeadRenegat
+  whitelisted: true
+  requirements:
+  # - !type:RoleTimeRequirement
+  #   role: JobRenegat
+  #   time: 1
+  - !type:SpeciesRequirement
+    species:
+    - Human
+    - Dwarf
+  startingGear: ReneGearHead # EN
+  supervisors: job-head-renegade-supervisor
+  canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+    #- type: PersistentCraftAccess
+    - type: Access
+      tags:
+      - Renegat
+    - type: Bands
+      band: Stalker
+      bandIcon: rene
+      bandProto: STRenegatsBand
+      bandRankId: 2
+    - type: BlockTackingHolyItems
+    - type: NpcFactionMember
+      factions:
+      - Bandit
+    - type: Vocal # stalker EN change start
+      sounds:
+        Male: MaleHumanBandit
+        Female: FemaleHumanBandit
+        Unsexed: MaleHumanBandit # stalker EN change end
+
+- type: startingGear
+  id: ReneGear
+  equipment:
+    id: BandPDA
+    dogtag: ClothingNeckDogtagRenegade
+
+- type: startingGear # EN # You just can't have, working tests, because, YOU DON'T NEED THEM, OKAY?
+  id: ReneGearHead
+  equipment:
+    id: BandPDA
+    dogtag: ClothingNeckDogtagRenegadeLeader
+
+- type: stBand
+  id: STRenegatsBand
+  name: Renegades
+  factionId: Stalker #Renegades # Stalker-EN-TODO: Faction "Renegades" does not exist! Replaced with "Stalker"
+  maxMembers: 16
+  managingRankId: 2
+  hierarchy:
+    1: StalkerRene
+    2: StalkerHeadRene

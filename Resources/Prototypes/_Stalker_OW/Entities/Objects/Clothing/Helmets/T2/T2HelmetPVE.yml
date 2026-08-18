@@ -1,0 +1,38 @@
+- type: entity
+  parent: STClothingHeadBase
+  id: STOWClothingHeadHelmetT2PVEBase
+  suffix: STOW, T2, PVE
+  components:
+  - type: Craftable
+  - type: Tag
+    tags:
+      - BlockMask
+  - type: STWeight
+    self: 3.1
+  - type: Armor
+    armorClass: 2
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.80
+        Piercing: 0.90
+  - type: ExplosionResistance
+    damageCoefficient: 0.95
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - HeadTop
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+
+- type: entity
+  parent: STOWClothingHeadHelmetT2PVEBase
+  id: STOWClothingHeadHelmetT2PVEStalker
+  name: Cyclops Helmet
+  description: A cheap helmet with an equally cheap visor attached to the helmet in an extremely cheap way.
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/Head/makeshift_helmet.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/Head/makeshift_helmet.rsi
+  - type: Craftable

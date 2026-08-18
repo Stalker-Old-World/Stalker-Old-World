@@ -1,0 +1,71 @@
+- type: entity
+  abstract: true
+  parent: STBaseWeaponSniper
+  id: STBaseWeaponSniperSKS
+  components:
+  - type: STWeight
+    self: 3.75
+  - type: Clothing
+    sprite: _Stalker/Objects/Weapons/Guns/Snipers/sks.rsi
+  - type: Item
+    sprite: _Stalker/Objects/Weapons/Guns/Snipers/sks.rsi
+  - type: Sprite
+    sprite: _Stalker/Objects/Weapons/Guns/Snipers/sks.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_Stalker/Effects/Guns/sks_shoot.ogg
+    minAngle: 50
+    maxAngle: 85
+    angleIncrease: 1.5
+    angleDecay: 30
+    fireRate: 2
+  - type: BallisticAmmoProvider
+    capacity: 10
+    whitelist:
+      tags:
+      - STCartridge739
+  - type: STWeaponDamageFalloff
+    falloffMultiplier: 0.8
+  - type: STWeaponAccuracy
+    accuracyMultiplier: 2
+
+- type: entity
+  parent: STBaseWeaponSniperSKS
+  id: STWeaponSniperSKS
+  name: SKS Carbine
+  description: The Simonov self-loading carbine chambered in 7.62x39mm with fixed 10-round magazine. Offers powerful caliber at low cost, though with certain limitations in Zone conditions.
+
+- type: entity
+  parent: STBaseWeaponSniperSKS
+  id: STWeaponSniperSKSpersecutor
+  name: Преследователь
+  description: Винтовка Мондрагона, переделанная и модифицированная под калибр СКС. Перекрашена в чёрныЙ, а на стволе неизвестного происхождения зарубки.
+  components:
+  - type: Clothing
+    sprite: _Stalker/Objects/Weapons/Guns/Snipers/persecutor.rsi
+  - type: Item
+    sprite: _Stalker/Objects/Weapons/Guns/Snipers/persecutor.rsi
+  - type: Sprite
+    sprite: _Stalker/Objects/Weapons/Guns/Snipers/persecutor.rsi
+    scale: 0.9, 0.9
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_Stalker/Effects/Guns/sks_shoot.ogg
+    # StalkerOW - Begin
+    #minAngle: 52
+    minAngle: 40
+    #maxAngle: 110
+    maxAngle: 90
+    #fireRate: 3.2
+    fireRate: 4
+    #angleIncrease: 3
+    angleIncrease: 0.5
+    # StalkerOW - End
+    angleDecay: 15
+    projectileSpeed: 70

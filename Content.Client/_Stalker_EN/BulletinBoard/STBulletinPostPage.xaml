@@ -1,0 +1,33 @@
+<BoxContainer xmlns="https://spacestation14.io"
+              xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+              xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
+              Orientation="Vertical"
+              HorizontalExpand="True"
+              VerticalExpand="True"
+              RectClipContent="True"
+              Margin="4">
+
+    <!-- Header -->
+    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="0 0 0 4">
+        <Button Name="BackButton" MinWidth="60"/>
+        <Label Name="TitleLabel" StyleClasses="LabelHeading" HorizontalExpand="True" Align="Center"/>
+    </BoxContainer>
+
+    <customControls:HSeparator Margin="0 2 0 2"/>
+
+    <!-- Description field -->
+    <Label Name="DescriptionFieldLabel" StyleClasses="LabelKeyText" Margin="0 4 0 2"/>
+    <PanelContainer VerticalExpand="True" HorizontalExpand="True" MinSize="0 80">
+        <PanelContainer.PanelOverride>
+            <graphics:StyleBoxFlat BackgroundColor="#333237"/>
+        </PanelContainer.PanelOverride>
+        <TextEdit Name="DescriptionInput" HorizontalExpand="True" VerticalExpand="True"/>
+    </PanelContainer>
+
+    <!-- Character counter -->
+    <Label Name="CharCounter" HorizontalAlignment="Right" Margin="0 2 0 0" StyleClasses="LabelSubText"/>
+
+    <!-- Submit button -->
+    <Button Name="SubmitButton" HorizontalExpand="True" Margin="0 4 0 0"/>
+
+</BoxContainer>

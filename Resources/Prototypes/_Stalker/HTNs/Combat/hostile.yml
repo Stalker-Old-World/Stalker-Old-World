@@ -1,0 +1,129 @@
+- type: htnCompound
+  id: STSimpleHostileCompound
+  branches:
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:UnPullOperator
+          preconditions:
+            - !type:PulledPrecondition
+              isPulled: true
+    - tasks: # start EN changes
+        - !type:HTNCompoundTask
+          task: STSimpleMeleeCombatAliveCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: FollowCompound
+    - tasks:
+      - !type:HTNCompoundTask
+        task: STSimpleMeleeCombatCritCompound
+    - tasks:
+      - !type:HTNCompoundTask
+        task: FollowCompound # end EN changes
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompound
+
+- type: htnCompound
+  id: STSimpleMeleeCombatCompound
+  branches:
+    # Melee combat (unarmed or otherwise)
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:UtilityOperator
+            proto: NearbyMeleeTargets
+        - !type:HTNCompoundTask
+          task: STSimpleMeleeAttackTargetCompound
+
+# Tries to melee attack our target.
+- type: htnCompound
+  id: STSimpleMeleeAttackTargetCompound
+  branches:
+    # Move to melee range and hit them
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:MoveToOperator
+            shutdownState: PlanFinished
+            pathfindInPlanning: true
+            removeKeyOnFinish: false
+            targetKey: TargetCoordinates
+            pathfindKey: TargetPathfind
+            rangeKey: MeleeRange
+        - !type:HTNPrimitiveTask
+          operator: !type:MeleeOperator
+            targetKey: Target
+          preconditions:
+            - !type:KeyExistsPrecondition
+              key: Target
+            - !type:TargetInRangePrecondition
+              targetKey: Target
+              rangeKey: MeleeRange
+          services:
+            - !type:UtilityService
+              id: MeleeService
+              proto: NearbyMeleeTargets
+              key: Target
+
+# EN
+# TargetIsDeadCon might be unnecessary idk
+- type: utilityQuery
+  id: STMeleeAliveTargets
+  query:
+  - !type:NearbyHostilesQuery
+  considerations:
+    - !type:TargetIsAliveCon
+      curve: !type:BoolCurve
+    - !type:TargetIsDeadCon
+      curve: !type:InverseBoolCurve
+    - !type:TargetDistanceCon
+      curve: !type:PresetCurve
+        preset: TargetDistance
+    - !type:TargetHealthCon
+      curve: !type:PresetCurve
+        preset: TargetHealth
+    - !type:TargetAccessibleCon
+      curve: !type:BoolCurve
+    - !type:TargetInLOSOrCurrentCon
+      curve: !type:BoolCurve
+
+- type: utilityQuery
+  id: STMeleeCritTargets
+  query:
+  - !type:NearbyHostilesQuery
+  considerations:
+  - !type:TargetIsCritCon
+    curve: !type:BoolCurve
+  - !type:TargetIsDeadCon
+    curve: !type:InverseBoolCurve
+  - !type:TargetDistanceCon
+    curve: !type:PresetCurve
+      preset: TargetDistance
+  - !type:TargetHealthCon
+    curve: !type:PresetCurve
+      preset: TargetHealth
+  - !type:TargetAccessibleCon
+    curve: !type:BoolCurve
+  - !type:TargetInLOSOrCurrentCon
+    curve: !type:BoolCurve
+
+# look for a living target
+- type: htnCompound
+  id: STSimpleMeleeCombatAliveCompound
+  branches:
+  - tasks:
+    - !type:HTNPrimitiveTask
+      operator: !type:UtilityOperator
+        proto: STMeleeAliveTargets
+    - !type:HTNCompoundTask
+      task: STSimpleMeleeAttackTargetCompound
+
+# look for a crit target
+- type: htnCompound
+  id: STSimpleMeleeCombatCritCompound
+  branches:
+  - tasks:
+    - !type:HTNPrimitiveTask
+      operator: !type:UtilityOperator
+        proto: STMeleeCritTargets
+    - !type:HTNCompoundTask
+      task: STSimpleMeleeAttackTargetCompound
+# end EN

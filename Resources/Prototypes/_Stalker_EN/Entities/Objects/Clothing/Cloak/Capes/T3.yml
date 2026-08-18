@@ -1,0 +1,290 @@
+- type: entity
+  parent: ClothingOuterCoatLoyalist
+  id: ClothingOuterCoatKevlarMercenaries
+  name: Mercenary utility raincoat
+  description: A raincoat worn by Mercenaries, featuring a myriad of small pockets. Painted in blue.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_merc.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_merc.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetKevlarMercenaries
+    requiredSlot:
+    - cloak
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container {}
+
+- type: entity
+  parent: ClothingHeadHelmetLoyalistCoat
+  id: ClothingHeadHelmetKevlarMercenaries
+  name: Mercenary raincoat hood
+  description: Sadly too small to fit over your helmet.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/hats/coat_hat_mercs.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/hats/coat_hat_mercs.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+- type: entity
+  parent: ClothingOuterCoatLoyalist
+  id: ClothingOuterCoatReinforcedMilitia
+  name: Reinforced Militia Cloak
+  description: A reinforced cloak dawned by the Cordon Militia.
+  suffix: ST, T3
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_militia.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_militia.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetKevlarMilitia
+    requiredSlot:
+    - cloak
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container {}
+
+- type: entity
+  parent: ClothingHeadHelmetLoyalistCoat
+  id: ClothingHeadHelmetKevlarMilitia
+  name: Militia Kevlar Hood
+  description: Sadly too small to fit over your helmet.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/hats/coat_hat_militia.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/hats/coat_hat_militia.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+- type: entity
+  parent: ClothingOuterCoatLoyalist
+  id: ClothingOuterCoatKevlarClearSky
+  name: sky-blue utility raincoat
+  description: A strange raincoat, featuring a myriad of pockets and painted in a light blue... camouflage pattern?
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_cs.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_cs.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetKevlarClearSky
+    requiredSlot:
+    - cloak
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container {}
+
+- type: entity
+  parent: ClothingHeadHelmetLoyalistCoat
+  id: ClothingHeadHelmetKevlarClearSky
+  name: sky-blue raincoat hood
+  description: Sadly too small to fit over your helmet.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/hats/coat_hat_cs.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/hats/coat_hat_cs.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+- type: entity
+  parent: STClothingCapeBase
+  id: ClothingOuterCoatEmergencyResourcePouch
+  name: Emergency Resource Pouch
+  description: This vest was developed by 'NIICHAZ' scientists to store equipment and supplies. It is very comfortable to wear with the SSP, although it can also be worn with other suits. Behind the vest, there is a tag on which it says:Developed by the 'NIICHAZ' scientist Ivan Voronov.
+  components:
+  - type: STWeight
+    self: 6
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/emergency_resource_pouch.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/emergency_resource_pouch.rsi
+  - type: Armor
+    armorClass: 2
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+  - type: Storage
+    maxItemSize: Normal
+    blacklist:
+      tags:
+      - STArtifact
+    grid:
+      - 0,4,0,5
+      - 0,0,0,2
+      - 2,4,2,5
+      - 2,1,3,2
+      - 4,4,4,5
+      - 5,1,6,2
+      - 6,4,6,5
+      - 8,4,8,5
+      - 8,0,8,2
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
+
+- type: entity
+  parent: ClothingOuterCoatKevlarMonolith
+  id: ClothingOuterCoatKevlarMonolithClean
+  name: кевларовый плащ монолита
+  description: Плащ, сделанный в условиях зоны, на удивление качественная работа, сделан из качественной кожи и прошит кевларом,кое-где вставлены бронепластины, окрашен в необычный камуфляж.
+  suffix: ST, T2
+  components:
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 0
+
+- type: entity
+  parent: ClothingOuterCoatLoyalist
+  id: ClothingOuterCoatFreedomPoncho
+  name: Freedom utility poncho
+  description: A poncho worn by Freedom fighters, featuring a myriad of small pockets and Flecktarn camouflage.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_freedom_poncho.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_freedom_poncho.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetPonchoFreedom
+    requiredSlot:
+    - cloak
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container {}
+
+- type: entity
+  parent: ClothingOuterCoatFreedomPoncho
+  id: ClothingOuterCoatFreedomPonchoShort
+  name: Freedom utility poncho (short)
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_freedom_poncho_short.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_freedom_poncho_short.rsi
+
+- type: entity
+  parent: ClothingOuterCoatFreedomPoncho
+  id: ClothingOuterCoatFreedomCloak
+  name: Freedom utility cloak
+  description: A cloak worn by Freedom fighters, featuring a myriad of small pockets and Flecktarn camouflage.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_freedom_cape.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/coat_freedom_cape.rsi
+
+- type: entity
+  parent: ClothingHeadHelmetLoyalistCoat
+  id: ClothingHeadHelmetPonchoFreedom
+  name: Freedom poncho hood
+  description: Sadly too small to fit over your helmet.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/hats/coat_hat_freedom_poncho.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/hats/coat_hat_freedom_poncho.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+- type: entity
+  parent: STClothingCapeBase
+  id: STClothingCapeTacticalRigGreen
+  suffix: ST
+  name: Tactical Rig Green
+  description: Very tacticool rig for your combat utilities, mags, whatever else fit in there.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/tacticalrig_green.rsi 
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/tacticalrig_green.rsi 
+  - type: STWeight
+    self: 4
+  - type: Storage
+    maxItemSize: Normal
+    blacklist:
+      tags:
+      - STArtifact
+    grid:
+      - 0,4,0,5
+      - 0,0,0,2
+      - 2,4,2,5
+      - 2,1,3,2
+      - 4,4,4,5
+      - 5,1,6,2
+      - 6,4,6,5
+      - 8,4,8,5
+      - 8,0,8,2
+
+- type: entity
+  parent: STClothingCapeTacticalRigGreen
+  id: STClothingCapeTacticalRigBlack
+  suffix: ST
+  name: Tactical Rig Black
+  description: Very tacticool rig for your combat utilities, mags, whatever else fit in there.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/tacticalrig_black.rsi 
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/tacticalrig_black.rsi
+
+- type: entity
+  parent: STClothingCapeTacticalRigGreen
+  id: STClothingCapeTacticalRigBrown
+  suffix: ST
+  name: Tactical Rig Brown
+  description: Very tacticool rig for your combat utilities, mags, whatever else fit in there.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/tacticalrig_brown.rsi 
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/tacticalrig_brown.rsi
+
+- type: entity
+  parent: STClothingCapeTacticalRigGreen
+  id: STClothingCapeTacticalRigBlue
+  suffix: ST
+  name: Tactical Rig Blue
+  description: Very tacticool rig for your combat utilities, mags, whatever else fit in there.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/tacticalrig_blue.rsi 
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/tacticalrig_blue.rsi
+
+- type: entity
+  parent: STClothingCapeTacticalRigGreen
+  id: STClothingCapeTacticalRigRed
+  suffix: ST
+  name: Tactical Rig red
+  description: Very tacticool rig for your combat utilities, mags, whatever else fit in there.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/cloak/tacticalrig_red.rsi 
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/cloak/tacticalrig_red.rsi 

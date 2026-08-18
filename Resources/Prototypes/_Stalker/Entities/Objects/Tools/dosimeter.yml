@@ -1,0 +1,92 @@
+- type: entity
+  parent: BaseCraftItem
+  id: BaseDosimeter
+  name: Geiger counter
+  description: A handheld device used for detecting and measuring radiation pulses.
+  suffix: Stalker, Dosimeter
+  abstract: true
+  components:
+    - type: Sprite
+      layers:
+        - state: geiger_base
+        - state: geiger_on_idle
+          map: ["enum.GeigerLayers.Screen"]
+          shader: unshaded
+          visible: false
+    - type: Item
+    - type: Geiger
+      showControl: true
+      showExamine: true
+      showAll: false
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.GeigerVisuals.IsEnabled:
+          GeigerLayers.Screen:
+            True: { visible: True }
+            False: { visible: False }
+        enum.GeigerVisuals.DangerLevel:
+          GeigerLayers.Screen:
+            None: {state: geiger_on_idle}
+            Low: {state: geiger_on_low}
+            Med: {state: geiger_on_med}
+            High: {state: geiger_on_high}
+            Extreme: {state: geiger_on_ext}
+    - type: RepositoryItem # stalker-en change
+      categoryName: repository-tools-category
+
+- type: entity
+  parent: BaseDosimeter
+  id: DosimeterModified
+  name: модифицированный дозиметр
+  description: Изменённый умельцами счётчик Гейгера, что теперь показывает сумму отрицательных излучений всех типов, кроме радиационного. Незаменимо в аномальных полях и при пси-излучении.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Tools/geiger_modified.rsi
+    - type: Item
+      sprite: _Stalker/Objects/Tools/geiger_modified.rsi
+    - type: Geiger
+      damageTypes:  # start en change
+      - Asphyxiation
+      - Bloodloss
+      - Blunt
+      - Piercing
+      - Slash
+      - Heat
+      - Shock
+      - Cold
+      - Caustic
+      - Poison
+      - Cellular
+      - Psy
+      - Compression
+      - Structural # end en changes
+
+- type: entity
+  parent: BaseDosimeter
+  id: DosimeterUniversal
+  name: точный модифицированный дозиметр
+  description: Самый совершенный детектор показывающий сумму отрицательных излучений всех типов, оснащен различными датчиками, проводящими групповой тест на природу излучения.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Tools/geiger_universal.rsi
+    - type: Item
+      sprite: _Stalker/Objects/Tools/geiger_universal.rsi
+    - type: Geiger
+      accuracy: 3 # start en changes
+      damageTypes:
+      - Asphyxiation
+      - Bloodloss
+      - Blunt
+      - Piercing
+      - Slash
+      - Heat
+      - Shock
+      - Cold
+      - Caustic
+      - Radiation
+      - Poison
+      - Cellular
+      - Psy
+      - Compression
+      - Structural # end en changes

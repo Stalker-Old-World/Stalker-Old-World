@@ -1,0 +1,29 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckToothNecklace
+  name: Tooth Necklace
+  description: What madman made this?
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/Neck/Toothnecklace.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/Neck/Toothnecklace.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,6,1
+    quickInsert: true
+    areaInsert: true
+    whitelist:
+      tags:
+      - Stalkertooth
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: [ ]
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: RepositoryItem
+    categoryName: repository-clothing-category

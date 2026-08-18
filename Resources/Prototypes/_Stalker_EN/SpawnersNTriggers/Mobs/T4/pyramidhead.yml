@@ -1,0 +1,35 @@
+- type: entity
+  name: pyramidhead (1) (10%) 30м
+  id: STTriggerPyramidHead11030
+  parent: STBaseTrigger111030
+  suffix: ST, T4, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantPyramidHead
+    restricted:
+    - STMobMutantPyramidHead
+
+- type: entity
+  name: pyramidhead (1) (25%) 30м
+  id: STTriggerPyramidHead12530
+  parent: STBaseTrigger112530
+  suffix: ST, T4, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantPyramidHead
+    restricted:
+    - STMobMutantPyramidHead
+
+- type: entity
+  name: pyramidhead (1) (100%) 30м
+  id: STTriggerPyramidHead110030
+  parent: STBaseTrigger1110030
+  suffix: ST, T4, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantPyramidHead
+    restricted:
+    - STMobMutantPyramidHead

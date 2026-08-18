@@ -1,0 +1,44 @@
+
+- type: entity
+  parent: STBaseWeaponGameRevolver
+  id: STWeaponRevolverSWPC325TR
+  name: S&W PC 325 TR # changed to use 357 on stalker EN
+  description: Шестизарядный револьвер для опытных стрелков с хорошими характеристиками скорострела под калибр .45 ACP. Большой разброс из-за отдачи, рекомендуется стрелять на дальних дистанциях не торопясь.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Weapons/Guns/Revolvers/s&w_pc_325_tr.rsi
+      scale: 0.9, 0.9
+      layers:
+      - state: icon
+        map: ["enum.GunVisualLayers.Base"]
+    - type: Gun
+      projectileSpeed: 55
+      minAngle:  0
+      maxAngle: 35
+      angleIncrease: 10
+      angleDecay: 20
+      fireRate: 3
+      selectedMode: SemiAuto
+      soundGunshot:
+        path: /Audio/_Stalker/Effects/Guns/revolver4.ogg
+    - type: RevolverAmmoProvider
+      whitelist:
+        tags:
+          - Cartridge357Magnum
+          - SpeedLoader357Magnum
+      proto: null
+      capacity: 8
+      chambers: [ null, null, null, null, null, null, null, null ]
+      ammoSlots: [ null, null, null, null, null, null, null, null ]
+      soundEject:
+        path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+      soundInsert:
+        path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+    - type: STWeight
+      self: 1.58
+    - type: StaticPrice
+      price: 30
+    - type: UseDelay
+      delay: 1
+    - type: RepositoryItem
+      categoryName: repository-weapons-category

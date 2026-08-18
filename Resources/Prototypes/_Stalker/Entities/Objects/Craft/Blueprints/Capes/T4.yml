@@ -1,0 +1,8 @@
+
+- type: entity
+  parent: STBaseBlueprint
+  id: STClothingCapeArmorChainmailSevaBlueprint
+  name: Рецепт плаща Сева
+  components:
+    - type: STBlueprint
+      blueprint: newrecipeSTClothingCapeArmorChainmailSeva

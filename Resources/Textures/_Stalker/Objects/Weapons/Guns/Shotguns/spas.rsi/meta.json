@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "copyright": "Stalker14 CLA",
+  "license": "CC-BY-NC-SA-3.0",
+  "size": {
+    "x": 48,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "bolt-open"
+    },
+    {
+      "name": "butt-close"
+    },
+    {
+      "name": "butt-open"
+    },
+    {
+      "name": "equipped-BACKPACK",
+      "directions": 4
+    },
+    {
+      "name": "equipped-BACKPACK-butt",
+      "directions": 4
+    },
+    {
+      "name": "equipped-SUITSTORAGE",
+      "directions": 4
+    },
+    {
+      "name": "equipped-SUITSTORAGE-butt",
+      "directions": 4
+    },
+    {
+      "name": "icon"
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left-butt-c",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left-butt-o",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right-butt-c",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right-butt-o",
+      "directions": 4
+    },
+    {
+      "name": "wielded-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "wielded-inhand-left-butt-c",
+      "directions": 4
+    },
+    {
+      "name": "wielded-inhand-left-butt-o",
+      "directions": 4
+    },
+    {
+      "name": "wielded-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "wielded-inhand-right-butt-c",
+      "directions": 4
+    },
+    {
+      "name": "wielded-inhand-right-butt-o",
+      "directions": 4
+    }
+  ]
+}

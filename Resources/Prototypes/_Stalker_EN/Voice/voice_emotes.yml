@@ -1,0 +1,1615 @@
+- type: emote
+  id: STAttack
+  name: chat-emote-name-st-attack
+  category: VoiceLine
+  available: true
+  icon: _Stalker_EN/Interface/Emotes/attack.png
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-st-attack"]
+  chatTriggers:
+    - stattack
+
+- type: emote
+  id: STBackup
+  name: chat-emote-name-st-backup
+  category: VoiceLine
+  available: true
+  icon: _Stalker_EN/Interface/Emotes/backup.png
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-st-backup"]
+  chatTriggers:
+  - stbackup
+
+- type: emote
+  id: STCover
+  name: chat-emote-name-st-cover
+  category: VoiceLine
+  available: true
+  icon: _Stalker_EN/Interface/Emotes/cover.png
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-st-cover"]
+  chatTriggers:
+  - stcover
+
+- type: emote
+  id: STEnemy
+  name: chat-emote-name-st-enemy
+  category: VoiceLine
+  available: true
+  icon: _Stalker_EN/Interface/Emotes/enemy.png
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-st-enemy"]
+  chatTriggers:
+  - stenemy
+
+- type: emote
+  id: STGrenade
+  name: chat-emote-name-st-grenade
+  category: VoiceLine
+  available: true
+  icon: _Stalker_EN/Interface/Emotes/grenade.png
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-st-grenade"]
+  chatTriggers:
+  - stnade
+
+- type: emote
+  id: STMedkit
+  name: chat-emote-name-st-medkit
+  category: VoiceLine
+  available: true
+  icon: _Stalker_EN/Interface/Emotes/medkit.png
+  whitelist:
+    components:
+    - Vocal
+  chatMessages: ["chat-emote-msg-st-medkit"]
+  chatTriggers:
+  - stmedkit
+
+  # Special Emotes
+- type: emote
+  id: STCheekiBreeki
+  name: chat-emote-name-st-cheekibreeki
+  category: VoiceLine
+  icon: _Stalker_EN/Interface/Emotes/bandit.png
+  whitelist:
+    components:
+    - Vocal
+    - CheekiBreeki
+    requireAll: true
+  chatMessages: ["chat-emote-msg-st-cheekibreeki"]
+  chatTriggers:
+  - stcheeki
+
+- type: emote
+  id: STPsyVoice
+  name: chat-emote-name-st-psyvoice
+  category: VoiceLine
+  icon: _Stalker_EN/Interface/Emotes/monolith.png
+  whitelist:
+    components:
+    - Vocal
+    - PsyVoiceEmote
+    requireAll: true
+  chatTriggers:
+  - stpsy
+
+- type: emote
+  id: STSvoboda
+  name: chat-emote-name-st-svoboda
+  category: VoiceLine
+  icon: _Stalker_EN/Interface/Emotes/freedom.png
+  whitelist:
+    components:
+    - Vocal
+    - SvobodaEmote
+    requireAll: true
+  chatMessages: ["chat-emote-msg-st-svoboda"]
+  chatTriggers:
+  - stsvoboda
+
+  # Loner
+- type: emoteSounds
+  id: MaleHumanLoner
+  sounds:
+    Scream:
+      collection: MaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: LonerLaugh
+    Sneeze:
+      collection: MaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: MaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: MaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: BikeHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: MaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: MaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: MaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: LonerDeath
+    STAttack:
+      collection: LonerAttack
+    STBackup:
+      collection: LonerBackup
+    STCover:
+      collection: LonerCover
+    STEnemy:
+      collection: LonerEnemy
+    STGrenade:
+      collection: LonerGrenade
+    STMedkit:
+      collection: LonerMedkit
+
+- type: emoteSounds
+  id: FemaleHumanLoner
+  sounds:
+    Scream:
+      collection: FemaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: FemaleLaugh
+      params:
+        variation: 0.125
+    Sneeze:
+      collection: FemaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: FemaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: FemaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: CluwneHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: FemaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: FemaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: FemaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: LonerDeath
+      params:
+        pitch: 1.2
+    STAttack:
+      collection: LonerAttack
+      params:
+        pitch: 1.2
+    STBackup:
+      collection: LonerBackup
+      params:
+        pitch: 1.2
+    STCover:
+      collection: LonerCover
+      params:
+        pitch: 1.2
+    STEnemy:
+      collection: LonerEnemy
+      params:
+        pitch: 1.2
+    STGrenade:
+      collection: LonerGrenade
+      params:
+        pitch: 1.2
+    STMedkit:
+      collection: LonerMedkit
+      params:
+        pitch: 1.2
+
+  # Bandit
+- type: emoteSounds
+  id: MaleHumanBandit
+  sounds:
+    Scream:
+      collection: MaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: BanditLaugh
+    Sneeze:
+      collection: MaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: MaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: MaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: BikeHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: MaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: MaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: MaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: BanditDeath
+    STAttack:
+      collection: BanditAttack
+    STBackup:
+      collection: BanditBackup
+    STCover:
+      collection: BanditCover
+    STEnemy:
+      collection: BanditEnemy
+    STGrenade:
+      collection: BanditGrenade
+    STMedkit:
+      collection: BanditMedkit
+    STCheekiBreeki:
+      path: /Audio/_Stalker_EN/VoiceLines/Bandit/detour_7.ogg
+
+- type: emoteSounds
+  id: FemaleHumanBandit
+  sounds:
+    Scream:
+      collection: FemaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: FemaleLaugh
+      params:
+        variation: 0.125
+    Sneeze:
+      collection: FemaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: FemaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: FemaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: CluwneHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: FemaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: FemaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: FemaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: BanditDeath
+      params:
+        pitch: 1.2
+    STAttack:
+      collection: BanditAttack
+      params:
+        pitch: 1.2
+    STBackup:
+      collection: BanditBackup
+      params:
+        pitch: 1.2
+    STCover:
+      collection: BanditCover
+      params:
+        pitch: 1.2
+    STEnemy:
+      collection: BanditEnemy
+      params:
+        pitch: 1.2
+    STGrenade:
+      collection: BanditGrenade
+      params:
+        pitch: 1.2
+    STMedkit:
+      collection: BanditMedkit
+      params:
+        pitch: 1.2
+    STCheekiBreeki:
+      path: /Audio/_Stalker_EN/VoiceLines/Bandit/detour_7.ogg
+      params:
+        pitch: 1.2
+
+  # Duty
+- type: emoteSounds
+  id: MaleHumanDuty
+  sounds:
+    Scream:
+      collection: MaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: DutyLaugh
+    Sneeze:
+      collection: MaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: MaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: MaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: BikeHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: MaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: MaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: MaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: DutyDeath
+    STAttack:
+      collection: DutyAttack
+    STBackup:
+      collection: DutyBackup
+    STCover:
+      collection: DutyCover
+    STEnemy:
+      collection: DutyEnemy
+    STGrenade:
+      collection: DutyGrenade
+    STMedkit:
+      collection: DutyMedkit
+
+- type: emoteSounds
+  id: FemaleHumanDuty
+  sounds:
+    Scream:
+      collection: FemaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: FemaleLaugh
+      params:
+        variation: 0.125
+    Sneeze:
+      collection: FemaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: FemaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: FemaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: CluwneHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: FemaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: FemaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: FemaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: DutyDeath
+      params:
+        pitch: 1.2
+    STAttack:
+      collection: DutyAttack
+      params:
+        pitch: 1.2
+    STBackup:
+      collection: DutyBackup
+      params:
+        pitch: 1.2
+    STCover:
+      collection: DutyCover
+      params:
+        pitch: 1.2
+    STEnemy:
+      collection: DutyEnemy
+      params:
+        pitch: 1.2
+    STGrenade:
+      collection: DutyGrenade
+      params:
+        pitch: 1.2
+    STMedkit:
+      collection: DutyMedkit
+      params:
+        pitch: 1.2
+
+  # Ecologists
+- type: emoteSounds
+  id: MaleHumanEcologists
+  sounds:
+    Scream:
+      collection: MaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: EcologistsLaugh
+    Sneeze:
+      collection: MaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: MaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: MaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: BikeHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: MaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: MaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: MaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: EcologistsDeath
+    STAttack:
+      collection: EcologistsAttack
+    STBackup:
+      collection: EcologistsBackup
+    STCover:
+      collection: EcologistsCover
+    STEnemy:
+      collection: EcologistsEnemy
+    STGrenade:
+      collection: EcologistsGrenade
+    STMedkit:
+      collection: EcologistsMedkit
+
+- type: emoteSounds
+  id: FemaleHumanEcologists
+  sounds:
+    Scream:
+      collection: FemaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: FemaleLaugh
+      params:
+        variation: 0.125
+    Sneeze:
+      collection: FemaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: FemaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: FemaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: CluwneHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: FemaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: FemaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: FemaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: EcologistsDeath
+      params:
+        pitch: 1.2
+    STAttack:
+      collection: EcologistsAttack
+      params:
+        pitch: 1.2
+    STBackup:
+      collection: EcologistsBackup
+      params:
+        pitch: 1.2
+    STCover:
+      collection: EcologistsCover
+      params:
+        pitch: 1.2
+    STEnemy:
+      collection: EcologistsEnemy
+      params:
+        pitch: 1.2
+    STGrenade:
+      collection: EcologistsGrenade
+      params:
+        pitch: 1.2
+    STMedkit:
+      collection: EcologistsMedkit
+      params:
+        pitch: 1.2
+
+  # Freedom
+- type: emoteSounds
+  id: MaleHumanFreedom
+  sounds:
+    Scream:
+      collection: MaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: FreedomLaugh
+    Sneeze:
+      collection: MaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: MaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: MaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: BikeHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: MaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: MaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: MaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: FreedomDeath
+    STAttack:
+      collection: FreedomAttack
+    STBackup:
+      collection: FreedomBackup
+    STCover:
+      collection: FreedomCover
+    STEnemy:
+      collection: FreedomEnemy
+    STGrenade:
+      collection: FreedomGrenade
+    STMedkit:
+      collection: FreedomMedkit
+    STSvoboda:
+      path: /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_5.ogg
+
+- type: emoteSounds
+  id: FemaleHumanFreedom
+  sounds:
+    Scream:
+      collection: FemaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: FemaleLaugh
+      params:
+        variation: 0.125
+    Sneeze:
+      collection: FemaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: FemaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: FemaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: CluwneHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: FemaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: FemaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: FemaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: FreedomDeath
+      params:
+        pitch: 1.2
+    STAttack:
+      collection: FreedomAttack
+      params:
+        pitch: 1.2
+    STBackup:
+      collection: FreedomBackup
+      params:
+        pitch: 1.2
+    STCover:
+      collection: FreedomCover
+      params:
+        pitch: 1.2
+    STEnemy:
+      collection: FreedomEnemy
+      params:
+        pitch: 1.2
+    STGrenade:
+      collection: FreedomGrenade
+      params:
+        pitch: 1.2
+    STMedkit:
+      collection: FreedomMedkit
+      params:
+        pitch: 1.2
+    STSvoboda:
+      path: /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_5.ogg
+      params:
+        pitch: 1.2
+
+  # Merc
+- type: emoteSounds
+  id: MaleHumanMerc
+  sounds:
+    Scream:
+      collection: MaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: MercLaugh
+    Sneeze:
+      collection: MaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: MaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: MaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: BikeHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: MaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: MaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: MaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: MercDeath
+    STAttack:
+      collection: MercAttack
+    STBackup:
+      collection: MercBackup
+    STCover:
+      collection: MercCover
+    STEnemy:
+      collection: MercEnemy
+    STGrenade:
+      collection: MercGrenade
+    STMedkit:
+      collection: MercMedkit
+
+- type: emoteSounds
+  id: FemaleHumanMerc
+  sounds:
+    Scream:
+      collection: FemaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: FemaleLaugh
+      params:
+        variation: 0.125
+    Sneeze:
+      collection: FemaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: FemaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: FemaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: CluwneHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: FemaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: FemaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: FemaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: MercDeath
+      params:
+        pitch: 1.2
+    STAttack:
+      collection: MercAttack
+      params:
+        pitch: 1.2
+    STBackup:
+      collection: MercBackup
+      params:
+        pitch: 1.2
+    STCover:
+      collection: MercCover
+      params:
+        pitch: 1.2
+    STEnemy:
+      collection: MercEnemy
+      params:
+        pitch: 1.2
+    STGrenade:
+      collection: MercGrenade
+      params:
+        pitch: 1.2
+    STMedkit:
+      collection: MercMedkit
+      params:
+        pitch: 1.2
+
+  # Military
+- type: emoteSounds
+  id: MaleHumanMilitary
+  sounds:
+    Scream:
+      collection: MaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: MilitaryLaugh
+    Sneeze:
+      collection: MaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: MaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: MaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: BikeHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: MaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: MaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: MaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: MilitaryDeath
+    STAttack:
+      collection: MilitaryAttack
+    STBackup:
+      collection: MilitaryBackup
+    STCover:
+      collection: MilitaryCover
+    STEnemy:
+      collection: MilitaryEnemy
+    STGrenade:
+      collection: MilitaryGrenade
+    STMedkit:
+      collection: MilitaryMedkit
+
+- type: emoteSounds
+  id: FemaleHumanMilitary
+  sounds:
+    Scream:
+      collection: FemaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: FemaleLaugh
+      params:
+        variation: 0.125
+    Sneeze:
+      collection: FemaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: FemaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: FemaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: CluwneHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: FemaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: FemaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: FemaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: MilitaryDeath
+      params:
+        pitch: 1.2
+    STAttack:
+      collection: MilitaryAttack
+      params:
+        pitch: 1.2
+    STBackup:
+      collection: MilitaryBackup
+      params:
+        pitch: 1.2
+    STCover:
+      collection: MilitaryCover
+      params:
+        pitch: 1.2
+    STEnemy:
+      collection: MilitaryEnemy
+      params:
+        pitch: 1.2
+    STGrenade:
+      collection: MilitaryGrenade
+      params:
+        pitch: 1.2
+    STMedkit:
+      collection: MilitaryMedkit
+      params:
+        pitch: 1.2
+
+  # Monolith
+- type: emoteSounds
+  id: MaleHumanMonolith
+  sounds:
+    Scream:
+      collection: MaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: MonolithLaugh
+    Sneeze:
+      collection: MaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: MaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: MaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: BikeHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: MaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: MaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: MaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: MonolithDeath
+    STAttack:
+      collection: MonolithAttack
+    STBackup:
+      collection: MonolithBackup
+    STCover:
+      collection: MonolithCover
+    STEnemy:
+      collection: MonolithEnemy
+    STGrenade:
+      collection: MonolithGrenade
+    STMedkit:
+      collection: MonolithMedkit
+    STPsyVoice:
+      collection: MonolithPsyVoice
+
+- type: emoteSounds
+  id: FemaleHumanMonolith
+  sounds:
+    Scream:
+      collection: FemaleScreams
+      params:
+        variation: 0.125
+    Laugh:
+      collection: FemaleLaugh
+      params:
+        variation: 0.125
+    Sneeze:
+      collection: FemaleSneezes
+      params:
+        variation: 0.125
+    Cough:
+      collection: FemaleCoughs
+      params:
+        variation: 0.125
+    CatMeow:
+      collection: CatMeows
+      params:
+        variation: 0.125
+    CatHisses:
+      collection: CatHisses
+      params:
+        variation: 0.125
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+      params:
+        variation: 0.125
+    RobotBeep:
+      collection: RobotBeeps
+      params:
+        variation: 0.125
+    Yawn:
+      collection: FemaleYawn
+      params:
+        variation: 0.125
+    Snore:
+      collection: Snores
+      params:
+        variation: 0.125
+    Honk:
+      collection: CluwneHorn
+      params:
+        variation: 0.125
+    Sigh:
+      collection: FemaleSigh
+      params:
+        variation: 0.125
+    Crying:
+      collection: FemaleCry
+      params:
+        variation: 0.125
+    Whistle:
+      collection: Whistles
+      params:
+        variation: 0.125
+    Weh:
+      collection: Weh
+      params:
+        variation: 0.125
+    Hew:
+      collection: Hew
+      params:
+        variation: 0.125
+    Gasp:
+      collection: FemaleGasp
+      params:
+        variation: 0.125
+    DefaultDeathgasp:
+      collection: MonolithDeath
+      params:
+        pitch: 1.2
+    STAttack:
+      collection: MonolithAttack
+      params:
+        pitch: 1.2
+    STBackup:
+      collection: MonolithBackup
+      params:
+        pitch: 1.2
+    STCover:
+      collection: MonolithCover
+      params:
+        pitch: 1.2
+    STEnemy:
+      collection: MonolithEnemy
+      params:
+        pitch: 1.2
+    STGrenade:
+      collection: MonolithGrenade
+      params:
+        pitch: 1.2
+    STMedkit:
+      collection: MonolithMedkit
+      params:
+        pitch: 1.2
+    STPsyVoice:
+      collection: MonolithPsyVoice

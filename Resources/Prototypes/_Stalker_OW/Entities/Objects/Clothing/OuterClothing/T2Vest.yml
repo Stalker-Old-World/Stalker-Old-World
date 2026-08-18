@@ -1,0 +1,78 @@
+- type: entity
+  parent: STClothingOuterArmorStorageBasic # Can replace with our own parent later to disconnect from RU prototypes.
+  id: STOWClothingOuterArmorT2VestBase
+  suffix: STOW, Armor, T2, PvP
+  abstract: true
+  components:
+    - type: STWeight
+      self: 3.5 # Awaiting weight rebalance to increase this.
+    - type: Storage # Contains 6 1x2, and 7 1x1 slots.
+      maxItemSize: Normal
+      grid:
+        - 0,2,0,3
+        - 1,0,1,0
+        - 2,2,2,3
+        - 3,0,3,0
+        - 4,2,4,3
+        - 5,0,5,0
+        - 6,2,6,3
+        - 7,0,7,0
+        - 8,2,8,3
+        - 9,0,9,0
+        - 10,2,10,3
+    - type: Tag
+      tags:
+        - BlockBelt
+    - type: Armor # Blunt -20%/-3, Slash -20%/-3, Piercing -20%/-5, Explosion -20%.
+      armorClass: 2
+      modifiers:
+        flatReductions:
+          Blunt: 3
+          Slash: 3
+          Piercing: 5
+        coefficients:
+          Blunt: 0.8
+          Slash: 0.8
+          Piercing: 0.8
+    - type: GrantsArtifactSlots
+      slots: 1 # This is a significant disadvantage compared to the 2 slots, since it prevents you from running electrical artifacts.
+    - type: ExplosionResistance
+      damageCoefficient: 0.80
+    - type: Craftable
+# Visual style for these armors is any low-coverage armor vest. No groin, neck, or shoulder protection ideally. Don't use Shield-2 or ANA Tactical as these are used by the T3 armor vests!
+
+- type: entity
+  parent: STOWClothingOuterArmorT2VestBase
+  id: STOWClothingOuterArmorT2VestBandit
+  name: Bandit 6B2 Ballistic Vest
+  description: A Soviet body armor system which entered service in 1981, containing titanium armor plates. Painted in Bandit colors.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/outerClothing/6B2_deserter.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/outerClothing/6B2_deserter.rsi
+    - type: Craftable
+
+- type: entity
+  parent: STOWClothingOuterArmorT2VestBase
+  id: STOWClothingOuterArmorT2VestMilitary
+  name: Military 6B2 Ballistic Vest
+  description: A Soviet body armor system which entered service in 1981, containing titanium armor plates. Standard body armor of Ukrainian OKSOP forces.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/outerClothing/6B2.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/outerClothing/6B2.rsi
+    - type: Craftable
+
+- type: entity
+  parent: STOWClothingOuterArmorT2VestBase
+  id: STOWClothingOuterArmorT2VestRenegade
+  name: Renegade 6B2 Ballistic Vest
+  description: A Soviet body armor system which entered service in 1981, containing titanium armor plates. Painted in Renegade colors.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/outerClothing/6B2_brown.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/outerClothing/6B2_brown.rsi
+    - type: Craftable

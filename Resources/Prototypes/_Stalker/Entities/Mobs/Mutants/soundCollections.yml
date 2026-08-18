@@ -1,0 +1,79 @@
+- type: soundCollection
+  id: BushStep
+  files:
+  - /Audio/_Stalker/Mutants/bush/step1.ogg
+  - /Audio/_Stalker/Mutants/bush/step2.ogg
+  - /Audio/_Stalker/Mutants/bush/step3.ogg
+  - /Audio/_Stalker/Mutants/bush/step4.ogg
+  - /Audio/_Stalker/Mutants/bush/step5.ogg
+  - /Audio/_Stalker/Mutants/bush/step6.ogg
+  - /Audio/_Stalker/Mutants/bush/step7.ogg
+- type: soundCollection
+  id: BushDead
+  files:
+  - /Audio/_Stalker/Mutants/bush/dead.ogg
+  - /Audio/_Stalker/Mutants/bush/dead1.ogg
+
+- type: soundCollection
+  id: STZombieDeath
+  files:
+  - /Audio/_Stalker_EN/Mutants/Zombies/Death/death_1.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Death/death_2.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Death/death_3.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Death/death_4.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Death/death_5.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Death/death_6.ogg
+
+- type: soundCollection
+  id: STZombieSpotted
+  files:
+  - /Audio/_Stalker_EN/Mutants/Zombies/Spotted/enemy_1.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Spotted/enemy_2.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Spotted/enemy_3.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Spotted/enemy_4.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Spotted/enemy_5.ogg
+
+- type: soundCollection
+  id: STZombieIdle
+  files:
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_1.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_2.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_3.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_4.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_5.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_6.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_7.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_8.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_9.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_10.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_11.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Idle/idle_12.ogg
+
+- type: soundCollection
+  id: STZombieHit # for when the zombie is hit
+  files:
+  - /Audio/_Stalker_EN/Mutants/Zombies/Hit/hit_1.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Hit/hit_2.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Hit/hit_3.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Hit/hit_4.ogg
+
+- type: soundCollection
+  id: STZombieAttack # for when the zombie is attacking someone
+  files:
+  - /Audio/_Stalker_EN/Mutants/Zombies/Attack/attack_1.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Attack/attack_2.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Attack/attack_3.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Attack/attack_4.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Attack/attack_5.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Attack/attack_6.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Attack/attack_7.ogg
+  - /Audio/_Stalker_EN/Mutants/Zombies/Attack/attack_8.ogg
+
+- type: speechSounds
+  id: STZombie
+  saySound:
+    collection: STZombieIdle
+  askSound:
+    collection: STZombieIdle
+  exclaimSound:
+    collection: STZombieAttack

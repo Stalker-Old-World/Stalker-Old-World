@@ -1,0 +1,177 @@
+# Stalker EN Changes - Falloff adjusted
+- type: entity
+  abstract: true
+  parent: STBaseEntity
+  id: STBaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+  - type: FlyBySound
+  - type: Clickable
+  - type: Sprite
+    noRot: false
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: bullet
+      shader: unshaded
+  - type: Physics
+    bodyType: Dynamic
+    linearDamping: 0
+    angularDamping: 0
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.1"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: Projectile
+    impactEffect: BulletImpactEffect
+    damage:
+      types:
+        Piercing: 14
+    soundHit:
+      path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
+  - type: TimedDespawn
+    lifetime: 10
+  #- type: STProjectileAccuracy # EN start
+  #  thresholds:
+  #  - range: 1
+  #    falloff: 0.03
+  #- type: STProjectileDamageFalloff
+  #  thresholds:
+  #  - range: 4
+  #    falloff: 0.15      # Gentle base falloff
+  #  - range: 20
+  #    falloff: 0.6       # Moderate drop # EN end
+  - type: LagCompensation
+
+- type: entity
+  parent: STBaseBullet
+  id: STBaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 7
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.45,0.15,0.15"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+
+- type: entity
+  abstract: true
+  parent: STBaseBullet
+  id: STBaseBean #Low range, almost melee
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: STProjectileAccuracy
+    thresholds:
+    - range: 1
+      falloff: 0.01
+
+- type: entity
+  abstract: true
+  parent: STBaseBullet
+  id: STBasePistolBullet #Low range - SMGs and Pistols (Aggressive)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: STProjectileAccuracy
+    thresholds:
+    - range: 5
+      falloff: 0.01
+
+- type: entity
+  abstract: true
+  parent: STBaseBullet
+  id: STBaseLRBullet #Medium range, light rifle (5.45, 5.56)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: STProjectileAccuracy
+    thresholds:
+    - range: 5
+      falloff: 0.01
+
+- type: entity
+  abstract: true
+  parent: STBaseBullet
+  id: STBaseMRBullet #Medium to high range, medium rifle (7.62x39)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: STProjectileAccuracy
+    thresholds:
+    - range: 5
+      falloff: 0.01
+
+- type: entity
+  abstract: true
+  parent: STBaseBullet
+  id: STBaseHRBullet #High range, heavy rifle (7.62x54, .308)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: STProjectileAccuracy
+    thresholds:
+    - range: 5
+      falloff: 0.01
+#Old world change FUCK FALLOFF I HATE FALLOFF
+
+- type: entity
+  abstract: true
+  parent: STBaseBullet
+  id: STBaseSHRBullet #Super High range, sniper rifles
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: STProjectileAccuracy
+    thresholds:
+    - range: 5
+      falloff: 0.001
+# old world change, FUCK FALLOFF
+
+- type: entity
+  abstract: true
+  parent: STBaseBullet
+  id: STBaseSPBullet #Special ammo like 9x39 or .300 blackout
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: STProjectileAccuracy
+    thresholds:
+    - range: 5
+      falloff: 0.01
+# old world change, FUCK FALLOFF
+
+- type: entity
+  abstract: true
+  parent: STBaseBullet
+  id: STBase45ACP #.45 ACP
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: STProjectileAccuracy
+    thresholds:
+    - range: 5
+      falloff: 0.01
+# old world change, FUCK FALLOFF
+
+# stalker EN change - used for revolvers
+- type: entity
+  abstract: true
+  parent: STBaseBullet
+  id: STBaseRevolverBullet # longer range
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: STProjectileAccuracy
+    thresholds:
+    - range: 5
+      falloff: 0.01
+# old world change, FUCK FALLOFF

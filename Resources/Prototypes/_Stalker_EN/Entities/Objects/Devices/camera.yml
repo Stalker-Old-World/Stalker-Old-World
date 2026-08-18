@@ -1,0 +1,101 @@
+- type: entity
+  parent: BaseItem
+  id: STCamera
+  name: camera
+  suffix: ST
+  description: A battered Zenit camera. Still takes decent pictures in the Zone.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Devices/camera.rsi
+    state: camera
+  - type: Item
+    size: Small
+    storedRotation: 90
+  - type: ItemSlots
+    slots:
+      film_slot:
+        name: st-camera-film-slot-name
+        startingItem: STCameraFilm
+        swap: true
+        whitelist:
+          tags:
+          - STCameraFilm
+  - type: STCamera
+  - type: STWeight
+    self: 0.5
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  parent: STCamera
+  id: STCameraVintage
+  name: vintage camera
+  suffix: ST
+  description: An old FED rangefinder. Produces warm, faded photos with a Polaroid look.
+  components:
+  - type: STCamera
+    effect: Polaroid
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Devices/camera.rsi
+    state: camera_vintage
+
+- type: entity
+  parent: STCamera
+  id: STCameraDamaged
+  name: damaged camera
+  suffix: ST
+  description: A camera with fried internals. Photos come out glitchy and distorted.
+  components:
+  - type: STCamera
+    effect: Glitch
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Devices/camera.rsi
+    state: camera_broken
+
+- type: entity
+  parent: BaseItem
+  id: STPhoto
+  name: photograph
+  suffix: ST
+  description: A printed photograph.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/misc.rsi
+    state: photo
+  - type: Item
+    size: Tiny
+  - type: ActivatableUI
+    key: enum.STPhotoUiKey.Key
+    inHandsOnly: false
+  - type: UserInterface
+    interfaces:
+      enum.STPhotoUiKey.Key:
+        type: STPhotoBoundUserInterface
+  - type: STPhoto
+  - type: STWeight
+    self: 0.1
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-miscellaneous-category
+  - type: Tag
+    tags:
+    - Document
+
+- type: entity
+  parent: BaseItem
+  id: STCameraFilm
+  name: camera film
+  suffix: ST
+  description: A roll of photographic film. Holds 5 exposures.
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Craft/tech_card.rsi
+    state: base
+  - type: Item
+    size: Tiny
+  - type: Tag
+    tags:
+    - STCameraFilm
+  - type: LimitedCharges
+    maxCharges: 5
+  - type: STWeight
+    self: 0.1

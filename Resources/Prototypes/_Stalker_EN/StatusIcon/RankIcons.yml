@@ -1,0 +1,67 @@
+# Abstract base — all rank icons share these properties
+- type: jobIcon
+  abstract: true
+  id: STRankBase
+  locationPreference: Left
+  isShaded: true
+  hideOnStealth: true
+  priority: 11
+  allowSelection: false
+  layer: Base
+  xOffset: 0
+
+- type: jobIcon
+  parent: STRankBase
+  id: STRankNovice
+  icon:
+    sprite: /Textures/_Stalker_EN/Icons/Ranks/ranks.rsi
+    state: Novice
+
+- type: jobIcon
+  parent: STRankBase
+  id: STRankTrainee
+  icon:
+    sprite: /Textures/_Stalker_EN/Icons/Ranks/ranks.rsi
+    state: Trainee
+
+- type: jobIcon
+  parent: STRankBase
+  id: STRankExperienced
+  icon:
+    sprite: /Textures/_Stalker_EN/Icons/Ranks/ranks.rsi
+    state: Experienced
+
+- type: jobIcon
+  parent: STRankBase
+  id: STRankProfessional
+  icon:
+    sprite: /Textures/_Stalker_EN/Icons/Ranks/ranks.rsi
+    state: Professional
+
+- type: jobIcon
+  parent: STRankBase
+  id: STRankVeteran
+  icon:
+    sprite: /Textures/_Stalker_EN/Icons/Ranks/ranks.rsi
+    state: Veteran
+
+- type: jobIcon
+  parent: STRankBase
+  id: STRankExpert
+  icon:
+    sprite: /Textures/_Stalker_EN/Icons/Ranks/ranks.rsi
+    state: Expert
+
+- type: jobIcon
+  parent: STRankBase
+  id: STRankMaster
+  icon:
+    sprite: /Textures/_Stalker_EN/Icons/Ranks/ranks.rsi
+    state: Master
+
+- type: jobIcon
+  parent: STRankBase
+  id: STRankLegend
+  icon:
+    sprite: /Textures/_Stalker_EN/Icons/Ranks/ranks.rsi
+    state: Legend

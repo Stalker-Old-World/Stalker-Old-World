@@ -1,0 +1,14 @@
+ent-STBaseModuleSilencerRifles = makeshift rifle silencer
+    .suffix = ST, silencer, T1, RU
+ent-STModuleSilencerRiflesT1Ru = makeshift rifle silencer RU
+    .desc = A makeshift rifle silencer. For Warsaw Pact weapons.
+    .suffix = { ent-STBaseModuleSilencerRifles.suffix }
+ent-STModuleSilencerRiflesT1Nato = makeshift rifle silencer NATO
+    .desc = A makeshift rifle silencer. For NATO weapons.
+    .suffix = ST, silencer, T1, NATO
+ent-STModuleSilencerRiflesT2Ru = professional rifle silencer RU
+    .desc = A factory-made rifle silencer. For Warsaw Pact weapons.
+    .suffix = ST, silencer, T2, RU
+ent-STModuleSilencerRiflesT2Nato = professional rifle silencer NATO
+    .desc = A factory-made rifle silencer. For NATO weapons.
+    .suffix = ST, silencer, T2, NATO

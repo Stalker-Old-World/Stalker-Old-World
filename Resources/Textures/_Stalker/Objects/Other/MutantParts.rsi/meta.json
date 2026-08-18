@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "copyright": "Stalker14 CLA",
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "blinddog"
+    },
+    {
+      "name": "pseudo"
+    },
+    {
+      "name": "pseudodog"
+    },
+    {
+      "name": "sosich"
+    },
+    {
+      "name": "svinota"
+    },
+    {
+      "name": "snork"
+    }
+  ],
+  "license": "CC-BY-NC-SA-3.0"
+}

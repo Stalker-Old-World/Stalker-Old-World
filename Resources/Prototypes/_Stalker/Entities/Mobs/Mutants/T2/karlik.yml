@@ -1,0 +1,119 @@
+- type: entity
+  id: STMutantKarlik
+  parent: BaseMobMutant
+  name: Карлик
+  suffix: ST, T2
+  description: Обитатель подземелий, катакомб. Говорят, что они являются жертвами учёных, и теперь их внутренняя злоба за все злодеяния и боль вырвались наружу. Слабые псионики, способные оказать сопротивление сталкеру, и заманить в ловушку.
+  components:
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/_Stalker/Mutants/karlik/karlik_start.ogg
+      params:
+        volume: 1
+        maxDistance: 20
+  - type: Sprite
+    sprite: _Stalker/Mobs/Mutants/karlik.rsi
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: karlik
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: karlik
+      Dead:
+        Base: dead
+  - type: Damageable
+    damageModifierSet: STMutantT2DamageModifierSet
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 200
+        behaviors:
+          - !type:PlaySoundBehavior
+            sound:
+              path: /Audio/_Stalker/Mutants/karlik/karlik_dead.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: "/Audio/Weapons/smash.ogg"
+    angle: 0
+    attackRate: 0.75
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Slash: 15
+        Blunt: 5
+  - type: HTN
+    rootTask:
+      task: SimpleRangedHostileCompound
+    blackboard:
+      VisionRadius: !type:Single
+        20
+      AggroVisionRadius: !type:Single
+        15
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 1.5
+  - type: BasicEntityAmmoProvider
+    proto: STBulletBolt
+    capacity: 1
+    count: 1
+  - type: Gun
+    fireRate: 0.5
+    useKey: false
+    projectileSpeed: 15
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot: /Audio/_Stalker/Mutants/karlik/karlik_attack.ogg
+  - type: Butcherable
+    spawned:
+    - id: Roubles100
+      amount: 3
+      prob: 1
+  # Stalker-EN start
+  - type: STMobVariantConfig
+    variants:
+    - chance: 0.08
+      quality: Uncommon
+      nameOverride: st-mob-variant-uncommon-karlik
+      healthMultiplier: 1.1
+      damageMultiplier: 1.1
+      spriteScale: 1.05
+      spriteTint: "#706030FF"
+      spriteSaturation: 1.4
+      spriteBrightness: 0.75
+      minWeightMultiplier: 0.95
+      maxWeightMultiplier: 1.25
+      butcherSwaps:
+        Roubles100: Roubles100
+    - chance: 0.02
+      quality: Rare
+      nameOverride: st-mob-variant-rare-karlik
+      healthMultiplier: 1.2
+      damageMultiplier: 1.2
+      spriteScale: 1.1
+      spriteTint: "#D0E0FFFF"
+      spriteSaturation: 0.2
+      spriteBrightness: 1.5
+      minWeightMultiplier: 1.1
+      maxWeightMultiplier: 1.4
+      butcherSwaps:
+        Roubles100: Roubles500
+    - chance: 0.001
+      quality: Legendary
+      nameOverride: st-mob-variant-legendary-karlik
+      healthMultiplier: 1.3
+      damageMultiplier: 1.3
+      spriteScale: 1.15
+      spriteTint: "#FF8020FF"
+      spriteSaturation: 1.4
+      spriteBrightness: 1.3
+      minWeightMultiplier: 1.3
+      maxWeightMultiplier: 1.6
+      butcherSwaps:
+        Roubles100: Roubles2000
+  # Stalker-EN end

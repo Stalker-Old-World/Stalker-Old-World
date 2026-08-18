@@ -1,0 +1,35 @@
+- type: stCharacterRank
+  id: Default
+  ranks:
+  - index: 0
+    timeRequired: 0
+    iconId: STRankNovice
+    name: st-rank-novice
+  - index: 1
+    timeRequired: 50h
+    iconId: STRankTrainee
+    name: st-rank-trainee
+  - index: 2
+    timeRequired: 120h
+    iconId: STRankExperienced
+    name: st-rank-experienced
+  - index: 3
+    timeRequired: 260h
+    iconId: STRankProfessional
+    name: st-rank-professional
+  - index: 4
+    timeRequired: 520h
+    iconId: STRankVeteran
+    name: st-rank-veteran
+  - index: 5
+    timeRequired: 940h
+    iconId: STRankExpert
+    name: st-rank-expert
+  - index: 6
+    timeRequired: 1620h
+    iconId: STRankMaster
+    name: st-rank-master
+  - index: 7
+    timeRequired: 2750h
+    iconId: STRankLegend
+    name: st-rank-legend

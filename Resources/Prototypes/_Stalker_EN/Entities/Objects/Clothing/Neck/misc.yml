@@ -1,0 +1,11 @@
+﻿- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckDutyGeneralEpaulette
+  name: Duty general epaulette
+  description: A decorative epaulette belonging to the general of duty.
+  suffix: ST
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/Neck/Misc/duty_general_epaulette.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/Neck/Misc/duty_general_epaulette.rsi

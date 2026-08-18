@@ -1,0 +1,16 @@
+- type: mapLoader
+  id: StalkerBaseMaps
+  mapPaths:
+    Red Forest: /Maps/_ST/World/RedForest.yml
+    Garbage: /Maps/_ST/World/Garbage.yml
+    Dark Hollow: /Maps/_ST/World/DarkHollow.yml
+    Rostok and Wilds: /Maps/_ST/World/RostokWilds.yml
+    Bar and Sido: /Maps/_ST/World/BarSido.yml
+    Dark Valley: /Maps/_ST/World/DarkValley.yml
+    Agroprom: /Maps/_ST/World/Agroprom.yml
+    Limansk: /Maps/_ST/World/Limansk.yml
+    Military Base: /Maps/_ST/World/MilitaryBase.yml
+    Yantar: /Maps/_ST/World/Yantar.yml
+    Miracle Machine: /Maps/_ST/World/MiracleMachine.yml
+    Swamps: /Maps/_ST/World/Swamps.yml
+    Jupiter Plant: /Maps/_ST/World/JupiterPlant.yml

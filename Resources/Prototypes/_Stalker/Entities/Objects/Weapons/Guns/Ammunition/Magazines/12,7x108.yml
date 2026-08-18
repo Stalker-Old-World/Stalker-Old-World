@@ -1,0 +1,37 @@
+
+- type: entity
+  id: 50bmgMag10
+  name: magazine 50 BMG (10)
+  description: Magazine for 50 cal rifles. Bullet capacity 10. Sold empty.
+  parent: Base545Mag10
+  suffix: Stalker
+  components:
+    - type: STWeight
+      self: 0.35
+    - type: Tag
+      tags:
+        - Magazine50bmg
+    - type: BallisticAmmoProvider
+      proto:
+      mayTransfer: true
+      whitelist:
+        tags:
+          - STCartridge50bmg
+      capacity: 10
+    - type: Item
+      size: Small
+      shape:
+        - 0,0,0,1
+    - type: Sprite
+      scale: 0.8, 0.8
+      sprite: _Stalker/Objects/Weapons/Guns/Ammunition/Magazines/13108.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-1
+          map: ["enum.GunVisualLayers.Mag"]
+    - type: MagazineVisuals
+      magState: mag
+      steps: 2
+      zeroVisible: false
+    - type: Appearance

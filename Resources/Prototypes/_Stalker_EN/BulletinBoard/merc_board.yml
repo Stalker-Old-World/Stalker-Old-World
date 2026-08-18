@@ -1,0 +1,30 @@
+- type: entity
+  parent: BaseSTBulletinCartridge
+  id: STMercBoardCartridge
+  components:
+  - type: Cartridge
+    programName: st-merc-board-program-name
+    icon:
+      sprite: _Stalker_EN/MercBoard/mercboard.rsi
+      state: icon
+  - type: STBulletinBoard
+    boardTypeId: merc
+    offerRefPrefix: "MB#"
+    headerTitle: st-merc-board-header-title
+    primaryTabName: st-merc-board-tab-services
+    secondaryTabName: st-merc-board-tab-jobs
+    primaryPostButton: st-merc-board-post-service
+    secondaryPostButton: st-merc-board-post-job
+    primaryInfoLabel: st-merc-board-active-offers
+    secondaryInfoLabel: st-merc-board-job-requests
+    secondaryHint: st-merc-board-jobs-hint
+    newPrimaryTitle: st-merc-board-new-service
+    newSecondaryTitle: st-merc-board-new-job
+    searchPlaceholder: st-merc-board-search-placeholder
+    primaryBorderColor: "#4488CC"
+    primaryOwnBorderColor: "#66AAEE"
+    secondaryBorderColor: "#CCAA44"
+    secondaryOwnBorderColor: "#EEDD66"
+    maxOffersPerPlayer: 1
+  - type: STMercBoardRestrictions
+    requiredBandForPrimary: STMercenariesBand

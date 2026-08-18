@@ -1,0 +1,15 @@
+- type: shopPreset
+  id: NpcSciPBEN # 1.25x - Pending Economy Change
+  minSellPrice: 5
+  categories:
+    - name: Vodka
+      priority: 1
+      items:
+        DrinkCossackVodkaBottleFull: 45
+    - name: "Gardening"
+      priority: 2
+      items:
+        RobustHarvestChemistryBottleStalker: 50
+        CannabisSeedsStalker: 70
+        HydroponicsToolMiniHoe: 70
+        Bucket: 60

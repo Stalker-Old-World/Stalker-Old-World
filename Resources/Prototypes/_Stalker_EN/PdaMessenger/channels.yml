@@ -1,0 +1,122 @@
+- type: stMessengerChannel
+  id: STGeneral
+  name: st-messenger-channel-general
+  color: "#AAAAAA"
+  sortOrder: 0
+  broadcastToDiscord: true
+
+- type: stMessengerChannel
+  id: STWar
+  name: st-messenger-channel-war
+  color: "#AAAAAA"
+  sortOrder: 1
+  broadcastToDiscord: true
+
+- type: stMessengerChannel
+  id: STRookie
+  name: st-messenger-channel-rookie
+  color: "#88CC88"
+  sortOrder: 2
+  broadcastToDiscord: true
+
+- type: stMessengerChannel
+  id: STLoners
+  name: st-messenger-channel-loners
+  color: "#C8A878"
+  requiredBands:
+  - STStalkerBand
+  sortOrder: 10
+
+- type: stMessengerChannel
+  id: STNeutrals
+  name: st-messenger-channel-neutrals
+  color: "#B8A868"
+  requiredBands:
+  - STNeutralBand
+  sortOrder: 11
+
+- type: stMessengerChannel
+  id: STDuty
+  name: st-messenger-channel-duty
+  color: "#CC4444"
+  requiredBands:
+  - STDolgBand
+  sortOrder: 12
+
+- type: stMessengerChannel
+  id: STFreedom
+  name: st-messenger-channel-freedom
+  color: "#44AA44"
+  requiredBands:
+  - STFreedomBand
+  sortOrder: 13
+
+- type: stMessengerChannel
+  id: STBandits
+  name: st-messenger-channel-bandits
+  color: "#AA8844"
+  requiredBands:
+  - STBanditsBand
+  - STToadsBand
+  sortOrder: 14
+
+- type: stMessengerChannel
+  id: STEcologist
+  name: st-messenger-channel-ecologist
+  color: "#FF8800"
+  requiredBands:
+  - STSciBand
+  sortOrder: 15
+
+- type: stMessengerChannel
+  id: STMercenaries
+  name: st-messenger-channel-mercenaries
+  color: "#4488CC"
+  requiredBands:
+  - STMercenariesBand
+  sortOrder: 16
+
+- type: stMessengerChannel
+  id: STMilitary
+  name: st-messenger-channel-military
+  color: "#668844"
+  requiredBands:
+  - STMilitaryBand
+  - STMilitaryStalkerBand
+  - STUNBand
+  sortOrder: 17
+
+- type: stMessengerChannel
+  id: STMonolith
+  name: st-messenger-channel-monolith
+  color: "#886688"
+  requiredBands:
+  - STMonolithBand
+  sortOrder: 18
+
+- type: stMessengerChannel
+  id: STClearSky
+  name: st-messenger-channel-clearsky
+  color: "#4488AA"
+  requiredBands:
+  - STClearSkyBand
+  sortOrder: 19
+
+- type: stMessengerChannel
+  id: STRenegades
+  name: st-messenger-channel-renegades
+  color: "#AA4444"
+  requiredBands:
+  - STRenegatsBand
+  sortOrder: 20
+
+- type: stMessengerChannel
+  id: STGovernment
+  name: st-messenger-channel-gov
+  color: "#E0B0FF"
+  requiredBands:
+  - STMilitaryBand
+  - STMilitaryStalkerBand
+  - STUNBand
+  - STSciBand
+  sortOrder: 21

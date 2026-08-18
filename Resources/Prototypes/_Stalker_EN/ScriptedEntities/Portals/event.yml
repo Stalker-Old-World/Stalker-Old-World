@@ -1,0 +1,156 @@
+﻿- type: entity
+  parent: MapTeleportBase
+  id: Spawn-Gulag #Event
+  name: Spawn-Gulag
+  suffix: Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Spawn-GulagUncollide #Event
+  name: Spawn-Gulag
+  suffix: Teleport, Portal, Event, Uncollide
+  components:
+  - type: LinkByString
+    linkString: Spawn-Gulag
+
+- type: entity
+  parent: MapTeleportBase
+  id: Spawn-Casino #Event
+  name: Spawn-Casino
+  suffix: Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Spawn-CasinoUncollide #Event
+  name: Spawn-Casino
+  suffix: Teleport, Portal, Event, Uncollide
+  components:
+  - type: LinkByString
+    linkString: Spawn-Casino
+
+#SH
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Fog-ObservationDeckUncollide
+  name: Fog-ObservationDeck
+  suffix: SH, Teleport, Portal, Event, Uncollide
+  components:
+  - type: LinkByString
+    linkString: Fog-ObservationDeck
+
+- type: entity
+  parent: MapTeleportBase
+  id: Fog-ObservationDeck
+  name: Fog-ObservationDeck
+  suffix: SH, Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: ObservationDeck-Alley
+  name: ObservationDeck-Alley
+  suffix: SH, Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: RoadHome-Outside
+  name: RoadHome-Outside
+  suffix: SH, Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: WoodsideMain-2ndFloor
+  name: WoodsideMain-2ndFloor
+  suffix: SH, Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: WoodsideSmall-2ndFloor
+  name: WoodsideSmall-2ndFloor
+  suffix: SH, Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: Woodside-Bluecreek
+  name: Woodside-Bluecreek
+  suffix: SH, Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: End-FogUncollide
+  name: End-Fog
+  suffix: SH, Teleport, Portal, Event, Uncollide
+  components:
+  - type: LinkByString
+    linkString: End-Fog
+
+- type: entity
+  parent: MapTeleportBase
+  id: End-Fog
+  name: End-Fog
+  suffix: SH, Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: Abandon-2ndFloor
+  name: Abandon-2ndFloor
+  suffix: SH, Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: Ending-Results
+  name: Ending-Results
+  suffix: SH, Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: Results-Outside
+  name: Results-Outside
+  suffix: SH, Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: Fog-Extra
+  name: Fog-Extra
+  suffix: SH, Teleport, Portal, Event
+
+
+
+# spare unused portals
+- type: entity
+  parent: MapTeleportBase
+  id: Anywhere-Anywhere1
+  name: Anywhere-Anywhere1
+  suffix: Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: Anywhere-Anywhere2
+  name: Anywhere-Anywhere2
+  suffix: Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: Anywhere-Anywhere3
+  name: Anywhere-Anywhere3
+  suffix: Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: Anywhere-Anywhere4
+  name: Anywhere-Anywhere4
+  suffix: Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBase
+  id: Anywhere-Anywhere5
+  name: Anywhere-Anywhere5
+  suffix: Teleport, Portal, Event
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Anywhere-Anywhere5Uncollide
+  name: Anywhere-Anywhere5
+  suffix: Teleport, Portal, Event, Uncollide
+  components:
+  - type: LinkByString
+    linkString: Anywhere-Anywhere5

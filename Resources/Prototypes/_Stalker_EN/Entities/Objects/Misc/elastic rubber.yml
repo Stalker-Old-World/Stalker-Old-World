@@ -1,0 +1,50 @@
+- type: entity
+  parent: STBaseItem
+  id: STElasticRubberRed
+  name: Elastic Rubber (Red)
+  description: "For some reason, looking at them, the ONLY idea that comes to mind is to tie around your magazine."
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/elastic_rubber.rsi
+    state: icon
+    color: "#8f0000"
+    scale: 0.4,0.4
+  - type: Tag
+    tags:
+      - STElasticRubberRed
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-miscellaneous-category
+
+- type: entity
+  parent: STBaseItem
+  id: STElasticRubberGreen
+  name: Elastic Rubber (Green)
+  description: "For some reason, looking at them, the ONLY idea that comes to mind is to tie around your magazine."
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/elastic_rubber.rsi
+    state: icon
+    color: "#007308"
+    scale: 0.4,0.4
+  - type: Tag
+    tags:
+      - STElasticRubberGreen
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-miscellaneous-category
+
+- type: entity
+  parent: STBaseItem
+  id: STElasticRubberBlue
+  name: Elastic Rubber (Blue)
+  description: "For some reason, looking at them, the ONLY idea that comes to mind is to tie around your magazine."
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/elastic_rubber.rsi
+    state: icon
+    color: "#001d8f"
+    scale: 0.4,0.4
+  - type: Tag
+    tags:
+      - STElasticRubberBlue
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-miscellaneous-category

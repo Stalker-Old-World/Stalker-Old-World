@@ -1,0 +1,62 @@
+- type: entity
+  parent: BaseSubdermalImplant
+  id: STMonoBombImplant
+  name: Monolith Bomb Implant
+  description: Use to blow yourself up and praise the monolith!
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      permanent: true
+      implantAction: STActivateSeraSuicideEvent
+    - type: TriggerOnActivateImplant
+    - type: TwoStageTrigger
+      keysIn:
+      - timer
+      triggerDelay: 2.3
+      components:
+      - type: ExplodeOnTrigger
+        keysIn:
+        - stageTwo
+      - type: GibOnTrigger # EN
+        targetUser: true
+        deleteItems: false
+        keysIn:
+        - stageTwo
+    - type: EmitSoundOnTrigger
+      sound: /Audio/Effects/chopstickbreak.ogg
+      positional: true
+      keysIn:
+      - timer
+    - type: TimerTrigger
+      delay: 0.2
+      initialBeepDelay: 0
+      beepInterval: 50
+      beepSound:
+        path: /Audio/_Stalker_EN/VoiceLines/Monolith/Death/death_2.ogg
+    - type: Explosive
+      explosionType: Default
+      totalIntensity: 160
+      intensitySlope: 4
+      maxIntensity: 60
+      canCreateVacuum: false
+    - type: Tag
+      tags:
+        - SubdermalImplant
+        - HideContextMenu
+
+- type: entity
+  parent: BaseSuicideAction
+  id: STActivateMonolithSuicideEvent
+  name: Monolith Self Destruct
+  description: Use to blow yourself up and praise the monolith!
+  components:
+  - type: Action
+    checkCanInteract: false
+    checkConsciousness: false
+    itemIconStyle: BigAction
+    priority: -20
+    icon:
+      sprite: _Stalker/Objects/Weapons/Grenades/rgdgrenade.rsi
+      state: icon
+  - type: InstantAction
+    event: !type:ActivateImplantEvent

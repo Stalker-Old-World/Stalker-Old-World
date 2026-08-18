@@ -1,0 +1,156 @@
+﻿# clothing
+- type: shopPreset
+  id: STTownClothingSalesmanEN
+  minSellPrice: 5
+  #  itemsForSale:
+  #    Entry: 000
+  categories:
+  - name: Hats
+    priority: 1
+    items:
+      STClothingHeadHatFoma: 250
+      ClothingHeadHatCanadaBeanie: 250
+      ClothingHeadHatBrownFlatcap: 200
+      ClothingHeadHatBlacksoft: 150
+      ClothingHeadHatBluesoft: 150
+      ClothingHeadHatYellowsoft: 150
+      ClothingHeadHatGreensoft: 150
+      ClothingHeadHatGreysoft: 150
+      ClothingHeadHatOrangesoft: 150
+      ClothingHeadHatPurplesoft: 150
+      ClothingHeadHatRedsoft: 150
+      ClothingHeadHatMimesoft: 150
+      ClothingHeadHatTrucker: 200
+  - name: Gloves
+    priority: 2
+    items:
+      ClothingHandsGlovesColorBlue: 100
+      ClothingHandsGlovesColorRed: 100
+      ClothingHandsGlovesColorBrown: 100
+      ClothingHandsGlovesColorGreen: 100
+      ClothingHandsGlovesColorLightBrown: 100
+      ClothingHandsGlovesColorOrange: 100
+      ClothingHandsGlovesColorTeal: 100
+      ClothingHandsGlovesColorWhite: 100
+  - name: Boots
+    priority: 3
+    items:
+      ClothingShoesColorBlack: 100
+      ClothingShoesColorBlue: 100
+      ClothingShoesColorBrown: 100
+      ClothingShoesColorGreen: 100
+      ClothingShoesColorOrange: 100
+      ClothingShoesColorPurple: 100
+      ClothingShoesColorRed: 100
+      ClothingShoesColorWhite: 100
+      ClothingShoesColorYellow: 100
+      ClothingShoesGreenLizardskin: 250
+      ClothingShoesHighheelBoots: 250
+      ClothingShoesSkates: 1000
+      ClothingShoesSlippers: 250
+
+# medical
+- type: shopPreset
+  id: STTownPharmacyEN
+  minSellPrice: 5
+  #  itemsForSale:
+  #    Entry: 000
+  categories:
+  - name: Medical
+    priority: 1
+    items:
+      MedkitElite: 300
+      MedkitLAR: 500
+      STPillboxAntirad: 25
+      STPillboxProbud: 50
+      STPillboxShiza: 1000
+  - name: Storage
+    priority: 2
+    items:
+      ClothingBackpackDuffelMedicalStalker: 50
+  - name: Novelty
+    priority: 3
+    items:
+      PlushieLizardJobMedicaldoctor: 500
+      ToyFigurineMedicalDoctor: 500
+
+# guns
+- type: shopPreset
+  id: STTownPGunsmithEN
+  minSellPrice: 5
+  #  itemsForSale:
+  #    Entry: 000
+  categories:
+  - name: Weapons
+    priority: 1
+    items:
+      STWeaponRifleL85WhiteStrawberry: 1000
+      STWeaponRifleARX160: 1000
+      STWeaponRifleAKS74UBlack: 1000
+      STWeaponRifleOC14Alt: 1000
+  - name: Magazines
+    priority: 2
+    items:
+      545Mag45: 250
+      739Mag45: 250
+      751Mag30: 250
+      754Mag10: 250
+      556Mag45: 250
+  - name: Storage
+    priority: 3
+    items:
+      StalkerGunCaseStandard: 100
+      StalkerGunCaseDouble: 200
+
+# tourist??
+- type: shopPreset
+  id: STTownTouristEN
+  minSellPrice: 5
+  #  itemsForSale:
+  #    Entry: 000
+  categories:
+  - name: Provisions
+    priority: 1
+    items:
+      BoxMRE: 200
+      Binocularus1: 100
+      FlippoLighter: 10
+      DrinkWaterBottleFull: 10
+      FoodTinMRE: 25
+      FoodTinPeaches: 25
+  - name: Storage
+    priority: 2
+    items:
+      ClothingBackpackTacticOliveStalker: 100
+      ClothingBackpackDuffelHikingVSRF: 1000
+      ClothingBackpackStalkerZaryaGreen: 200
+      ClothingBackpackMercStalker: 250
+
+# grocer
+- type: shopPreset
+  id: STTownGrocerEN
+  minSellPrice: 5
+  #  itemsForSale:
+  #    Entry: 000
+  categories:
+  - name: Food
+    priority: 1
+    items:
+      FoodSnackPistachios: 15
+      FoodSnackRaisins: 15
+      FoodSnackChips: 15
+      FoodBagel: 20
+      FoodBreadBanana: 35
+      FoodBreadCorn: 35
+      FoodBakedCookie: 5
+      FoodBakedCookieOatmeal: 5
+      FoodBakedBunHotX: 15
+      FoodBakedMuffin: 15
+  - name: Recipes
+    priority: 2
+    items:
+      STCookingKvass: 250
+      STCookingCakePlain: 250
+      STCookingBorscht: 250
+      STCookingIceCream: 500
+      STCookingCakeBerry: 500

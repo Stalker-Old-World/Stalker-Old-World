@@ -1,0 +1,80 @@
+- type: entity
+  parent: BaseItem
+  id: BaseMagazineBox357Magnum
+  suffix: Stalker
+  abstract: true
+  components:
+  - type: RepositoryItem
+    categoryName: repository-cartridges-category
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+      - Cartridge357Magnum
+    proto: SpeedLoader357Magnum
+    capacity: 30
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/Ammunition/AmmoBoxes/357.rsi
+    scale: 0.75, 0.75
+  - type: MagazineVisuals
+    magState: ammo
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+# Boxes
+- type: entity
+  parent: BaseMagazineBox357Magnum
+  id: MagazineBox357Magnum
+  name: Ammo Box (.357 Magnum) FMJ
+  description: "For revolvers, 30 pieces in a box. Provides penetration of armor class 2."
+  suffix: Stalker
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge357MagnumFMJ
+  - type: Sprite
+    scale: 0.75, 0.75
+    layers:
+    - state: fmj
+      map: ["enum.GunVisualLayers.Base"]
+    - state: ammo-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BaseMagazineBox357Magnum
+  id: MagazineBox357MagnumHP
+  name: Ammo Box (.357 Magnum) HP
+  description: "For revolvers, 30 pieces in a box. Useless against armor."
+  suffix: Stalker
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge357MagnumHP
+  - type: Sprite
+    scale: 0.75, 0.75
+    layers:
+    - state: hp
+      map: ["enum.GunVisualLayers.Base"]
+    - state: ammo-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  parent: BaseMagazineBox357Magnum
+  id: MagazineBox357MagnumAP
+  name: Ammo Box (.357 Magnum) AP
+  description: "For revolvers, 30 pieces in a box. Provides penetration of armor class 3."
+  suffix: Stalker
+  components:
+  - type: BallisticAmmoProvider
+    proto: Cartridge357MagnumAP
+  - type: Sprite
+    scale: 0.75, 0.75
+    layers:
+    - state: fmj
+      map: ["enum.GunVisualLayers.Base"]
+    - state: ammo-1
+      map: ["enum.GunVisualLayers.Mag"]

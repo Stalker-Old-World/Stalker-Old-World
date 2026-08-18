@@ -1,0 +1,10 @@
+- type: lightCraftingRecipe
+  id: STCraftGasMaskGP7Neutral
+  results:
+    - STClothingMaskGP7Neutral
+  steps:
+    firstIngredient: STSkinsKitNeutral
+    secondIngredient: ClothingMaskGP7
+    keepFirst: true
+    time: 5
+

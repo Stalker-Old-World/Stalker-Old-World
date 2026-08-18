@@ -1,0 +1,58 @@
+#9x19
+
+- type: entity
+  id: Bullet919PSOGJ
+  name: bullet (9х19 auto)
+  parent: STBaseBullet # EN
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 2
+  - type: Projectile
+    projectileClass: 1
+    damage:
+      types:
+        Piercing: 18 #OW Pistols should be weaker than rifles, unsure how much though.
+        Mutant: 23 # EN
+  # - type: StaminaDamageOnCollide
+    # damage: 1
+
+- type: entity
+  id: Bullet919PST
+  name: bullet (9х19 auto)
+  parent: Bullet919PSOGJ
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    projectileClass: 2
+    damage:
+      types:
+        Piercing: 18 #OW
+        Mutant: 14 # EN
+
+- type: entity
+  id: Bullet919RIP
+  name: bullet (9х18 auto)
+  parent: Bullet919PSOGJ
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    projectileClass: 0
+    damage:
+      types:
+        Mutant: 40 #OW
+        Piercing: 5
+        Blunt: 5
+        Slash: 5
+
+- type: entity
+  id: Bullet919PBM
+  name: bullet (9х19 auto)
+  parent: Bullet919PSOGJ
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    projectileClass: 3
+    damage:
+      types:
+        Piercing: 18 #OW

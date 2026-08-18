@@ -1,0 +1,107 @@
+#Silent Hill Pyramid Head by Nahuel
+- type: entity
+  parent: BaseMobMutant
+  id: STMobMutantPyramidHead
+  name: PyramidHead
+  suffix: ST, T4, SH
+  description: Red Pyramid Thing.
+  components:
+  - type: Sprite
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base", "movement" ]
+        sprite: /Textures/_Stalker_EN/Mobs/Mutants/pyramidhead.rsi
+        state: alive-1
+  - type: SpriteMovement
+    movementLayers:
+      movement:
+        state: alive-3
+    noMovementLayers:
+      movement:
+        state: alive-1
+  - type: DamageStateVisuals
+    states:
+      Alive:
+        Base: alive-1
+      Dead:
+        Base: dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      3500: Dead
+  - type: Damageable
+    damageModifierSet: STMutantT3DamageModifierSet
+  - type: Bloodstream
+    bloodReagents:
+      reagents:
+      - ReagentId: MuteToxin
+        Quantity: 1
+    bloodMaxVolume: 100
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      2500: 1.2
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 3500
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/_Stalker_EN/Mutants/pyramidhead_death.ogg
+  - type: Butcherable
+    spawned:
+    - id: STWeaponSwordofjudgement
+      amount: 1
+      prob: 0.1
+    - id: MutantPartRustEgg
+      amount: 1
+      prob: 1
+  - type: STWeight
+    self: 65
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 2
+    baseSprintSpeed: 4
+  - type: MeleeWeapon
+    attackRate: 0.4
+    angle: 30
+    range: 1.9
+    soundHit:
+          path: /Audio/_Stalker_EN/Mutants/pyramidhead_hit.ogg
+          params:
+           variation: 0.125
+    soundSwing:
+      path: /Audio/_Stalker_EN/Mutants/pyramidhead_miss.ogg
+      params:
+        variation: 0.125
+    animation: WeaponArcSmash
+    wideAnimation: WeaponArcSmash
+    damage:
+      types:
+        Slash: 70
+        Blunt: 10
+        Psy: 10
+  - type: BonusMeleeDamage
+    heavyDamageMultiplier: 1.5
+  - type: StaminaDamageOnHit
+    damage: 50
+  - type: Puller
+    needsHands: false
+  - type: MeleeThrowOnHit # Throws you
+    speed: 5
+    distance: 5
+  - type: NPCRetaliation
+    attackMemoryLength: 30 # Is this even needed if it's always hostile
+  - type: NpcFactionMember
+    factions:
+    - Mutated
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damage:
+      types:
+        Burn: -100
+        Toxin: -100
+        Airloss: -100
+        Psy: -100
+        Radiation: -100

@@ -1,0 +1,20 @@
+﻿using Content.Shared.Whitelist;
+using Robust.Shared.Prototypes;
+
+namespace Content.Shared._Stalker.ZoneAnomaly.Effects.Components;
+
+[RegisterComponent, EntityCategory("StSkipSpawnTest")]
+public sealed partial class ZoneAnomalyEffectThrowComponent : Component
+{
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public EntityWhitelist? Whitelist;
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float Distance = 10f;
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float Force  = 10f;
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float MinDistance;
+}

@@ -1,0 +1,16 @@
+- type: entity
+  parent: BaseItem
+  id: STMessengerCartridge
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/cartridge.rsi
+    state: cart-y
+  - type: UIFragment
+    ui: !type:STMessengerUi
+  - type: Cartridge
+    programName: st-messenger-program-name
+    icon:
+      sprite: _Stalker_EN/PdaMessenger/messenger.rsi
+      state: icon
+  - type: STMessenger
+  - type: STMessengerServer

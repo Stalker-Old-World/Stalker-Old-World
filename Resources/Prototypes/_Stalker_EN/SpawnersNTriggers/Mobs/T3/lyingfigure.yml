@@ -1,0 +1,59 @@
+- type: entity
+  name: lyingfigure (1) (100%) 30м
+  id: STTriggerLyingFigure110030
+  parent: STBaseTrigger1110030
+  suffix: ST, T3, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantLyingFigure
+    restricted:
+    - STMobMutantLyingFigure
+
+- type: entity
+  name: lyingfigure (1-1) (75%) 30м
+  id: STTriggerLyingFigure117530
+  parent: STBaseTrigger117530
+  suffix: ST, T3, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantLyingFigure
+    restricted:
+    - STMobMutantLyingFigure
+
+- type: entity
+  name: lyingfigure (1-2) (75%) 30м
+  id: STTriggerLyingFigure127530
+  parent: STBaseTrigger127530
+  suffix: ST, T3, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantLyingFigure
+    restricted:
+    - STMobMutantLyingFigure
+
+- type: entity
+  name: lyingfigure (1-2) (25%) 30м
+  id: STTriggerLyingFigure122530
+  parent: STBaseTrigger122530
+  suffix: ST, T3, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantLyingFigure
+    restricted:
+    - STMobMutantLyingFigure
+
+- type: entity
+  name: lyingfigure (1-2) (100%) 30м
+  id: STTriggerLyingFigure1210030
+  parent: STBaseTrigger1210030
+  suffix: ST, T3, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantLyingFigure
+    restricted:
+    - STMobMutantLyingFigure

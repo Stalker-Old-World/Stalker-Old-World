@@ -1,0 +1,49 @@
+#-----------------------Dolla-----------------------
+- type: shopPreset
+  id: BaseDollarFaction
+  itemsForSale:
+    ZoneArtifactFireball: 0
+
+
+  categories:
+#  - name: shop-category-weapons
+#    priority: 1
+#    items:
+      #Special
+#  - name: shop-category-magazines
+#    priority: 2
+#    items:
+      #Special
+  - name: shop-category-ammunition
+    priority: 3
+    items:
+      KhattabkaGrenade: 2
+#  - name: shop-category-armor
+#    priority: 4
+#    items:
+      #Special
+  - name: shop-category-storage-and-containers
+    priority: 5
+    items:
+      ClothingBackpackDuffelBlackTacticStalker: 90
+      ClothingBackpackDuffelOliveTacticStalker: 90
+  - name: shop-category-research-equipment
+    priority: 7
+    items:
+      ZoneAnomalyDetectorAD3: 30
+  - name: shop-category-medicine
+    priority: 10
+    items:
+      BoxMRE: 5
+      MedkitMilitary: 3
+      MedkitScience: 5
+      MedkitElite: 15
+      MedkitLAR: 18
+      ThermoOintment: 5
+      STOintmentGood: 5
+      STTourniquet: 3
+#  - name: shop-category-modules
+#    priority: 11
+#    items:
+      #Special
+

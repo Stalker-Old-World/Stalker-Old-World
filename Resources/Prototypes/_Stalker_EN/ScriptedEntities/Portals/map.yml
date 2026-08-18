@@ -1,0 +1,305 @@
+#################################################### Great Swamps - Everywhere else
+
+- type: entity
+  parent: MapTeleportBase
+  id: GreatSwamps-Cordon1
+  name: Great Swamps - Cordon1
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: GreatSwamps-Cordon2
+  name: Great Swamps - Cordon2
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: GreatSwamps-Agroprom
+  name: Great Swamps - Agroprom
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: Agroprom-Rostok
+  name: Agroprom - Rostok
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: RedForest-Oasis
+  name: RedForest - Oasis
+  components:
+  - type: Portal
+    cooldown: 5
+
+# Military
+
+- type: entity
+  parent: MapTeleportBase
+  id: MilitaryBase-RedForest
+  name: MilitaryBase-RedForest
+  components:
+  - type: Portal
+    cooldown: 5
+  - type: AccessReader
+    access: [["MilitaryStalker"]]
+
+- type: entity
+  parent: MapTeleportBase
+  id: Helicopter-LZ #Event
+  name: Helicopter-LZ
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Helicopter-LZUncollide #Event
+  name: Helicopter-LZUncollide
+  components:
+  - type: LinkByString
+    linkString: Helicopter-LZ
+
+- type: entity
+  parent: MapTeleportBase
+  id: MBase-Agro
+  name: MBase-Agro
+  components:
+  - type: AccessReader
+    access: [["MilitaryBarraks"]]
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: MBase-AgroUncollide
+  name: MBase-AgroUncollide
+  components:
+  - type: LinkByString
+    linkString: MBase-Agro
+  - type: AccessReader
+    access: [ [ "MilitaryBarraks" ] ]
+
+- type: entity
+  parent: MapTeleportBase
+  id: Yantar-MBase
+  name: Yantar-MBase
+  components:
+  - type: AccessReader
+    access: [["MilitaryBarraks"]]
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Yantar-MBaseUncollide
+  name: Yantar-MBaseUncollide
+  components:
+  - type: LinkByString
+    linkString: Yantar-MBase
+  - type: AccessReader
+    access: [ [ "MilitaryBarraks" ] ]
+
+# Red Forest / Limansk
+
+- type: entity
+  parent: MapTeleportBase
+  id: RedForest-LimanskEN
+  name: RedForest-Limansk
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: RedForest-LimanskEN2
+  name: RedForest-Limansk2
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: RedForest-LimanskEN3
+  name: RedForest-Limansk3
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: RedForest-DarkValley
+  name: Red Forest - Dark Valley
+  components:
+  - type: Portal
+    cooldown: 5
+
+# Duty
+
+- type: entity
+  parent: MapTeleportBase
+  id: Duty-Bar
+  name: Duty-Bar
+  components:
+  - type: AccessReader
+    access: [["Dolg"]]
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Duty-BarUncollide
+  name: Duty-BarUncollide
+  components:
+  - type: LinkByString
+    linkString: Duty-Bar
+
+# Yantar
+
+- type: entity
+  parent: MapTeleportBase
+  id: Yantar1EN
+  name: Yantar Warp
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: YantarTunnel
+  name: Yantar Tunnel
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: YantarLabLadder
+  name: Yantar Lab Ladder
+
+- type: entity
+  parent: MapTeleportBase
+  id: YantarUpstairs
+  name: Yantar Upstairs
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: Yantar-Lab
+  name: Yantar-Lab
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: Yantar-Lab2
+  name: Yantar-Lab 2
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Yantar-LabUncollide2
+  name: Yantar-LabUncollide 2
+  components:
+  - type: LinkByString
+    linkString: Yantar-Lab2
+
+- type: entity
+  parent: MapTeleportBase
+  id: Yantar-Lab3
+  name: Yantar-Lab 3
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Yantar-LabUncollide3
+  name: Yantar-LabUncollide 3
+  components:
+  - type: LinkByString
+    linkString: Yantar-Lab3
+
+- type: entity
+  parent: MapTeleportBase
+  id: Yantar-Rostok
+  name: Yantar-Rostok
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: Yantar-DeadCity
+  name: Yantar-DeadCity
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: Yantar-Agroprom
+  name: Yantar-Agroprom
+  components:
+  - type: Portal
+    cooldown: 5
+
+- type: entity
+  parent: MapTeleportBase
+  id: Yantar-YantarLabMono
+  name: Yantar-YantarLabMono
+  components:
+  - type: Portal
+    cooldown: 10
+
+# JupiterPlant
+
+- type: entity
+  parent: MapTeleportBase
+  id: RedForest-JupiterPlant
+  name: RedForest-JupiterPlant
+  components:
+  - type: Portal
+    cooldown: 5
+
+# Monolith
+
+- type: entity
+  parent: MapTeleportBase
+  id: Mono-Yantar
+  name: Mono-Yantar
+  components:
+  - type: AccessReader
+    access: [["Monolith"]]
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Mono-YantarUncollide
+  name: Mono-YantarUncollide
+  components:
+  - type: LinkByString
+    linkString: Mono-Yantar
+
+- type: entity
+  parent: MapTeleportBase
+  id: Yantar-Mono
+  name: Yantar-Mono
+  components:
+  - type: AccessReader
+    access: [["Monolith"]]
+
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Yantar-MonoUncollide
+  name: Yantar-MonoUncollide
+  components:
+  - type: LinkByString
+    linkString: Yantar-Mono
+
+# Merc
+
+- type: entity
+  parent: MapTeleportBase
+  id: MercBase-MercUnderground
+  name: Merc Base - Merc Underground
+  components:
+  - type: Portal
+    cooldown: 5

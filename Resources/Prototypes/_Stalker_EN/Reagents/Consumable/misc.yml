@@ -1,0 +1,16 @@
+﻿- type: reagent
+  id: STPiss
+  name: reagent-name-stpiss
+  parent: Toxin
+  desc: reagent-desc-stpiss
+  physicalDesc: reagent-physical-desc-acrid
+  flavor: salty
+  color: "#DBCE5A"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 0.3

@@ -1,0 +1,307 @@
+# PISTOLS
+# tt
+- type: entity
+  name: Tula Tokarev "Trick"
+  description: Trick or treat!
+  parent: WeaponPistolStalkerTT
+  id: WeaponPistolStalkerTTTrick
+  suffix: ST, Reward, Halloween
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/tt_trick.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/tt_trick.rsi
+    scale: 0.8, 0.8
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/tt_trick.rsi
+
+- type: entity
+  name: Tula Tokarev "Treat"
+  description: Trick or treat!
+  parent: WeaponPistolStalkerTT
+  id: WeaponPistolStalkerTTTreat
+  suffix: ST, Reward, Halloween
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/tt_treat.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/tt_treat.rsi
+    scale: 0.8, 0.8
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/tt_treat.rsi
+
+# aps
+- type: entity
+  parent: WeaponPistolStalkerAPS
+  id: WeaponPistolStalkerAPSBare
+  name: APS "Bare"
+  description: An APS pistol chambered in 9x18mm ammunition. The unfinished metal is wrapped in white cloth tape and one fresh strip stands out, denoting that it's been chemically cleaned and is safe to handle.
+  suffix: ST
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/aps_bare.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/aps_bare.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/aps_bare.rsi
+
+- type: entity
+  parent: WeaponPistolStalkerAPSBare
+  id: WeaponPistolStalkerAPSBareMono
+  name: APS "Bare"
+  description: An APS pistol chambered in 9x18mm ammunition. The unfinished metal is wrapped in white cloth tape.
+  suffix: ST
+  components:
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 6.65
+
+# glock
+- type: entity
+  name: Glock-17
+  description: A normal glock that someone's painted pink. Fashionable.
+  parent: WeaponPistolStalkerGlock
+  id: WeaponPistolStalkerGlockPink
+  suffix: ST, Reward
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/pink_glock.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/pink_glock.rsi
+    scale: 0.8, 0.8
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/pink_glock.rsi
+
+# SHOTGUNS
+# spas
+- type: entity
+  name: SPAS-12 "Candy Apple"
+  description: A standard SPAS-12 type shotgun with a chrome red finish.
+  parent: STWeaponShotgunSPAS
+  id: STWeaponShotgunSPASCandy
+  suffix: ST, Reward, Halloween
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/spas_candy.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/spas_candy.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/spas_candy.rsi
+
+# RIFLES
+# l85
+- type: entity
+  parent: STBaseWeaponRifleL85
+  id: STWeaponRifleL85Forecaster
+  name: L85 "Forecaster"
+  description: An L85 rifle in blue and gold. A rare sight in the zone, likely custom made.
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/l85_forecaster.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/l85_forecaster.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/l85_forecaster.rsi
+
+# AK12
+- type: entity
+  parent: STWeaponRifleStalkerAK12en
+  id: STWeaponRifleStalkerAK12Dolg
+  name: AK-12 "Spear"
+  description: An AK-12 rifle clad in a red camouflage pattern. Chambered in 5.45x39. It seems to be commonly used by the Duty clan of stalkers.
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/Rifles/_Skins/ak12_dolg.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/Rifles/_Skins/ak12_dolg.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/Rifles/_Skins/ak12_dolg.rsi
+
+# OC-14
+- type: entity
+  parent: STBaseWeaponRifleOC14
+  id: STWeaponRifleOC14Winter
+  name: OC-14 «Groza» (Winter)
+  description: An assault rifle-grenade launcher system, 70% unified with AK-type assault rifles, the OC-14 "Groza" wrapped in Modern camo often found used by Monolith, A small strip on the end denotes that this has been chemically cleaned.
+  suffix: ST
+  components:
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/Winterized_Groza.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/Winterized_Groza.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/Winterized_Groza.rsi
+
+- type: entity
+  parent: STBaseWeaponRifleOC14
+  id: STWeaponRifleOC14WinterMono
+  name: OC-14 «Groza» (Winter)
+  description: An assault rifle-grenade launcher system, 70% unified with AK-type assault rifles, the OC-14 "Groza" wrapped in Modern camo often found used by Monolith.
+  suffix: ST
+  components:
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/Winterized_Groza.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/Winterized_Groza.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/Winterized_Groza.rsi
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 6.65
+
+# AN-94
+- type: entity
+  name: AN-94 «Аbakan» (Winter)
+  suffix: ST
+  parent: STWeaponRifleStalkerAbakan
+  id: STWeaponRifleStalkerAbakanWinter
+  description:  weapon of elite Soviet troops. Designed to replace the outdated AKS. In the Abakan, not only the internal mechanisms are movable, but the entire receiver and barrel, which helps reduce recoil and significantly increase accuracy in combat. It is wrapped in Winter camo often found used by Monolith. A small strip on the end denotes that this has been chemically cleaned.
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/winterized_Abakan.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/winterized_Abakan.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/winterized_Abakan.rsi
+
+
+- type: entity
+  name: AN-94 «Аbakan» (Winter)
+  suffix: ST
+  parent: STWeaponRifleStalkerAbakan
+  id: STWeaponRifleStalkerAbakanWinterMono
+  description:  weapon of elite Soviet troops. Designed to replace the outdated AKS. In the Abakan, not only the internal mechanisms are movable, but the entire receiver and barrel, which helps reduce recoil and significantly increase accuracy in combat. It is wrapped in Winter camo often found used by Monolith.
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/winterized_Abakan.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/winterized_Abakan.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/winterized_Abakan.rsi
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 6.65
+# SCAR-H
+- type: entity
+  parent: STBaseWeaponRifleSCARH
+  id: STWeaponRifleSCARHClearSky
+  name: FN SCAR-H "Daylight"
+  suffix: ST, Skin
+  description: Belgian battle rifle chambered in 7.62x51mm NATO. Rare in the Zone, mostly used by western mercenaries. Powerful but maintenance-heavy weapon. This one seems to be custom painted in blue and gold.
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_daylight.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_daylight.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_daylight.rsi
+
+- type: entity
+  parent: STBaseWeaponRifleSCARH
+  id: STWeaponRifleSCARHNocturne
+  name: FN SCAR-H "Nocturne"
+  description: A custom version of the belgian SCAR-H, chambered in 7.62x51mm NATO.
+  suffix: ST, Skin
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_nocturne.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_nocturne.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_nocturne.rsi
+
+# SCAR-L
+- type: entity
+  parent: STWeaponRifleSCARL
+  id: STWeaponRifleSCARLClearSky
+  name: SCAR-L "Daylight"
+  suffix: ST, Skin
+  description: Belgian battle rifle chambered in 5.56x45mm NATO. Rare in the Zone, mostly used by western mercenaries. Powerful but maintenance-heavy weapon. This one seems to be custom painted in blue and gold.
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_l_daylight.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_l_daylight.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_l_daylight.rsi
+
+- type: entity
+  parent: STWeaponRifleSCARL
+  id: STWeaponRifleSCARLNocturne
+  name: SCAR-L "Nocturne"
+  suffix: ST, Skin
+  description: A custom version of the belgian SCAR-L, chambered in 5.56x45mm NATO.
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_l_nocturne.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_l_nocturne.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/scar_l_nocturne.rsi
+
+# SMGS
+# ppsh
+- type: entity
+  parent: STBaseWeaponSMGPPSh41
+  id: STWeaponSMGPPSh41Band
+  name: PPSh-41 "Robbery"
+  description: A PPSh-41 submachine gun with a thick layer of paint. The lines are a little sloppy but were clearly applied with love.
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/ppsh_band.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/ppsh_band.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/ppsh_band.rsi
+
+- type: entity
+  parent: STBaseWeaponSMGPPSh41
+  id: STWeaponSMGPPSh41Alt
+  name: PPSh-41
+  description: The iconic Soviet PPSh-41 submachine gun chambered in 7.62x25mm Tokarev, now with an alternative wood finish.
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/ppsh_alt.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/ppsh_alt.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/ppsh_alt.rsi
+
+# SNIPERS
+# svds
+- type: entity
+  name: SVDS "Spectral"
+  description: The cold frame hangs in the air and wisps of light wrap around it from barrel to stock. A whisper, always just behind the wielder's ear, calling them to the grave.
+  parent: STWeaponSniperSVDS
+  id: STWeaponSniperSVDSSpectral
+  suffix: ST, T4, Reward, Halloween
+  components:
+  - type: STWeight
+    self: -5
+  - type: PersonalDamage
+    damage:
+      types:
+        Cold: 0.05
+    interval: 1
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/svds_spectral.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/svds_spectral.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/svds_spectral.rsi
+
+- type: entity
+  parent: STBaseWeaponSMGMPL
+  id: STWeaponSMGMPLPahanka
+  name: MPL "Pahanka"
+  description: Walther 'Schwester' MPL A custom 9mm MPL sub machine gun. Three-dot fibre optic iron sights, a custom stock and bandit livery make this gun notable. This weapon has been converted to be suitable for a left-handed shooter. Chambers 9x19mm, and feeds from 32 round magazines.
+  components:
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/Pahanka.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/Pahanka.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/Pahanka.rsi

@@ -1,0 +1,42 @@
+
+- type: entity
+  parent: StalkerShop
+  id: StalkerShopBandits
+  name: Торгомат, бригады
+  #ST:OW - begin
+  #description: Теперь ещё и покупает!
+  description: Dispenses various military apparel from around the world.
+  #ST:OW - end
+  suffix: ST, Mapping, бандиты
+  components:
+  - type: Sprite
+    drawdepth: Objects
+    sprite: _Stalker/Structures/Machines/VendingMachines/torgomat_black.rsi
+    layers:
+    - state: torgomat_black
+      map: [ "enum.ConstructionVisuals.Layer" ]
+    - state: normal-unshaded
+  - type: Shop
+    moneyId: Roubles
+    shopPresetId: BandsShopPreset
+
+- type: entity
+  parent: StalkerShop
+  id: StalkerDollarShopBandits
+  name: Торгомат, бригады
+  #ST:OW - begin
+  #description: Теперь ещё и покупает!
+  description: Dispenses various military apparel from around the world.
+  #ST:OW - end
+  suffix: ST, Mapping, бандиты Т4
+  components:
+  - type: Sprite
+    drawdepth: Objects
+    sprite: _Stalker/Structures/Machines/VendingMachines/torgomat_black.rsi
+    layers:
+    - state: torgomat_black
+      map: [ "enum.ConstructionVisuals.Layer" ]
+    - state: normal-unshaded
+  - type: Shop
+    moneyId: Dollar
+    shopPresetId: BandsDollarShopPreset

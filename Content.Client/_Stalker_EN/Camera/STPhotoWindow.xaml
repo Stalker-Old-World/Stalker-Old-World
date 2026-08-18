@@ -1,0 +1,27 @@
+<camera:STPhotoWindow xmlns="https://spacestation14.io"
+                      xmlns:camera="clr-namespace:Content.Client._Stalker_EN.Camera"
+                      MouseFilter="Stop"
+                      SetSize="480 400">
+    <PanelContainer Name="Background"
+                    HorizontalExpand="True"
+                    VerticalExpand="True">
+        <BoxContainer Orientation="Vertical">
+            <!-- Close button row -->
+            <PanelContainer HorizontalAlignment="Right" Margin="4">
+                <TextureButton Name="CloseButton" StyleClasses="windowCloseButton" />
+            </PanelContainer>
+
+            <!-- Photo display area -->
+            <PanelContainer VerticalExpand="True" HorizontalExpand="True" Margin="8 0 8 8">
+                <TextureRect Name="PhotoTexture"
+                             Stretch="KeepAspectCentered"
+                             HorizontalExpand="True"
+                             VerticalExpand="True" />
+                <Label Name="LoadingLabel"
+                       Text="{Loc 'st-photo-loading'}"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" />
+            </PanelContainer>
+        </BoxContainer>
+    </PanelContainer>
+</camera:STPhotoWindow>

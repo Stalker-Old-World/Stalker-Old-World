@@ -1,0 +1,27 @@
+- type: entity
+  parent: BaseSTBulletinCartridge
+  id: STTradeBoardCartridge
+  components:
+  - type: Cartridge
+    programName: st-trade-board-program-name
+    icon:
+      sprite: _Stalker_EN/TradeBoard/tradeboard.rsi
+      state: icon
+  - type: STBulletinBoard
+    boardTypeId: trade
+    offerRefPrefix: "TB#"
+    headerTitle: st-trade-board-header-title
+    primaryTabName: st-trade-board-tab-selling
+    secondaryTabName: st-trade-board-tab-buying
+    primaryPostButton: st-trade-board-post-selling
+    secondaryPostButton: st-trade-board-post-buying
+    primaryInfoLabel: st-trade-board-active-offers
+    secondaryInfoLabel: st-trade-board-buying-requests
+    newPrimaryTitle: st-trade-board-new-selling
+    newSecondaryTitle: st-trade-board-new-buying
+    searchPlaceholder: st-trade-board-search-placeholder
+    primaryBorderColor: "#44AA44"
+    primaryOwnBorderColor: "#66CC66"
+    secondaryBorderColor: "#AA8844"
+    secondaryOwnBorderColor: "#CCAA66"
+    maxOffersPerPlayer: 3

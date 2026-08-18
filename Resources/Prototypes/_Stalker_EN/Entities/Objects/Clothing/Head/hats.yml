@@ -1,0 +1,65 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadBear
+  name: bear trophy
+  suffix: ST
+  components:
+  - type: STWeight
+    self: 8
+  - type: Armor
+    armorClass: 0
+    modifiers:
+      flatReductions:
+        Blunt: 1
+        Slash: 1
+      coefficients:
+        Cold: 0.9
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/MutantParts/bear_trophy.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/MutantParts/bear_trophy.rsi
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,1
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - HeadTop
+
+- type: entity
+  parent: STClothingHeadBase
+  id: ClothingHeadHatSmuggler
+  name: smuggler's cap
+  description: A durable cap with goggles, both unassuming and good for crossing any kind of terrain.
+  suffix: ST
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/hats/smuggler_hat.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/hats/smuggler_hat.rsi
+  - type: Craftable
+
+- type: entity
+  parent: STClothingHeadHatBase
+  id: ClothingHeadHatDutyPoncho
+  name: duty poncho hood
+  categories: [ HideSpawnMenu ]
+  description: A loose fitted hood, flipped up from a poncho.
+  suffix: ST
+  components:
+  - type: STWeight
+    self: 0.1
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/hats/coat_hat_duty_poncho.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/hats/coat_hat_duty_poncho.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - HeadTop
+
+- type: entity
+  parent: ClothingHeadHatDutyPoncho
+  id: ClothingHeadHatRostokPoncho # Just for the name change.
+  name: rostok poncho hood

@@ -1,0 +1,64 @@
+- type: entity
+  parent: BookBase
+  id: BookOldJournal
+  name: leather journal
+  description: An old leather-bound journal.
+  suffix: Stalker, junk
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/books.rsi
+    layers:
+    - state: journal
+  - type: STWeight
+    self: 1
+  - type: Engraveable
+  - type: Appearance
+  - type: PaperVisuals
+
+- type: entity
+  parent: BaseItem
+  id: BookCookingStalkerHomemade
+  name: homemade cookbook
+  description: A hand-bound cook book for storing recipes.
+  suffix: Stalker, cooking
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/books.rsi
+    layers:
+    - state: cookbookhomemade
+  - type: STWeight
+    self: 1
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,3,5
+    quickInsert: true
+    areaInsert: true
+    whitelist:
+      tags:
+      - STCookingRecipe
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: [ ]
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-miscellaneous-category
+
+# update this whenever a lightcraft food is added
+- type: entity
+  name: cookbook
+  parent: BookBase
+  id: BookCookingStalkerGuide
+  suffix: Stalker, cooking
+  description: A cookbook detailing basic techniques and recipes.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/books.rsi
+    layers:
+    - state: cookbook
+  - type: Paper
+    content: book-text-guide-cooking-stalker

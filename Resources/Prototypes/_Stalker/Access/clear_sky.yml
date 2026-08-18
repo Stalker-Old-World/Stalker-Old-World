@@ -1,0 +1,8 @@
+- type: accessLevel
+  id: CN
+  name: id-card-access-level-cn
+
+- type: accessGroup
+  id: CN
+  tags:
+    - CN

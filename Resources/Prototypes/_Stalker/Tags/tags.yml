@@ -1,0 +1,71 @@
+- type: Tag
+  id: STBolt
+
+- type: Tag
+  id: STPalletSalable
+
+- type: Tag
+  id: Khabar
+
+- type: Tag
+  id: P90Magazin
+
+- type: Tag
+  id: CartridgeRemingtonMagnum
+
+- type: Tag
+  id: SpeedLoaderRemingtonMagnum
+
+- type: Tag
+  id: MagazineUSAS
+
+- type: Tag
+  id: MagazineGSH-18
+
+- type: Tag
+  id: CartridgeShotgunDart
+
+- type: Tag
+  id: CartridgeShotgunBullet
+
+- type: Tag
+  id: CartridgeShotgunBulletRIP
+
+- type: Tag
+  id: License
+
+- type: Tag
+  id: Dogtag
+
+- type: Tag
+  id: GrehCanTakeOnly
+
+- type: Tag
+  id: STCombatKnife
+
+- type: Tag
+  id: STArtifact
+
+- type: Tag
+  id: STArtifactTier1
+
+- type: Tag
+  id: STArtifactTier2
+
+- type: Tag
+  id: STArtifactTier3
+
+- type: Tag
+  id: STArtifactTier4
+
+- type: Tag
+  id: STArtifactTier5
+
+- type: Tag
+  id: Vog25grenade
+
+- type: Tag
+  id: LugerMagazin
+
+- type: Tag
+  id: WipeSafe

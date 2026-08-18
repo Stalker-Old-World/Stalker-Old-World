@@ -1,0 +1,60 @@
+- files: ["hiss.ogg"]
+  license: "CC-BY-4.0"
+  copyright: "sample modified by carousel in compliance with EULA terms"
+  source: "https://soundtrackloops.com/"
+
+- files: ["cat1.ogg"]
+  license: "CC-BY-NC-4.0"
+  copyright: "Seidhepriest and Gunilla the cat"
+  source: "https://freesound.org/people/Seidhepriest/sounds/199631/"
+
+- files: ["cat2.ogg"]
+  license: "CC0-1.0"
+  copyright: "killumimati and Mr. Spock the cat"
+  source: "https://freesound.org/people/killumimati/sounds/381761/"
+
+- files: ["bear_hit.ogg"]
+  license: "CC0-1.0"
+  copyright: "FilmCow"
+  source: "https://filmcow.itch.io/filmcow-sfx"
+
+- files: ["pbear_hit.ogg"]
+  license: "CC-BY-NC-4.0"
+  copyright: "mixed by carousel for stalker14"
+  source: "https://github.com/coolmankid12345/stalker-14-EN"
+
+- files: ["pbear_miss.ogg"]
+  license: "CC-BY-NC-4.0"
+  copyright: "mixed by carousel for stalker14"
+  source: "https://github.com/coolmankid12345/stalker-14-EN"
+
+- files: ["izlom_death.ogg"]
+  license: "CC-BY-NC-4.0"
+  copyright: "mixed by carousel for stalker14"
+  source: "https://github.com/coolmankid12345/stalker-14-EN"
+
+- files: ["izlom_hit.ogg"]
+  license: "CC-BY-NC-4.0"
+  copyright: "mixed by carousel for stalker14"
+  source: "https://github.com/coolmankid12345/stalker-14-EN"
+
+- files: ["izlom_miss.ogg"]
+  license: "CC-BY-NC-4.0"
+  copyright: "mixed by carousel for stalker14"
+  source: "https://github.com/coolmankid12345/stalker-14-EN"
+  
+- files: ["mannequin_death.ogg"]
+  license: "CC-BY-NC-4.0"
+  copyright: "Konami Digital Entertainment"
+  source: "https://sounds.spriters-resource.com/playstation_2/silenthill2/asset/401080/"
+
+- files: ["mannequin_hit.ogg"]
+  license: "CC-BY-NC-4.0"
+  copyright: "Konami Digital Entertainment"
+  source: "https://sounds.spriters-resource.com/playstation_2/silenthill2/asset/401080/"
+
+- files: ["mannequin_miss.ogg"]
+  license: "CC-BY-NC-4.0"
+  copyright: "Konami Digital Entertainment"
+  source: "https://sounds.spriters-resource.com/playstation_2/silenthill2/asset/401080/"
+  

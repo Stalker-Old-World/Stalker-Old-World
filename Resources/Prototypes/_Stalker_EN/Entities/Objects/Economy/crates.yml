@@ -1,0 +1,1370 @@
+# Bulk Medical Items
+
+- type: entity
+  parent: UNstandartCrate
+  id: BulkArmyMedCrate
+  name: Bulk Army Medkit Crate
+  description: A bulk crate filled with army first aid kits.
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,5,5
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/carton_box.rsi
+    state: kb2
+  - type: Icon
+    sprite: _Stalker/Structures/Furniture/carton_box.rsi
+    state: kb2
+  - type: SpawnItemsOnUse
+    items:
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: UNstandartCrate
+  id: BulkScienceCrate
+  name: Bulk Science Medkit Crate
+  description: A bulk crate filled with elite first aid kits.
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,5,5
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/carton_box.rsi
+    state: kb2
+  - type: Icon
+    sprite: _Stalker/Structures/Furniture/carton_box.rsi
+    state: kb2
+  - type: SpawnItemsOnUse
+    items:
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: UNstandartCrate
+  id: BulkEliteCrate
+  name: Bulk Elite Medkit Crate
+  description: A bulk crate filled with elite first aid kits.
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,5,5
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/carton_box.rsi
+    state: kb2
+  - type: Icon
+    sprite: _Stalker/Structures/Furniture/carton_box.rsi
+    state: kb2
+  - type: SpawnItemsOnUse
+    items:
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: UNstandartCrate
+  id: BulkLARCrate
+  name: Bulk LAR Medkit Crate
+  description: A bulk crate filled with LAR first aid kits.
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,5,5
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/carton_box.rsi
+    state: kb2
+  - type: Icon
+    sprite: _Stalker/Structures/Furniture/carton_box.rsi
+    state: kb2
+  - type: SpawnItemsOnUse
+    items:
+    - id: MedkitLAR
+    - id: MedkitLAR
+    - id: MedkitLAR
+    - id: MedkitLAR
+    - id: MedkitLAR
+    - id: MedkitLAR
+    - id: MedkitLAR
+    - id: MedkitLAR
+    - id: MedkitLAR
+    - id: MedkitLAR
+    - id: MedkitLAR
+    - id: MedkitLAR
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+# Military Kits
+
+- type: entity
+  parent: BaseItem
+  id: OKSOPOfficerCrate
+  name: OKSOP Officer Kit
+  description: Officer's kit of the PSZ intended for officers of the Special Operations Forces.
+  suffix: OKSOP, T3
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: Zipties
+    - id: Zipties
+    - id: PowerCellHyper
+    - id: STClothingOuterArmorLightPlateVestBasePSZ7
+    - id: STWeaponRifleAK74M
+    - id: ClothingHeadBeretMilitary
+    - id: ClothingBeltWebbingOfficerStalker
+    - id: ClothingBackpackTacticOliveStalker
+    - id: DrinkMREFlask
+    - id: DrinkMREFlask
+    - id: FoodTinMRE
+    - id: FoodTinMRE
+    - id: RGD5Grenade
+    - id: RGD5Grenade
+    - id: RGD5Grenade
+    - id: STFoodBreadPlain
+    - id: STCombatKnife
+    - id: WeaponPistolStalkerPM
+    - id: BasePMMag
+    - id: BasePMMag
+    - id: 918PBMBox
+    - id: MedkitAI2
+    - id: MedkitAI2
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545PCBox
+    - id: 545PCBox
+    - id: 545PCBox
+    - id: 545PCBox
+    - id: 545PCBox
+    - id: 545PCBox
+    - id: 545PCBox
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitScience
+    - id: MedkitScience
+    # ST:OW - These are useless bloat items.
+    #- id: STTourniquet
+    #- id: STOintmentGood
+    #- id: STGauze
+    # ST:OW
+    - id: STFlashlightSeclite
+    - id: STBoltBagFilled
+    - id: BaseRadio
+    - id: STRadioHeadset
+    - id: Binocularus1
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: UNstandartCrate
+  id: OKSOPAK74Crate
+  name: OKSOP Sergeant Kit
+  description: Sergeant's army kit intended for OKSOP soldiers, converted for the Chernobyl Exclusion Zone.
+  suffix: OKSOP, T2
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    # ST:OW - Begin
+    #- id: STClothingOuterArmorLightPlateVestBaseMilitary
+    - id: STOWClothingOuterArmorT2VestMilitary
+    # ST:OW - End
+    - id: Zipties
+    - id: Zipties
+    - id: PowerCellHyper
+    - id: ClothingHeadHatMilitary
+    - id: STWeaponRifleAK74M
+    - id: ClothingBeltGreenWebbingStalker
+    - id: ClothingBackpackTacticOliveStalker
+    - id: DrinkMREFlask
+    - id: DrinkMREFlask
+    - id: FoodTinMRE
+    - id: FoodTinMRE
+    - id: RGD5Grenade
+    - id: RGD5Grenade
+    - id: STFoodBreadPlain
+    - id: STCombatKnife
+    - id: MedkitAI2
+    - id: MedkitAI2
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitScience
+    - id: STTourniquet
+    - id: STOintmentGood
+    - id: STGauze
+    - id: STGauze
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: STFlashlightSeclite
+    - id: STBoltBagFilled
+    - id: BaseRadio
+    - id: STRadioHeadset
+    - id: Binocularus1
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: UNstandartCrate
+  id: OKSOPMosinCrate
+  name: OKSOP Sergeant Sniper Kit
+  description: Sergeant's Recon kit intended for OKSOP soldiers, converted for the Chernobyl Exclusion Zone.
+  suffix: OKSOP, T2
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    # ST:OW - Begin
+    #- id: STClothingOuterArmorLightPlateVestBaseMilitary
+    - id: STOWClothingOuterArmorT2VestMilitary
+    # ST:OW - End
+    - id: Zipties
+    - id: Zipties
+    - id: PowerCellHyper
+    - id: ClothingHeadHatMilitary
+    - id: STWeaponSniperMosin
+    - id: WeaponPistolGSH18
+    - id: BaseGSH-18Mag10
+    - id: BaseGSH-18Mag10
+    - id: BaseGSH-18Mag10
+    - id: BaseGSH-18Mag10
+    - id: BaseGSH-18Mag10
+    - id: BaseGSH-18Mag10
+    - id: 919PSTBox
+    - id: 919RIPBox
+    - id: STModuleSniperSightT1
+    - id: ClothingBeltGreenWebbingStalker
+    - id: ClothingBackpackTacticOliveStalker
+    - id: DrinkMREFlask
+    - id: DrinkMREFlask
+    - id: FoodTinMRE
+    - id: FoodTinMRE
+    - id: RGD5Grenade
+    - id: RGD5Grenade
+    - id: STFoodBreadPlain
+    - id: STCombatKnife
+    - id: MedkitAI2
+    - id: MedkitAI2
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitScience
+    - id: STTourniquet
+    - id: STOintmentGood
+    - id: STGauze
+    - id: STGauze
+    - id: 754FMJBox
+    - id: 754FMJBox
+    - id: 754FMJBox
+    - id: 754FMJBox
+    - id: STFlashlightSeclite
+    - id: STBoltBagFilled
+    - id: BaseRadio
+    - id: STRadioHeadset
+    - id: Binocularus1
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: OKSOPAK74uCrate
+  name: OKSOP Enlisted Standard Issue Kit
+  description: Basic army kit intended for OKSOP soldiers, converted for the Chernobyl Exclusion Zone.
+  suffix: OKSOP, T2
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    # ST:OW - Begin
+    #- id: STClothingOuterArmorLightPlateVestBaseMilitary
+    - id: STOWClothingOuterArmorT2VestMilitary
+    # ST:OW - End
+    - id: Zipties
+    - id: Zipties
+    - id: PowerCellHyper
+    - id: ClothingHeadHatMilitary
+    - id: STWeaponRifleAKS74
+    - id: ClothingBeltGreenWebbingStalker
+    - id: ClothingBackpackTacticOliveStalker
+    - id: DrinkMREFlask
+    - id: DrinkMREFlask
+    - id: FoodTinMRE
+    - id: FoodTinMRE
+    - id: RGD5Grenade
+    - id: STFoodBreadPlain
+    - id: STCombatKnife
+    - id: MedkitAI2
+    - id: MedkitAI2
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitScience
+    - id: STOintment
+    - id: STGauze
+    - id: STGauze
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: STFlashlightSeclite
+    - id: STBoltBagFilled
+    - id: BaseRadio
+    - id: STRadioHeadset
+    - id: Binocularus1
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: OKSOPMP153Crate
+  name: OKSOP Enlisted Pointman Standard Kit
+  description: Basic army kit intended for OKSOP Pointmen, For soldiers designated to breach into tight spaces, and with a helmet for once! Converted for the Chernobyl Exclusion Zone.
+  suffix: OKSOP, T2
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    # ST:OW - Begin
+    #- id: STClothingOuterArmorLightPlateVestBaseMilitary
+    - id: STOWClothingOuterArmorT2VestMilitary
+    # ST:OW - End
+    - id: Zipties
+    - id: Zipties
+    - id: PowerCellHyper
+    - id: ClothingHeadHelmetSH68
+    - id: STWeaponShotgunMP153
+    - id: ClothingBeltGreenWebbingStalker
+    - id: ClothingBeltBandolierStalker
+    - id: ClothingBackpackTacticOliveStalker
+    - id: DrinkMREFlask
+    - id: DrinkMREFlask
+    - id: FoodTinMRE
+    - id: FoodTinMRE
+    - id: RGD5Grenade
+    - id: RGD5Grenade
+    - id: STFoodBreadPlain
+    - id: STCombatKnife
+    - id: MedkitAI2
+    - id: MedkitAI2
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitScience
+    - id: STOintment
+    - id: STGauze
+    - id: STGauze
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: STFlashlightSeclite
+    - id: STBoltBagFilled
+    - id: BaseRadio
+    - id: STRadioHeadset
+    - id: Binocularus1
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: OKSOPCombatMedCrate
+  name: OKSOP Senior Enlisted Combat Medic Kit
+  description: Basic army kit intended for OKSOP Combat Medics, for those to provide care for wounded OKSOP soldiers. Converted for the Chernobyl Exclusion Zone.
+  suffix: OKSOP, T2
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    # ST:OW - Begin
+    #- id: STClothingOuterArmorLightPlateVestBaseMilitary
+    - id: STOWClothingOuterArmorT2VestMilitary
+    # ST:OW - End
+    - id: Zipties
+    - id: Zipties
+    - id: PowerCellHyper
+    - id: ClothingHeadHatMilitary
+    - id: STWeaponRifleAKS74
+    - id: ClothingBeltGreenWebbingStalker
+    - id: ClothingBackpackTacticOliveStalker
+    - id: DrinkMREFlask
+    - id: DrinkMREFlask
+    - id: FoodTinMRE
+    - id: FoodTinMRE
+    - id: ClothingBandageStalkerKrest
+    - id: ClothingHeadHatBeretBrigmedic
+    - id: STFoodBreadPlain
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: STOintmentGood
+    - id: STOintmentGood
+    - id: STTourniquet
+    - id: STTourniquet
+    - id: STTourniquet
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: STFlashlightSeclite
+    - id: STBoltBagFilled
+    - id: BaseRadio
+    - id: STRadioHeadset
+    - id: Binocularus1
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: OKSOPSKSCrate
+  name: OKSOP Senior Enlisted Designated Marksman Kit
+  description: Basic army kit intended for OKSOP soldiers, converted for the Chernobyl Exclusion Zone.
+  suffix: OKSOP, T2
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    # ST:OW - Begin
+    #- id: STClothingOuterArmorLightPlateVestBaseMilitary
+    - id: STOWClothingOuterArmorT2VestMilitary
+    # ST:OW - End
+    - id: Zipties
+    - id: Zipties
+    - id: PowerCellHyper
+    - id: ClothingHeadHatMilitary
+    - id: STWeaponSniperSKS
+    - id: STModuleSilencerSniperT1
+    - id: STModuleSniperSightT1
+    - id: ClothingBeltGreenWebbingStalker
+    - id: ClothingBackpackTacticOliveStalker
+    - id: DrinkMREFlask
+    - id: DrinkMREFlask
+    - id: FoodTinMRE
+    - id: FoodTinMRE
+    - id: RGD5Grenade
+    - id: STFoodBreadPlain
+    - id: STCombatKnife
+    - id: MedkitAI2
+    - id: MedkitAI2
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitScience
+    - id: STOintment
+    - id: STGauze
+    - id: STGauze
+    - id: 739FMJBox
+    - id: 739FMJBox
+    - id: 739FMJBox
+    - id: STFlashlightSeclite
+    - id: STBoltBagFilled
+    - id: BaseRadio
+    - id: STRadioHeadset
+    - id: Binocularus1
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: Army545FMJCrate
+  name: Army 5.45x39 FMJ Ammo Boxes
+  description: Basic Army Kit containing 5.45x39 caliber FMJ cartridges, intended for OKSOP soldiers.
+  suffix: Stalker, T2
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    - id: 545FMJBox
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: Army6mmbuckshotCrate
+  name: Army 6mm Buckshot Ammo Boxes
+  description: Basic Army Kit containing 6.5mm buckshot cartridges, intended for OKSOP soldiers.
+  suffix: Stalker, T2
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    - id: 6mmBuckshotBox
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+# Monolith Kits - WILL BE ADDED NOW BECAUSE IM DOIN IT BABEY!!!!!
+
+- type: entity
+  parent: STBaseItem
+  id: SetMonolithBuyableCrateT3Heavy
+  name: Monolith Set "T3 Heavy"
+  description: A set containing armored coveralls.
+  suffix: ST, T3, Cache
+  components:
+  - type: STWeight
+    self: 10
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/Sets/monolith-marlya.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: ClothingOuterArmorMonolith
+    - id: ClothingOuterCoatKevlarMonolith
+    - id: ClothingMaskNeckBalaklava1
+    - id: ClothingBeltWebbingHolsterMonolith
+    - id: ClothingBackpackStalkerZaryaGreen
+    - id: PowerCellHyper
+    - id: PowerCellHyper
+    - id: STCombatKnife
+    - id: Binocularus1
+    - id: STFlashlightSeclite
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 4.5
+
+- type: entity
+  parent: STBaseItem
+  id: SetMonolithBuyableCrateT2Light
+  name: Monolith Set "T2 Light"
+  description: A set containing a plate vest and kevlar coat.
+  suffix: ST, T2, Cache
+  components:
+  - type: STWeight
+    self: 10
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/Sets/monolith-marlya.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: STClothingOuterArmorLightPlateVestBaseMonolith
+    - id: ClothingMaskGasZarya
+    - id: ClothingOuterCoatKevlarMonolith
+    - id: ClothingBeltWebbingHolsterMonolith
+    - id: ClothingBackpackStalkerZaryaBlack
+    - id: PowerCellHyper
+    - id: PowerCellHyper
+    - id: STCombatKnife
+    - id: Binocularus1
+    - id: STFlashlightSeclite
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 4.5
+
+- type: entity
+  parent: STBaseItem
+  id: SetMonolithBuyableCrateT3Light  #OW Change Start
+  name: Monolith Set "T3 Light"
+  description: A set containing a seva suit designed for light combat.  #OW Change End
+  suffix: ST, T1, Cache
+  components:
+  - type: STWeight
+    self: 10
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/Sets/monolith-marlya.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: ClothingOuterArmorSevaMonolith
+    - id: ClothingBeltWebbingHolsterMonolith
+    - id: ZoneAnomalyDetectorBMT12
+    - id: STOxygenTanksFractionalMonolith
+    - id: PowerCellHyper
+    - id: PowerCellHyper
+    - id: STCombatKnife
+    - id: Binocularus1
+    - id: STFlashlightSeclite
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 4.5
+
+- type: entity
+  parent: STBaseItem
+  id: SetMonolithBuyableCrateT2Heavy
+  name: Monolith Set "T2 Heavy"
+  description: A set containing a sunrise suit and kevlar coat.
+  suffix: ST, T2, Cache
+  components:
+  - type: STWeight
+    self: 10
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/Sets/monolith-marlya.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: ClothingOuterArmorZaryaMonolith
+    - id: ClothingMaskGasZarya
+    - id: ClothingOuterCoatKevlarMonolith
+    - id: ClothingBeltWebbingHolsterMonolith
+    - id: ClothingBackpackStalkerZaryaBlack
+    - id: PowerCellHyper
+    - id: PowerCellHyper
+    - id: STCombatKnife
+    - id: Binocularus1
+    - id: STFlashlightSeclite
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 4.5
+
+- type: entity
+  parent: STBaseItem
+  id: SetMonolithBuyableCrateInfiltrator1
+  name: Monolith Set "Infiltrator Shotgunner"
+  description: A set containing standard stalker gear, a Mossberg shotgun, and an APS pistol.
+  suffix: ST, T2, Cache
+  components:
+  - type: STWeight
+    self: 10
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/Sets/monolith-marlya.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: ClothingOuterArmourJacketStalker
+    - id: ClothingMaskGasZaryaMono
+    - id: ClothingBeltBandolierStalker
+    - id: ClothingBackpackTacticBeigeStalker
+    - id: ClothingCloakStalker
+    - id: WeaponPistolStalkerAPSBareMono
+    - id: BaseAPSMag
+    - id: BaseAPSMag
+    - id: BaseAPSMag
+    - id: 918PBMBox
+    - id: 918PBMBox
+    - id: STWeaponShotgunMossbergM88
+    - id: 8mmBuckshotBox
+    - id: 8mmBuckshotBox
+    - id: 8mmBuckshotBox
+    - id: 8mmBuckshotBox
+    - id: PowerCellHyper
+    - id: PowerCellHyper
+    - id: STCombatKnife
+    - id: Binocularus1
+    - id: STFlashlightSeclite
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 4.5
+
+- type: entity
+  parent: STBaseItem
+  id: SetMonolithBuyableCrateInfiltrator2
+  name: Monolith Set "Infiltrator Rifleman"
+  description: A set containing standard stalker gear, an SKS rifle, and an APS pistol.
+  suffix: ST, T2, Cache
+  components:
+  - type: STWeight
+    self: 10
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/Sets/monolith-marlya.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: ClothingOuterArmourJacketStalkerWhite
+    - id: ClothingMaskGP7
+    - id: ClothingBeltTarzanBlack
+    - id: ClothingBackpackTacticBlackStalker
+    - id: ClothingOuterCoatDoshdevik
+    - id: WeaponPistolStalkerAPSBareMono
+    - id: BaseAPSMag
+    - id: BaseAPSMag
+    - id: BaseAPSMag
+    - id: 918PBMBox
+    - id: 918PBMBox
+    - id: STWeaponSniperSKSIntegrated
+    - id: 739FMJBox
+    - id: 739FMJBox
+    - id: PowerCellHyper
+    - id: PowerCellHyper
+    - id: STCombatKnife
+    - id: Binocularus1
+    - id: STFlashlightSeclite
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 4.5
+
+- type: entity
+  parent: BaseItem
+  id: MonolithCrate739Mag30
+  name: Monolith 7.62 Magazines Crate
+  suffix: Stalker, T3
+  components:
+    - type: STWeight
+      self: 47.2
+    - type: Item
+      size: Ginormous
+    - type: MultiHandedItem
+    - type: Sprite
+      sprite: _Stalker/Structures/Furniture/Sets/military-box.rsi
+      state: icon
+    - type: SpawnItemsOnUse
+      items:
+        - id: 739Mag30
+        - id: 739Mag30
+        - id: 739Mag30
+        - id: 739Mag30
+        - id: 739Mag30
+      sound:
+        path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: MonolithCrate762FMJ
+  name: Monolith 7.62x39 FMJ Ammo Crate
+  suffix: Stalker, T3
+  components:
+    - type: STWeight
+      self: 47.2
+    - type: Item
+      size: Ginormous
+    - type: MultiHandedItem
+    - type: Sprite
+      sprite: _Stalker/Structures/Furniture/Sets/military-box.rsi
+      state: icon
+    - type: SpawnItemsOnUse
+      items:
+        - id: 739FMJBox
+        - id: 739FMJBox
+        - id: 739FMJBox
+        - id: 739FMJBox
+        - id: 739FMJBox
+      sound:
+        path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: MonolithCrate919Mag30
+  name: Monolith 9x19 Magazines Crate
+  suffix: Stalker, T3
+  components:
+    - type: STWeight
+      self: 47.2
+    - type: Item
+      size: Ginormous
+    - type: MultiHandedItem
+    - type: Sprite
+      sprite: _Stalker/Structures/Furniture/Sets/military-box.rsi
+      state: icon
+    - type: SpawnItemsOnUse
+      items:
+        - id: VityazMag
+        - id: VityazMag
+        - id: VityazMag
+        - id: VityazMag
+        - id: VityazMag
+      sound:
+        path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: MonolithCrate919PBM
+  name: Monolith 9x19 PBM Ammo Crate
+  suffix: Stalker, T3
+  components:
+    - type: STWeight
+      self: 47.2
+    - type: Item
+      size: Ginormous
+    - type: MultiHandedItem
+    - type: Sprite
+      sprite: _Stalker/Structures/Furniture/Sets/military-box.rsi
+      state: icon
+    - type: SpawnItemsOnUse
+      items:
+        - id: 919PBMBox
+        - id: 919PBMBox
+        - id: 919PBMBox
+        - id: 919PBMBox
+        - id: 919PBMBox
+      sound:
+        path: /Audio/Effects/unwrap.ogg
+
+# Event Kits ------------------------------------------------------------------------
+
+# Gulag Kits
+
+- type: entity
+  parent: BaseItem
+  id: STGulagT3Kit
+  name: Gulag Tier 3 Kit
+  description: A bag full of supplies for the Gulag. FIGHT!
+  suffix: Event, Gulag, T3, DO NOT SPAWN
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: STClothingOuterIOTV
+    - id: ClothingHeadAssaultHelmet
+    - id: STWeaponRifleG36Alt
+    - id: ClothingBeltWebbingHolsterLoner
+    - id: STCombatKnife
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: STGauze
+    - id: 556Mag30
+    - id: 556Mag30
+    - id: 556Mag30
+    - id: 556Mag30
+    - id: 556Mag30
+    - id: 556Mag30
+    - id: 556FMJBox
+    - id: 556FMJBox
+    - id: 556FMJBox
+    - id: 556FMJBox
+    - id: 556FMJBox
+    - id: 556FMJBox
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: STGulagT4Kit
+  name: Gulag Tier 4 Kit
+  description: A bag full of supplies for the Gulag. FIGHT!
+  suffix: Event, Gulag, T4, DO NOT SPAWN
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: STClothingOuterIOTVGEN4
+    - id: ClothingHeadHelmetUlach
+    - id: STWeaponRifleAK74M
+    - id: ClothingBeltWebbingHolsterLoner
+    - id: STCombatKnife
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: STGauze
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545Mag30
+    - id: 545PCBox
+    - id: 545PCBox
+    - id: 545PCBox
+    - id: 545PCBox
+    - id: 545PCBox
+    - id: 545PCBox
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: STGulagT5Kit
+  name: Gulag Tier 5 Kit
+  description: A bag full of supplies for the Gulag. FIGHT!
+  suffix: Event, Gulag, T5, DO NOT SPAWN
+  components:
+  - type: STWeight
+    self: 87.2
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: STClothingOuterHeavyRedut
+    - id: STClothingHeadHelmetFASTNeutralBlack
+    - id: STWeaponRifleHK416
+    - id: ClothingBeltWebbingHolsterLoner
+    - id: STCombatKnife
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: STGauze
+    - id: 556Mag30
+    - id: 556Mag30
+    - id: 556Mag30
+    - id: 556Mag30
+    - id: 556Mag30
+    - id: 556Mag30
+    - id: 556M856Box
+    - id: 556M856Box
+    - id: 556M856Box
+    - id: 556M856Box
+    - id: 556M856Box
+    - id: 556M856Box
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+# warzone shop
+- type: entity
+  id: STLostGear
+  parent: BaseItem
+  name: Lost Gear
+  description: A piece of lost gear. One stalker's trash...
+  suffix: Stalker
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Decoration/bag_potato.rsi
+    state: Bag_potato3
+  - type: SpawnItemsOnUse
+    items:
+    - id: ClothingBeltTarzanDeserter
+      prob: .1
+      orGroup: GiftPool
+    - id: ClothingCapeDeserters
+      prob: .1
+      orGroup: GiftPool
+    - id: ClothingBeltWebbingDeserter
+      prob: .01
+      orGroup: GiftPool
+    - id: ClothingTorsoTurtlenecksDeserterCamouflage
+      prob: .1
+      orGroup: GiftPool
+    - id: ClothingLegsJeansDeserterCamouflage
+      prob: .1
+      orGroup: GiftPool
+    - id: ClothingTorsoTShirtZavet
+      prob: .1
+      orGroup: GiftPool
+    - id: ClothingTorsoAnomalistTechnician
+      prob: .1
+      orGroup: GiftPool
+    - id: ClothingLegsAnomalistTechnician
+      prob: .1
+      orGroup: GiftPool
+    - id: ClothingMaskGasAnomalists
+      prob: .01
+      orGroup: GiftPool
+    - id: ClothingOuterCoatIvyAnomalist
+      prob: .01
+      orGroup: GiftPool
+    - id: ClothingLegsJeansPolice
+      prob: .1
+      orGroup: GiftPool
+    - id: ClothingTorsoJacketPolice
+      prob: .01
+      orGroup: GiftPool
+    - id: ClothingLegsJeansProjectPeshka
+      prob: .001
+      orGroup: GiftPool
+    - id: ClothingTorsoJaba
+      prob: .1
+      orGroup: GiftPool
+    - id: ClothingLegsJeansJaba
+      prob: .1
+      orGroup: GiftPool
+    - id: ClothingHandsGlovesJabs
+      prob: .01
+      orGroup: GiftPool
+    - id: DrinkLongIslandIcedTeaGlass
+      prob: .01
+      orGroup: GiftPool
+    - id: Roubles2000
+      prob: .07
+      orGroup: GiftPool
+    - id: Roubles5000
+      prob: .01
+      orGroup: GiftPool
+    - id: Hryvnias25
+      prob: .05
+      orGroup: GiftPool
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  id: STLostToy
+  parent: BaseItem
+  name: Lost Toy
+  description: A toy recovered from the zone. It's been here a long time.
+  suffix: Stalker
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Decoration/bag_potato.rsi
+    state: Bag_potato3
+  - type: SpawnItemsOnUse
+    items:
+    - id: PlushieOldStalker
+      prob: .05
+      orGroup: GiftPool
+    - id: PlushieExperiment
+      prob: .01
+      orGroup: GiftPool
+    - id: STPlushieFeltCat2
+      prob: .1
+      orGroup: GiftPool
+    - id: STPlushieFeltCat3
+      prob: .1
+      orGroup: GiftPool
+    - id: STPlushieFeltBear
+      prob: .1
+      orGroup: GiftPool
+    - id: STPlushieFeltBoar
+      prob: .1
+      orGroup: GiftPool
+    - id: PlushieHampter
+      prob: .007
+      orGroup: GiftPool
+    - id: PlushieLizardJobLawyer
+      prob: .01
+      orGroup: GiftPool
+    - id: PlushieLizardJobMedicaldoctor
+      prob: .01
+      orGroup: GiftPool
+    - id: PlushiePenguin
+      prob: .05
+      orGroup: GiftPool
+    - id: PlushieSnake
+      prob: .05
+      orGroup: GiftPool
+    - id: PlushieVulp
+      prob: .001
+      orGroup: GiftPool
+    - id: PlushieXeno
+      prob: .001
+      orGroup: GiftPool
+    - id: ToyFigurineBartender
+      prob: .05
+      orGroup: GiftPool
+    - id: ToyFigurineBoxer
+      prob: .07
+      orGroup: GiftPool
+    - id: ToyFigurineGriffin
+      prob: .04
+      orGroup: GiftPool
+    - id: ToyIan
+      prob: .005
+      orGroup: GiftPool
+    - id: ToyFigurineMouse
+      prob: .05
+      orGroup: GiftPool
+    - id: STToyCosmonaut
+      prob: .1
+      orGroup: GiftPool
+    - id: ToyRubberDuck
+      prob: .08
+      orGroup: GiftPool
+    - id: ToySeraph
+      prob: .007
+      orGroup: GiftPool
+    - id: HelicopterInstrument
+      prob: .01
+      orGroup: GiftPool
+    - id: OcarinaInstrument
+      prob: .01
+      orGroup: GiftPool
+    - id: RevolverCapGun
+      prob: .006
+      orGroup: GiftPool
+    - id: ClothingMaskRat
+      prob: .02
+      orGroup: GiftPool
+    - id: ClothingMaskRaven
+      prob: .02
+      orGroup: GiftPool
+    - id: ClothingMaskJackal
+      prob: .02
+      orGroup: GiftPool
+    - id: ClothingMaskFox
+      prob: .02
+      orGroup: GiftPool
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: STWarzoneMedicalCrateBasic
+  name: Basic Medical Shipment
+  description: A shipment of basic medical supplies; 5 army medkits, 5 scientific medkits, 2 bloodpacks.
+  suffix: Stalker
+  components:
+  - type: STWeight
+    self: 20
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: MedkitScience
+    - id: Bloodpack
+    - id: Bloodpack
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: BaseItem
+  id: STWarzoneMedicalCrateCombat
+  name: Combat Medical Shipment
+  description: A shipment of medical supplies for use in active combat zones; 8 army medkits, 4 elite medkits, 4 probudophiline syringes, and 4 tourniquets.
+  suffix: Stalker
+  components:
+  - type: STWeight
+    self: 25
+  - type: Item
+    size: Ginormous
+  - type: MultiHandedItem
+  - type: Sprite
+    sprite: _Stalker/Structures/Furniture/olive_bag.rsi
+    state: icon
+  - type: SpawnItemsOnUse
+    items:
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitMilitary
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: MedkitElite
+    - id: WakeUpMedipen
+    - id: WakeUpMedipen
+    - id: WakeUpMedipen
+    - id: WakeUpMedipen
+    - id: STTourniquet
+    - id: STTourniquet
+    - id: STTourniquet
+    - id: STTourniquet
+    sound:
+      path: /Audio/Effects/unwrap.ogg

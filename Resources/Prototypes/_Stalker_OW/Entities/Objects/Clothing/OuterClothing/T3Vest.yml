@@ -1,0 +1,212 @@
+- type: entity
+  parent: STClothingOuterArmorStorageBasic # Can replace with our own parent later to disconnect from RU prototypes.
+  id: STOWClothingOuterArmorT3VestBase
+  suffix: STOW, Armor, T3, PvP
+  abstract: true
+  components:
+  - type: STWeight
+    self: 5.5 # Awaiting weight rebalance to increase this.
+  - type: Storage # Contains 2 2x2, 2 1x3, and 3 1x2 slots.
+    maxItemSize: Large
+    blacklist:
+      tags:
+      - STArtifact
+    grid:
+      - 0,3,0,5
+      - 2,3,2,4
+      - 2,0,3,1
+      - 4,3,4,4
+      - 5,0,6,1
+      - 6,3,6,4
+      - 8,3,8,5
+  - type: Tag
+    tags:
+      - BlockBelt
+  - type: Armor # Blunt -20%/-5, Slash -20%/-5, Piercing -30%/-8, Explosion -25%. OW Change start - Lowered stats to allow loners to purchase and be faction equiv.
+    armorClass: 1
+    modifiers:
+      flatReductions:
+        Blunt: 0
+        Slash: 0
+        Piercing: 0
+  - type: GrantsArtifactSlots
+    slots: 1 # This is a significant disadvantage compared to the 2 slots, since it prevents you from running electrical artifacts.
+ #- type: ExplosionResistance
+ #  damageCoefficient: 0.75
+  - type: Craftable
+# Visual style for these armors is any low-coverage armor vest. No groin or shoulder protection ideally.
+
+- type: entity
+  parent: STOWClothingOuterArmorT3VestBase
+  id: STOWClothingOuterArmorT3VestStalker
+  name: ANA-III Tactical
+  description: A popular last-generation armor system consisting of front, back, and side inserts with Kevlar linings. Imported into the Zone by a wide variety of users.
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/outerClothing/ANA/Gray.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/outerClothing/ANA/Gray.rsi
+  - type: Armor # Blunt -20%/-5, Slash -20%/-5, Piercing -30%/-8, Explosion -25%. OW Change start - Lowered stats to allow loners to purchase and be faction equiv.
+    armorClass: 3
+    modifiers:
+      flatReductions:
+        Blunt: 5
+        Slash: 5
+        Piercing: 5
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.7
+  - type: GrantsArtifactSlots
+    slots: 1 # This is a significant disadvantage compared to the 2 slots, since it prevents you from running electrical artifacts.
+  - type: ExplosionResistance
+    damageCoefficient: 0.75 # OW Change End - Lowered stats to allow loners to purchase and be faction equiv.
+  - type: Craftable
+    
+- type: entity
+  parent: STOWClothingOuterArmorT3VestBase
+  id: STOWClothingOuterArmorT3VestBandit
+  name: Bandit Shield-3 Armor Vest
+  description: A enhanced version of the classic Shield-2 armor vest, painted in Bandit colors.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/outerClothing/plate_band.rsi # Needs updated in-hands.
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/outerClothing/plate_band.rsi
+    - type: Craftable
+
+- type: entity
+  parent: STOWClothingOuterArmorT3VestBase
+  id: STOWClothingOuterArmorT3VestDuty
+  name: Duty Shield-3 Armor Vest
+  description: A enhanced version of the classic Shield-2 armor vest, painted in Duty colors. Forgoes the usual artifact pouch, and worn with knee pads that help it to protect against the dangerous mutants Duty faces on the regular.
+  components:
+  # +10%/1 mutant protection but no artifact slots.
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/outerClothing/DOLG_T2_Plate_armor.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/outerClothing/DOLG_T2_Plate_armor.rsi
+ #- type: Armor
+ #  armorClass: 3
+ #  modifiers:
+ #    flatReductions:
+ #      Blunt: 6
+ #      Slash: 6
+ #      Piercing: 8 # OW Fixed absent stat
+ #   coefficients:
+ #      Blunt: 0.7
+ #      Slash: 0.7
+ #      Piercing: 0.7 # OW Fixed absent stat OW Change End - Armor stats temp removed to remove from violent circulation
+  - type: GrantsArtifactSlots
+    slots: 0
+  - type: Craftable
+
+- type: entity
+  parent: STOWClothingOuterArmorT3VestBase
+  id: STOWClothingOuterArmorT3VestClearSky
+  name: Sky-blue ANA-III Tactical
+  description: A popular last-generation armor system consisting of front, back, and side inserts with Kevlar linings. Imported into the Zone by a wide variety of users.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/outerClothing/ANA/Blue.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/outerClothing/ANA/Blue.rsi
+    - type: Armor # Blunt -20%/-5, Slash -20%/-5, Piercing -30%/-8, Explosion -25%. OW Change start - Lowered stats to allow loners to purchase and be faction equiv.
+      armorClass: 3
+      modifiers:
+        flatReductions:
+          Blunt: 5
+          Slash: 5
+          Piercing: 5
+        coefficients:
+          Blunt: 0.8
+          Slash: 0.8
+          Piercing: 0.7
+    - type: GrantsArtifactSlots
+      slots: 1 # This is a significant disadvantage compared to the 2 slots, since it prevents you from running electrical artifacts.    
+    - type: Craftable
+
+- type: entity
+  parent: STOWClothingOuterArmorT3VestBase
+  id: STOWClothingOuterArmorT3VestFreedom
+  name: Freedom Sentinel 3BP Ballistic Vest
+  description: A popular American-made vest containing a front and back plate. Painted in Freedom colors.
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/outerClothing/IOTV/Svoboda.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/outerClothing/IOTV/Svoboda.rsi
+  - type: Craftable
+
+- type: entity
+  parent: STOWClothingOuterArmorT3VestBase
+  id: STOWClothingOuterArmorT3VestJournalist
+  name: Armored Press Vest # This could use its own model name, instead of generic press vest.
+  description: Armor vest designed for journalists in war zones. Utterly indispensable in the Zone, especially when reporting on faction warfare.
+  components:
+    - type: Sprite
+      sprite: _Stalker_EN/Objects/Clothing/outerClothing/press_vest_armored.rsi # Sprite needs modification to remove shoulder and groin protection. Can keep the current version for use in T4 armor?
+    - type: Clothing
+      sprite: _Stalker_EN/Objects/Clothing/outerClothing/press_vest_armored.rsi
+    - type: Craftable
+
+- type: entity
+  parent: STOWClothingOuterArmorT3VestBase
+  id: STOWClothingOuterArmorT3VestMercenary
+  name: Mercenary Shield-3 Armor Vest
+  description: A enhanced version of the classic Shield-2 armor vest, painted in Mercenary colors.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/outerClothing/plate_merc.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/outerClothing/plate_merc.rsi
+    - type: Craftable
+
+# Military armor would go here, but currently they have the PSZ instead.
+
+- type: entity
+  parent: STOWClothingOuterArmorT3VestBase
+  id: STOWClothingOuterArmorT3VestNeutral
+  name: Neutral Shield-3 Armor Vest
+  description: A enhanced version of the classic Shield-2 armor vest, painted in Neutral colors.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/outerClothing/plate_stalker.rsi # Sorta placeholder sprite, but it works.
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/outerClothing/plate_stalker.rsi
+    - type: Armor # OW Change Start - Added separate stats for Neutrals to keep armor
+      armorClass: 3
+      modifiers:
+        flatReductions:
+          Blunt: 6
+          Slash: 6
+          Piercing: 8 # OW Fixed absent stat
+        coefficients:
+          Blunt: 0.7
+          Slash: 0.7
+          Piercing: 0.7 # OW Fixed absent stat   # OW Change End - Added separate stats for Neutrals to keep armor   
+    - type: Craftable
+
+- type: entity
+  parent: STOWClothingOuterArmorT3VestBase
+  id: STOWClothingOuterArmorT3VestRenegade
+  name: Renegade Shield-3 Armor Vest
+  description: A enhanced version of the classic Shield-2 armor vest, unprofessionally modified with a single shoulder pad and painted with a orange skull.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/outerClothing/plate_rene.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/outerClothing/plate_rene.rsi
+    - type: Craftable
+
+- type: entity
+  parent: STOWClothingOuterArmorT3VestBase
+  id: STOWClothingOuterArmorT3VestUnitedNations
+  name: UN Sentinel 3BP Ballistic Vest
+  description: A popular American-made vest containing a front and back plate. Standard issue for UN peacekeepers.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/outerClothing/ANA/UN.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/outerClothing/ANA/UN.rsi
+    - type: Craftable

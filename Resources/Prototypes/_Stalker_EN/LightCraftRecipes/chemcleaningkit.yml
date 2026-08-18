@@ -1,0 +1,190 @@
+﻿- type: lightCraftingRecipe
+  id: ChemCleaningKitAKS74Winter
+  results:
+  - STWeaponRifleAKS74Winter
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: STWeaponRifleAKS74WinterMono
+    time: 8
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitAKS74UWhite
+  results:
+  - STWeaponRifleAKS74UWhite
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: STWeaponRifleAKS74UWhiteMono
+    time: 8
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitAK103Mono
+  results:
+  - STWeaponRifleAK103MonoClean
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: STWeaponRifleAK103Mono
+    time: 8
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitAK12Mono
+  results:
+  - STWeaponRifleStalkerAK12MonoClean
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: STWeaponRifleStalkerAK12Mono
+    time: 8
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitG36Mono
+  results:
+  - STWeaponRifleG36MonoClean
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: STWeaponRifleG36Mono
+    time: 8
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitSVDMono
+  results:
+  - STWeaponSniperSVDMonoClean
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: STWeaponSniperSVDMono
+    time: 8
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitArmorMonolith
+  results:
+  - STCraftSturdyHideT3
+  - STCraftSturdyHideT3
+  - STCraftBasicThreadKitT1
+  - STCraftBasicThreadKitT1
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: ClothingOuterArmorMonolith
+    time: 15
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitAPSBare
+  results:
+  - WeaponPistolStalkerAPSBare
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: WeaponPistolStalkerAPSBareMono
+    time: 5
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitWebbingHolsterMonolith
+  results:
+  - ClothingBeltWebbingHolsterMonolithClean
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: ClothingBeltWebbingHolsterMonolith
+    time: 12
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitSevaMonolith
+  results:
+  - STCraftHideT2
+  - STCraftHideT2
+  - STCraftGlassT2
+  - STCraftBasicThreadKitT1
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: ClothingOuterArmorSevaMonolith
+    time: 15
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitKevlarMonolith
+  results:
+  - STCraftHideT2
+  - STCraftHideT2
+  - STCraftBasicThreadKitT1
+  - STCraftTapeKitT2
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: ClothingOuterCoatKevlarMonolith
+    time: 12
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitLightPlateVestBaseMonolith
+  results:
+  - STCraftHideT2
+  - STCraftHideT2
+  - STCraftPlasticFittingT2
+  - STCraftPlasticFittingT2
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: STClothingOuterArmorLightPlateVestBaseMonolith
+    time: 15
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitZaryaMonolith
+  results:
+  - STCraftHideT2
+  - STCraftHideT2
+  - STCraftBasicThreadKitT1
+  - STCraftTapeKitT2
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: ClothingOuterArmorZaryaMonolith
+    time: 15
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitBerill5MMonolith
+  results:
+  - STCraftPolymerFabricT4
+  - STCraftPolymerFabricT4
+  - STCraftIndustrialThreadStaplesKitT4
+  - STCraftIndustrialThreadStaplesKitT4
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: ClothingOuterArmorBerill5MMonolith
+    time: 15
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitJacketMonolith
+  results:
+  - STCraftCottonFabricT1
+  - STCraftCottonFabricT1
+  - STCraftBasicThreadKitT1
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: ClothingOuterJacketMonolith
+    time: 8
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitBeretMonolith
+  results:
+  - ClothingHeadBeretMonolithClean
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: ClothingHeadBeretMonolith
+    time: 5
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitHelmetBerill5MMonolith
+  results:
+  - ClothingHeadHelmetBerill5MMonolithClean
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: ClothingHeadHelmetBerill5MMonolith
+    time: 15
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitAbakanWinter
+  results:
+  - STWeaponRifleStalkerAbakanWinter
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: STWeaponRifleStalkerAbakanWinterMono
+    time: 15
+
+- type: lightCraftingRecipe
+  id: ChemCleaningKitOC14Winter
+  results:
+  - STWeaponRifleOC14Winter
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: STWeaponRifleOC14WinterMono
+    time: 15

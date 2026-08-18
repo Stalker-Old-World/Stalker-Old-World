@@ -1,0 +1,12 @@
+# Infantry helmet
+
+- type: lightCraftingRecipe
+  id:  STCraftSkinClothingHeadInfantryHelmetMilitary
+  results:
+    - ClothingHeadHelmetInfantryMilitary
+  steps:
+    firstIngredient: STSkinsKitMilitary
+    secondIngredient: ClothingHeadHelmetInfantry
+    keepFirst: true
+    time: 5
+

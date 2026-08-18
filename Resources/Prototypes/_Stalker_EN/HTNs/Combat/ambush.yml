@@ -1,0 +1,49 @@
+# "Ambush" mob AI: behaves like STSimpleHostileCompound, but stands perfectly still
+# instead of wandering when it has no target. Pair it with a small VisionRadius (e.g. 3)
+# so the mob only "notices" players who get close, and a larger AggroVisionRadius so it
+# keeps hunting once provoked. When it loses its target it falls back to standing still.
+
+# Stand perfectly still (no movement) and wait. Used as the idle fallback so the mob keeps
+# its static, non-moving sprite until a higher-priority (combat) branch becomes valid.
+- type: htnCompound
+  id: STStandStillCompound
+  branches:
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:WaitOperator
+            key: IdleTime
+          preconditions:
+            - !type:KeyExistsPrecondition
+              key: IdleTime
+
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:RandomOperator
+            targetKey: IdleTime
+            minKey: MinimumIdleTime
+            maxKey: MaximumIdleTime
+        - !type:HTNPrimitiveTask
+          operator: !type:WaitOperator
+            key: IdleTime
+          preconditions:
+            - !type:KeyExistsPrecondition
+              key: IdleTime
+
+- type: htnCompound
+  id: STAmbushHostileCompound
+  branches:
+    - tasks: # break free if a player grabs/pulls it
+        - !type:HTNPrimitiveTask
+          operator: !type:UnPullOperator
+          preconditions:
+            - !type:PulledPrecondition
+              isPulled: true
+    - tasks: # chase and melee a living target within vision
+        - !type:HTNCompoundTask
+          task: STSimpleMeleeCombatAliveCompound
+    - tasks: # finish off a downed/crit target
+        - !type:HTNCompoundTask
+          task: STSimpleMeleeCombatCritCompound
+    - tasks: # no target in range: stand still (the "ambush" state)
+        - !type:HTNCompoundTask
+          task: STStandStillCompound

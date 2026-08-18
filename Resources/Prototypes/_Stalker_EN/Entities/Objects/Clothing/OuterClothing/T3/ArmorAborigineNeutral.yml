@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingOuterArmorAborigineStalker
+  id: ClothingOuterArmorAborigineNeutral
+  name: Native Armor Suit 'Mentors Protection'
+  suffix: ST, T3, Universal
+  description:  Spray painted native to provide better armour in terms of dealing with mutants.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/outerClothing/neutral_aborigine.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/outerClothing/neutral_aborigine.rsi

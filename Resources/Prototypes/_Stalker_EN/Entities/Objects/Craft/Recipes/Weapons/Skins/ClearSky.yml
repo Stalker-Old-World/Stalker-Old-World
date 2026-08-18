@@ -1,0 +1,19 @@
+- type: lightCraftingRecipe
+  id: STCraftSkinSTWeaponRifleSCARHClearSky
+  results:
+  - STWeaponRifleSCARHClearSky
+  steps:
+    firstIngredient: STSkinsKitClearSky
+    secondIngredient: STWeaponRifleSCARH
+    keepFirst: true
+    time: 5
+
+- type: lightCraftingRecipe
+  id: STCraftSkinSTWeaponRifleSCARLClearSky
+  results:
+  - STWeaponRifleSCARLClearSky
+  steps:
+    firstIngredient: STSkinsKitClearSky
+    secondIngredient: STWeaponRifleSCARL
+    keepFirst: true
+    time: 5

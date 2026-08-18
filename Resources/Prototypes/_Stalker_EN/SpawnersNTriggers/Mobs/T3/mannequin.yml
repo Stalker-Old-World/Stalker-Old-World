@@ -1,0 +1,59 @@
+- type: entity
+  name: mannequin (1) (100%) 30м
+  id: STTriggerMannequin110030
+  parent: STBaseTrigger1110030
+  suffix: ST, T3, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantMannequin
+    restricted:
+    - STMobMutantMannequin
+
+- type: entity
+  name: mannequin (1-1) (75%) 30м
+  id: STTriggerMannequin117530
+  parent: STBaseTrigger117530
+  suffix: ST, T3, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantMannequin
+    restricted:
+    - STMobMutantMannequin
+
+- type: entity
+  name: mannequin (1-2) (75%) 30м
+  id: STTriggerMannequin127530
+  parent: STBaseTrigger127530
+  suffix: ST, T3, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantMannequin
+    restricted:
+    - STMobMutantMannequin
+
+- type: entity
+  name: mannequin (1-2) (25%) 30м
+  id: STTriggerMannequin122530
+  parent: STBaseTrigger122530
+  suffix: ST, T3, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantMannequin
+    restricted:
+    - STMobMutantMannequin
+
+- type: entity
+  name: mannequin (1-2) (100%) 30м
+  id: STTriggerMannequin1210030
+  parent: STBaseTrigger1210030
+  suffix: ST, T3, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - STMobMutantMannequin
+    restricted:
+    - STMobMutantMannequin

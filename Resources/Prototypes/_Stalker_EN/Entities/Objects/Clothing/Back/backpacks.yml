@@ -1,0 +1,106 @@
+- type: entity
+  parent: STClothingBackBase
+  id: ClothingBackpackSmuggler
+  name: smuggler's backpack
+  description: A heavy backpack made for long trips through the wilderness and moving large varieties of goods.
+  suffix: ST, PvE, T4
+  components:
+  - type: Storage #56, space for 1 full size gun
+    grid:
+    - 3,0,6,0
+    - 3,2,6,2
+    - 2,3,7,3
+    - 0,4,1,5
+    - 3,4,3,4
+    - 6,4,6,4
+    - 8,4,9,5
+    - 4,5,5,5
+    - 2,6,7,7
+    - 0,7,0,8
+    - 9,7,9,8
+    - 1,9,8,10
+    quickInsert: true
+    areaInsert: true
+    blacklist:
+      tags:
+      - STArtifact
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/backpacks/smuggler_backpack.rsi
+
+- type: entity
+  parent: STClothingBackBase
+  id: ClothingBackpackDuffelClearSky
+  name: Clear Sky Backpack
+  description: Usually used in hiking, this backpack is reffited for Clear Sky members.
+  suffix: ST
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/backpacks/army_backpack_cs.rsi
+  - type: Storage #40
+    grid:
+    - 0,0,4,7
+
+- type: entity
+  parent: STClothingBackBase
+  id: ClothingBackpackDuffelDuty
+  name: Duty Backpack
+  description: Usually used in hiking, this backpack is reffited for Duty members.
+  suffix: ST
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/backpacks/army_backpack_duty.rsi
+  - type: Storage #40
+    grid:
+    - 0,0,4,7
+
+- type: entity
+  parent: STClothingBackBase
+  id: ClothingBackpackDuffelFreedom
+  name: Freedom Backpack
+  description: Usually used in hiking, this backpack is reffited for Freedom members.
+  suffix: ST
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/backpacks/army_backpack_freedom.rsi
+  - type: Storage #40
+    grid:
+    - 0,0,4,7
+
+- type: entity
+  parent: STClothingBackBase
+  id: ClothingBackpackDuffelRenegade
+  name: Renegade Backpack
+  description: Usually used in hiking, this backpack is reffited for Renegade members.
+  suffix: ST
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/backpacks/army_backpack_renegade.rsi
+  - type: Storage #40
+    grid:
+    - 0,0,4,7
+
+- type: entity
+  parent: STClothingBackBase
+  id: ClothingBackpackDuffelBandits
+  name: Bandits Backpack
+  description: Usually used in hiking, this backpack is reffited for Bandits members.
+  suffix: ST
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/backpacks/army_backpack_bandit.rsi
+  - type: Storage #40
+    grid:
+    - 0,0,4,7
+
+- type: entity
+  parent: STClothingBackBase
+  id: ClothingBackpackDuffelNeutral
+  name: Neutrals Backpack
+  description: Usually used in hiking, this backpack is reffited for Neutrals members.
+  suffix: ST
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/backpacks/army_backpack_neutral.rsi
+  - type: Storage #40
+    grid:
+    - 0,0,4,7

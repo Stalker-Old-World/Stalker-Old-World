@@ -1,0 +1,175 @@
+- type: entity
+  parent: STClothingOuterArmorStorageBasic
+  id: STClothingOuterArmorVeryHeavy
+  name: КСН-13 «Бегемот»
+  description: Костюм Специального Назначения «Бегемот», используется государственными оперативниками в условиях ЧЗО.
+  suffix: ST, T4, PvE
+  components:
+  - type: STWeight
+    self: 6.5
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/outerClothing/begemot_armor.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/outerClothing/begemot_armor.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+      - 0,2,0,3
+      - 1,0,1,0
+      - 2,2,2,3
+      - 3,0,3,0
+      - 4,2,4,3
+      - 5,0,5,0
+      - 6,2,6,3
+      - 7,0,7,0
+      - 8,2,8,3
+      - 9,0,9,0
+      - 10,2,10,3
+      - 11,0,11,0
+      - 12,2,12,3
+  - type: Armor
+    armorClass: 4
+    modifiers:
+      flatReductions:
+        Blunt: 10
+        Slash: 9
+        Piercing: 6
+        Radiation: 2
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.75
+        Heat: 0.8
+        Radiation: 0.95
+        Caustic: 0.95
+        Shock: 0.9
+        Psy: 1
+        Compression: 0.75
+  - type: GrantsArtifactSlots
+    slots: 4 # EN
+  - type: ExplosionResistance
+    damageCoefficient: 0.80
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodMerc
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
+
+- type: entity
+  parent: STClothingOuterArmorVeryHeavy
+  id: STClothingOuterArmorVeryHeavySci
+  name: КСН-13-М
+  description: Костюм Специального Назначения «Бегемот», используется государственными оперативниками в условиях ЧЗО.
+  suffix: ST, T4, PvE
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/outerClothing/begemotM.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/outerClothing/begemotM.rsi
+  - type: Armor
+    armorClass: 4
+    modifiers:
+      flatReductions:
+        Blunt: 8
+        Slash: 8
+        Piercing: 4
+        Radiation: 3
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.75
+        Heat: 0.6
+        Radiation: 0.65
+        Caustic: 0.65
+        Shock: 0.7
+        Compression: 0.75
+  - type: GrantsArtifactSlots
+    slots: 5 # EN
+
+- type: entity
+  parent: STClothingOuterArmorVeryHeavy
+  id: STClothingOuterArmorVeryHeavyFreedom
+  name: КСН-13 «Бегемот» Свободы
+  description: Костюм Специального Назначения «Бегемот», переделанный группировкой Свобода.
+  suffix: ST, T4, PvE
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/outerClothing/begemot_freedom.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/outerClothing/begemot_freedom.rsi
+
+- type: entity
+  parent: STClothingOuterArmorVeryHeavy
+  id: STClothingOuterArmorGonchiy
+  name: Бронекостюм "Гончий"
+  description: Костюм с маскировочными элементами, созданный для быстрого и комфортного передвижения по Зоне, в ущерб защитным показателям.
+  suffix: ST, T4, PvE
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/outerClothing/gonchiy.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/outerClothing/gonchiy.rsi
+  - type: ToggleableClothing
+    clothingPrototype: STClothingHeadHardsuitGonchiy
+    slot: head
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1
+  - type: Armor
+    armorClass: 4
+    modifiers:
+      flatReductions:
+        Blunt: 7
+        Slash: 7
+        Piercing: 3
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.75
+        Radiation: 0.75
+        Caustic: 0.75
+        Shock: 0.95
+        Compression: 0.9
+  - type: GrantsArtifactSlots
+    slots: 4 # Stalker-Changes | Number of artifact slots this armor grants
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: STClothingHeadHardsuitGonchiy
+  name: шлем гончего #base
+  description: Шлем из комплекта "Гончий".
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/hats/gonchiy_helm.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/hats/gonchiy_helm.rsi
+  - type: BreathMask
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - BlockMask
+  - type: PressureProtection
+    highPressureMultiplier: 0.1
+    lowPressureMultiplier: 1000
+  - type: Armor
+    armorClass: 4
+    modifiers:
+      flatReductions:
+        Radiation: 1
+        Caustic: 1
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Compression: 0.95
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout

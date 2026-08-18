@@ -1,0 +1,9 @@
+- type: lightCraftingRecipe
+  id: STCraftSkinClothingPSZ7Deserter
+  results:
+    - STClothingOuterArmorDesertersPSZ7
+  steps:
+    firstIngredient: STSkinsKitDeserters
+    secondIngredient: STClothingOuterArmorLightPlateVestBasePSZ7
+    keepFirst: true
+    time: 5

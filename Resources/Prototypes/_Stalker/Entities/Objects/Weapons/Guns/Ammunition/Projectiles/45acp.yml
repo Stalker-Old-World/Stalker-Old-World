@@ -1,0 +1,71 @@
+
+- type: entity
+  id: Bullet45ACPLFMJ
+  name: bullet (.45 ACP Lasermatch FMJ)
+  parent: STBaseBullet # EN
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 2
+  - type: Projectile
+    projectileClass: 1
+    damage:
+      types:
+        Piercing: 22 #OW
+        Mutant: 24 # EN
+
+- type: entity
+  id: Bullet45ACPMFMJ
+  name: bullet (.45 ACP Match FMJ)
+  parent: Bullet45ACPLFMJ
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    projectileClass: 2
+    damage:
+      types:
+        Piercing: 22 #OW
+        Mutant: 20 # EN
+
+- type: entity
+  id: Bullet45ACPHydroshock
+  name: bullet (.45 ACP Hydra-Shok)
+  parent: Bullet45ACPLFMJ
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    projectileClass: 1
+    damage:
+      types:
+        Blunt: 10
+        Slash: 10
+        Piercing: 15
+        Mutant: 20
+
+- type: entity
+  id: Bullet45ACPRIP
+  name: bullet (.45 ACP RIP)
+  parent: Bullet45ACPLFMJ
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    projectileClass: 0
+    damage:
+      types:
+        Mutant: 75 #OW
+        Piercing: 7
+        Blunt: 7
+        Slash: 7
+
+- type: entity
+  id: Bullet45ACPAP
+  name: bullet (.45 ACP AP)
+  parent: Bullet45ACPLFMJ
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    projectileClass: 3
+    damage:
+      types:
+        Piercing: 22 #OW
+        Mutant: 12 # EN

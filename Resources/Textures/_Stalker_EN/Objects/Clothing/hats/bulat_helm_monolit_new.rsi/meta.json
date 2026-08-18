@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "copyright": "Stalker14 CLA, modified by justawaffle7470",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "equipped-HELMET",
+            "directions": 4
+        }
+    ],
+    "license": "CC-BY-NC-SA-3.0"
+}

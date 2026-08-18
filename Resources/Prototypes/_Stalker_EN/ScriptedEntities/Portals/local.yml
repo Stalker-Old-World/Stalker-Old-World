@@ -1,0 +1,35 @@
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportEcoBunker
+  suffix: Ecologist
+  name: Elevator Teleport
+  components:
+  - type: LinkByString
+    linkString: EcoBunker
+
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportEcoYantar
+  suffix: Ecologist
+  name: Yantar Eco Bunker
+  components:
+  - type: LinkByString
+    linkString: EcoYantar
+
+- type: entity
+  parent: LocalTeleportBaseUncollide
+  id: YantarLabLadderUncollide
+  suffix: Yantar
+  name: Yantar Lab Ladder Uncollide
+  components:
+  - type: LinkByString
+    linkString: YantarLabLadder
+
+- type: entity
+  parent: LocalTeleportBase
+  id: LocalTeleportNeutralStairs
+  suffix: Neutral
+  name: Neutral Base Stairs
+  components:
+  - type: LinkByString
+    linkString: NeutralBaseStairs

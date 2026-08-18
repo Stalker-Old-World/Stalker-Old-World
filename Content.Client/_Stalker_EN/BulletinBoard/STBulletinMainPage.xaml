@@ -1,0 +1,39 @@
+<BoxContainer xmlns="https://spacestation14.io"
+              xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
+              Orientation="Vertical"
+              HorizontalExpand="True"
+              VerticalExpand="True"
+              RectClipContent="True"
+              Margin="4">
+
+    <!-- Header -->
+    <BoxContainer Orientation="Horizontal" Margin="0 0 0 4" MinSize="0 28">
+        <AnimatedTextureRect Name="HeaderIcon" Access="Public" SetSize="20 20" VerticalAlignment="Center" Margin="0 0 16 0"/>
+        <Label Name="HeaderLabel" StyleClasses="LabelHeading" VerticalAlignment="Center" HorizontalExpand="True"/>
+        <Button Name="MuteButton" MinWidth="50" MinHeight="24" Margin="4 0 0 0"/>
+    </BoxContainer>
+
+    <customControls:HSeparator Margin="0 2 0 2"/>
+
+    <!-- Tab buttons -->
+    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="0 2 0 4">
+        <Button Name="PrimaryTabButton" HorizontalExpand="True" Margin="0 0 2 0"/>
+        <Button Name="SecondaryTabButton" HorizontalExpand="True" Margin="2 0 0 0"/>
+    </BoxContainer>
+
+    <!-- Search bar -->
+    <LineEdit Name="SearchBar" HorizontalExpand="True" Margin="0 0 0 4"/>
+
+    <!-- Info label (count or hint text) -->
+    <RichTextLabel Name="InfoLabel" HorizontalExpand="True" Margin="0 0 0 4"/>
+
+    <!-- Cards area -->
+    <ScrollContainer Name="CardScroll" VerticalExpand="True" HScrollEnabled="False" MinSize="0 100">
+    </ScrollContainer>
+
+    <customControls:HSeparator Margin="0 4 0 4"/>
+
+    <!-- Post button (only visible when allowed) -->
+    <Button Name="PostButton" HorizontalExpand="True" Visible="False"/>
+
+</BoxContainer>

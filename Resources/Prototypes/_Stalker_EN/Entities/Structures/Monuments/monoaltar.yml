@@ -1,0 +1,51 @@
+﻿- type: entity
+  id: StalkerMonolithAltarKit
+  parent: STBaseItem
+  name: strange receiver
+  suffix: ST
+  description: A jumble of devices for broadcasting... something. With some logs, something can be built.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Tools/monoaltarkit.rsi
+    state: icon
+  - type: STWeight
+    self: 15
+  - type: Item
+    size: Normal
+  - type: Craftable
+
+- type: lightCraftingRecipe
+  id: MonolithAltarRecipe1
+  results:
+  - StalkerMonolitBornFire
+  steps:
+    firstIngredient: STLogStalkerT1
+    secondIngredient: StalkerMonolithAltarKit
+    time: 20
+
+- type: lightCraftingRecipe
+  id: MonolithAltarRecipe2
+  results:
+  - StalkerMonolitBornFire
+  steps:
+    firstIngredient: STLogStalkerT2
+    secondIngredient: StalkerMonolithAltarKit
+    time: 20
+
+- type: lightCraftingRecipe
+  id: MonolithAltarRecipe3
+  results:
+  - StalkerMonolitBornFire
+  steps:
+    firstIngredient: STLogStalkerT3
+    secondIngredient: StalkerMonolithAltarKit
+    time: 20
+
+- type: lightCraftingRecipe
+  id: MonolithAltarRecipe4
+  results:
+  - StalkerMonolitBornFire
+  steps:
+    firstIngredient: STLogStalkerT4
+    secondIngredient: StalkerMonolithAltarKit
+    time: 20

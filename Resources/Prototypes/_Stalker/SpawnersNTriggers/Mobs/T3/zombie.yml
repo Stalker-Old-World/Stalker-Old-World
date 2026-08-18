@@ -1,0 +1,223 @@
+- type: entity
+  name: триггер зомби (1-4) (20%)
+  id: STTriggerZombie142010
+  parent: STBaseTrigger142010
+  suffix: ST, T3, Trigger
+  components:
+    - type: SpawnOnApproach
+      prototypes:
+        - MobStalkerZombieBase
+        - MobStalkerZombieISSG
+        - MobStalkerZombieSosop
+        - MobStalkerZombieGlod
+        - MobStalkerZombieChN
+        - MobStalkerZombieRHBZ
+        - MobStalkerZombieMerc
+        - MobStalkerZombieBandit1
+        - MobStalkerZombieDolg1
+        - MobStalkerZombieDolg2
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieEcologist1
+        - MobStalkerZombieEcologist2
+        - MobStalkerZombieFreedom1
+        - MobStalkerZombieFreedom2
+        - MobStalkerZombieLoner1
+        - MobStalkerZombieLoner2
+        - MobStalkerZombieLoner3
+        - MobStalkerZombieLoner4
+        - MobStalkerZombieLoner5
+        - MobStalkerZombieLonershotgunner1
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieMerc1
+      restricted:
+        - MobStalkerZombieBase
+        - MobStalkerZombieISSG
+        - MobStalkerZombieSosop
+        - MobStalkerZombieGlod
+        - MobStalkerZombieChN
+        - MobStalkerZombieRHBZ
+        - MobStalkerZombieMerc
+        - MobStalkerZombieBandit1
+        - MobStalkerZombieDolg1
+        - MobStalkerZombieDolg2
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieEcologist1
+        - MobStalkerZombieEcologist2
+        - MobStalkerZombieFreedom1
+        - MobStalkerZombieFreedom2
+        - MobStalkerZombieLoner1
+        - MobStalkerZombieLoner2
+        - MobStalkerZombieLoner3
+        - MobStalkerZombieLoner4
+        - MobStalkerZombieLoner5
+        - MobStalkerZombieLonershotgunner1
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieMerc1
+
+- type: entity
+  name: триггер зомби (1-4) (50%)
+  id: STTriggerZombie145030
+  parent: STBaseTrigger145030
+  suffix: ST, T3, Trigger
+  components:
+    - type: SpawnOnApproach
+      prototypes:
+        - MobStalkerZombieBase
+        - MobStalkerZombieISSG
+        - MobStalkerZombieSosop
+        - MobStalkerZombieGlod
+        - MobStalkerZombieChN
+        - MobStalkerZombieRHBZ
+        - MobStalkerZombieMerc
+        - MobStalkerZombieBandit1
+        - MobStalkerZombieDolg1
+        - MobStalkerZombieDolg2
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieEcologist1
+        - MobStalkerZombieEcologist2
+        - MobStalkerZombieFreedom1
+        - MobStalkerZombieFreedom2
+        - MobStalkerZombieLoner1
+        - MobStalkerZombieLoner2
+        - MobStalkerZombieLoner3
+        - MobStalkerZombieLoner4
+        - MobStalkerZombieLoner5
+        - MobStalkerZombieLonershotgunner1
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieMerc1
+      restricted:
+        - MobStalkerZombieBase
+        - MobStalkerZombieISSG
+        - MobStalkerZombieSosop
+        - MobStalkerZombieGlod
+        - MobStalkerZombieChN
+        - MobStalkerZombieRHBZ
+        - MobStalkerZombieMerc
+        - MobStalkerZombieBandit1
+        - MobStalkerZombieDolg1
+        - MobStalkerZombieDolg2
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieEcologist1
+        - MobStalkerZombieEcologist2
+        - MobStalkerZombieFreedom1
+        - MobStalkerZombieFreedom2
+        - MobStalkerZombieLoner1
+        - MobStalkerZombieLoner2
+        - MobStalkerZombieLoner3
+        - MobStalkerZombieLoner4
+        - MobStalkerZombieLoner5
+        - MobStalkerZombieLonershotgunner1
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieMerc1
+
+- type: entity
+  name: триггер зомби (1-2) (10%)
+  id: STTriggerZombie121010
+  parent: STBaseTrigger121010
+  suffix: ST, T3, Trigger
+  components:
+    - type: SpawnOnApproach
+      prototypes:
+        - MobStalkerZombieBase
+        - MobStalkerZombieISSG
+        - MobStalkerZombieSosop
+        - MobStalkerZombieGlod
+        - MobStalkerZombieChN
+        - MobStalkerZombieRHBZ
+        - MobStalkerZombieMerc
+        - MobStalkerZombieBandit1
+        - MobStalkerZombieDolg1
+        - MobStalkerZombieDolg2
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieEcologist1
+        - MobStalkerZombieEcologist2
+        - MobStalkerZombieFreedom1
+        - MobStalkerZombieFreedom2
+        - MobStalkerZombieLoner1
+        - MobStalkerZombieLoner2
+        - MobStalkerZombieLoner3
+        - MobStalkerZombieLoner4
+        - MobStalkerZombieLoner5
+        - MobStalkerZombieLonershotgunner1
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieMerc1
+      restricted:
+        - MobStalkerZombieBase
+        - MobStalkerZombieISSG
+        - MobStalkerZombieSosop
+        - MobStalkerZombieGlod
+        - MobStalkerZombieChN
+        - MobStalkerZombieRHBZ
+        - MobStalkerZombieMerc
+        - MobStalkerZombieBandit1
+        - MobStalkerZombieDolg1
+        - MobStalkerZombieDolg2
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieEcologist1
+        - MobStalkerZombieEcologist2
+        - MobStalkerZombieFreedom1
+        - MobStalkerZombieFreedom2
+        - MobStalkerZombieLoner1
+        - MobStalkerZombieLoner2
+        - MobStalkerZombieLoner3
+        - MobStalkerZombieLoner4
+        - MobStalkerZombieLoner5
+        - MobStalkerZombieLonershotgunner1
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieMerc1
+
+- type: entity
+  name: триггер зомби (1-2) (50%)
+  id: STTriggerZombie125010
+  parent: STBaseTrigger125010
+  suffix: ST, T3, Trigger
+  components:
+    - type: SpawnOnApproach
+      prototypes:
+        - MobStalkerZombieBase
+        - MobStalkerZombieISSG
+        - MobStalkerZombieSosop
+        - MobStalkerZombieGlod
+        - MobStalkerZombieChN
+        - MobStalkerZombieRHBZ
+        - MobStalkerZombieMerc
+        - MobStalkerZombieBandit1
+        - MobStalkerZombieDolg1
+        - MobStalkerZombieDolg2
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieEcologist1
+        - MobStalkerZombieEcologist2
+        - MobStalkerZombieFreedom1
+        - MobStalkerZombieFreedom2
+        - MobStalkerZombieLoner1
+        - MobStalkerZombieLoner2
+        - MobStalkerZombieLoner3
+        - MobStalkerZombieLoner4
+        - MobStalkerZombieLoner5
+        - MobStalkerZombieLonershotgunner1
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieMerc1
+      restricted:
+        - MobStalkerZombieBase
+        - MobStalkerZombieISSG
+        - MobStalkerZombieSosop
+        - MobStalkerZombieGlod
+        - MobStalkerZombieChN
+        - MobStalkerZombieRHBZ
+        - MobStalkerZombieMerc
+        - MobStalkerZombieBandit1
+        - MobStalkerZombieDolg1
+        - MobStalkerZombieDolg2
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieEcologist1
+        - MobStalkerZombieEcologist2
+        - MobStalkerZombieFreedom1
+        - MobStalkerZombieFreedom2
+        - MobStalkerZombieLoner1
+        - MobStalkerZombieLoner2
+        - MobStalkerZombieLoner3
+        - MobStalkerZombieLoner4
+        - MobStalkerZombieLoner5
+        - MobStalkerZombieLonershotgunner1
+        - MobStalkerZombieDolgshotgunner1
+        - MobStalkerZombieMerc1

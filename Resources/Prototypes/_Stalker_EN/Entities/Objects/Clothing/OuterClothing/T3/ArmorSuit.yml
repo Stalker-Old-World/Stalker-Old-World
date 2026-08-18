@@ -1,0 +1,92 @@
+- type: entity
+  parent: ClothingOuterArmorMonolith
+  id: ClothingOuterArmorMonolithClean
+  name: Chernobyl Armored Coveralls
+  description: Armored coveralls used by the Monolith soldiers. The fabric is a bit frayed but it's marked with tape around the wrist to indicate it's been chemically cleaned and is safe to use.
+  components:
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 0
+
+- type: entity
+  parent: STClothingOuterArmorBase
+  id: STClothingOuterArmorLepestokNeutralEN  #THIS IS A BADGER USING THE SPRITE OF THE BERYL PETAL
+  name: Badger "Petal"
+  description: Modified by the Neutral craftsman "Titmouse". With improved fabric.
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/outerClothing/lepestok_neutral.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/outerClothing/lepestok_neutral.rsi
+  - type: Storage
+    maxItemSize: Large
+    grid:
+      - 0,3,0,4
+      - 2,3,2,4
+      - 4,3,4,4
+      - 6,0,8,1
+      - 6,3,6,4
+      - 8,3,8,4
+      - 10,3,10,4
+
+- type: entity
+  parent: STClothingOuterArmorBase
+  id: STClothingOuterArmorNeutralBadger
+  name: Badger Armored Coveralls
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/outerClothing/neutral_badger.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/outerClothing/neutral_badger.rsi
+  - type: Storage
+    maxItemSize: Large
+    grid:
+      - 0,3,0,4
+      - 2,3,2,4
+      - 4,3,4,4
+      - 6,0,8,1
+      - 6,3,6,4
+      - 8,3,8,4
+      - 10,3,10,4
+    
+- type: entity
+  parent: STClothingOuterArmorBase
+  id: STClothingOuterArmorMilitaryBadger
+  name: Military Badger
+  description: Colored by local militaries in dark green camo. Smells like cheap paint.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/outerClothing/militarybadger.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/outerClothing/militarybadger.rsi
+  - type: Storage
+    maxItemSize: Large
+    blacklist:
+      tags:
+      - STArtifact
+    grid:
+      - 0,3,0,4
+      - 2,3,2,4
+      - 4,3,4,4
+      - 6,0,8,1
+      - 6,3,6,4
+      - 8,3,8,4
+      - 10,3,10,4
+  - type: Armor #Same as ClothingOuterArmorBandits
+    armorClass: 3
+    modifiers:
+      flatReductions:
+        Blunt: 2
+        Slash: 2
+        Piercing: 6
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.7
+        Compression: 0.95
+        Radiation: 0.95
+        Heat: 0.95
+        Caustic: 0.85
+        Shock: 0.95
+  - type: Craftable

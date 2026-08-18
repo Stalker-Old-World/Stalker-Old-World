@@ -1,0 +1,580 @@
+﻿### Base portable instruments
+- type: entity
+  id: BaseStructureNoCollide
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: GravityAffected
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+      #  mask:
+      #  - MachineMask
+      #  layer:
+      #  - MidImpassable
+      #  - LowImpassable
+  - type: Pullable
+  - type: Tag
+    tags:
+    - Structure
+
+- type: entity
+  # This means that it's not anchored on spawn.
+  id: BaseStructureDynamicNoCollide
+  parent: BaseStructureNoCollide
+  abstract: true
+  components:
+  # These might/might not be a good idea
+  #  - type: MovedByPressure
+  #  - type: DamageOnHighSpeedImpact
+  #  - type: TileFrictionModifier
+  #    modifier: 0.5
+  - type: Transform
+    anchored: false
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+      #  mask:
+      #  - MachineMask
+      #  layer:
+      #  - MidImpassable
+      #  - LowImpassable
+  - type: Clickable
+  - type: Anchorable
+
+- type: entity
+  name: baseinstrument
+  id: BasePortablePlaceableInstrument
+  parent: BaseStructureDynamicNoCollide
+  abstract: true
+  components:
+  - type: Instrument
+  - type: ActivatableUI
+    blockSpectators: true # otherwise they can play client-side music
+    inHandsOnly: false
+    singleUser: true
+    requiresComplex: true
+    verbText: verb-instrument-openui
+    key: enum.InstrumentUiKey.Key
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: Objects/Fun/Instruments/structureinstruments.rsi
+  - type: Damageable
+    damageContainer: Inorganic
+    damageModifierSet: Metallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: UserInterface
+    interfaces:
+      enum.InstrumentUiKey.Key:
+        type: InstrumentBoundUserInterface
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 80
+        #mask:
+        #- Impassable
+        #- MidImpassable
+        layer:
+        - Opaque
+        #- MidImpassable
+        #- BulletImpassable
+  - type: StaticPrice
+    price: 300
+  - type: RequireProjectileTarget
+
+- type: entity
+  parent: BasePortablePlaceableInstrument
+  id: BasePortablePlaceableInstrumentRotatable
+  name: baseinstrumentrotatable
+  abstract: true
+  components:
+  - type: Rotatable
+    rotateWhileAnchored: true
+
+
+### Portable instrument packs
+
+- type: entity
+  name: portable piano pack
+  parent: BaseItem
+  id: PianoInstrumentPortablePack
+  description: Play Needles Piano Now.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: PianoInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  name: portable upright piano pack
+  parent: BaseItem
+  id: UprightPianoInstrumentPortablePack
+  description: I said Piannie!
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: UprightPianoInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  name: portable vibraphone pack
+  id: VibraphoneInstrumentPortablePack
+  parent: BaseItem
+  description: Good vibes all around.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: VibraphoneInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  name: portable marimba pack
+  id: MarimbaInstrumentPortablePack
+  parent: BaseItem
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: MarimbaInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  name: portable church organ pack
+  parent: BaseItem
+  id: ChurchOrganInstrumentPortablePack
+  description: This thing really blows!
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: ChurchOrganInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  name: portable tuba pack
+  parent: BaseItem
+  id: TubaInstrumentPortablePack
+  description: The big daddy of the brass family. Standing next to its majesty makes you feel insecure.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: TubaInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  id: HarpInstrumentPortablePack
+  parent: BaseItem
+  name: portable harp pack
+  description: Plucking at the strings cuts your fingers, but at least the music is pretty.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: HarpInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  id: TimpaniInstrumentPortablePack
+  parent: BaseItem
+  name: portable timpani pack
+  description: It goes BOOM BOOM BOOM BOOM!
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: TimpaniInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  id: TaikoInstrumentPortablePack
+  parent: BaseItem
+  name: portable taiko pack
+  description: A large drum. Looking at it fills you with the urge to slap it.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: TaikoInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  id: ContrabassInstrumentPortablePack
+  parent: BaseItem
+  name: portable contrabass pack
+  description: Perfect for laying down a nice jazzy beat.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: ContrabassInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  name: portable minimoog pack
+  parent: BaseItem
+  id: MinimoogInstrumentPortablePack
+  description: This is a minimoog, like a space piano, but more spacey!
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: MinimoogInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+- type: entity
+  id: TomDrumsInstrumentPortablePack
+  parent: BaseItem
+  name: portable tom drums pack
+  description: Where'd the rest of the kit go?
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: TomDrumsInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+  ### portable DAW pack won't be listed in the instruments shop, instead, it could be a reward from events or something
+- type: entity
+  parent: BaseItem
+  id: DawInstrumentPortablePack
+  name: portable digital audio workstation pack
+  description: Cutting edge music technology, straight from the 90s.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    state: icon
+  - type: Item
+    sprite: _Stalker_EN/Objects/Fun/portable_instrument.rsi
+    size: Normal
+  - type: SpawnAfterInteract
+    prototype: DawInstrumentPortable
+    doAfter: 5
+    removeOnInteract: true
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-tools-category
+
+### Portable instruments
+
+- type: entity
+  name: portable piano
+  parent:  BasePortablePlaceableInstrumentRotatable
+  id: PianoInstrumentPortable
+  description: Play Needles Piano Now.
+  components:
+  - type: Instrument
+    program: 1
+  - type: Sprite
+    state: piano
+  - type: Climbable
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: PianoInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  name: portable upright piano
+  parent:  BasePortablePlaceableInstrumentRotatable
+  id: UprightPianoInstrumentPortable
+  description: I said Piannie!
+  components:
+  - type: Instrument
+    program: 3
+  - type: Sprite
+    state: piano-upright
+  - type: Climbable
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: UprightPianoInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  name: portable vibraphone
+  id: VibraphoneInstrumentPortable
+  parent:  BasePortablePlaceableInstrumentRotatable
+  description: Good vibes all around.
+  components:
+  - type: Instrument
+    program: 11
+  - type: Sprite
+    state: vibraphone
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: VibraphoneInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  name: portable marimba
+  id: MarimbaInstrumentPortable
+  parent:  BasePortablePlaceableInstrumentRotatable
+  components:
+  - type: Instrument
+    program: 12
+  - type: Sprite
+    state: marimba
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: MarimbaInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  name: portable church organ
+  parent:  BasePortablePlaceableInstrumentRotatable
+  id: ChurchOrganInstrumentPortable
+  description: This thing really blows!
+  components:
+  - type: Instrument
+    program: 19
+  - type: Sprite
+    state: church-organ
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: ChurchOrganInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  name: portable tuba
+  parent:  BasePortablePlaceableInstrument
+  id: TubaInstrumentPortable
+  description: The big daddy of the brass family. Standing next to its majesty makes you feel insecure.
+  components:
+  - type: Instrument
+    program: 58
+  - type: Sprite
+    state: tuba
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: TubaInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  id: HarpInstrumentPortable
+  parent:  BasePortablePlaceableInstrument
+  name: portable harp
+  description: Plucking at the strings cuts your fingers, but at least the music is pretty.
+  components:
+  - type: Instrument
+    program: 46
+  - type: Sprite
+    state: harp
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: HarpInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  id: TimpaniInstrumentPortable
+  parent:  BasePortablePlaceableInstrumentRotatable
+  name: portable timpani
+  description: It goes BOOM BOOM BOOM BOOM!
+  components:
+  - type: Instrument
+    program: 47
+  - type: Sprite
+    state: timpani
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: TimpaniInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  id: TaikoInstrumentPortable
+  parent:  BasePortablePlaceableInstrumentRotatable
+  name: portable taiko
+  description: A large drum. Looking at it fills you with the urge to slap it.
+  components:
+  - type: Instrument
+    program: 116
+  - type: Sprite
+    state: taiko
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: TaikoInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  id: ContrabassInstrumentPortable
+  parent:  BasePortablePlaceableInstrument
+  name: portable contrabass
+  description: Perfect for laying down a nice jazzy beat.
+  components:
+  - type: Instrument
+    program: 43
+  - type: Sprite
+    state: contrabass
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.30
+        density: 180
+        mask:
+        - Impassable
+        - HighImpassable
+        - MidImpassable
+        layer:
+        - Opaque
+        - HighImpassable
+        - MidImpassable
+        - BulletImpassable
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: ContrabassInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  name: portable minimoog
+  parent:  BasePortablePlaceableInstrumentRotatable
+  id: MinimoogInstrumentPortable
+  description: This is a minimoog, like a space piano, but more spacey!
+  components:
+  - type: Instrument
+    program: 81
+  - type: Sprite
+    state: minimoog
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: MinimoogInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  id: TomDrumsInstrumentPortable
+  parent:  BasePortablePlaceableInstrumentRotatable
+  name: portable tom drums
+  description: Where'd the rest of the kit go?
+  components:
+  - type: Instrument
+    program: 117
+  - type: Sprite
+    state: toms
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: TomDrumsInstrumentPortablePack
+    disassembleTime: 5
+
+- type: entity
+  parent: [  BasePortablePlaceableInstrumentRotatable, ConstructibleMachine]
+  id: DawInstrumentPortable
+  name: portable digital audio workstation
+  description: Cutting edge music technology, straight from the 90s.
+  components:
+  - type: Sprite
+    layers:
+    - state: daw-base
+    - state: daw-display
+      shader: unshaded
+    - state: daw-panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: WiresVisuals
+  - type: WiresPanel
+  - type: Machine
+    board: DawInstrumentMachineCircuitboard
+  - type: Instrument
+    allowPercussion: true
+    allowProgramChange: true
+  - type: DisassembleOnAltVerb
+    prototypeToSpawn: DawInstrumentPortablePack
+    disassembleTime: 5

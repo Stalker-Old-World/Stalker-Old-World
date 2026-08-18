@@ -1,0 +1,111 @@
+- type: entity
+  parent: NPCDoll
+  id: NPCForesterCordonEN
+  name: GateKeeper [→   ←]
+  description: An old man who's seen more than most Stalkers possibly could.
+  suffix: ST, EN-TRADER, Cordon
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/NPC/Forester.rsi
+    state: forester
+  - type: Physics
+    bodyType: Static
+  - type: DatasetVocalizer
+    dataset: NPCStalkerForesterCordonAds
+  - type: ActivatableUI
+    key: enum.ShopUiKey.Key
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.ShopUiKey.Key:
+        type: ShopBoundUserInterface
+  - type: Shop
+    moneyId: Roubles
+    shopPresetId: NpcForesterCordonEN
+  - type: TypingIndicator
+    proto: robot
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Alto
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+  - type: TimedDespawn
+    lifetime: 1800
+
+- type: entity
+  parent: NPCForesterCordonEN
+  id: NPCForesterRedForestEN
+  suffix: ST, EN-TRADER, RF
+  components:
+  - type: DatasetVocalizer
+    dataset: NPCStalkerForesterRedForestAds
+  - type: Shop
+    moneyId: Dollar
+    shopPresetId: NpcForesterRedForestEN
+
+- type: entity
+  parent: NPCForesterCordonEN
+  id: NPCForesterLimanskEN
+  suffix: ST, EN-TRADER, Limansk
+  components:
+  - type: DatasetVocalizer
+    dataset: NPCStalkerForesterLimanskAds
+  - type: Shop
+    moneyId: Dollar
+    shopPresetId: NpcForesterLimanskEN
+
+- type: entity
+  name: Forester Spawner (Cordon)
+  id: STTriggerTraderForesterCordon
+  parent: STBaseTrigger125
+  suffix: ST, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - NPCForesterCordonEN
+    restricted:
+    - NPCForesterCordonEN
+  - type: STAnomalyGeneratorSpawnBlocker
+    size: 5
+  - type: EmissionLightningSpawnBlocker
+    radius: 5
+
+- type: entity
+  name: Forester Spawner (Red Forest)
+  id: STTriggerTraderForesterRedForest
+  parent: STBaseTrigger125
+  suffix: ST, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - NPCForesterRedForestEN
+    restricted:
+    - NPCForesterRedForestEN
+  - type: STAnomalyGeneratorSpawnBlocker
+    size: 5
+  - type: EmissionLightningSpawnBlocker
+    radius: 5
+
+- type: entity
+  name: Forester Spawner (Limansk)
+  id: STTriggerTraderForesterLimansk
+  parent: STBaseTrigger125
+  suffix: ST, Trigger
+  components:
+  - type: SpawnOnApproach
+    prototypes:
+    - NPCForesterLimanskEN
+    restricted:
+    - NPCForesterLimanskEN
+  - type: STAnomalyGeneratorSpawnBlocker
+    size: 5
+  - type: EmissionLightningSpawnBlocker
+    radius: 5

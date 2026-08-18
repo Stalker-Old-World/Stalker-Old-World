@@ -1,0 +1,11 @@
+﻿- type: lightCraftingRecipe
+  id: STClothingOuterArmorMilitaryBadgerCraft
+  results:
+  - STClothingOuterArmorMilitaryBadger
+  steps:
+    firstIngredient: STSkinsKitMilitary
+    secondIngredient: ClothingOuterArmorStalker
+    keepFirst: true
+    exactSecond: false
+    time: 5
+

@@ -1,0 +1,592 @@
+# monolith
+- type: entity
+  parent: STBaseStructure
+  id: STMonolithCrate
+  suffix: Stalker, монолит
+  name: чёрный ящик монолита
+  components:
+    - type: Storage
+      maxItemSize: Ginormous
+      grid:
+        - 0,0,47,25
+    - type: Sprite
+      sprite: _Stalker/Objects/Other/Boxes/black_crate.rsi
+      state: icon
+    - type: Transform
+      noRot: true
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+    - type: UserInterface
+      interfaces:
+        enum.StorageUiKey.Key:
+          type: StorageBoundUserInterface
+    - type: StorageFill
+      contents:
+        # outer
+        - id: STClothingOuterArmorLightPlateVestBaseMonolithClean
+          prob: 0.5
+        - id: STClothingOuterArmorLightPlateVestBaseMonolithClean
+          prob: 0.5
+        - id: STClothingOuterArmorLightPlateVestBaseMonolithClean
+          prob: 0.5
+        - id: ClothingOuterCoatKevlarMonolithClean
+          prob: 0.3
+        - id: ClothingOuterCoatKevlarMonolithClean
+          prob: 0.3
+        - id: ClothingOuterCoatKevlarMonolithClean
+          prob: 0.3
+        - id: ClothingOuterArmorSevaMonolithPriest
+          prob: 0.1
+        - id: ClothingOuterArmorSevaMonolithClean
+          prob: 0.3
+        - id: ClothingOuterArmorSevaMonolithClean
+          prob: 0.3
+        - id: ClothingOuterArmorSevaMonolithClean
+          prob: 0.3
+        - id: ClothingOuterArmorMonolithClean
+          prob: 0.4
+        - id: ClothingOuterArmorMonolithClean
+          prob: 0.4
+        - id: ClothingOuterArmorMonolithClean
+          prob: 0.4
+        - id: ClothingOuterArmorMonolithClean
+          prob: 0.4
+        - id: STClothingOuterCoatTihiy
+          prob: 0.2
+        # backpack
+        - id: ClothingBackpackTacticBlackStalker
+          prob: 0.5
+        - id: ClothingBackpackTacticBlackStalker
+          prob: 0.5
+        - id: ClothingBackpackTacticBlackStalker
+          prob: 0.5
+        # belt
+        - id: ClothingBeltWebbingHolsterMonolithClean
+          prob: 0.5
+        - id: ClothingBeltWebbingHolsterMonolithClean
+          prob: 0.5
+        - id: ClothingBeltWebbingHolsterMonolithClean
+          prob: 0.5
+        # mask
+        - id: ClothingMaskGasMonoClean
+          prob: 0.5
+        - id: ClothingMaskGasMonoClean
+          prob: 0.5
+        - id: ClothingMaskGasMonoClean
+          prob: 0.5
+        - id: ClothingMaskGasMarlyaRuined
+          prob: 0.5
+        - id: ClothingMaskGasMarlyaRuined
+          prob: 0.5
+        # hat
+        - id: ClothingHeadHelmetBerill5MMonolithClean
+          prob: 0.45
+        - id: ClothingHeadHelmetBerill5MMonolithClean
+          prob: 0.45
+        - id: ClothingHeadHelmetBerill5MMonolithClean
+          prob: 0.45
+        - id: ClothingHeadHelmetBerill5MMonolithClean
+          prob: 0.45
+        - id: ClothingHeadHelmetBerill5MMonolithClean
+          prob: 0.45
+        - id: ClothingHeadHelmetBerill5MMonolithClean
+          prob: 0.45
+        - id: ClothingHeadHelmetBulatMonolithClean
+          prob: 0.15
+        - id: ClothingHeadHelmetBulatMonolithClean
+          prob: 0.15
+        - id: ClothingHeadHelmetBulatMonolithClean
+          prob: 0.15
+        # weapon
+        - id: STWeaponSMGStalkerCP2Veresk
+          prob: 0.35
+        - id: STWeaponSMGStalkerCP2Veresk
+          prob: 0.35
+        - id: STWeaponSMGStalkerCP2Veresk
+          prob: 0.35
+        - id: STWeaponRifleSIG550
+          prob: 0.35
+        - id: STWeaponRifleSIG550
+          prob: 0.35
+        - id: STWeaponRifleSIG550
+          prob: 0.35
+        - id: STWeaponRifleM4
+          prob: 0.35
+        - id: STWeaponRifleM4
+          prob: 0.35
+        - id: STWeaponRifleM4
+          prob: 0.35
+        - id: STWeaponRifleM4
+          prob: 0.35
+        - id: STWeaponRifleLR300v1
+          prob: 0.25
+        - id: STWeaponRifleLR300v1
+          prob: 0.25
+        - id: STWeaponRifleG36MonoClean
+          prob: 0.5
+        - id: STWeaponRifleAK103MonoClean
+          prob: 0.3
+        - id: STWeaponSniperSVDMonoClean
+          prob: 0.3
+        - id: STWeaponRifleStalkerAbakanWinter
+          prob: 0.3
+        # modules STModuleSMGGripT1
+        - id: STModuleScopeRiflesT2Nato
+          prob: 0.3
+        - id: STModuleScopeRiflesT2Nato
+          prob: 0.3
+        - id: STModuleScopeRiflesT2Nato
+          prob: 0.3
+        - id: STModuleSniperSightT2
+          prob: 0.7
+        - id: STModuleSMGGripT2
+          prob: 0.3
+        - id: STModuleSMGGripT2
+          prob: 0.3
+        - id: STModuleSMGGripT2
+          prob: 0.3
+        - id: STModuleSilencerRiflesT2Nato
+          prob: 0.3
+        - id: STModuleSilencerRiflesT2Nato
+          prob: 0.3
+        - id: STModuleSilencerRiflesT2Nato
+          prob: 0.3
+        - id: STModuleSilencerRiflesT2Ru
+          prob: 0.3
+        - id: STModuleSilencerRiflesT2Ru
+          prob: 0.3
+        - id: STModuleSilencerRiflesT2Ru
+          prob: 0.3
+        - id: STModuleSilencerSniperT2
+          prob: 0.7
+        # mags
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: BaseMP5Mag
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag30
+          prob: 0.25
+        - id: 556Mag45
+          prob: 0.1
+        - id: 556Mag45
+          prob: 0.1
+      # ammo
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 919PBMBox
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+        - id: 556M855Box
+          prob: 0.25
+      # meds
+        - id: STGauze
+          prob: 0.6
+        - id: STGauze
+          prob: 0.6
+        - id: STGauze
+          prob: 0.6
+        - id: STGauze
+          prob: 0.6
+        - id: STTourniquet
+          prob: 0.5
+        - id: STTourniquet
+          prob: 0.5
+        - id: STTourniquet
+          prob: 0.5
+        - id: STTourniquet
+          prob: 0.5
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitScience
+          prob: 0.6
+        - id: MedkitScience
+          prob: 0.6
+        - id: MedkitScience
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitAI2
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitMilitary
+          prob: 0.6
+        - id: MedkitScience
+          prob: 0.6
+        - id: MedkitScience
+          prob: 0.6
+        - id: MedkitScience
+          prob: 0.6
+        - id: STPillboxProbud
+          prob: 0.6
+        - id: STPillboxProbud
+          prob: 0.6
+        - id: STPillboxProbud
+          prob: 0.6
+        - id: Bloodpack
+          prob: 0.6
+        - id: Bloodpack
+          prob: 0.6
+        - id: Bloodpack
+          prob: 0.6
+      # misc
+        - id: BoxZiptie
+          prob: 0.5
+        - id: STEnergyDrink
+          prob: 0.15
+        - id: STEnergyDrink
+          prob: 0.15
+        - id: STEnergyDrink
+          prob: 0.15
+        - id: STEnergyDrink
+          prob: 0.15
+        - id: Binocularus1
+          prob: 0.3
+        - id: Binocularus1
+          prob: 0.3
+        - id: Binocularus1
+          prob: 0.3
+        - id: Binocularus1
+          prob: 0.3
+        - id: STFlashlightSeclite
+          prob: 1
+        - id: PowerCellHyper
+          prob: 1

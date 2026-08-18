@@ -1,0 +1,11 @@
+- type: Tag
+  id: HidesArms
+
+- type: Tag
+  id: HidesChest
+
+- type: Tag
+  id: HidesHead
+
+- type: Tag
+  id: HidesLegs

@@ -1,0 +1,439 @@
+# Cordon
+- type: ambientMusic
+  id: CordonDay
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/amb01.ogg
+    params:
+      volume: -15
+  rules: AmbianceCordonDay
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: ambientMusic
+  id: CordonNight
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/night.ogg
+    params:
+      volume: -15
+  rules: AmbianceCordonNight
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+# Swamp
+- type: ambientMusic
+  id: SwampDay
+  sound:
+    collection: STENAmbianceSwampDay
+    params:
+      volume: -15
+  rules: AmbianceSwampDay
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: ambientMusic
+  id: SwampNight
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/marsh_night.ogg
+    params:
+      volume: -15
+  rules: AmbianceSwampNight
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: soundCollection
+  id: STENAmbianceSwampDay
+  files:
+  - /Audio/_Stalker_EN/Music/Ambient/marsh_1.ogg
+  - /Audio/_Stalker_EN/Music/Ambient/marsh_2.ogg
+
+# Garbage
+- type: ambientMusic
+  id: GarbageDay
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/amb02.ogg
+    params:
+      volume: -15
+  rules: AmbianceGarbageDay
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: ambientMusic
+  id: GarbageNight
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/amb20.ogg
+    params:
+      volume: -15
+  rules: AmbianceGarbageNight
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+# Dark Valley
+- type: ambientMusic
+  id: DarkValleyDay
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/amb05.ogg
+    params:
+      volume: -15
+  rules: AmbianceDarkValleyDay
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: ambientMusic
+  id: DarkValleyNight
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/amb09.ogg
+    params:
+      volume: -15
+  rules: AmbianceDarkValleyNight
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+# Agroprom
+- type: ambientMusic
+  id: AgropromDay
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/amb08.ogg
+    params:
+      volume: -15
+  rules: AmbianceAgropromDay
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: ambientMusic
+  id: AgropromNight
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/amb20.ogg
+    params:
+      volume: -15
+  rules: AmbianceAgropromNight
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+# Yantar
+- type: ambientMusic
+  id: YantarDay
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/amb22.ogg
+    params:
+      volume: -15
+  rules: AmbianceYantarDay
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: ambientMusic
+  id: YantarNight
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/amb17.ogg
+    params:
+      volume: -15
+  rules: AmbianceYantarNight
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+# Bar and Wilds
+- type: ambientMusic
+  id: BarWildsDay
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/amb06.ogg
+    params:
+      volume: -15
+  rules: AmbianceBarWildsDay
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: ambientMusic
+  id: BarWildsNight
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/amb09.ogg
+    params:
+      volume: -15
+  rules: AmbianceBarWildsNight
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+# Red Forest
+- type: ambientMusic
+  id: RedForestDay
+  sound:
+    collection: STENAmbianceRedForestDay
+    params:
+      volume: -15
+  rules: AmbianceRedForestDay
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: ambientMusic
+  id: RedForestNight
+  sound:
+    collection: STENAmbianceRedForestNight
+    params:
+      volume: -15
+  rules: AmbianceRedForestNight
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: soundCollection
+  id: STENAmbianceRedForestDay
+  files:
+  - /Audio/_Stalker_EN/Music/Ambient/jupiter_day.ogg
+  - /Audio/_Stalker_EN/Music/Ambient/zaton_day.ogg
+
+- type: soundCollection
+  id: STENAmbianceRedForestNight
+  files:
+  - /Audio/_Stalker_EN/Music/Ambient/jupiter_night.ogg
+  - /Audio/_Stalker_EN/Music/Ambient/zaton_night.ogg
+
+# Limansk
+- type: ambientMusic
+  id: LimanskDay
+  sound:
+    collection: STENAmbianceLimanskDay
+    params:
+      volume: -15
+  rules: AmbianceLimanskDay
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: ambientMusic
+  id: LimanskNight
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/pripyat_night.ogg
+    params:
+      volume: -15
+  rules: AmbianceLimanskNight
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+- type: soundCollection
+  id: STENAmbianceLimanskDay
+  files:
+  - /Audio/_Stalker_EN/Music/Ambient/pripyat_day.ogg
+  - /Audio/_Stalker_EN/Music/Ambient/limansk.ogg
+
+# Underground
+- type: ambientMusic
+  id: Underground
+  sound:
+    path: /Audio/_Stalker_EN/Music/Ambient/underground.ogg
+    params:
+      volume: -15
+  rules: AmbianceUnderground
+  fadeIn: false
+  interruptable: true
+  priority: 3
+
+# ------------
+#     RULES
+# ------------
+
+# Cordon
+- type: rules
+  id: AmbianceCordonDay
+  rules:
+    - !type:IsDayRule
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Cordon"
+
+- type: rules
+  id: AmbianceCordonNight
+  rules:
+    - !type:IsDayRule
+      inverted: true
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Cordon"
+
+# Swamp
+- type: rules
+  id: AmbianceSwampDay
+  rules:
+    - !type:IsDayRule
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Swamps"
+
+- type: rules
+  id: AmbianceSwampNight
+  rules:
+    - !type:IsDayRule
+      inverted: true
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Swamps"
+
+# Garbage
+- type: rules
+  id: AmbianceGarbageDay
+  rules:
+    - !type:IsDayRule
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Garbage"
+
+- type: rules
+  id: AmbianceGarbageNight
+  rules:
+    - !type:IsDayRule
+      inverted: true
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Garbage"
+
+# Dark Valley
+- type: rules
+  id: AmbianceDarkValleyDay
+  rules:
+    - !type:IsDayRule
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Dark Valley"
+        - "Dark Hollow"
+
+- type: rules
+  id: AmbianceDarkValleyNight
+  rules:
+    - !type:IsDayRule
+      inverted: true
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Dark Valley"
+        - "Dark Hollow"
+
+# Agroprom
+- type: rules
+  id: AmbianceAgropromDay
+  rules:
+    - !type:IsDayRule
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Agroprom"
+
+- type: rules
+  id: AmbianceAgropromNight
+  rules:
+    - !type:IsDayRule
+      inverted: true
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Agroprom"
+
+# BarWilds
+- type: rules
+  id: AmbianceBarWildsDay
+  rules:
+    - !type:IsDayRule
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Rostok and Wilds"
+
+- type: rules
+  id: AmbianceBarWildsNight
+  rules:
+    - !type:IsDayRule
+      inverted: true
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Rostok and Wilds"
+
+# RedForest
+- type: rules
+  id: AmbianceRedForestDay
+  rules:
+    - !type:IsDayRule
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Red Forest"
+        - "Jupiter Plant"
+
+- type: rules
+  id: AmbianceRedForestNight
+  rules:
+    - !type:IsDayRule
+      inverted: true
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Red Forest"
+        - "Jupiter Plant"
+
+# Limansk
+- type: rules
+  id: AmbianceLimanskDay
+  rules:
+    - !type:IsDayRule
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Limansk"
+
+- type: rules
+  id: AmbianceLimanskNight
+  rules:
+    - !type:IsDayRule
+      inverted: true
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Limansk"
+
+# Yantar
+- type: rules
+  id: AmbianceYantarDay
+  rules:
+    - !type:IsDayRule
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Yantar"
+
+- type: rules
+  id: AmbianceYantarNight
+  rules:
+    - !type:IsDayRule
+      inverted: true
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Yantar"
+
+# Underground
+- type: rules
+  id: AmbianceUnderground
+  rules:
+    - !type:PreventInGreenzoneRule
+    - !type:IsOnSpecificMapRule
+      maps:
+        - "Miracle Machine"

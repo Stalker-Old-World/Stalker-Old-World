@@ -1,0 +1,136 @@
+- type: entity
+  parent: ClothingScarfBase
+  id: STClothingNeckFacescarfBlack
+  name: чёрный лицевой шарф
+  description: Уютный чёрный лицевой шарф, который позволит держать ваше лицо в тепле. Можно носить как на лице, так и на шее.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_black.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_black.rsi
+      slots: [ mask, neck ]
+    - type: IdentityBlocker
+      coverage: MOUTH
+
+- type: entity
+  parent: STClothingNeckFacescarfBlack
+  id: STClothingNeckFacescarfBlue
+  name: синий лицевой шарф
+  description: Уютный синий лицевой шарф, который позволит держать ваше лицо в тепле. Можно носить как на лице, так и на шее.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_blue.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_blue.rsi
+      slots: [ mask, neck ]
+
+- type: entity
+  parent: STClothingNeckFacescarfBlack
+  id: STClothingNeckFacescarfGreen
+  name: зелёный лицевой шарф
+  description: Уютный зелёный лицевой шарф, который позволит держать ваше лицо в тепле. Можно носить как на лице, так и на шее.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_green.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_green.rsi
+      slots: [ mask, neck ]
+
+- type: entity
+  parent: STClothingNeckFacescarfBlack
+  id: STClothingNeckFacescarfGrey
+  name: серый лицевой шарф
+  description: Уютный серый лицевой шарф, который позволит держать ваше лицо в тепле. Можно носить как на лице, так и на шее.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_grey.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_grey.rsi
+      slots: [ mask, neck ]
+
+- type: entity
+  parent: STClothingNeckFacescarfBlack
+  id: STClothingNeckFacescarfOrange
+  name: оранжевый лицевой шарф
+  description: Уютный оранжевый лицевой шарф, который позволит держать ваше лицо в тепле. Можно носить как на лице, так и на шее.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_orange.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_orange.rsi
+      slots: [ mask, neck ]
+
+- type: entity
+  parent: STClothingNeckFacescarfBlack
+  id: STClothingNeckFacescarfPurple
+  name: фиолетовый лицевой шарф
+  description: Уютный фиолетовый лицевой шарф, который позволит держать ваше лицо в тепле. Можно носить как на лице, так и на шее.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_purple.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_purple.rsi
+      slots: [ mask, neck ]
+
+- type: entity
+  parent: STClothingNeckFacescarfBlack
+  id: STClothingNeckFacescarfRed
+  name: красный лицевой шарф
+  description: Уютный красный лицевой шарф, который позволит держать ваше лицо в тепле. Можно носить как на лице, так и на шее.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_red.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_red.rsi
+      slots: [ mask, neck ]
+
+- type: entity
+  parent: STClothingNeckFacescarfBlack
+  id: STClothingNeckFacescarfWhite
+  name: белый лицевой шарф
+  description: Уютный белый лицевой шарф, который позволит держать ваше лицо в тепле. Можно носить как на лице, так и на шее.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_white.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/facescarf_white.rsi
+      slots: [ mask, neck ]
+
+- type: entity
+  parent: STClothingNeckFacescarfBlack
+  id: STClothingNeckFacescarfBlackSkull
+  name: чёрная арафатка с черепом
+  description: Чёрная арафатка с изображением черепа. Можно носить как на лице, так и на шее.
+  suffix: ST, Кастомка
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/araphatka-blacksckull.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/araphatka-blacksckull.rsi
+      slots: [ mask, neck ]
+
+- type: entity
+  parent: STClothingNeckFacescarfBlack
+  id: STClothingNeckFacescarfDarkGreen
+  name: болотная арафатка
+  description: Арафатка болотного цвета. Можно носить как на лице, так и на шее.
+  suffix: ST, Кастомка
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/araphatka-boloto.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/araphatka-boloto.rsi
+      slots: [ mask, neck ]
+
+- type: entity
+  parent: STClothingNeckFacescarfBlack
+  id: STClothingNeckFacescarfLightGreen
+  name: зелёная арафатка
+  description: Зелёная арафатка. Можно носить как на лице, так и на шее.
+  suffix: ST, Кастомка
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/araphatka-green.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Neck/facescarfs/araphatka-green.rsi
+      slots: [ mask, neck ]

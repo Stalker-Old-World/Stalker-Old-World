@@ -1,0 +1,214 @@
+- type: entity
+  parent: NPCDoll
+  id: NPCUncle
+  name: Uncle [→   ←]
+  suffix: ST, EN-TRADER
+  description: He smells like weed and beer and he looks like he's ready to get back to the lake.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/NPC/uncle.rsi
+    state: unc
+  - type: Physics
+    bodyType: Static
+  - type: Vocalizer
+  - type: DatasetVocalizer
+    dataset: NPCStalkerUncleAds
+  - type: ActivatableUI
+    key: enum.ShopUiKey.Key
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.ShopUiKey.Key:
+        type: ShopBoundUserInterface
+  - type: Shop
+    moneyId: Roubles
+    shopPresetId: STFishShopPreset
+  - type: TypingIndicator
+    proto: robot
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Alto
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+
+- type: entity
+  parent: NPCDoll
+  id: NPCMeatman
+  name: ??? [→   ←]
+  suffix: ST, EN-TRADER, MANUAL MAP ONLY
+  description: He nervously shifts his weight back and forth. The jingle of coins can be heard from his pockets.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Mobs/Mutants/izlom.rsi
+    state: alive-1
+  - type: Physics
+    bodyType: Static
+  - type: DatasetVocalizer
+    dataset: NPCStalkerMeatAds
+  - type: ActivatableUI
+    key: enum.ShopUiKey.Key
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.ShopUiKey.Key:
+        type: ShopBoundUserInterface
+  - type: Shop
+    moneyId: Hryvnias
+    shopPresetId: STMeatShopPreset
+    buybackMaxItems: 0
+  - type: TypingIndicator
+    proto: default
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
+  - type: Speech
+    speechVerb: Default
+    speechSounds: Alto
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+
+# parented to steal the sprite, replace it later
+- type: entity
+  parent: NPCBandEN
+  id: NPCToothEN
+  name: Tooth [→   ←]
+  description: He doesn't much care for allegiances, he just wants somewhere to sell his goods and buy more stock.
+  suffix: ST, EN-TRADER
+  components:
+  - type: Shop
+    moneyId: Roubles
+    shopPresetId: STNPCToothPresetEN
+
+# flea market traders
+- type: entity
+  parent: NPCDoll
+  id: NPCFleaBase
+  name: Flea market trader [→   ←]
+  suffix: ST, EN-TRADER
+  description: A stalker with goods to pawn.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Stalker/NPC/Security.rsi
+    state: security
+  - type: Physics
+    bodyType: Static
+  - type: Vocalizer
+  - type: DatasetVocalizer
+    dataset: NPCStalkerSecurityAds
+  - type: ActivatableUI
+    key: enum.ShopUiKey.Key
+    singleUser: true
+  - type: UserInterface
+    interfaces:
+      enum.ShopUiKey.Key:
+        type: ShopBoundUserInterface
+  - type: Shop
+    moneyId: Roubles
+    shopPresetId: STFlea1Preset
+  - type: TypingIndicator
+    proto: robot
+  - type: TTS # Corvax-TTS
+    voice: TrainingRobot
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Alto
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+
+- type: entity
+  parent: NPCFleaBase
+  id: NPCFlea1
+  suffix: ST, EN-TRADER, Medical
+  components:
+  - type: Shop
+    moneyId: Roubles
+    shopPresetId: STFlea1Preset
+
+- type: entity
+  parent: NPCFleaBase
+  id: NPCFlea2
+  suffix: ST, EN-TRADER, Cassettes
+  components:
+  - type: Shop
+    moneyId: Roubles
+    shopPresetId: STFlea2Preset
+
+- type: entity
+  parent: NPCFleaBase
+  id: NPCFlea3
+  suffix: ST, EN-TRADER, Shotguns
+  components:
+  - type: Shop
+    moneyId: Roubles
+    shopPresetId: STFlea3Preset
+
+- type: entity
+  parent: NPCFleaBase
+  id: NPCFlea4
+  suffix: ST, EN-TRADER, Food
+  components:
+  - type: Shop
+    moneyId: Roubles
+    shopPresetId: STFlea4Preset
+
+- type: entity
+  parent: NPCFleaBase
+  id: NPCFlea5
+  suffix: ST, EN-TRADER, Clothing
+  components:
+  - type: Shop
+    moneyId: Roubles
+    shopPresetId: STFlea5Preset
+
+- type: entity
+  parent: NPCFleaBase
+  id: NPCFlea6
+  suffix: ST, EN-TRADER, Clothing
+  components:
+  - type: Shop
+    moneyId: Roubles
+    shopPresetId: STFlea6Preset
+
+# spawner
+- type: entity
+  id: STFleaMarketSpawner
+  name: fleamarket (Random NPC)
+  suffix: Stalker, EN-SHOP
+  parent: FlexibleMarker
+  categories: [ Spawner, StSkipSpawnTest ]
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: _Stalker/NPC/Security.rsi
+      state: security
+  - type: RandomSpawner
+    prototypes:
+    - NPCFlea1
+    - NPCFlea2
+    - NPCFlea3
+    - NPCFlea4
+    - NPCFlea5
+    - NPCFlea6
+    chance: 1
+    offset: 0.0

@@ -1,0 +1,102 @@
+- type: entity
+  abstract: true
+  parent: STClothingHeadBase 
+  id: STOWClothingHeadHelmetT2PVPBase
+  name: T2 combat helmet base
+  suffix: STOW, T2, PVP
+  components:
+  - type: STWeight
+    self: 2.1
+  - type: Craftable
+  - type: Armor
+    armorClass: 2
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.80
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - HeadTop
+
+- type: entity
+  parent: STOWClothingHeadHelmetT2PVPBase
+  id: STOWClothingHeadHelmetT2PVPStalker
+  name: Vostok Helmet
+  description: Infantry helmet of the 'Vostok' brand, second protection class, manufacturer unknown.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/Head/pehhelm_stal.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/Head/pehhelm_stal.rsi
+
+- type: entity
+  parent: STOWClothingHeadHelmetT2PVPBase
+  id: STOWClothingHeadHelmetT2PVPBandit
+  name: Bandit Vostok Helmet # OW Begin - Changed names to be more consistent
+  description: The infantry helmet 'Vostok' with stripes on it, like Adidas, is revered by gang formations.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/hats/band_helmet.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/hats/band_helmet.rsi
+
+- type: entity
+  parent: STOWClothingHeadHelmetT2PVPBase
+  id: STOWClothingHeadHelmetT2PVPRenegade
+  name: Renegade Vostok Helmet
+  description: A standard infantry helmet, repainted in the colors of a renegade, with some minor modifications.
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/hats/renegade_merc_helmet.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/hats/renegade_merc_helmet.rsi
+
+- type: entity
+  parent: STOWClothingHeadHelmetT2PVPBase
+  id: STOWClothingHeadHelmetT2PVPUN
+  name: UN Vostok 'West'
+  description: Infantry helmet 'Vostok', repainted in blue.
+  suffix: STOW, UN, T2 # EN
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/hats/pehhelm_un.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/hats/pehhelm_un.rsi
+
+- type: entity
+  parent: STOWClothingHeadHelmetT2PVPBase
+  id: STOWClothingHeadHelmetT2PVPMerc
+  name: Mercenary Vostok 'Bastion'
+  suffix: STOW, T2, Скин
+  description: The 'Bastion' helmet, second protection class, manufacturer unknown.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/hats/merc_bastion.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/hats/merc_bastion.rsi
+
+- type: entity
+  parent: STOWClothingHeadHelmetT2PVPBase
+  id: STOWClothingHeadHelmetT2PVPDuty
+  name: Duty Vostok Helmet
+  description: Infantry helmet of the 'Vostok' brand, second protection class, manufacturer unknown.
+  components:
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/hats/pehhelm_dolg.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/hats/pehhelm_dolg.rsi
+
+- type: entity
+  parent: STOWClothingHeadHelmetT2PVPBase
+  id: STOWClothingHeadHelmetT2PVPMilitary
+  name: Military Vostok Helmet # OW End - Changed names to be more consistent
+  description: «East» brand helmet with II level protection, manufacturer is unknown. Now in army colours.
+  components:
+    - type: Sprite
+      sprite: _Stalker_EN/Objects/Clothing/Head/military_Easthelmet.rsi
+    - type: Clothing
+      sprite: _Stalker_EN/Objects/Clothing/Head/military_Easthelmet.rsi

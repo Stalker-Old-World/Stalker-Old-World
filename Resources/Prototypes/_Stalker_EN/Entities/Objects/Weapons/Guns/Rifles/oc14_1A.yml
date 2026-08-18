@@ -1,0 +1,63 @@
+- type: entity
+  parent: STBaseWeaponRifleOC14
+  id: STBaseWeaponRifleOC14-A1
+  name: OC-14-1A «Groza»
+  description: Russian bullpup assault rifle chambered in 7.62x39mm. Valued in the Zone for compactness and firepower.
+  components:
+  - type: STWeight
+    self: 3.1
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Weapons/Guns/Rifles/grozaA1.rsi
+  - type: Item
+    sprite: _Stalker_EN/Objects/Weapons/Guns/Rifles/grozaA1.rsi
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Weapons/Guns/Rifles/grozaA1.rsi
+  - type: Gun
+    fireRate: 4 # bit less DPS then SCAR due to lower firerate and weaker caliber
+    burstFireRate: 8 # after 3 bullets shot it goes on cooldown
+    burstCooldown: 0.35 # cooldown makes it shoot 3 bullets each 0.5 seconds or 6 bullets per 1 sec
+    soundGunshot:
+      path: /Audio/_Stalker/Effects/Guns/n_groza_shot.ogg
+      params:
+          volume: -2
+    minAngle: 45
+    maxAngle: 90 # I think for having less firerate it should have better accuracy
+    angleIncrease: 1.2
+    selectedMode: Burst
+    availableModes:
+    - Burst
+    - SemiAuto
+    angleDecay: 8.5
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_Stalker/Weapons/Guns/RifleGen/MagIn/rifle_magin.ogg
+        ejectSound: /Audio/_Stalker/Weapons/Guns/RifleGen/MagOut/rifle_magout.ogg
+        priority: 4
+        whitelist:
+          tags:
+          - Magazine739
+      gun_module_muzzle:
+        name: Muzzle
+        priority: 3
+        whitelist:
+          tags:
+          - STWeaponModuleRifleSilencerRu
+      gun_module_scope:
+        name: Scope
+        priority: 2
+        whitelist:
+          tags:
+          - STWeaponModuleRifleScopeRu
+      gun_chamber:
+        name: Chamber
+        startingItem:
+        priority: 1
+        whitelist:
+          tags:
+          - STCartridge739
+  - type: STWeaponDamageFalloff
+    falloffMultiplier: 0.9
+  - type: STWeaponAccuracy
+    accuracyMultiplier: 1.55

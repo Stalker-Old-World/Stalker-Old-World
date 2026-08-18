@@ -1,0 +1,13 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseSTBulletinCartridge
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/cartridge.rsi
+    state: cart-y
+  - type: UIFragment
+    ui: !type:STBulletinBoardUi
+  - type: Cartridge
+  - type: STBulletinBoard
+  - type: STBulletinServer

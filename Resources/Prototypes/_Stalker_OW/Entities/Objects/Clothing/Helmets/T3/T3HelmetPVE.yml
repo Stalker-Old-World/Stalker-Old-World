@@ -1,0 +1,167 @@
+- type: entity
+  abstract: true
+  parent: STClothingHeadBase # Can replace with our own parent later to disconnect from RU prototypes.
+  id: STOWClothingHeadHelmetT3PVEBase
+  name: Vityaz Tactical Helmet
+  suffix: STOW, T3, PVE
+  components:
+  - type: Craftable
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+      - BlockMask
+  - type: STWeight
+    self: 4
+  - type: Armor
+    armorClass: 3
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.80
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  - type: Reflect
+    reflectProb: 0.01
+    spread: 360
+    reflects:
+      - NonEnergy
+    soundOnReflect: /Audio/_Stalker/Effects/sear.ogg
+  - type: HelmetVisor
+    toggleAction: ActionToggleHelmetVisor
+    equippedPrefixUp: visor-up
+    iconStateUp: icon-visor-up
+    visorUpReflectProb: 0.01
+    visorUpModifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.90
+    isToggleable: true
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - HeadTop
+    - Snout
+  - type: SlotBlockOverride
+    tag: BlockMask
+
+- type: entity
+  parent: STOWClothingHeadHelmetT3PVEBase
+  id: STOWClothingHeadHelmetT3PVEStalker
+  name: Vityaz Helmet
+  description: The Vityaz-S shockproof helmet was made at the Steel Research Institute. Development on the helmet started in the late 1980s. The helmet got a visor, even though it ended up being pretty bulky.
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/hats/Vityaz1C.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/hats/Vityaz1C.rsi
+
+- type: entity
+  parent: STOWClothingHeadHelmetT3PVEBase
+  id: STOWClothingHeadHelmetT3PVERenegade
+  name: Renegade Vityaz Helmet # OW Begin - Changed names to be more consistent
+  description: Shockproof helmet 'Vityaz 1C', modified by the Renegades.
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/hats/Vityaz1L.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/hats/Vityaz1L.rsi
+
+- type: entity
+  parent: STOWClothingHeadHelmetT3PVEBase
+  id: STOWClothingHeadHelmetT3PVEBandit
+  name: Bandit Vityaz Helmet
+  description: The shockproof helmet 'Vityaz 1C', which has three stripes on it
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/hats/Vityaz1B.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/hats/Vityaz1B.rsi
+
+- type: entity
+  parent: STOWClothingHeadHelmetT3PVEBase
+  id: STOWClothingHeadHelmetT3PVEDuty
+  name: Duty Vityaz Helmet
+  description: The Vityaz-M shockproof helmet was made at the Steel Research Institute. Development on the helmet started in the late 1980s. The helmet got a visor, even though it ended up being bulky.
+  components:
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/hats/Vityaz1M.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/hats/Vityaz1M.rsi
+
+- type: entity
+  parent: STOWClothingHeadHelmetT3PVEBase
+  id: STOWClothingHeadHelmetT3PVEClearSky
+  name: Clear Sky Vityaz Helmet
+  description: Vityaz 1C helmet modified with blue camo to match similar pieces of armor.
+  components:
+    - type: Sprite
+      sprite: _Stalker_EN/Objects/Clothing/hats/CS_vityaz.rsi
+    - type: Clothing
+      sprite: _Stalker_EN/Objects/Clothing/hats/CS_vityaz.rsi
+
+- type: entity
+  parent: STOWClothingHeadHelmetT3PVEBase
+  id: STOWClothingHeadHelmetT3PVEFreedom
+  name: Freedom Vityaz 'Kushch'
+  description: Vityaz 1C helmet modified by Freedom artisans, it smells like leaves and dirt.
+  components:
+    - type: Sprite
+      sprite: _Stalker_EN/Objects/Clothing/hats/VityazKushch.rsi
+    - type: Clothing
+      sprite: _Stalker_EN/Objects/Clothing/hats/VityazKushch.rsi
+      
+- type: entity
+  parent: STOWClothingHeadHelmetT3PVEBase
+  id: STOWClothingHeadHelmetT3PVEMerc
+  name: Mercenary Vityaz Helmet
+  description: Vityaz 1C helmet modified by a certain mercenary company.
+  components:
+    - type: Sprite
+      sprite: _Stalker_EN/Objects/Clothing/hats/Vityaz1Merc.rsi
+    - type: Clothing
+      sprite: _Stalker_EN/Objects/Clothing/hats/Vityaz1Merc.rsi
+      
+- type: entity
+  parent: STOWClothingHeadHelmetT3PVEBase
+  id: STOWClothingHeadHelmetT3PVENeutral
+  name: Neutral Vityaz 'Helping Hand' # OW End - Changed names to be more consistent
+  description: Vityaz 1C helmet modified with yellow paint, used by the neutral faction.
+  components:
+    - type: Sprite
+      sprite: _Stalker_EN/Objects/Clothing/hats/Neutral_Vityaz.rsi
+    - type: Clothing
+      sprite: _Stalker_EN/Objects/Clothing/hats/Neutral_Vityaz.rsi
+      
+- type: entity 
+  parent: ClothingMaskBase
+  id: STOWClothingHeadHelmetT3PVEMaskRenegade
+  name: Welding Mask 'Buffalo'
+  description: A welding mask turned into a weapon. Metal, horns, orange stripes – everything screams aggression. Facing an opponent like this is already half losing.
+  components:
+    - type: STWeight
+      self: 3
+    - type: Sprite
+      sprite: _Stalker/Objects/Clothing/mask/tegilla_rene.rsi
+    - type: Clothing
+      sprite: _Stalker/Objects/Clothing/mask/tegilla_rene.rsi
+    - type: IdentityBlocker
+    - type: Tag
+      tags:
+        - BlockHead
+        - BlockMask
+    - type: HideLayerClothing
+      slots:
+        - Snout
+    - type: Armor
+      armorClass: 3
+      modifiers:
+        flatReductions:
+          Radiation: 1
+        coefficients:
+          Blunt: 0.75
+          Slash: 0.75
+          Piercing: 0.80
+    - type: ExplosionResistance

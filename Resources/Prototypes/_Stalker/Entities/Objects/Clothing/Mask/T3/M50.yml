@@ -1,0 +1,27 @@
+
+- type: entity
+  parent: STClothingMaskGas
+  id: ClothingMaskM50
+  suffix: ST, T3, Rad
+  name: противогаз M50
+  description: Фильтрующее средство индивидуальной защиты органов дыхания, глаз и кожи лица человека, разработанное и производящееся в Соединённых Штатах Америки. Защищает от токсинов.
+  components:
+  - type: Tag
+    tags:
+      - BlockMask
+  - type: Sprite
+    sprite: _Stalker/Objects/Clothing/mask/m50.rsi
+  - type: Clothing
+    sprite: _Stalker/Objects/Clothing/mask/m50.rsi
+  - type: Armor
+    modifiers:
+      #coefficients: # EN start
+        #Radiation: 0.8
+        #Caustic: 0.85
+      flatReductions:
+        Radiation: 4 # EN end
+  - type: Craftable
+  #- type: HideLayerClothing # EN start
+    #slots:
+    #- Hair
+    #- HeadTop # EN end

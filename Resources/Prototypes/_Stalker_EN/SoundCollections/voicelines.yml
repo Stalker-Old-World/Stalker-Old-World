@@ -1,0 +1,767 @@
+# Loner
+- type: soundCollection
+  id: LonerAttack
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_many_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_many_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_many_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_many_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_many_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_one_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_one_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_one_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_one_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Attack/attack_one_5.ogg
+
+- type: soundCollection
+  id: LonerBackup
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Loners/EmoteBackup/backup_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/EmoteBackup/backup_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/EmoteBackup/backup_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/EmoteBackup/backup_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/EmoteBackup/backup_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/EmoteBackup/backup_6.ogg
+
+- type: soundCollection
+  id: LonerCover
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Cover/cover_fire_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Cover/cover_fire_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Cover/cover_fire_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Cover/cover_fire_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Cover/cover_fire_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Cover/cover_fire_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Cover/cover_fire_7.ogg
+
+- type: soundCollection
+  id: LonerDeath
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Death/death_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Death/death_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Death/death_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Death/death_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Death/death_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Death/death_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Death/death_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Death/death_8.ogg
+
+- type: soundCollection
+  id: LonerEnemy
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Enemy/enemy_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Enemy/enemy_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Enemy/enemy_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Enemy/enemy_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Enemy/enemy_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Enemy/enemy_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Enemy/enemy_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Enemy/enemy_8.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Enemy/enemy_9.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Enemy/enemy_10.ogg
+
+- type: soundCollection
+  id: LonerGrenade
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Grenade/grenade_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Grenade/grenade_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Grenade/grenade_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Grenade/grenade_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Grenade/grenade_ready_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Grenade/grenade_ready_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Grenade/grenade_ready_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Grenade/grenade_ready_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Grenade/grenade_ready_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Grenade/grenade_ready_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Grenade/grenade_ready_7.ogg
+
+- type: soundCollection
+  id: LonerLaugh
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Laugh/laughter_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Laugh/laughter_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Laugh/laughter_3.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Loners/Laugh/laughter_4.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Loners/Laugh/laughter_5.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Loners/Laugh/laughter_6.ogg
+
+- type: soundCollection
+  id: LonerMedkit
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Medkit/help_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Medkit/help_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Medkit/help_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Medkit/help_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Loners/Medkit/help_5.ogg
+
+# Bandit
+- type: soundCollection
+  id: BanditAttack
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Attack/attack_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Attack/attack_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Attack/attack_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Attack/attack_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Attack/attack_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Attack/attack_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Attack/attack_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Attack/attack_8.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Attack/attack_9.ogg
+
+- type: soundCollection
+  id: BanditBackup
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/EmoteBackup/backup_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/EmoteBackup/backup_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/EmoteBackup/backup_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/EmoteBackup/backup_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/EmoteBackup/backup_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/EmoteBackup/backup_6.ogg
+
+- type: soundCollection
+  id: BanditCover
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Cover/cover_fire_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Cover/cover_fire_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Cover/cover_fire_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Cover/cover_fire_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Cover/cover_fire_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Cover/cover_fire_6.ogg
+
+- type: soundCollection
+  id: BanditDeath
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Death/anomaly_0.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Death/death_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Death/death_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Death/death_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Death/death_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Death/death_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Death/death_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Death/death_7.ogg
+
+- type: soundCollection
+  id: BanditEnemy
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_8.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_9.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_10.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_11.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Enemy/enemy_12.ogg
+
+- type: soundCollection
+  id: BanditGrenade
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/grenade_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/grenade_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/grenade_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/grenade_ready_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/grenade_ready_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/grenade_ready_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/grenade_ready_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/grenade_ready_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/grenade_ready_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/grenade_ready_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/ready_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/ready_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Grenade/ready_3.ogg
+
+- type: soundCollection
+  id: BanditLaugh
+  files:
+  #- /Audio/_Stalker_EN/VoiceLines/Bandit/Laugh/laughter_1.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Bandit/Laugh/laughter_2.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Bandit/Laugh/laughter_3.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Bandit/Laugh/laughter_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Laugh/laughter_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Laugh/laughter_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Laugh/laughter_7.ogg
+
+- type: soundCollection
+  id: BanditMedkit
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Medkit/help_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Medkit/help_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Medkit/help_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Medkit/help_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Bandit/Medkit/help_5.ogg
+
+# Duty
+- type: soundCollection
+  id: DutyAttack
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_many_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_many_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_many_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_one_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_one_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_one_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_one_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Attack/attack_one_5.ogg
+
+- type: soundCollection
+  id: DutyBackup
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Duty/EmoteBackup/backup_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/EmoteBackup/backup_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/EmoteBackup/backup_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/EmoteBackup/backup_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/EmoteBackup/backup_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/EmoteBackup/backup_6.ogg
+
+- type: soundCollection
+  id: DutyCover
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Cover/cover_fire_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Cover/cover_fire_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Cover/cover_fire_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Cover/cover_fire_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Cover/cover_fire_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Cover/cover_fire_6.ogg
+
+- type: soundCollection
+  id: DutyDeath
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Death/death_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Death/death_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Death/death_3.ogg
+
+- type: soundCollection
+  id: DutyEnemy
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Enemy/enemy_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Enemy/enemy_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Enemy/enemy_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Enemy/enemy_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Enemy/enemy_5.ogg
+
+- type: soundCollection
+  id: DutyGrenade
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Grenade/grenade_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Grenade/grenade_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Grenade/grenade_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Grenade/grenade_ready_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Grenade/grenade_ready_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Grenade/grenade_ready_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Grenade/grenade_ready_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Grenade/grenade_ready_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Grenade/grenade_ready_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Grenade/grenade_ready_7.ogg
+
+- type: soundCollection
+  id: DutyLaugh
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Laugh/laughter_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Laugh/laughter_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Laugh/laughter_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Laugh/laughter_4.ogg
+
+- type: soundCollection
+  id: DutyMedkit
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Medkit/help_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Medkit/help_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Medkit/help_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Medkit/help_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Duty/Medkit/help_5.ogg
+
+# Ecologists
+- type: soundCollection
+  id: EcologistsAttack
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_many_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_many_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_many_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_many_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_one_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_one_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_one_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_one_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Attack/attack_one_5.ogg
+
+- type: soundCollection
+  id: EcologistsBackup
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/EmoteBackup/backup_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/EmoteBackup/backup_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/EmoteBackup/backup_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/EmoteBackup/backup_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/EmoteBackup/backup_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/EmoteBackup/backup_6.ogg
+
+- type: soundCollection
+  id: EcologistsCover
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Cover/cover_fire_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Cover/cover_fire_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Cover/cover_fire_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Cover/cover_fire_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Cover/cover_fire_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Cover/cover_fire_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Cover/cover_fire_7.ogg
+
+- type: soundCollection
+  id: EcologistsDeath
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Death/death_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Death/death_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Death/death_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Death/death_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Death/death_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Death/death_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Death/death_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Death/death_8.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Death/death_9.ogg
+
+- type: soundCollection
+  id: EcologistsEnemy
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Enemy/enemy_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Enemy/enemy_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Enemy/enemy_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Enemy/enemy_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Enemy/enemy_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Enemy/enemy_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Enemy/enemy_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Enemy/enemy_8.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Enemy/enemy_9.ogg
+
+- type: soundCollection
+  id: EcologistsGrenade
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Grenade/grenade_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Grenade/grenade_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Grenade/grenade_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Grenade/grenade_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Grenade/grenade_5.ogg
+
+- type: soundCollection
+  id: EcologistsLaugh
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Laugh/laughter_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Laugh/laughter_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Laugh/laughter_3.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Ecologists/Laugh/laughter_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Laugh/laughter_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Laugh/laughter_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Laugh/laughter_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Laugh/laughter_8.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Ecologists/Laugh/laughter_9.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Ecologists/Laugh/laughter_10.ogg
+
+- type: soundCollection
+  id: EcologistsMedkit
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Medkit/help_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Medkit/help_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Medkit/help_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Medkit/help_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Ecologists/Medkit/help_5.ogg
+
+# Freedom
+- type: soundCollection
+  id: FreedomAttack
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_many_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_many_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_many_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_many_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_one_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_one_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_one_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_one_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Attack/attack_one_5.ogg
+
+- type: soundCollection
+  id: FreedomBackup
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/EmoteBackup/backup_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/EmoteBackup/backup_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/EmoteBackup/backup_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/EmoteBackup/backup_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/EmoteBackup/backup_5.ogg
+
+- type: soundCollection
+  id: FreedomCover
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Cover/cover_fire_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Cover/cover_fire_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Cover/cover_fire_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Cover/cover_fire_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Cover/cover_fire_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Cover/cover_fire_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Cover/cover_fire_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Cover/cover_fire_8.ogg
+
+- type: soundCollection
+  id: FreedomDeath
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Death/death_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Death/death_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Death/death_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Death/death_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Death/death_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Death/death_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Death/death_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Death/death_8.ogg
+
+- type: soundCollection
+  id: FreedomEnemy
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Enemy/enemy_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Enemy/enemy_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Enemy/enemy_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Enemy/enemy_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Enemy/enemy_5.ogg
+
+- type: soundCollection
+  id: FreedomGrenade
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_ready_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_ready_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_ready_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_ready_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_ready_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_ready_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Grenade/grenade_ready_7.ogg
+
+- type: soundCollection
+  id: FreedomLaugh
+  files:
+  #- /Audio/_Stalker_EN/VoiceLines/Freedom/Laugh/laughter_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Laugh/laughter_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Laugh/laughter_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Laugh/laughter_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Laugh/laughter_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Laugh/laughter_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Laugh/laughter_7.ogg
+
+- type: soundCollection
+  id: FreedomMedkit
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Medkit/help_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Medkit/help_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Medkit/help_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Medkit/help_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Freedom/Medkit/help_5.ogg
+
+# Merc
+- type: soundCollection
+  id: MercAttack
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Attack/attack_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Attack/attack_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Attack/attack_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Attack/attack_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Attack/attack_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Attack/attack_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Attack/attack_8.ogg
+
+- type: soundCollection
+  id: MercBackup
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Merc/EmoteBackup/backup_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/EmoteBackup/backup_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/EmoteBackup/backup_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/EmoteBackup/backup_4.ogg
+
+- type: soundCollection
+  id: MercCover
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Cover/cover_fire_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Cover/cover_fire_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Cover/cover_fire_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Cover/cover_fire_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Cover/cover_fire_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Cover/cover_fire_6.ogg
+
+- type: soundCollection
+  id: MercDeath
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Death/death_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Death/death_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Death/death_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Death/death_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Death/death_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Death/death_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Death/death_7.ogg
+
+- type: soundCollection
+  id: MercEnemy
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Enemy/enemy_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Enemy/enemy_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Enemy/enemy_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Enemy/enemy_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Enemy/enemy_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Enemy/enemy_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Enemy/enemy_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Enemy/enemy_8.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Enemy/enemy_9.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Enemy/enemy_10.ogg
+
+- type: soundCollection
+  id: MercGrenade
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Grenade/grenade_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Grenade/grenade_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Grenade/grenade_3.ogg
+
+- type: soundCollection
+  id: MercLaugh
+  files:
+  #- /Audio/_Stalker_EN/VoiceLines/Merc/Laugh/laughter_1.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Merc/Laugh/laughter_2.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Merc/Laugh/laughter_3.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Merc/Laugh/laughter_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Laugh/laughter_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Laugh/laughter_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Laugh/laughter_7.ogg
+
+- type: soundCollection
+  id: MercMedkit
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Medkit/help_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Medkit/help_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Medkit/help_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Medkit/help_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Medkit/help_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Medkit/help_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Merc/Medkit/help_7.ogg
+
+# Military
+- type: soundCollection
+  id: MilitaryAttack
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_many_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_many_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_many_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_many_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_many_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_many_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_one_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_one_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_one_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_one_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Attack/attack_one_5.ogg
+
+- type: soundCollection
+  id: MilitaryBackup
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Military/EmoteBackup/backup_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/EmoteBackup/backup_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/EmoteBackup/backup_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/EmoteBackup/backup_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/EmoteBackup/backup_5.ogg
+
+- type: soundCollection
+  id: MilitaryCover
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Military/Cover/cover_fire_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Cover/cover_fire_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Cover/cover_fire_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Cover/cover_fire_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Cover/cover_fire_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Cover/cover_fire_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Cover/cover_fire_7.ogg
+
+- type: soundCollection
+  id: MilitaryDeath
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Military/Death/death_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Death/death_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Death/death_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Death/death_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Death/death_5.ogg
+
+- type: soundCollection
+  id: MilitaryEnemy
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Military/Enemy/enemy_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Enemy/enemy_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Enemy/enemy_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Enemy/enemy_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Enemy/enemy_5.ogg
+
+- type: soundCollection
+  id: MilitaryGrenade
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Military/Grenade/grenade_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Grenade/grenade_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Grenade/grenade_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Grenade/grenade_ready_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Grenade/grenade_ready_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Grenade/grenade_ready_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Grenade/grenade_ready_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Grenade/grenade_ready_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Grenade/grenade_ready_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Grenade/grenade_ready_7.ogg
+
+- type: soundCollection
+  id: MilitaryLaugh
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Military/Laugh/laughter_1.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Military/Laugh/laughter_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Laugh/laughter_3.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Military/Laugh/laughter_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Laugh/laughter_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Laugh/laughter_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Laugh/laughter_7.ogg
+
+- type: soundCollection
+  id: MilitaryMedkit
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Military/Medkit/help_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Medkit/help_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Medkit/help_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Medkit/help_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Medkit/help_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Military/Medkit/help_6.ogg
+
+# Monolith
+- type: soundCollection
+  id: MonolithAttack
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_8.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_many_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_many_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_many_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_many_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_many_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_many_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_many_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_many_8.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_one_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_one_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Attack/attack_one_3.ogg
+
+- type: soundCollection
+  id: MonolithBackup
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/EmoteBackup/backup_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/EmoteBackup/backup_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/EmoteBackup/backup_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/EmoteBackup/backup_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/EmoteBackup/backup_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/EmoteBackup/backup_6.ogg
+
+- type: soundCollection
+  id: MonolithCover
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Cover/cover_fire_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Cover/cover_fire_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Cover/cover_fire_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Cover/cover_fire_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Cover/cover_fire_5.ogg
+
+- type: soundCollection
+  id: MonolithDeath
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Death/death_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Death/death_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Death/death_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Death/death_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Death/death_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Death/death_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Death/death_7.ogg
+
+- type: soundCollection
+  id: MonolithEnemy
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Enemy/enemy_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Enemy/enemy_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Enemy/enemy_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Enemy/enemy_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Enemy/enemy_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Enemy/enemy_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Enemy/enemy_7.ogg
+
+- type: soundCollection
+  id: MonolithGrenade
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_ready_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_ready_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_ready_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_ready_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_ready_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_ready_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Grenade/grenade_ready_7.ogg
+
+- type: soundCollection
+  id: MonolithLaugh
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Laugh/laughter_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Laugh/laughter_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Laugh/laughter_3.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Monolith/Laugh/laughter_4.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Monolith/Laugh/laughter_5.ogg
+  #- /Audio/_Stalker_EN/VoiceLines/Monolith/Laugh/laughter_6.ogg
+
+- type: soundCollection
+  id: MonolithMedkit
+  files:
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Medkit/help_1.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Medkit/help_2.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Medkit/help_3.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Medkit/help_4.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Medkit/help_5.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Medkit/help_6.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Medkit/help_7.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Medkit/help_8.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Medkit/help_9.ogg
+  - /Audio/_Stalker_EN/VoiceLines/Monolith/Medkit/help_10.ogg
+
+- type: soundCollection
+  id: MonolithPsyVoice
+  files:
+  - /Audio/_Stalker_EN/Effects/psivoice1.ogg
+  - /Audio/_Stalker_EN/Effects/psivoice2.ogg
+  - /Audio/_Stalker_EN/Effects/psivoice3.ogg

@@ -1,0 +1,14 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleMono
+  name: Monolith Mantle
+  description: A mantle worn by the Zealots of the zone.
+  components:
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Clothing/Neck/monomantle.rsi
+  - type: Clothing
+    sprite: _Stalker_EN/Objects/Clothing/Neck/monomantle.rsi
+  - type: PersonalDamage
+    damage:
+      types:
+        Radiation: 18.01

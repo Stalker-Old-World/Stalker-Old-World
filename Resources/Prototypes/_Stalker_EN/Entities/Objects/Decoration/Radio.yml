@@ -1,0 +1,573 @@
+﻿# Stalker EN Cassettes
+
+- type: entity
+  parent: BaseItem
+  id: CasseteRapGod
+  suffix: Stalker, Cassette, (Rap God)
+  name: Cassette "Rap God"
+  description: A brand new cassette tape. It's believed to contain a song. On the front of the tape is the encrypted message C.o.n.t.r.i.b.u.t.o.r.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker/Music/Radio/Contributor/RapGod.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker/Objects/Misc/casete.rsi
+    state: c6
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+# Factions
+
+- type: entity
+  parent: BaseItem
+  id: CasseteBandit
+  suffix: Stalker, Cassette, (Bandit Radio)
+  name: Cassette "Bandit Radio"
+  description: A brand new cassette tape. It's believed to contain a song.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker/bandit_radio.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker/Objects/Misc/casete.rsi
+    state: c7
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteDuty
+  suffix: Stalker, Cassette, (Duty Propaganda)
+  name: Cassette "Duty"
+  description: A brand new cassette tape. It's believed to contain a song.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker/Music/Radio/rupor.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker/Objects/Misc/casete.rsi
+    state: c7
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteArstotzka1984 #1984
+  suffix: Stalker, Cassette, (Glory to Arstotzka)
+  name: Cassette "Glory to Arstotzka"
+  description: A brand new cassette tape. It's believed to contain a song.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker/Music/Radio/Contributor/arstotzka_1.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker/Objects/Misc/casete.rsi
+    state: c5
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteArstotzka1
+  suffix: Stalker, Cassette, (Arstotzka Good)
+  name: Cassette "Arstotzka Good"
+  description: A brand new cassette tape. It's believed to contain a song.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker/Music/Radio/Contributor/arstotzka_2.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker/Objects/Misc/casete.rsi
+    state: c5
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteArstotzka2
+  suffix: Stalker, Cassette, (Arstotzka Bad)
+  name: Cassette "Arstotzka Bad"
+  description: A brand new cassette tape. It's believed to contain a song.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker/Music/Radio/Contributor/arstotzka_3.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker/Objects/Misc/casete.rsi
+    state: c5
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteArmy2
+  suffix: Stalker, Cassette, (Bomzh)
+  name: Cassette "Bomzh"
+  description: A brand new cassette tape. It's believed to contain a song.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker/army_radio2.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker/Objects/Misc/casete.rsi
+    state: c5
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteArmy3
+  suffix: Stalker, Cassette, (Chansonette)
+  name: Cassette "Chansonette"
+  description: A brand new cassette tape. It's believed to contain a song.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker/army_radio3.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker/Objects/Misc/casete.rsi
+    state: c5
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteArmy4
+  suffix: Stalker, Cassette, (On the line I drive)
+  name: Cassette "On the line I drive"
+  description: A brand new cassette tape. It's believed to contain a song.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker/ua_radio.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker/Objects/Misc/casete.rsi
+    state: c5
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteRenegade
+  suffix: Stalker, Cassette, (Renegade Radio)
+  name: Cassette "Renegade Radio"
+  description: A brand new cassette tape. It's believed to contain a song.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker/Music/Radio/renegat_radio.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker/Objects/Misc/casete.rsi
+    state: c7
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+#SH
+
+- type: entity
+  parent: BaseItem
+  id: CasseteSH1
+  suffix: Stalker, Cassette, SH
+  name: Anam Cara
+  description: A weathered cassette tape with a red circular seal on the label.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Music/Event/AnamCara.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: red #pyramid thing
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteSH2
+  suffix: Stalker, Cassette, SH
+  name: Laura Plays The Piano
+  description: A weathered cassette tape with a red circular seal on the label.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Music/Event/LauraPlaysThePiano.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: red #pyramid thing
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteSH3
+  suffix: Stalker, Cassette, SH
+  name: Promise
+  description: A weathered cassette tape with a red circular seal on the label.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Music/Event/Promise.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: red #pyramid thing
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteSH4
+  suffix: Stalker, Cassette, SH
+  name: The Day Of Night Shadows
+  description: A weathered cassette tape with a red circular seal on the label.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Music/Event/TheDayOfNightShadows.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: red #pyramid thing
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteSH5
+  suffix: Stalker, Cassette, SH
+  name: Theme Of Laura
+  description: A weathered cassette tape with a red circular seal on the label.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Music/Event/ThemeOfLaura.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: red #pyramid thing
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteSH6
+  suffix: Stalker, Cassette, SH
+  name: Unhinged Betrayal
+  description: A weathered cassette tape with a red circular seal on the label.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Music/Event/UnhingedBetrayal.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: red #pyramid thing
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteSH7
+  suffix: Stalker, Cassette, SH
+  name: What Lurks In The Forest
+  description: A weathered cassette tape with a red circular seal on the label.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Music/Event/WhatLurksInTheForest.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: red #pyramid thing
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteSH8
+  suffix: Stalker, Cassette, SH
+  name: White Noise
+  description: A weathered cassette tape with a red circular seal on the label.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Music/Event/WhiteNoise.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: red #pyramid thing
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+#Darkwood
+
+- type: entity
+  parent: BaseItem
+  id: CasseteDW1
+  suffix: Stalker, Cassette, DW
+  name: Morning
+  description: A weathered cassette with a label written in charcoal.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Music/Event/Morning.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: white
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteDW2
+  suffix: Stalker, Cassette, DW
+  name: Wolf
+  description: A weathered cassette smelling like wet dog.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Music/Event/Wolf.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: white
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+#PACHAMAQUINA
+
+- type: entity
+  parent: BaseItem
+  id: CassetePACHAMAQUINA1
+  suffix: Stalker, Cassette, PACHAMAQUINA # Yerba Mate
+  name: Old Automata
+  description: A weathered cassette reading 'PACHAMAQUINA' on the label.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Music/Event/OldAutomata.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: white
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+# Admeme
+
+- type: entity
+  parent: BaseItem
+  id: CasseteGold
+  suffix: Stalker, Cassette, ADMEME
+  name: Gold Cassette
+  description: An old cassette tape with a solid gold case. The tape is fragile from the passing of time and likely won't survive rough handling or the mechanisms of a repository.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Effects/static.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: gold
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteRed
+  suffix: Stalker, Cassette, ADMEME
+  name: Red Cassette
+  description: An old cassette tape with a red case and torn label. The tape is fragile from the passing of time and likely won't survive rough handling or the mechanisms of a repository.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Effects/static.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: red
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: CasseteWhite
+  suffix: Stalker, Cassette, ADMEME
+  name: White Cassette
+  description: An old cassette tape with a white case and blank label. The tape is fragile from the passing of time and likely won't survive rough handling or the mechanisms of a repository.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker_EN/Effects/static.ogg
+  - type: Tag
+    tags:
+    - Cassete
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/cassette.rsi
+    state: white
+  - type: RepositoryItem # stalker-en change
+    categoryName: repository-cassettes-category
+
+# record player
+
+- type: entity
+  parent: BaseItem
+  id: RadioRecordPlayer
+  name: record player
+  suffix: ST
+  description: A record player in decent condition. It looks like it isn't more than a decade old.
+  components:
+  - type: STWeight
+    self: 5
+  - type: Boombox
+  - type: ContainerContainer
+    containers:
+      cassette_slot: !type:ContainerSlot {}
+  - type: ItemSlots
+    slots:
+      cassette_slot:
+        name: Record
+        whitelist:
+          tags:
+            - STRecord
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/record_player.rsi
+    state: player
+  - type: Item
+    size: Ginormous
+    shape:
+    - 0,0,3,3
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: STRecordWhole
+  suffix: Stalker, Cassette, ADMEME
+  name: record
+  description: A record. It might be hard to find something that can play it.
+  components:
+  - type: STWeight
+    self: 0.15
+  - type: Cassete
+    sound: /Audio/_Stalker/serafim_embient.ogg
+  - type: Tag
+    tags:
+      - STRecord
+  - type: Sprite
+    sprite: _Stalker_EN/Objects/Misc/record_player.rsi
+    state: record
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category
+
+- type: entity
+  parent: BaseItem
+  id: STRecordShard
+  suffix: Stalker
+  name: record piece
+  description: A piece of a broken record.
+  components:
+  - type: STWeight
+    self: 0.03
+  - type: Sprite
+    layers:
+    - sprite: _Stalker_EN/Objects/Misc/record_player.rsi
+      state: shard1
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+  - type: RandomSprite
+    available:
+    - enum.DamageStateVisualLayers.Base:
+        shard1: ""
+        shard2: ""
+        shard3: ""
+        shard4: ""
+  - type: Item
+    size: Tiny
+  - type: RepositoryItem
+    categoryName: repository-cassettes-category

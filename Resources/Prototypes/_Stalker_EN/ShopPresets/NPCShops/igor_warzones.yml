@@ -1,0 +1,69 @@
+﻿####################################### SHOP
+# these display in order listed
+- type: stBandShopListings
+  id: STBandShopListings
+  items:
+  # big ammo boxes
+  # T0
+  - productEntity: 7mmBuckshotBoxCink
+    price: 80
+    # T1
+  - productEntity: 6mmBuckshotBoxCink
+    price: 100
+  - productEntity: 45ACPLFMJBoxCink
+    price: 100
+  - productEntity: 725PBoxCink
+    price: 100
+  - productEntity: 918PGJBoxCink
+    price: 100
+  - productEntity: 919PSOGJBoxCink
+    price: 100
+    # T2
+  - productEntity: 8mmBuckshotBoxCink
+    price: 175
+  - productEntity: 45ACPMFMJBoxCink
+    price: 195
+  - productEntity: 545FMJBoxCink
+    price: 175
+  - productEntity: 556FMJBoxCink
+    price: 175
+  - productEntity: 725PTBoxCink
+    price: 175
+  - productEntity: 918PSTBoxCink
+    price: 150
+  - productEntity: 919PSTBoxCink
+    price: 150
+  - productEntity: 939SP5BoxCink
+    price: 200
+  - productEntity: ShotgunBulletBoxCink
+    price: 175
+  # T3
+  - productEntity: 45ACPAPBoxCink
+    price: 275
+  - productEntity: 545PCBoxCink
+    price: 275
+  - productEntity: 556M855BoxCink
+    price: 250
+  - productEntity: 725PSTBoxCink
+    price: 250
+  - productEntity: 739FMJBoxCink
+    price: 250
+  - productEntity: 751M80BoxCink
+    price: 250
+  - productEntity: 754FMJBoxCink
+    price: 350
+  - productEntity: 918PBMBoxCink
+    price: 215
+  - productEntity: 919PBMBoxCink
+    price: 215
+  - productEntity: 939BPBoxCink
+    price: 325
+  # misc
+  - productEntity: STWarzoneMedicalCrateBasic
+    price: 200
+  - productEntity: STWarzoneMedicalCrateCombat
+    price: 350
+  - productEntity: STLostGear
+    price: 100
+  - productEntity: STLostToy
+    price: 500

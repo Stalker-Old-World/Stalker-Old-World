@@ -1,0 +1,32 @@
+- type: entity
+  parent: MapTeleportBaseUncollide
+  id: Spawn-AnomalistUncollide
+  name: Spawn-AnomalistUncollide (spawn)
+  components:
+  - type: LinkByString
+    linkString: Spawn-Anomalist
+  - type: AccessReader
+    access: [["Anomalist"]]
+
+- type: entity
+  parent: MapTeleportBase
+  id: Spawn-Anomalist
+  name: Spawn-Anomalist (spawn)
+  components:
+  - type: AccessReader
+    access: [["Anomalist"]]
+
+- type: entity
+  parent: MapTeleportBase
+  id: Agroprom-Anomalist
+  name: Agroprom-Anomalist (spawn)
+
+- type: entity
+  parent: MapTeleportBase
+  id: Cordon-Anomalist
+  name: Cordon-Anomalist (spawn)
+
+- type: entity
+  parent: MapTeleportBase
+  id: Dump-Anomalist
+  name: Dump-Anomalist (spawn)

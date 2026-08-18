@@ -1,0 +1,178 @@
+- type: job
+  id: StalkerMonolith
+  name: job-monolith
+  icon: monolith
+  description: job-monolith-desc
+  playTimeTracker: JobMonolith
+  whitelisted: true
+  requirements:
+    # - !type:RoleTimeRequirement
+    #   role: JobMonolith
+    #   time: 1
+    - !type:SpeciesRequirement
+      species:
+      - Human
+  startingGear: MonolithGear
+  supervisors: job-monolith-supervisor
+  canBeAntag: false
+  special:
+    - !type:AddComponentSpecial
+      components:
+      #- type: PersistentCraftAccess
+      - type: Access
+        tags:
+          - Monolith
+      - type: Bands
+        altBand: stalker
+        canChange: true
+        # ST:OW begin
+        startDisguised: false
+        # ST:OW end
+        band: Stalker
+        bandIcon: monolith
+        bandProto: STMonolithBand
+        bandRankId: 1
+      - type: NpcFactionMember
+        factions:
+          - Mutated
+      - type: Hunger
+        baseDecayRate: 0
+      - type: Thirst
+        baseDecayRate: 0
+      - type: PersonalDamageBlock
+      - type: Damageable
+        damageContainer: Biological
+        damageModifierSet: Monolith # Stalker EN change
+      - type: BlockTackingHolyItems
+      - type: TeethPull
+        teethProto: ToothStalker
+        pullingItemTag: PliersStalker
+        teethCount: 3
+        initialTeeth: 3
+      - type: STAnomalyTipsViewing
+      - type: AutoImplant
+        implants:
+        - STMonoBombImplant # Stalker EN change start
+      # ST:OW begin
+      - type: MonolithHivemind
+      # ST:OW end
+      - type: IntrinsicRadioReceiver
+      - type: IntrinsicRadioTransmitter
+        channels:
+        - Monolith
+      - type: ActiveRadio
+        channels:
+        - Monolith
+        GlobalReceive: true
+      - type: Vocal
+        sounds:
+          Male: MaleHumanMonolith
+          Female: FemaleHumanMonolith
+          Unsexed: MaleHumanMonolith
+      - type: CantUseDetector
+        denialMessage: "This is not in the will of the Monolith."
+      - type: PsyVoiceEmote # stalker EN change end
+      - type: PsyEffectImmune
+
+- type: job
+  id: StalkerHeadMonolith
+  name: Monolith Preacher
+  icon: monolith
+  description: Lead the Monolith on a Crusade across the Zone. Follow the order of the Monolith.
+  playTimeTracker: JobHeadMonolith
+  whitelisted: true
+  requirements:
+  # - !type:RoleTimeRequirement
+  #   role: JobMonolith
+  #   time: 1
+  - !type:SpeciesRequirement
+    species:
+    - Human
+  startingGear: MonolithGear
+  supervisors: job-stalker-head-monolith-supervisor
+  canBeAntag: false
+  special:
+  - !type:AddComponentSpecial
+    components:
+    #- type: PersistentCraftAccess
+    - type: Access
+      tags:
+      - Monolith
+    - type: Bands
+      altBand: stalker
+      canChange: true
+      # ST:OW begin
+      startDisguised: false
+      # ST:OW end
+      band: Stalker
+      bandIcon: monolith
+      bandProto: STMonolithBand
+      bandRankId: 2
+    - type: NpcFactionMember
+      factions:
+      - Mutated
+    - type: Hunger
+      baseDecayRate: 0
+    - type: Thirst
+      baseDecayRate: 0
+    - type: PersonalDamageBlock
+    - type: Damageable
+      damageContainer: Biological
+      damageModifierSet: Monolith # Stalker EN change
+    - type: BlockTackingHolyItems
+    - type: TeethPull
+      teethProto: ToothStalker
+      pullingItemTag: PliersStalker
+      teethCount: 3
+      initialTeeth: 3
+    - type: STAnomalyTipsViewing
+    - type: AutoImplant
+      implants:
+      - STMonoBombImplant # Stalker EN change start
+    # ST:OW begin
+    - type: MonolithHivemind
+    # ST:OW end
+    - type: IntrinsicRadioReceiver
+    - type: IntrinsicRadioTransmitter
+      channels:
+      - Monolith
+    - type: ActiveRadio
+      channels:
+      - Monolith
+      GlobalReceive: true
+    - type: Vocal
+      sounds:
+        Male: MaleHumanMonolith
+        Female: FemaleHumanMonolith
+        Unsexed: MaleHumanMonolith
+    - type: CantUseDetector
+      denialMessage: "This is not in the will of the Monolith."
+    - type: PsyVoiceEmote # stalker EN change end
+    - type: PsyEffectImmune
+
+- type: startingGear
+  id: MonolithGear
+  equipment:
+    #ears: STClothingChip # stalker EN
+    id: MonolithPDA
+    dogtag: ClothingNeckDogtagMonolith # EN
+    torso: ClothingTorsoTurtlenecksMonolithCamouflage
+    legs: ClothingLegsJeansMonolithCamouflage
+    shoes: STClothingShoesBootsCombat
+- type: stBand
+  id: STMonolithBand
+  name: Monolith
+  factionId: Monolith
+  maxMembers: 16
+  managingRankId: 2
+  disguiseTargetJobId: Stalker # stalker EN change
+  hierarchy:
+    1: StalkerMonolith
+    2: StalkerHeadMonolith
+
+- type: damageModifierSet # Stalker EN change
+  id: Monolith
+  class: 0
+  coefficients:
+    Radiation: 0
+    Psy: 0

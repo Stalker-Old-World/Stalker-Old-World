@@ -1,0 +1,68 @@
+- type: shopPreset
+  id: NpcErjanAlimovEN
+  minSellPrice: 5
+  itemsForSale:
+    STJewelrySilver: 400
+    STJewelryGold: 600
+    STWristwatchGold: 1500
+    STGoldRingBigDiamond: 2000
+  categories:
+    - name: Items
+      priority: 1
+      items:
+        ClothingMaskBandGold: 300
+        CardBin: 500
+        PokerCardBin: 500
+        ClothingHeadHatCowboyWhite: 2000
+        ClothingHeadHatCowboyBountyHunter: 2000
+        ClothingShoesBootsCowboyBlack: 1000
+        ClothingShoesBootsCowboyBrown: 1000
+        ClothingShoesBootsCowboyWhite: 1000
+        ClothingEyesGlassesCheapSunglasses: 50
+        HandLabeler: 75
+        STGoldShovel: 100000
+        ClothingHeadBandGold: 300
+        GoldenPlunger: 10000
+        FlippoEngravedLighter: 5000
+    - name: Consumption
+      priority: 2
+      items:
+        CigarGold: 50
+        DrinkChampagneBottleFull: 1000
+        DrinkCognacBottleFull: 1000
+        FoodTartGapple: 400
+    - name: Musical Instruments
+      priority: 3
+      items:
+        ElectricGuitarInstrument: 5000
+        BassGuitarInstrument: 5000
+        RockGuitarInstrument: 5000
+        KalimbaInstrument: 1000
+        FluteInstrument: 3000
+        SaxophoneInstrument: 6000
+        TromboneInstrument: 4000
+        ClarinetInstrument: 3000
+        ViolaInstrument: 4000
+        ViolinInstrument: 4000
+        SynthesizerInstrument: 7000
+        XylophoneInstrument: 3000
+        GlockenspielInstrument: 3000
+        BanjoInstrument: 3000
+        CelloInstrument: 4000
+        MicrophoneInstrument: 5000
+    - name: Portable Musical Instruments
+      priority: 4
+      items:
+        PianoInstrumentPortablePack: 5000
+        UprightPianoInstrumentPortablePack: 6000
+        VibraphoneInstrumentPortablePack: 6000
+        MarimbaInstrumentPortablePack: 5000
+        ChurchOrganInstrumentPortablePack: 6000
+        TubaInstrumentPortablePack: 6000
+        HarpInstrumentPortablePack: 6000
+        TimpaniInstrumentPortablePack: 5000
+        TaikoInstrumentPortablePack: 5000
+        ContrabassInstrumentPortablePack: 6000
+        MinimoogInstrumentPortablePack: 6000
+        TomDrumsInstrumentPortablePack: 5000
+
