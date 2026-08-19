@@ -52,6 +52,17 @@
     secondIngredient: STWeaponSniperSVDMono
     time: 8
 
+# ST:OW begin
+- type: lightCraftingRecipe
+  id: ChemCleaningKitAKMMono
+  results:
+    - STWeaponRifleAKMWinter
+  steps:
+    firstIngredient: CraftChemicalCleaningKit
+    secondIngredient: STWeaponRifleAKMWinterMono
+    time: 8
+# ST:OW end
+
 - type: lightCraftingRecipe
   id: ChemCleaningKitArmorMonolith
   results:

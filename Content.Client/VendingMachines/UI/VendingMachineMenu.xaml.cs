@@ -24,6 +24,8 @@ namespace Content.Client.VendingMachines.UI
         private readonly Dictionary<EntProtoId, EntityUid> _dummies = [];
         private readonly Dictionary<EntProtoId, (ListContainerButton Button, VendingMachineItem Item)> _listItems = new();
         private readonly Dictionary<EntProtoId, uint> _amounts = new();
+        private string _selectedCategory = "all"; // ST:OW
+        private List<VendorItemsListData> _cachedListData = new(); // ST:OW
 
         /// <summary>
         /// Whether the vending machine is able to be interacted with or not.
@@ -42,6 +44,19 @@ namespace Content.Client.VendingMachines.UI
             VendingContents.DataFilterCondition += DataFilterCondition;
             VendingContents.GenerateItem += GenerateButton;
             VendingContents.ItemKeyBindDown += (args, data) => OnItemSelected?.Invoke(args, data);
+            
+            // ST:OW begin
+            // Category button wiring
+            CategoryAllButton.OnPressed += _ => SetCategory("all");
+            CategoryArmorButton.OnPressed += _ => SetCategory("armor");
+            CategoryWeaponsButton.OnPressed += _ => SetCategory("weapons");
+            CategoryAmmoButton.OnPressed += _ => SetCategory("ammo");
+            CategoryMagazineButton.OnPressed += _ => SetCategory("magazines");
+            CategoryClothingButton.OnPressed += _ => SetCategory("clothing");
+            CategoryStorageButton.OnPressed += _ => SetCategory("storage");
+            CategoryMedicineButton.OnPressed += _ => SetCategory("medicine");
+            CategoryUtilityButton.OnPressed += _ => SetCategory("utility");
+            // ST:OW end
         }
 
         protected override void Dispose(bool disposing)
@@ -61,10 +76,17 @@ namespace Content.Client.VendingMachines.UI
         }
 
         private bool DataFilterCondition(string filter, ListData data)
+            // ST:OW begin
         {
-            if (data is not VendorItemsListData { ItemText: var text })
+            if (data is not VendorItemsListData { ItemText: var text, Category: var category })
                 return false;
+            
+            var itemCategory = string.IsNullOrWhiteSpace(category) ? "misc" : category.Trim().ToLowerInvariant();
 
+            if (_selectedCategory != "all" && itemCategory != _selectedCategory)
+                return false;
+            // ST:OW end
+            
             if (string.IsNullOrEmpty(filter))
                 return true;
 
@@ -121,6 +143,12 @@ namespace Content.Client.VendingMachines.UI
             {
                 var entry = inventory[i];
 
+                // ST:OW begin
+                // If no category is set then default to "all"
+                if (string.IsNullOrWhiteSpace(_selectedCategory))
+                    _selectedCategory = "all";
+                // ST:OW end
+                
                 if (!_prototypeManager.Resolve(entry.ID, out var prototype))
                 {
                     _amounts[entry.ID] = 0;
@@ -143,10 +171,12 @@ namespace Content.Client.VendingMachines.UI
                 listData.Add(new VendorItemsListData(prototype.ID, i)
                 {
                     ItemText = itemText,
+                    Category = string.IsNullOrWhiteSpace(entry.Category) ? "misc" : entry.Category.Trim().ToLowerInvariant() // ST:OW
                 });
             }
 
-            VendingContents.PopulateList(listData);
+            _cachedListData = listData; // ST:OW
+            VendingContents.PopulateList(_cachedListData); // ST:OW
 
             SetSizeAfterUpdate(longestEntry.Length, inventory.Count);
         }
@@ -174,7 +204,29 @@ namespace Content.Client.VendingMachines.UI
                 button.Button.Disabled = !enabled || amount == 0;
             }
         }
+        // ST:OW begin
+        public void SetCategory(string category)
+        {
+            _selectedCategory = string.IsNullOrWhiteSpace(category)
+                ? "all"
+                : category.Trim().ToLowerInvariant();
 
+            List<VendorItemsListData> filtered;
+
+            if (_selectedCategory == "all")
+            {
+                filtered = _cachedListData;
+            }
+            else
+            {
+                filtered = _cachedListData
+                    .Where(x => (x.Category ?? "misc").Trim().ToLowerInvariant() == _selectedCategory)
+                    .ToList();
+            }
+
+            VendingContents.PopulateList(filtered);
+        }
+        // ST:OW end
         private string GetItemText(EntityUid dummy, uint amount)
         {
             var itemName = Identity.Name(dummy, _entityManager);
@@ -191,5 +243,6 @@ namespace Content.Client.VendingMachines.UI
     public record VendorItemsListData(EntProtoId ItemProtoID, int ItemIndex) : ListData
     {
         public string ItemText = string.Empty;
+        public string Category = "misc"; // ST:OW
     }
 }

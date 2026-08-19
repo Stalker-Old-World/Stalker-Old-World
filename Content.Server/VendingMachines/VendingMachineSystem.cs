@@ -15,6 +15,12 @@ using Content.Shared.VendingMachines;
 using Content.Shared.Wall;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
+// ST:OW begin
+using Content.Shared.Clothing.Components;
+using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Inventory;
+using Content.Shared.Weapons.Ranged.Components;
+// ST:OW end
 
 namespace Content.Server.VendingMachines
 {
@@ -23,6 +29,9 @@ namespace Content.Server.VendingMachines
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly PricingSystem _pricing = default!;
         [Dependency] private readonly ThrowingSystem _throwingSystem = default!;
+        [Dependency] private readonly InventorySystem _inventory = default!; // ST:OW
+        [Dependency] private readonly SharedHandsSystem _hands = default!; // ST:OW
+        [Dependency] private readonly Content.Server.Weapons.Ranged.Systems.GunSystem _gun = default!; // ST:OW
 
         private const float WallVendEjectDistanceFromWall = 1f;
 
@@ -166,6 +175,8 @@ namespace Content.Server.VendingMachines
 
             if (forceEject)
             {
+                // Forced ejections do not belong to the player
+                vendComponent.NextBuyer = null; // ST:OW
                 vendComponent.NextItemToEject = item.ID;
                 vendComponent.ThrowNextItem = throwItem;
                 var entry = GetEntry(uid, item.ID, item.Type, vendComponent);
@@ -179,7 +190,8 @@ namespace Content.Server.VendingMachines
             }
         }
 
-        protected override void EjectItem(EntityUid uid, VendingMachineComponent? vendComponent = null, bool forceEject = false)
+        protected override void EjectItem(EntityUid uid, VendingMachineComponent? vendComponent = null,
+            bool forceEject = false)
         {
             if (!Resolve(uid, ref vendComponent))
                 return;
@@ -191,6 +203,9 @@ namespace Content.Server.VendingMachines
             if (string.IsNullOrEmpty(vendComponent.NextItemToEject))
             {
                 vendComponent.ThrowNextItem = false;
+                // If the item disappeared then it does not belong to the player
+                vendComponent.NextBuyer = null; // ST:OW
+
                 return;
             }
 
@@ -201,23 +216,131 @@ namespace Content.Server.VendingMachines
             //Make sure the wallvends spawn outside of the wall.
             if (TryComp<WallMountComponent>(uid, out var wallMountComponent))
             {
-                var offset = (wallMountComponent.Direction + xform.LocalRotation - Math.PI / 2).ToVec() * WallVendEjectDistanceFromWall;
+                var offset = (wallMountComponent.Direction + xform.LocalRotation - Math.PI / 2).ToVec() *
+                             WallVendEjectDistanceFromWall;
                 spawnCoordinates = spawnCoordinates.Offset(offset);
             }
 
             var ent = Spawn(vendComponent.NextItemToEject, spawnCoordinates);
-
+            TryPrefillMonolithMagazine(uid, ent, vendComponent); // ST:OW
+            
+            // ST:OW begin
             if (vendComponent.ThrowNextItem)
             {
                 var range = vendComponent.NonLimitedEjectRange;
-                var direction = new Vector2(_random.NextFloat(-range, range), _random.NextFloat(-range, range));
+                var direction = new Vector2(
+                    _random.NextFloat(-range, range), 
+                    _random.NextFloat(-range, range));
+
                 _throwingSystem.TryThrow(ent, direction, vendComponent.NonLimitedEjectForce);
+            }
+            else if (vendComponent.AutoEquipDispensed &&
+                     vendComponent.NextBuyer is { } buyer &&
+                     !Deleted(buyer))
+            {
+                TryAutoEquipOrHand(ent, buyer);
             }
 
             vendComponent.NextItemToEject = null;
             vendComponent.ThrowNextItem = false;
+            vendComponent.NextBuyer = null;
         }
 
+        // Magazines are filled! (For Monolith at least)
+        private void TryPrefillMonolithMagazine(EntityUid vendingUid, EntityUid item, VendingMachineComponent vendComponent)
+        {
+            if (!vendComponent.PrefillMagazines)
+                return;
+
+            if (MetaData(vendingUid).EntityPrototype?.ID != "VendingMachineBoxesMonolith")
+                return;
+
+            var itemProto = MetaData(item).EntityPrototype?.ID;
+            if (itemProto == null)
+                return;
+
+            EntProtoId? tier3Ammo = itemProto switch
+            {
+                "BaseAPSMag"      => "STCartridge918PBM",
+                "VityazMag"       => "STCartridge919PBM",
+                "545Mag30"        => "STCartridge545PC",
+                "556Mag30"        => "STCartridge556M855",
+                "739Mag30"        => "STCartridge739FMJ",
+                "754Mag10"        => "STCartridge754FMJ",
+                "BaseTommyGunMag" => "Cartridge45ACPAP",
+                "TommyGunDrum2"   => "Cartridge45ACPAP",
+                _ => null
+            };
+
+            if (tier3Ammo == null)
+                return;
+
+            _gun.TryFillBallisticMagazine(item, tier3Ammo.Value);
+        }
+
+        // Auto-equip items
+        private static readonly string[] PrioritySlots = 
+        {
+            "ears",          // Headsets
+            "mask",          // Gas masks
+            "head",          // Helmets & hats
+            "cloak",         // Cloaks
+            "neck",          // Scarves
+            "outerClothing", // Suits
+            "back",          // Backpacks
+            "belt",          // Belt
+            "gloves",        // Guess.
+        };
+
+        private bool TryAutoEquipOrHand(EntityUid item, EntityUid user)
+        {
+            if (Deleted(item) || Deleted(user))
+                return false;
+            
+            // Put guns in your hand instead of anywhere else
+            if (HasComp<GunComponent>(item))
+            {
+                return _hands.TryPickupAnyHand(
+                    user,
+                    item,
+                    checkActionBlocker: false,
+                    animateUser: false,
+                    animate: false);
+            }
+            
+            // Only try inventory slots for clothing
+           if (HasComp<ClothingComponent>(item))
+           {
+               foreach (var slot in PrioritySlots)
+               {
+                  if (_inventory.TryEquip(user, item, slot, silent: true, force: false))
+                      return true;
+                }
+            }
+            
+            // Try each slot by priority
+            foreach (var slot in PrioritySlots)
+            {
+                if (_inventory.TryEquip(user, item, slot, silent: true, force: false))
+                    return true;
+            }
+
+            // Try to equip to hands
+            if (_hands.TryPickupAnyHand(
+                    user,
+                    item,
+                    checkActionBlocker: false,
+                    animateUser: false,
+                    animate: false))
+            {
+                return true;
+            }
+
+            // If equip or hold both fail then drop on ground
+            return false;
+        }
+        // ST:OW end
+        
         public override void Update(float frameTime)
         {
             base.Update(frameTime);

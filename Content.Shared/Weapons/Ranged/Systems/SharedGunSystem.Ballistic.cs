@@ -9,6 +9,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
+using Robust.Shared.Prototypes; // ST:OW
 
 namespace Content.Shared.Weapons.Ranged.Systems;
 
@@ -318,6 +319,32 @@ public abstract partial class SharedGunSystem
         UpdateAmmoCount(entity.Owner);
         Dirty(entity);
     }
+    // ST:OW begin
+    public bool TryFillBallisticMagazine(EntityUid uid, EntProtoId ammoProto)
+    {
+        if (!TryComp<BallisticAmmoProviderComponent>(uid, out var ballistic))
+            return false;
+
+        var missing = ballistic.Capacity - ballistic.Count;
+        if (missing <= 0)
+            return false;
+
+        ballistic.Proto = ammoProto;
+        ballistic.UnspawnedCount += missing;
+
+        ballistic.EntProtos.Capacity = Math.Max(ballistic.EntProtos.Capacity, ballistic.EntProtos.Count + missing);
+        for (var i = 0; i < missing; i++)
+        {
+            ballistic.EntProtos.Add(ammoProto);
+        }
+
+        DirtyField(uid, ballistic, nameof(BallisticAmmoProviderComponent.Proto));
+        DirtyField(uid, ballistic, nameof(BallisticAmmoProviderComponent.UnspawnedCount));
+        DirtyField(uid, ballistic, nameof(BallisticAmmoProviderComponent.EntProtos));
+    
+        return true;
+    }
+    // ST:OW end
 }
 
 /// <summary>
