@@ -123,7 +123,7 @@
   parent: STBaseWeaponRifleOC14
   id: STWeaponRifleOC14Winter
   name: OC-14 «Groza» (Winter)
-  description: An assault rifle-grenade launcher system, 70% unified with AK-type assault rifles, the OC-14 "Groza" wrapped in Modern camo often found used by Monolith, A small strip on the end denotes that this has been chemically cleaned.
+  description: A compact, versatile assault rifle-grenade launcher system, wrapped in the modern camo signature to the Monolith. A small strip on the end denotes that this has been chemically cleaned. # ST:OW
   suffix: ST
   components:
   - type: Item
@@ -137,7 +137,7 @@
   parent: STBaseWeaponRifleOC14
   id: STWeaponRifleOC14WinterMono
   name: OC-14 «Groza» (Winter)
-  description: An assault rifle-grenade launcher system, 70% unified with AK-type assault rifles, the OC-14 "Groza" wrapped in Modern camo often found used by Monolith.
+  description: A compact, versatile assault rifle-grenade launcher system, wrapped in the modern camo signature to the Monolith. # ST:OW
   suffix: ST
   components:
   - type: Item
@@ -157,7 +157,7 @@
   suffix: ST
   parent: STWeaponRifleStalkerAbakan
   id: STWeaponRifleStalkerAbakanWinter
-  description:  weapon of elite Soviet troops. Designed to replace the outdated AKS. In the Abakan, not only the internal mechanisms are movable, but the entire receiver and barrel, which helps reduce recoil and significantly increase accuracy in combat. It is wrapped in Winter camo often found used by Monolith. A small strip on the end denotes that this has been chemically cleaned.
+  description: Weapon of elite Soviet troops. Designed to replace the outdated AKS. In the Abakan, not only the internal mechanisms are movable, but the entire receiver and barrel, which helps reduce recoil and significantly increase accuracy in combat. It is wrapped in the winter camo signature to the Monolith. A small strip on the end denotes that this has been chemically cleaned. # ST:OW
   components:
   - type: Clothing
     sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/winterized_Abakan.rsi
@@ -172,7 +172,7 @@
   suffix: ST
   parent: STWeaponRifleStalkerAbakan
   id: STWeaponRifleStalkerAbakanWinterMono
-  description:  weapon of elite Soviet troops. Designed to replace the outdated AKS. In the Abakan, not only the internal mechanisms are movable, but the entire receiver and barrel, which helps reduce recoil and significantly increase accuracy in combat. It is wrapped in Winter camo often found used by Monolith.
+  description: Weapon of elite Soviet troops. Designed to replace the outdated AKS. In the Abakan, not only the internal mechanisms are movable, but the entire receiver and barrel, which helps reduce recoil and significantly increase accuracy in combat. It is wrapped in the winter camo signature to the Monolith. # ST:OW
   components:
   - type: Clothing
     sprite: _Stalker_EN/Objects/Weapons/Guns/_Skins/winterized_Abakan.rsi
@@ -184,6 +184,42 @@
     damage:
       types:
         Radiation: 6.65
+
+# ST:OW begin        
+# AKM
+- type: entity
+  parent: STBaseWeaponRifleAKM
+  id: STWeaponRifleAKMWinter
+  name: AKM "Zone Legend" (Winter)
+  description: An improved modernization of the Kalashnikov rifle chambered in 7.62x39mm, wrapped in the winter camo signature to the Monolith. It remains a legendary symbol of reliability in the toughest conditions. A small strip on the end denotes that this has been chemically cleaned.
+  suffix: ST
+  components:
+    - type: Item
+      sprite: _Stalker_OW/Objects/Weapons/_Skins/Winterized_AKM.rsi
+    - type: Sprite
+      sprite: _Stalker_OW/Objects/Weapons/_Skins/Winterized_AKM.rsi
+    - type: Clothing
+      sprite: _Stalker_OW/Objects/Weapons/_Skins/Winterized_AKM.rsi
+
+- type: entity
+  parent: STBaseWeaponRifleAKM
+  id: STWeaponRifleAKMWinterMono
+  name: AKM "Zone Legend" (Winter)
+  description: An improved modernization of the Kalashnikov rifle chambered in 7.62x39mm, wrapped in the winter camo often found used by Monolith. It remains a legendary symbol of reliability in the toughest conditions.
+  suffix: ST
+  components:
+    - type: Item
+      sprite: _Stalker_OW/Objects/Weapons/_Skins/Winterized_AKM.rsi
+    - type: Sprite
+      sprite: _Stalker_OW/Objects/Weapons/_Skins/Winterized_AKM.rsi
+    - type: Clothing
+      sprite: _Stalker_OW/Objects/Weapons/_Skins/Winterized_AKM.rsi
+    - type: PersonalDamage
+      damage:
+        types:
+          Radiation: 6.65
+# ST:OW end
+
 # SCAR-H
 - type: entity
   parent: STBaseWeaponRifleSCARH

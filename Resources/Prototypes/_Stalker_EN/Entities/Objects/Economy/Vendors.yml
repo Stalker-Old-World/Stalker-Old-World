@@ -14,6 +14,7 @@
     dispenseOnHitThreshold: 2
     offState: off
     brokenState: broken
+    autoEquipDispensed: true # ST:OW
   - type: Sprite
     sprite: _Stalker/Objects/Decoration/military_lot_of_boxes.rsi
     layers:
@@ -43,22 +44,82 @@
 
 - type: vendingMachineInventory
   id: MilitaryPSZInventoryEN
-  startingInventory:
-    OKSOPMP153Crate: 8 #T2 Enlisted - (Amount of Enlisted x 2)
-    OKSOPSKSCrate: 4 #T2 senior privates (amount of senior privates x 4)
-    OKSOPAK74uCrate: 8 # T2 Enlisted - (Amount of Enlisted x 2)
-    OKSOPCombatMedCrate: 6 # T2 Enlisted - (Amount of Enlisted x 3)
-    OKSOPAK74Crate: 4 # T2 Sergeant - (Amount of SGT x 4)
-    OKSOPMosinCrate: 2 #T2 Sergeant - (Amount of SGT x 2)
-    ArmyProvisionCrate: 6
-    ArmyMedkitMilitaryCrate: 6
-    Army545Mag30Crate: 6
-    Army545FMJCrate: 6
-    Army6mmbuckshotCrate: 6
-    STBoltBagFilled: 10
-    BaseRadio: 10
-    STRadioHeadset: 10
-    STWeaponShotgunMP153: 10 # For gun confiscation replacements!
+  #startingInventory:
+  #OKSOPMP153Crate: 8 #T2 Enlisted - (Amount of Enlisted x 2)
+  #OKSOPSKSCrate: 4 #T2 senior privates (amount of senior privates x 4)
+  #OKSOPAK74uCrate: 8 # T2 Enlisted - (Amount of Enlisted x 2)
+  #OKSOPCombatMedCrate: 6 # T2 Enlisted - (Amount of Enlisted x 3)
+  #OKSOPAK74Crate: 4 # T2 Sergeant - (Amount of SGT x 4)
+  #OKSOPMosinCrate: 2 #T2 Sergeant - (Amount of SGT x 2)
+  #ArmyProvisionCrate: 6
+  #ArmyMedkitMilitaryCrate: 6
+  #Army545Mag30Crate: 6
+  #Army545FMJCrate: 6
+  #Army6mmbuckshotCrate: 6
+
+  # ST:OW begin
+  categoryGroups:
+    - category: armor
+      entries:
+        ClothingHeadHelmetSH68: 30
+        STOWClothingOuterArmorT2VestMilitary: 30
+        
+    - category: weapons
+      entries:
+        STWeaponRifleAKS74: 30
+        STWeaponRifleAK74M: 10
+        STWeaponSniperMosin: 10
+        STWeaponSniperSKS: 10
+        STWeaponShotgunMP153: 30 # For gun confiscation replacements!
+        WeaponPistolGSH18: 30
+        RGD5Grenade: 20
+        STCombatKnife: 30
+
+    - category: magazines
+      entries:
+        545Mag30: 50
+        BaseGSH-18Mag10: 30
+
+    - category: ammo
+      entries:
+        545FMJBox: 50
+        739FMJBox: 25
+        754FMJBox: 25
+        919PSTBox: 25
+        919RIPBox: 25
+        6mmBuckshotBox: 30
+
+    - category: medicine
+      entries:
+          MedkitAI2: 30
+          MedkitMilitary: 20
+          MedkitScience: 20
+
+    - category: storage
+      entries:
+        ClothingBeltGreenWebbingStalker: 30
+        ClothingBeltBandolierStalker: 30
+        ClothingBackpackTacticOliveStalker: 30
+
+    - category: utility
+      entries:
+        DrinkMREFlask: 50
+        FoodTinMRE: 50
+        Zipties: 50
+        PowerCellHyper: 50
+        STBoltBagFilled: 50
+        BaseRadio: 50
+        STRadioHeadset: 50
+        STModuleSilencerSniperT1: 10
+        STModuleSniperSightT1: 10
+
+    - category: clothing
+      entries:
+        ClothingMaskGP7: 30
+        ClothingHeadHatMilitary: 30
+        ClothingBandageStalkerKrest: 30
+        ClothingHeadHatBeretBrigmedic: 30
+  # ST:OW end
 
 # OKSOP Officers - Restock on RU's Vendor File
 
@@ -76,6 +137,7 @@
     dispenseOnHitThreshold: 2
     offState: off
     brokenState: broken
+    autoEquipDispensed: true # ST:OW
   - type: Sprite
     sprite: _Stalker/Objects/Decoration/military_green_box.rsi
     layers:
@@ -105,13 +167,58 @@
 
 - type: vendingMachineInventory
   id: MilitaryPSZInventoryOfficerEN
-  startingInventory:
-    OKSOPOfficerCrate: 4 # T3 Officer
-    MilitaryPSZInventoryRestock: 6
-    Screwdriver: 1
-    ClothingBandageStalkerSopOne: 10
-    ClothingBandageStalkerSopTwo: 10
-    STBoltBagFilled: 10
-    BaseRadio: 10
-    STRadioHeadset: 10
-    STWeaponShotgunMP153: 10 # For gun confiscation replacements!
+  #startingInventory:
+    #OKSOPOfficerCrate: 4 # T3 Officer
+  # ST:OW begin
+  categoryGroups:
+    - category: armor
+      entries:
+        STClothingOuterArmorLightPlateVestBasePSZ7: 4
+        
+    - category: weapons
+      entries:
+        STWeaponRifleAK74M: 4
+        STWeaponShotgunMP153: 10 # For gun confiscation replacements!
+        WeaponPistolStalkerPM: 4
+        RGD5Grenade: 10
+        STCombatKnife: 4
+        
+    - category: magazines
+      entries:
+        545Mag30: 28
+        BasePMMag: 8
+        
+    - category: ammo
+      entries:
+        545PCBox: 28
+        918PBMBox: 8
+        
+    - category: medicine
+      entries:
+        MedkitAI2: 8
+        MedkitMilitary: 8
+        MedkitScience: 8
+        
+    - category: storage
+      entries:
+        ClothingBackpackTacticOliveStalker: 4
+        ClothingBeltWebbingOfficerStalker: 4
+        
+    - category: utility
+      entries:
+        DrinkMREFlask: 10
+        FoodTinMRE: 10
+        Zipties: 8
+        PowerCellHyper: 4
+        MilitaryPSZInventoryRestock: 6
+        Screwdriver: 1
+        STBoltBagFilled: 10
+        BaseRadio: 10
+        STRadioHeadset: 10
+        
+    - category: clothing
+      entries:
+        ClothingHeadBeretMilitary: 4
+        ClothingBandageStalkerSopOne: 10
+        ClothingBandageStalkerSopTwo: 10
+  # ST:OW end

@@ -4,6 +4,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+using Robust.Shared.Prototypes; // ST:OW
 
 namespace Content.Shared.VendingMachines
 {
@@ -69,6 +70,35 @@ namespace Content.Shared.VendingMachines
 
         [DataField]
         public bool Broken;
+        
+        // ST:OW begin
+
+        /// <summary>
+        /// If true, will attempt to auto-equip dispensed items to player
+        /// Fallback is hand, then ground
+        /// </summary>
+        [DataField("autoEquipDispensed")] public bool AutoEquipDispensed = false;
+        
+        /// <summary>
+        /// Player responsible for the currently pending vend
+        /// Runtime state only
+        /// </summary>
+        public EntityUid? NextBuyer;
+
+        /// <summary>
+        /// If true, vend attempts to prefill magazines with ammunition
+        /// </summary>
+        [DataField("prefillMagazines")] public bool PrefillMagazines = false;
+
+        /// <summary>
+        /// Will display if an item is infinitely available from vendor
+        /// </summary>
+        [DataField("infiniteStock")]
+        public HashSet<string> InfiniteStock = new();
+
+        // id >>> category for UI
+        public Dictionary<string, string> InventoryCategories = new();
+        // ST:OW end
 
         /// <summary>
         /// When true, will forcefully throw any object it dispenses
@@ -178,7 +208,7 @@ namespace Content.Shared.VendingMachines
         /// <summary>
         /// RSI state for the vending machine's deny animation. Will either be played once as sprite flick
         /// or looped depending on how <see cref="LoopDenyAnimation"/> is set.
-        /// Will be displayed on the layer <see cref="VendingMachineVisualLayers.BaseUnshaded"/>
+        /// Will be displayed on the layer <see cref="VendinTgMachineVisualLayers.BaseUnshaded"/>
         /// </summary>
         [DataField]
         public string? DenyState;
@@ -212,18 +242,23 @@ namespace Content.Shared.VendingMachines
         [DataField]
         public uint Amount;
 
+        // ST:OW begin
+        [DataField] public string Category = "misc";
+        [DataField] public bool Infinite = false;
+        // ST:OW end
         public VendingMachineInventoryEntry(InventoryType type, string id, uint amount)
         {
             Type = type;
             ID = id;
             Amount = amount;
         }
-
         public VendingMachineInventoryEntry(VendingMachineInventoryEntry entry)
         {
             Type = entry.Type;
             ID = entry.ID;
             Amount = entry.Amount;
+            Category = entry.Category;
+            Infinite = entry.Infinite;
         }
     }
 

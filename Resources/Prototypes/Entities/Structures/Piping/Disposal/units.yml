@@ -154,3 +154,24 @@
         type: MailingUnitBoundUserInterface
       enum.ConfigurationUiKey.Key:
         type: ConfigurationBoundUserInterface
+
+# ST:OW begin
+- type: entity
+  id: DisposalUnitInfinite
+  parent: DisposalUnit
+  name: disposal unit
+  suffix: Infinite, ST:OW
+  description: Littering is bad for the environment! Dispose of your trash here instead.
+  components:
+    - type: DisposalDeleteContents
+    - type: DisposalUnit
+      automaticEngage: true
+      automaticEngageTime: 10 # Seconds
+      disablePressure: true
+      whitelist:
+        components:
+          - Item
+      blacklist:
+        components:
+          - EntityStorage
+# ST:OW end

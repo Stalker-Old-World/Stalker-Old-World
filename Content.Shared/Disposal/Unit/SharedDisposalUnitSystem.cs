@@ -594,7 +594,7 @@ public abstract class SharedDisposalUnitSystem : EntitySystem
         UpdateState(uid, state, component, metadata);
     }
 
-    public bool TryFlush(EntityUid uid, DisposalUnitComponent component)
+    public virtual bool TryFlush(EntityUid uid, DisposalUnitComponent component) // ST:OW
     {
         if (!CanFlush(uid, component))
         {
@@ -653,7 +653,7 @@ public abstract class SharedDisposalUnitSystem : EntitySystem
 
     }
 
-    public void ManualEngage(EntityUid uid, DisposalUnitComponent component, MetaDataComponent? metadata = null)
+    public virtual void ManualEngage(EntityUid uid, DisposalUnitComponent component, MetaDataComponent? metadata = null) // ST:OW
     {
         component.Engaged = true;
         UpdateVisualState(uid, component);

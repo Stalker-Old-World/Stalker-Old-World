@@ -8,6 +8,17 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Shared.Disposal.Components;
 
+// ST:OW begin
+/// <summary>
+/// Allows a disposal unit to delete its contents when flushed instead of sending them through disposal pipes.
+/// </summary>
+[RegisterComponent]
+public sealed partial class DisposalDeleteContentsComponent : Component
+{
+}
+// ST:OW end
+
+
 /// <summary>
 /// Takes in entities and flushes them out to attached disposals tubes after a timer.
 /// </summary>

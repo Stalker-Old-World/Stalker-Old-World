@@ -1,53 +1,157 @@
 # not actually a torg but whatevr
 - type: vendingMachineInventory
   id: MonolithInventoryEN
-  startingInventory:
-    SetMonolithBuyableCrateT3Heavy: 10
-    SetMonolithBuyableCrateT3Light: 10  # OW
-    SetMonolithBuyableCrateT2Heavy: 10
-    SetMonolithBuyableCrateT2Light: 10
-    SetMonolithBuyableCrateInfiltrator1: 10
-    SetMonolithBuyableCrateInfiltrator2: 10
-    ClothingNeckScarfWhite: 10
-    MonolithCrateMedkit: 10
-    STThrowingknifeYellow: 100
-    STWeaponRifleAKM: 10
-    STWeaponRifleAKS74WinterMono: 10
-    STWeaponRifleAKS74UWhiteMono: 10
-    STWeaponRifleLR300v1: 10
-    STWeaponRifleOC14WinterMono: 10
-    STWeaponSniperMosin: 10
-    STWeaponSMGStalkerCP2Veresk: 10 # ow chaange
-    DG05SmokeGrenade: 10 # ow change
-    MonolithCrate545Mag30: 10
-    MonolithCrate545PC: 10
-    MonolithCrate556Mag30: 10
-    MonolithCrate556M855: 10
-    MonolithCrate762FMJ: 10
-    MonolithCrate754FMJ: 10
-    MonolithCrate739Mag30: 10
-    MonolithCrate919Mag30: 10
-    MonolithCrate919PBM: 10
-    45ACPAPBox: 10 # ow change
-    TommyGunDrum2: 10 # ow change
-    BaseTommyGunMag: 10 # ow change
-    VityazMag: 10 # ow change
-    ClothingOuterJacketMonolith: 10
-    STClothingNeckFacescarfWhite: 10
-    STClothingNeckFacescarfGrey: 10
-    STClothingNeckFacescarfBlack: 10
-    FoldedFlagMono: 20
-    StalkerMonolithAltarKit: 10
-    BoxZiptie: 10
-    ClothingHeatBagStalker: 10
-    Paper: 10
-    BloodyPaper: 10
-    Pen: 10
-    Candle: 30
-    Matchbox: 5
-    MonolithInventoryRestockEN: 1
-    Screwdriver: 1
+  # ST:OW begin
+  categoryGroups:
+  #startingInventory:
+    # SetMonolithBuyableCrateT3Heavy: 10
+    # SetMonolithBuyableCrateT3Light: 10
+    # SetMonolithBuyableCrateT2Heavy: 10
+    # SetMonolithBuyableCrateT2Light: 10
+    # SetMonolithBuyableCrateInfiltrator1: 10
+    # SetMonolithBuyableCrateInfiltrator2: 10
+    # MonolithCrate545Mag30: 10
+    # MonolithCrate545PC: 10
+    # MonolithCrate556Mag30: 10
+    # MonolithCrate556M855: 10
+    # MonolithCrate762FMJ: 10
+    # MonolithCrate754FMJ: 10
+    # MonolithCrate739Mag30: 10
+    # MonolithCrate919Mag30: 10
+    # MonolithCrate919PBM: 10
+    # MonolithInventoryRestockEN: 1
+    # Screwdriver: 1
 
+    - category: armor
+      entries:
+        ClothingOuterArmorMonolith: 999
+        ClothingOuterArmorSevaMonolith: 999
+        ClothingOuterArmorZaryaMonolith: 999
+        STClothingOuterArmorLightPlateVestBaseMonolith: 999
+        ClothingOuterCoatKevlarMonolith: 999
+        ClothingMaskGasZarya: 999
+        ClothingMaskGasZaryaMono: 999
+        ClothingMaskGP7: 999
+        STClothingMaskGasPPM88: 999
+        ClothingMaskXoma: 999
+
+    - category: weapons
+      entries:
+        STCombatKnife: 999
+        WeaponPistolStalkerAPSBareMono: 999
+        STWeaponShotgunMossbergM88: 999
+        STWeaponSniperSKSIntegrated: 999
+        STThrowingknifeYellow: 999
+        STWeaponRifleAKMWinterMono: 999
+        STWeaponRifleAKS74WinterMono: 999
+        STWeaponRifleAKS74UWhiteMono: 999
+        STWeaponRifleLR300v1: 999
+        STWeaponRifleOC14WinterMono: 999
+        STWeaponSniperMosin: 999
+        STWeaponSMGStalkerCP2Veresk: 999
+        DG05SmokeGrenade: 999
+
+    - category: magazines
+      entries:
+        545Mag30: 999
+        556Mag30: 999
+        739Mag30: 999
+        754Mag10: 999
+        BaseAPSMag: 999
+        BaseTommyGunMag: 999
+        TommyGunDrum2: 999
+        VityazMag: 999
+
+    - category: ammo
+      entries:
+        545PCBox: 999
+        556M855Box: 999
+        754FMJBox: 999
+        739FMJBox: 999
+        918PBMBox: 999
+        919PBMBox: 999
+        8mmBuckshotBox: 999
+        45ACPAPBox: 999
+        
+    - category: medicine
+      entries:
+        MedkitMilitary: 999
+        MedkitScience: 999
+        MedkitAI2: 999
+        Defibrillator: 999
+
+    - category: storage
+      entries:
+        ClothingBeltWebbingHolsterMonolith: 999
+        ClothingBeltPocketPouch: 999
+        ClothingBeltTarzanBlack: 999
+        ClothingBackpackMercStalker: 999
+        ClothingBeltWebbingHolsterLoner: 999
+        ClothingBackpackStalkerZaryaGreen: 999
+        ClothingBackpackStalkerZaryaBlack: 999
+        ClothingBackpackTacticBlackStalker: 999
+        ClothingBackpackTacticBeigeStalker: 999
+        
+    - category: utility
+      entries:
+        PowerCellHyper: 999
+        Binocularus1: 999
+        STFlashlightSeclite: 999
+        FoldedFlagMono: 999
+        StalkerMonolithAltarKit: 999
+        BoxZiptie: 999
+        ClothingHeatBagStalker: 999
+        Paper: 999
+        BloodyPaper: 999
+        Pen: 999
+        Candle: 999
+        Matchbox: 999
+
+    - category: clothing
+      entries:
+        ClothingNeckScarfWhite: 999
+        ClothingOuterJacketMonolith: 999
+        STClothingNeckFacescarfWhite: 999
+        STClothingNeckFacescarfGrey: 999
+        STClothingNeckFacescarfBlack: 999
+        ClothingCloakStalker: 999
+        ClothingOuterArmourJacketStalkerWhite: 999
+        ClothingOuterArmourJacketStalker: 999
+        ClothingOuterCoatDoshdevik: 999
+        ClothingOuterCoatLoyalist: 999
+        ClothingOuterCoatLoyalistLight: 999
+        ClothingOuterCoatStalker: 999
+        STClothingCapeArmorChainmailSeva: 999
+        ClothingHandsGlovesFingerless: 999
+        ClothingHandsGlovesMercFingerless: 999
+        ClothingMaskNeckFacemask: 999
+        ClothingMaskNeckBalaklava1: 999
+        ClothingMaskNeckBalaklava2: 999
+        ClothingMaskNeckBalaklava3: 999
+        ClothingTorsoTShirtPivozavr: 999
+        ClothingTorsoTShirtSailorSuit: 999
+        ClothingTorsoTShirtColorBlack: 999
+        ClothingTorsoTurtlenecksBereza: 999
+        ClothingTorsoTurtlenecksBattleTurtleneckbBlack: 999
+        ClothingTorsoTurtlenecksBlackTurtleneck: 999
+        ClothingTorsoTurtlenecksKhakiTurtleneck: 999
+        ClothingLegsJeansBlue: 999
+        ClothingLegsJeansStalker: 999
+        ClothingTorsoTurtlenecksMatrosska: 999
+        ClothingLegsJeansGreenCargo: 999
+        ClothingLegsJeansGreyCargo: 999
+        ClothingLegsJeansBlackCargo: 999
+        ClothingLegsJeansSandCargo: 999
+        ClothingLegsJeansBlackNew: 20
+        ClothingLegsBattlePantsBlack: 999
+        ClothingLegsVeryBlueJenas: 999
+        ClothingLegsCombatForest: 999
+        ClothingLegsNavyPants: 999
+        ClothingLegsskirtshort: 999
+        ClothingLegsskirtmedium: 999
+        ClothingLegsskirtlong: 999
+        #ST:OW end
+        
 - type: entity
   parent: BaseItem
   id: MonolithInventoryRestockEN
@@ -67,7 +171,7 @@
     sprite: _Stalker/Structures/Furniture/Sets/military-box.rsi
     state: icon
 
-# The premium vender
+# The premium vendor
 - type: shopPreset
   id: MonolithPremium
   minSellPrice: 1

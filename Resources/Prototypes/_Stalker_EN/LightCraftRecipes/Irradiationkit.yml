@@ -105,3 +105,14 @@
     firstIngredient: STIrradiationkit
     secondIngredient: STWeaponRifleOC14Winter
     time: 15
+
+# ST:OW begin    
+- type: lightCraftingRecipe
+  id: IrradiationkitAKMMono
+  results:
+    - STWeaponRifleAKMWinterMono
+  steps:
+    firstIngredient: STIrradiationkit
+    secondIngredient: STWeaponRifleAKMWinter
+    time: 15
+# ST:OW end

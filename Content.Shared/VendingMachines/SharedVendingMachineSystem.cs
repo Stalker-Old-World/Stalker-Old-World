@@ -60,19 +60,29 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
         var emaggedInventory = new Dictionary<string, VendingMachineInventoryEntry>();
         var contrabandInventory = new Dictionary<string, VendingMachineInventoryEntry>();
 
-        foreach (var weh in component.Inventory)
         {
-            inventory[weh.Key] = new(weh.Value);
-        }
+            // ST:OW begin
+            foreach (var weh in component.Inventory)
+            {
+                var e = new VendingMachineInventoryEntry(weh.Value);
+                e.Category = component.InventoryCategories.GetValueOrDefault(weh.Key, "misc");
+                inventory[weh.Key] = e;
+            }
 
-        foreach (var weh in component.EmaggedInventory)
-        {
-            emaggedInventory[weh.Key] = new(weh.Value);
-        }
+            foreach (var weh in component.EmaggedInventory)
+            {
+                var e = new VendingMachineInventoryEntry(weh.Value);
+                e.Category = component.InventoryCategories.GetValueOrDefault(weh.Key, "misc");
+                emaggedInventory[weh.Key] = e;
+            }
 
-        foreach (var weh in component.ContrabandInventory)
-        {
-            contrabandInventory[weh.Key] = new(weh.Value);
+            foreach (var weh in component.ContrabandInventory)
+            {
+                var e = new VendingMachineInventoryEntry(weh.Value);
+                e.Category = component.InventoryCategories.GetValueOrDefault(weh.Key, "misc");
+                contrabandInventory[weh.Key] = e;
+            }
+            // ST:OW end
         }
 
         args.State = new VendingMachineComponentState()
@@ -234,6 +244,8 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
         vendComponent.EjectEnd = Timing.CurTime + vendComponent.EjectDelay;
         vendComponent.NextItemToEject = entry.ID;
         vendComponent.ThrowNextItem = throwItem;
+        // Remember the player until the item is actually spawned
+        vendComponent.NextBuyer = user; // ST:OW
 
         if (TryComp(uid, out SpeakOnUIClosedComponent? speakComponent))
             _speakOn.TrySetFlag((uid, speakComponent));
@@ -323,12 +335,50 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
 
         if (!PrototypeManager.TryIndex(component.PackPrototypeId, out VendingMachineInventoryPrototype? packPrototype))
             return;
+        
+        // ST:OW begin
+        component.InventoryCategories.Clear();
 
-        AddInventoryFromPrototype(uid, packPrototype.StartingInventory, InventoryType.Regular, component, restockQuality);
+        if (packPrototype.CategoryGroups is { Count: > 0 })
+        {
+            var totalEntries = 0;
+            foreach (var group in packPrototype.CategoryGroups)
+            {
+                totalEntries += group.Entries.Count;
+            }
+
+            var flattened = new Dictionary<string, uint>(totalEntries);
+
+            foreach (var group in packPrototype.CategoryGroups)
+            {
+                var cat = string.IsNullOrWhiteSpace(group.Category) ? "misc" : group.Category;
+
+                foreach (var (id, amount) in group.Entries)
+                {
+                    flattened[id] = amount;
+                    component.InventoryCategories[id] = cat;
+                }
+            }
+
+            AddInventoryFromPrototype(uid, flattened, InventoryType.Regular, component, restockQuality);
+        }
+        else
+        {
+            // Fallback legacy path
+            AddInventoryFromPrototype(uid, packPrototype.StartingInventory, InventoryType.Regular, component, restockQuality);
+
+            foreach (var (id, _) in packPrototype.StartingInventory)
+            {
+                component.InventoryCategories[id] = "misc";
+            }
+        }
+
         AddInventoryFromPrototype(uid, packPrototype.EmaggedInventory, InventoryType.Emagged, component, restockQuality);
         AddInventoryFromPrototype(uid, packPrototype.ContrabandInventory, InventoryType.Contraband, component, restockQuality);
+
         Dirty(uid, component);
     }
+        // ST:OW end
 
     private void OnEmagged(EntityUid uid, VendingMachineComponent component, ref GotEmaggedEvent args)
     {

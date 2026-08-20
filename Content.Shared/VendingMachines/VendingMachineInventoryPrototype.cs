@@ -4,6 +4,20 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 
 namespace Content.Shared.VendingMachines
 {
+    // ST:OW begin
+    [DataDefinition]
+    public sealed partial class VendingInventoryCategoryEntry
+    {
+        [DataField("id", required: true)]
+        public string ID = default!;
+
+        [DataField("amount", required: true)]
+        public uint Amount;
+
+        [DataField("category")]
+        public string Category = "misc";
+    }
+    // ST:OW end
     [Prototype]
     public sealed partial class VendingMachineInventoryPrototype : IPrototype
     {
@@ -19,5 +33,20 @@ namespace Content.Shared.VendingMachines
 
         [DataField("contrabandInventory", customTypeSerializer:typeof(PrototypeIdDictionarySerializer<uint, EntityPrototype>))]
         public Dictionary<string, uint>? ContrabandInventory { get; private set; }
+        
+        // ST:OW begin
+        [DataField("categoryGroups")]
+        public List<VendingCategoryGroup>? CategoryGroups { get; private set; }
+        
+        [DataDefinition]
+        public sealed partial class VendingCategoryGroup
+        {
+            [DataField("category", required: true)]
+            public string Category = "misc";
+
+            [DataField("entries", required: true, customTypeSerializer: typeof(PrototypeIdDictionarySerializer<uint, EntityPrototype>))]
+            public Dictionary<string, uint> Entries = new();
+        }
+        // ST:OW end
     }
 }
