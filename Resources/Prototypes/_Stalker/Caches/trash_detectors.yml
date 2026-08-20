@@ -45,8 +45,6 @@
       
       # Currency 
       - Roubles500
-      - Roubles1000
-      - Roubles2000
 
       # Rare (T3 items)
       rarePrototypes:
@@ -59,7 +57,6 @@
       - STCraftMultilayerPCBT3
     
       # Weapons
-      - STWeaponShotgunMP153
       - STWeaponShotgunMossbergM88
       - WeaponPistolStalkerAPS
       - RGD5Grenade
@@ -77,8 +74,8 @@
       - STGoldRingBigDiamond
       
       # Currency
-      - Roubles5000
-      rareChance: 0.10 # 10%
+      - Roubles2000
+      rareChance: 0.05 # 5%
 
       epicPrototypes:
       - STCraftSheetAluminumT4

@@ -68,15 +68,15 @@
       priority: 2
       items:
         TrashDetectorTier1: 200
-        TrashDetectorTier2: 600
-        TrashDetectorTier3: 1800
+        TrashDetectorTier2: 5000
+        TrashDetectorTier3: 8500
         longrangemetaldetector: 3000
         STCombatKnife: 50
 
     - name: shop-category-blueprints
       priority: 3
       items:
-        TrashDetectorTier4Blueprint: 25000
+        TrashDetectorTier4Blueprint: 30000
         
     - name: shop-category-storage-and-containers
       priority: 4
