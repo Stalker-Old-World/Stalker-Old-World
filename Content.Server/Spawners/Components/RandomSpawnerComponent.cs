@@ -19,7 +19,37 @@ namespace Content.Server.Spawners.Components
         [ViewVariables(VVAccess.ReadWrite)]
         [DataField]
         public float RareChance { get; set; } = 0.05f;
+        
+        // ST:OW begin
+        /// <summary>
+        /// Epic tier prototypes (rolled before Rare, after Legendary)
+        /// </summary>
+        [ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
+        public List<EntProtoId> EpicPrototypes { get; set; } = new();
 
+        /// <summary>
+        /// The chance that an epic prototype may spawn
+        /// </summary>
+        [ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
+        public float EpicChance { get; set; } = 0f;
+
+        /// <summary>
+        /// Legendary tier prototypes (rolled first)
+        /// </summary>
+        [ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
+        public List<EntProtoId> LegendaryPrototypes { get; set; } = new();
+
+        /// <summary>
+        /// The chance that a legendary prototype may spawn
+        /// </summary>
+        [ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
+        public float LegendaryChance { get; set; } = 0f;
+        // ST:OW end
+        
         /// <summary>
         /// Scatter of entity spawn coordinates
         /// </summary>

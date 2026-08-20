@@ -311,8 +311,8 @@
         ZoneAnomalyDetectorAD1: 500 # T1
         ZoneAnomalyDetectorUpgradeAD2: 3000
         TrashDetectorTier1: 200
-        TrashDetectorTier2: 1600
-        TrashDetectorTier3: 3500
+        TrashDetectorTier2: 5000
+        TrashDetectorTier3: 10000
     - name: shop-category-utilities
       priority: 8
       items:

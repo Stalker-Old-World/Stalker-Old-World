@@ -8,6 +8,7 @@ using Content.Shared.Popups;
 using Content.Shared.Interaction;
 using Content.Server._Stalker.TrashSerchable;
 using Content.Shared.TrashDetector;
+using Content.Shared.Hands.EntitySystems; // ST:OW
 
 namespace Content.Server.TrashDetector
 {
@@ -19,6 +20,8 @@ namespace Content.Server.TrashDetector
         [Dependency] internal readonly IEntityManager _entityManager = default!;
         [Dependency] internal readonly IMapManager _mapManager = default!;
         [Dependency] protected readonly AudioSystem Audio = default!;
+        [Dependency] private readonly SharedHandsSystem _hands = default!;
+
         public override void Initialize()
         {
             base.Initialize();
@@ -47,7 +50,8 @@ namespace Content.Server.TrashDetector
             {
                 if (trash.TimeBeforeNextSearch < 0f)
                 {
-                    var doAfterArgs = new DoAfterArgs(_entityManager, user, comp.SearchTime, new GetTrashDoAfterEvent(), uid, target: target, used: uid)
+                    var doAfterArgs = new DoAfterArgs(_entityManager, user, comp.SearchTime, new GetTrashDoAfterEvent(),
+                        uid, target: target, used: uid)
                     {
                         BreakOnDamage = true,
                         NeedHand = true,
@@ -58,35 +62,52 @@ namespace Content.Server.TrashDetector
                 }
                 else
                 {
-                    _popupSystem.PopupEntity("This pile has already been checked recently", user, PopupType.LargeCaution);
+                    _popupSystem.PopupEntity("This pile has already been checked recently", user,
+                        PopupType.LargeCaution);
                 }
             }
 
         }
 
+        // ST:OW begin
+        private void SpawnLootToHandsOrGround(EntityUid user, string protoId)
+        {
+            var coords = Transform(user).Coordinates;
+            var spawned = Spawn(protoId, coords);
+            _hands.TryPickupAnyHand(user, spawned); // if fails, stays on ground
+        }
+
         public void OnDoAfter(EntityUid uid, TrashDetectorComponent comp, GetTrashDoAfterEvent args)
         {
-
-            if (args.Handled || args.Cancelled || args.Args.Target == null || !TryComp<TrashSerchableComponent>(args.Args.Target.Value, out var trash))
+            if (args.Handled || args.Cancelled || args.Args.Target == null ||
+                !TryComp<TrashSerchableComponent>(args.Args.Target.Value, out var trash))
+            {
                 return;
-            var target = args.Args.Target.Value;
-
-            if (_random.Prob(comp.Probability))
-            {
-                trash.TimeBeforeNextSearch = 900f;
-                _popupSystem.PopupEntity("The device beeps", uid, PopupType.LargeCaution);
-                var xform = Transform(uid);
-                var coords = xform.Coordinates;
-                Spawn(comp.Loot, coords);
-            }
-            else
-            {
-                trash.TimeBeforeNextSearch = 900f;
-                _popupSystem.PopupEntity("The device does not make a sound", uid, PopupType.LargeCaution);
             }
 
             args.Handled = true;
-        }
 
+            trash.TimeBeforeNextSearch = 900f;
+
+            if (!_random.Prob(comp.Probability))
+            {
+                _popupSystem.PopupEntity("The device does not make a sound", uid, PopupType.LargeCaution);
+                return;
+            }
+
+            _popupSystem.PopupEntity("The device beeps", uid, PopupType.LargeCaution);
+
+            var hardCap = Math.Max(1, comp.RollsHardCap);
+            var minRolls = Math.Clamp(comp.RollsMin, 1, hardCap);
+            var maxRolls = Math.Clamp(comp.RollsMax, minRolls, hardCap);
+
+            var rolls = _random.Next(minRolls, maxRolls + 1);
+
+            for (var i = 0; i < rolls; i++)
+            {
+                SpawnLootToHandsOrGround(uid, comp.Loot);
+            }
+        }
+        // ST:OW end
     }
 }

@@ -1170,27 +1170,28 @@
         type: ShopBoundUserInterface
 
 # Fun
-
-- type: entity
-  parent: NPCDoll
-  id: NPCMaksimka
-  name: Максимка [→   ←]
-  description: Бегает сюда из ближайшей деревни где проводит каникулы, чтобы немного подзаработать продавая баллончики
-  components:
-  - type: Sprite
-    sprite: _Stalker/Objects/NPCs/maksimka.rsi
-    state: base
-  - type: Physics
+# ST:OW begin
+#- type: entity
+  #parent: NPCDoll
+  #id: NPCMaksimka
+  #name: Максимка [→   ←]
+  #description: Бегает сюда из ближайшей деревни где проводит каникулы, чтобы немного подзаработать продавая баллончики
+  #components:
+  #- type: Sprite
+  #  sprite: _Stalker/Objects/NPCs/maksimka.rsi
+  #  state: base
+  #- type: Physics
   # - type: Shop  #Commented, shop-preset wiped
     # moneyId: Roubles
     # shopPresetId: NpcMaksimka  #If you uncomment it - CHANGE SHOP PRESET
-  - type: ActivatableUI
-    key: enum.ShopUiKey.Key
-    singleUser: true
-  - type: UserInterface
-    interfaces:
-      enum.ShopUiKey.Key:
-        type: ShopBoundUserInterface
+  #- type: ActivatableUI
+  #  key: enum.ShopUiKey.Key
+  #  singleUser: true
+  #- type: UserInterface
+  #  interfaces:
+  #    enum.ShopUiKey.Key:
+  #      type: ShopBoundUserInterface
+# ST:OW end
 
 # sera-start
 - type: entity

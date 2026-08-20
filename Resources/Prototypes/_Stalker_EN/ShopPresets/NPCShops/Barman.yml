@@ -456,7 +456,7 @@
         ZoneArtifactDetectorSpruce: 6575 #T3
         Veles: 8000 # T3
         TrashDetectorTier1: 200
-        TrashDetectorTier2: 400
+        TrashDetectorTier2: 5000
 
     - name: shop-category-utilities
       priority: 11

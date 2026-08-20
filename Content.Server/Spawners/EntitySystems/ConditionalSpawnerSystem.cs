@@ -6,6 +6,7 @@ using Content.Shared.GameTicking.Components;
 using JetBrains.Annotations;
 using Robust.Shared.Map;
 using Robust.Shared.Random;
+using Robust.Shared.Prototypes; // ST:OW
 
 namespace Content.Server.Spawners.EntitySystems
 {
@@ -91,52 +92,72 @@ namespace Content.Server.Spawners.EntitySystems
             if (!Deleted(uid))
                 Spawn(_robustRandom.Pick(component.Prototypes), Transform(uid).Coordinates);
         }
+        
+        // ST:OW begin
+        private void Spawn(Entity<EntityTableSpawnerComponent> ent)
+        {
+            if (Deleted(ent))
+                return;
+
+            var spawns = _entityTable.GetSpawns(ent.Comp.Table);
+
+            foreach (var prototype in spawns)
+            {
+                SpawnWithOffset(ent, prototype, ent.Comp.Offset);
+            }
+        }
 
         private void Spawn(EntityUid uid, RandomSpawnerComponent component)
         {
-            if (component.RarePrototypes.Count > 0 && (component.RareChance == 1.0f || _robustRandom.Prob(component.RareChance)))
-            {
-                Spawn(_robustRandom.Pick(component.RarePrototypes), Transform(uid).Coordinates);
-                return;
-            }
-
+            // Base spawn chance behavior
             if (component.Chance != 1.0f && !_robustRandom.Prob(component.Chance))
                 return;
-
-            if (component.Prototypes.Count == 0)
-            {
-                Log.Warning($"Prototype list in RandomSpawnerComponent is empty! Entity: {ToPrettyString(uid)}");
-                return;
-            }
 
             if (Deleted(uid))
                 return;
 
-            var offset = component.Offset;
+            // Pick rarity from: Legendary -> Epic -> Rare -> Common
+            EntProtoId selected;
+
+            if (component.LegendaryPrototypes.Count > 0 &&
+                (component.LegendaryChance == 1.0f || _robustRandom.Prob(component.LegendaryChance)))
+            {
+                selected = _robustRandom.Pick(component.LegendaryPrototypes);
+            }
+            else if (component.EpicPrototypes.Count > 0 &&
+                     (component.EpicChance == 1.0f || _robustRandom.Prob(component.EpicChance)))
+            {
+                selected = _robustRandom.Pick(component.EpicPrototypes);
+            }
+            else if (component.RarePrototypes.Count > 0 &&
+                     (component.RareChance == 1.0f || _robustRandom.Prob(component.RareChance)))
+            {
+                selected = _robustRandom.Pick(component.RarePrototypes);
+            }
+            else
+            {
+                if (component.Prototypes.Count == 0)
+                {
+                    Log.Warning($"Prototype list in RandomSpawnerComponent is empty! Entity: {ToPrettyString(uid)}");
+                    return;
+                }
+
+                selected = _robustRandom.Pick(component.Prototypes);
+            }
+
+            SpawnWithOffset(uid, selected, component.Offset);
+        }
+
+        private void SpawnWithOffset(EntityUid uid, EntProtoId prototype, float offset)
+        {
             var xOffset = _robustRandom.NextFloat(-offset, offset);
             var yOffset = _robustRandom.NextFloat(-offset, offset);
 
             var coordinates = Transform(uid).Coordinates.Offset(new Vector2(xOffset, yOffset));
-
-            Spawn(_robustRandom.Pick(component.Prototypes), coordinates);
+            Spawn(prototype, coordinates);
         }
-
-        private void Spawn(Entity<EntityTableSpawnerComponent> ent)
-        {
-            if (TerminatingOrDeleted(ent) || !Exists(ent))
-                return;
-
-            var coords = Transform(ent).Coordinates;
-
-            var spawns = _entityTable.GetSpawns(ent.Comp.Table);
-            foreach (var proto in spawns)
-            {
-                var xOffset = _robustRandom.NextFloat(-ent.Comp.Offset, ent.Comp.Offset);
-                var yOffset = _robustRandom.NextFloat(-ent.Comp.Offset, ent.Comp.Offset);
-                var trueCoords = coords.Offset(new Vector2(xOffset, yOffset));
-
-                SpawnAtPosition(proto, trueCoords);
-            }
-        }
+        // ST:OW end
     }
 }
+
+
